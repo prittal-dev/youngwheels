@@ -1,0 +1,6 @@
+{
+  "name": "Young Wheels - Kids Ride-On Toys",
+  "description": "Delhi-based manufacturer of kids ride-on toys, magic swing cars, baby walkers, potty chairs, and rocking animals with a playful modern design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
