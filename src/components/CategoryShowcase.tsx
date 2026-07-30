@@ -22,6 +22,19 @@ export const CategoryShowcase: React.FC<CategoryShowcaseProps> = ({ onSelectCate
 
   const getCategoryTheme = (id: CategoryId) => {
     switch (id) {
+      case 'ride-ons':
+      case 'riders':
+      case 'electric-rideons':
+      case 'rocking-animals':
+        return {
+          cardBg: 'bg-gradient-to-br from-[#E6F4EA] to-[#A7F3D0]/30',
+          borderColor: 'border-[#10B981]',
+          badgeBg: 'bg-[#10B981] text-white',
+          btnBg: 'bg-[#10B981] hover:bg-[#059669] text-white',
+          iconBg: 'bg-[#E6F4EA] text-[#10B981]',
+          icon: <Car className="w-5 h-5 text-[#10B981]" />,
+        };
+      case 'swing-cars':
       case 'magic-cars':
         return {
           cardBg: 'bg-gradient-to-br from-[#FFF9E6] to-[#FFE399]/40',
@@ -40,15 +53,7 @@ export const CategoryShowcase: React.FC<CategoryShowcaseProps> = ({ onSelectCate
           iconBg: 'bg-[#EBFBFA] text-[#4ECDC4]',
           icon: <Footprints className="w-5 h-5 text-[#4ECDC4]" />,
         };
-      case 'riders':
-        return {
-          cardBg: 'bg-gradient-to-br from-[#E6F4EA] to-[#A7F3D0]/30',
-          borderColor: 'border-[#10B981]',
-          badgeBg: 'bg-[#10B981] text-white',
-          btnBg: 'bg-[#10B981] hover:bg-[#059669] text-white',
-          iconBg: 'bg-[#E6F4EA] text-[#10B981]',
-          icon: <Car className="w-5 h-5 text-[#10B981]" />,
-        };
+      case 'potty-trainers':
       case 'potty-chairs':
         return {
           cardBg: 'bg-gradient-to-br from-[#FFF0F0] to-[#FECDD3]/30',
@@ -58,24 +63,7 @@ export const CategoryShowcase: React.FC<CategoryShowcaseProps> = ({ onSelectCate
           iconBg: 'bg-[#FFF0F0] text-[#EF4444]',
           icon: <Sparkles className="w-5 h-5 text-[#EF4444]" />,
         };
-      case 'electric-rideons':
-        return {
-          cardBg: 'bg-gradient-to-br from-[#FFF7ED] to-[#FED7AA]/40',
-          borderColor: 'border-[#F97316]',
-          badgeBg: 'bg-[#F97316] text-white',
-          btnBg: 'bg-[#F97316] hover:bg-[#EA580C] text-white',
-          iconBg: 'bg-[#FFF7ED] text-[#F97316]',
-          icon: <Zap className="w-5 h-5 text-[#F97316]" />,
-        };
-      case 'rocking-animals':
-        return {
-          cardBg: 'bg-gradient-to-br from-[#FFF0F5] to-[#FFB6C1]/30',
-          borderColor: 'border-[#FFB6C1]',
-          badgeBg: 'bg-[#FFB6C1] text-slate-900',
-          btnBg: 'bg-[#EC4899] hover:bg-[#DB2777] text-white',
-          iconBg: 'bg-[#FFF0F5] text-[#EC4899]',
-          icon: <Smile className="w-5 h-5 text-[#EC4899]" />,
-        };
+      case 'tricycles':
       case 'tri-cycles':
         return {
           cardBg: 'bg-gradient-to-br from-[#ECFEFF] to-[#A5F3FC]/30',

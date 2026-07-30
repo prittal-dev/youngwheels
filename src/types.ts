@@ -1,12 +1,16 @@
 export type CategoryId = 
+  | 'ride-ons' 
+  | 'kick-scooters' 
   | 'baby-walkers' 
+  | 'swing-cars' 
+  | 'tricycles' 
+  | 'potty-trainers'
   | 'magic-cars' 
   | 'riders' 
   | 'potty-chairs' 
   | 'electric-rideons' 
   | 'rocking-animals' 
-  | 'tri-cycles' 
-  | 'kick-scooters';
+  | 'tri-cycles';
 
 export interface Product {
   id: string;

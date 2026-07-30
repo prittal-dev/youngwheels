@@ -22,19 +22,41 @@ export interface CategoryCardItem {
 
 export const ALL_CATEGORY_CARDS: CategoryCardItem[] = [
   {
+    id: 'ride-ons',
+    name: 'Ride-Ons &\nPush Cars',
+    subtitle: 'For Little Feet and Big Adventures',
+    bgHex: '#6EE7B7',
+    bgClass: 'bg-[#6EE7B7]',
+    textClass: 'text-slate-900',
+    doodleType: 'cloud',
+    image: 'https://images.unsplash.com/photo-1594787318286-3d835c1d207f?auto=format&fit=crop&q=80&w=600',
+    modelCountText: '13 Models'
+  },
+  {
+    id: 'kick-scooters',
+    name: 'Kick\nScooters',
+    subtitle: 'For Little Feet and Big Adventures',
+    bgHex: '#86EFAC',
+    bgClass: 'bg-[#86EFAC]',
+    textClass: 'text-slate-900',
+    doodleType: 'cloud',
+    image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=600',
+    modelCountText: '8 Models'
+  },
+  {
     id: 'baby-walkers',
-    name: 'Walker',
+    name: 'Baby\nWalkers',
     subtitle: 'For Little Feet and Big Adventures',
     bgHex: '#A3E635',
     bgClass: 'bg-[#A3E635]',
     textClass: 'text-slate-900',
     doodleType: 'scribble',
     image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&q=80&w=600',
-    modelCountText: '8 Models'
+    modelCountText: '3 Models'
   },
   {
-    id: 'magic-cars',
-    name: 'Magic Car /\nSwing Car',
+    id: 'swing-cars',
+    name: 'Swing Cars &\nMagic Cars',
     subtitle: 'For Little Feet and Big Adventures',
     bgHex: '#FEF08A',
     bgClass: 'bg-[#FEF08A]',
@@ -44,70 +66,26 @@ export const ALL_CATEGORY_CARDS: CategoryCardItem[] = [
     modelCountText: '12 Models'
   },
   {
-    id: 'riders',
-    name: 'Riders',
-    subtitle: 'For Little Feet and Big Adventures',
-    bgHex: '#6EE7B7',
-    bgClass: 'bg-[#6EE7B7]',
-    textClass: 'text-slate-900',
-    doodleType: 'cloud',
-    image: 'https://images.unsplash.com/photo-1594787318286-3d835c1d207f?auto=format&fit=crop&q=80&w=600',
-    modelCountText: '6 Models'
-  },
-  {
-    id: 'potty-chairs',
-    name: 'Potty\nChair',
-    subtitle: 'For Little Feet and Big Adventures',
-    bgHex: '#FCA5A5',
-    bgClass: 'bg-[#FCA5A5]',
-    textClass: 'text-slate-900',
-    doodleType: 'scribble',
-    image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&q=80&w=600',
-    modelCountText: '7 Models'
-  },
-  {
-    id: 'electric-rideons',
-    name: 'Electric\nRideons',
-    subtitle: 'For Little Feet and Big Adventures',
-    bgHex: '#FFEDD5',
-    bgClass: 'bg-[#FFEDD5]',
-    textClass: 'text-slate-900',
-    doodleType: 'cloud',
-    image: 'https://images.unsplash.com/photo-1558060370-d644479be6f7?auto=format&fit=crop&q=80&w=600',
-    modelCountText: '5 Models'
-  },
-  {
-    id: 'rocking-animals',
-    name: 'Rocking\nAnimals',
-    subtitle: 'For Little Feet and Big Adventures',
-    bgHex: '#F472B6',
-    bgClass: 'bg-[#F472B6]',
-    textClass: 'text-slate-900',
-    doodleType: 'cloud',
-    image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&q=80&w=600',
-    modelCountText: '4 Models'
-  },
-  {
-    id: 'tri-cycles',
-    name: 'Tri Cycle',
+    id: 'tricycles',
+    name: 'Kids\nTricycles',
     subtitle: 'For Little Feet and Big Adventures',
     bgHex: '#67E8F9',
     bgClass: 'bg-[#67E8F9]',
     textClass: 'text-slate-900',
     doodleType: 'scribble',
     image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80&w=600',
-    modelCountText: '6 Models'
+    modelCountText: '11 Models'
   },
   {
-    id: 'kick-scooters',
-    name: 'Kick\nScooter',
+    id: 'potty-trainers',
+    name: 'Potty Chairs &\nTrainers',
     subtitle: 'For Little Feet and Big Adventures',
-    bgHex: '#86EFAC',
-    bgClass: 'bg-[#86EFAC]',
+    bgHex: '#FCA5A5',
+    bgClass: 'bg-[#FCA5A5]',
     textClass: 'text-slate-900',
-    doodleType: 'cloud',
-    image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=600',
-    modelCountText: '5 Models'
+    doodleType: 'scribble',
+    image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&q=80&w=600',
+    modelCountText: '8 Models'
   }
 ];
 

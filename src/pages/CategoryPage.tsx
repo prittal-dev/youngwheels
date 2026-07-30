@@ -41,8 +41,22 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
   }, [searchQuery, categoryId]);
 
   const allProducts = products || PRODUCTS;
-  const categoryInfo = CATEGORIES.find((c) => c.id === categoryId) || CATEGORIES[0];
-  const categoryProducts = allProducts.filter((p) => p.category === categoryId);
+  const categoryInfo = CATEGORIES.find((c) => c.id === categoryId) || CATEGORIES.find((c) => c.id === 'ride-ons') || CATEGORIES[0];
+  const categoryProducts = allProducts.filter((p) => {
+    if (categoryId === 'ride-ons' || categoryId === 'riders' || categoryId === 'electric-rideons' || categoryId === 'rocking-animals') {
+      return p.category === 'ride-ons' || p.category === 'riders' || p.category === 'electric-rideons' || p.category === 'rocking-animals';
+    }
+    if (categoryId === 'swing-cars' || categoryId === 'magic-cars') {
+      return p.category === 'swing-cars' || p.category === 'magic-cars';
+    }
+    if (categoryId === 'tricycles' || categoryId === 'tri-cycles') {
+      return p.category === 'tricycles' || p.category === 'tri-cycles';
+    }
+    if (categoryId === 'potty-trainers' || categoryId === 'potty-chairs') {
+      return p.category === 'potty-trainers' || p.category === 'potty-chairs';
+    }
+    return p.category === categoryId;
+  });
 
   const filteredProducts = categoryProducts.filter((p) => {
     const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -57,6 +71,16 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
 
   const getCategoryDetails = () => {
     switch (categoryId) {
+      case 'ride-ons':
+      case 'riders':
+      case 'electric-rideons':
+      case 'rocking-animals':
+        return {
+          title: 'Ride-Ons & Push Cars',
+          subtitle: 'Sturdy push-along ride-ons with back support, under-seat storage, and interactive lights.',
+          highlights: ['Under-Seat Storage Trunk', 'Ergonomic Backrest', 'Anti-Flip Rear Bumper', 'Squeaker Steering Horn']
+        };
+      case 'swing-cars':
       case 'magic-cars':
         return {
           title: 'Magic Swing Cars & Twisters',
@@ -69,30 +93,14 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
           subtitle: 'Designed to encourage first steps safely with multi-position height adjustments, speed-controlled wheels, and removable activity trays.',
           highlights: ['3-Position Height Adjustment', 'Speed Control Tension Wheels', 'Removable Toy/Snack Tray', 'Padded Washable Seat']
         };
+      case 'potty-trainers':
       case 'potty-chairs':
         return {
           title: 'Ergonomic Potty Chairs & Ride-On Trainers',
           subtitle: 'Make potty training gentle and exciting! Features high splash guards, easy-clean removable bowls, and fun animal & scooter designs.',
           highlights: ['Removable Inner Bowl', 'Non-Slip Tile Grips', 'Splash Guard & Lid', '2-in-1 Scooter Ride-Ons']
         };
-      case 'rocking-animals':
-        return {
-          title: '2-in-1 Rocking & Rolling Animals',
-          subtitle: 'Smooth anti-tip rocking arc that converts in seconds into a rolling ride-on toy by flipping down its hidden wheels.',
-          highlights: ['Safe 15° Rocking Arc', 'Hidden Rolling Wheels', 'Musical Sound Buttons', 'Ergonomic Saddle Seat']
-        };
-      case 'riders':
-        return {
-          title: 'Riders & Push Along Cars',
-          subtitle: 'Ergonomic ride-on push cars equipped with steering horns, backrest support, and spacious under-seat storage.',
-          highlights: ['Under-Seat Storage Trunk', 'Ergonomic Backrest', 'Anti-Flip Rear Bumper', 'Squeaker Steering Horn']
-        };
-      case 'electric-rideons':
-        return {
-          title: 'Electric Battery Operated Rideons',
-          subtitle: 'Exciting battery-operated tractors, excavators, and quad bikes with parental remote control and real engine sounds.',
-          highlights: ['2.4G Bluetooth Remote', 'Rechargeable Battery', 'Working LED Lights', 'Engine & Music Sounds']
-        };
+      case 'tricycles':
       case 'tri-cycles':
         return {
           title: 'Kids Activity Tri Cycles & Tricycles',
@@ -104,6 +112,12 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
           title: '3-Wheel Light-Up Kick Scooters',
           subtitle: 'Lean-to-steer balance scooters with 3-level height adjustable T-bar, magnetic flashing LED wheels, and rear foot brake.',
           highlights: ['Self-Generating LED Wheels', '3-Level Adjustable Height', 'Lean-to-Steer Balance', 'Wide Non-Slip Deck']
+        };
+      default:
+        return {
+          title: 'Young Wheels Premium Toys',
+          subtitle: 'Safe, durable, and joyful ride-on toys manufactured with love in New Delhi, India.',
+          highlights: ['100% Non-Toxic Virgin ABS', 'Factory Direct Quality', 'Ergonomic Toddler Safety', 'BIS Certified']
         };
     }
   };

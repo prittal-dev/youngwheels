@@ -12,6 +12,7 @@ import { ContactPage } from './pages/ContactPage';
 import { AdminPage } from './pages/AdminPage';
 import { AllCategoriesPage } from './pages/AllCategoriesPage';
 import { BlogPage } from './pages/BlogPage';
+import { SocialPage } from './pages/SocialPage';
 import { CategoryId, Product, EnquiryItem } from './types';
 import { COMPANY_DETAILS } from './data/company';
 import { PRODUCTS } from './data/products';
@@ -24,11 +25,18 @@ export default function App() {
   const [wholesaleModalOpen, setWholesaleModalOpen] = useState<boolean>(false);
   const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
 
-  // Managed Products State (with localStorage persistence)
+  // Managed Products State (with localStorage persistence & auto-sync to 55 catalog items)
   const [productsList, setProductsList] = useState<Product[]>(() => {
     try {
-      const saved = localStorage.getItem('yw_products');
-      return saved ? JSON.parse(saved) : PRODUCTS;
+      const saved = localStorage.getItem('yw_products_v4');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length >= PRODUCTS.length) {
+          return parsed;
+        }
+      }
+      localStorage.setItem('yw_products_v4', JSON.stringify(PRODUCTS));
+      return PRODUCTS;
     } catch {
       return PRODUCTS;
     }
@@ -203,7 +211,7 @@ export default function App() {
             />
           )}
 
-          {['baby-walkers', 'magic-cars', 'riders', 'potty-chairs', 'electric-rideons', 'rocking-animals', 'tri-cycles', 'kick-scooters'].includes(activeTab) && (
+          {['ride-ons', 'kick-scooters', 'baby-walkers', 'swing-cars', 'tricycles', 'potty-trainers', 'magic-cars', 'riders', 'potty-chairs', 'electric-rideons', 'rocking-animals', 'tri-cycles'].includes(activeTab) && (
             <CategoryPage
               categoryId={activeTab as CategoryId}
               onQuickView={(p) => setQuickViewProduct(p)}
@@ -223,6 +231,8 @@ export default function App() {
               }}
             />
           )}
+
+          {activeTab === 'social' && <SocialPage />}
 
           {activeTab === 'admin' && (
             <AdminPage

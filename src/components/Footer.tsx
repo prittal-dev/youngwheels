@@ -124,8 +124,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
                 </button>
               </li>
               <li>
+                <button onClick={() => onNavigateTab('social')} className="hover:text-[#DD2A7B] transition-colors flex items-center gap-1">
+                  <span>Social Hub (Instagram)</span>
+                </button>
+              </li>
+              <li>
                 <button onClick={() => onNavigateTab('contact')} className="hover:text-[#FF6B6B] transition-colors">
                   Contact & Location
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onNavigateTab('admin')} className="hover:text-slate-200 transition-colors text-slate-400 text-[11px]">
+                  Factory Admin Portal
                 </button>
               </li>
               <li>

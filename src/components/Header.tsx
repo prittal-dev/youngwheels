@@ -19,7 +19,9 @@ import {
   ShieldCheck,
   LayoutGrid,
   Zap,
-  Bike
+  Bike,
+  Instagram,
+  BookOpen
 } from 'lucide-react';
 import { COMPANY_DETAILS, CATEGORIES } from '../data/company';
 import { CategoryId } from '../types';
@@ -51,14 +53,26 @@ export const Header: React.FC<HeaderProps> = ({
 
   const getCategoryIcon = (id: CategoryId) => {
     switch (id) {
-      case 'baby-walkers': return <Footprints className="w-4 h-4 text-[#84CC16]" />;
-      case 'magic-cars': return <Car className="w-4 h-4 text-[#FF6B6B]" />;
-      case 'riders': return <Car className="w-4 h-4 text-[#10B981]" />;
-      case 'potty-chairs': return <Sparkles className="w-4 h-4 text-[#EF4444]" />;
-      case 'electric-rideons': return <Zap className="w-4 h-4 text-[#F97316]" />;
-      case 'rocking-animals': return <Smile className="w-4 h-4 text-[#EC4899]" />;
-      case 'tri-cycles': return <Bike className="w-4 h-4 text-[#06B6D4]" />;
-      case 'kick-scooters': return <Sparkles className="w-4 h-4 text-[#22C55E]" />;
+      case 'ride-ons':
+      case 'riders':
+      case 'electric-rideons':
+      case 'rocking-animals':
+        return <Car className="w-4 h-4 text-[#10B981]" />;
+      case 'swing-cars':
+      case 'magic-cars':
+        return <Car className="w-4 h-4 text-[#FF6B6B]" />;
+      case 'baby-walkers':
+        return <Footprints className="w-4 h-4 text-[#84CC16]" />;
+      case 'potty-trainers':
+      case 'potty-chairs':
+        return <Sparkles className="w-4 h-4 text-[#EF4444]" />;
+      case 'tricycles':
+      case 'tri-cycles':
+        return <Bike className="w-4 h-4 text-[#06B6D4]" />;
+      case 'kick-scooters':
+        return <Sparkles className="w-4 h-4 text-[#22C55E]" />;
+      default:
+        return <Car className="w-4 h-4 text-[#FF6B6B]" />;
     }
   };
 
@@ -134,6 +148,7 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-1 font-semibold text-sm">
+          {/* 1. Home */}
           <button
             onClick={() => handleNavClick('home')}
             className={`px-3 py-2 rounded-xl transition-all ${
@@ -145,7 +160,19 @@ export const Header: React.FC<HeaderProps> = ({
             Home
           </button>
 
-          {/* Products Dropdown */}
+          {/* 2. About Us */}
+          <button
+            onClick={() => handleNavClick('about')}
+            className={`px-3 py-2 rounded-xl transition-all ${
+              activeTab === 'about'
+                ? 'bg-[#4ECDC4] text-slate-900 font-bold shadow-xs'
+                : 'text-slate-700 hover:bg-[#E0F7F5] hover:text-slate-900'
+            }`}
+          >
+            About Us
+          </button>
+
+          {/* 3. Toys Dropdown */}
           <div 
             className="relative"
             onMouseEnter={() => setProductsDropdownOpen(true)}
@@ -154,12 +181,12 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               onClick={() => handleNavClick('all-categories')}
               className={`px-3 py-2 rounded-xl flex items-center gap-1 transition-all ${
-                activeTab === 'all-categories' || ['baby-walkers', 'magic-cars', 'riders', 'potty-chairs', 'electric-rideons', 'rocking-animals', 'tri-cycles', 'kick-scooters'].includes(activeTab)
+                activeTab === 'all-categories' || ['ride-ons', 'kick-scooters', 'baby-walkers', 'swing-cars', 'tricycles', 'potty-trainers', 'magic-cars', 'riders', 'potty-chairs', 'electric-rideons', 'rocking-animals', 'tri-cycles'].includes(activeTab)
                   ? 'bg-[#FF6B6B] text-white font-bold shadow-xs'
                   : 'text-slate-700 hover:bg-[#FFE399] hover:text-slate-900'
               }`}
             >
-              <span>Toy Categories</span>
+              <span>Toys</span>
               <ChevronDown className={`w-4 h-4 transition-transform ${productsDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
 
@@ -178,7 +205,7 @@ export const Header: React.FC<HeaderProps> = ({
                   </div>
                   <div>
                     <div className="text-xs font-black">All Categories View</div>
-                    <div className="text-[10px] text-slate-600">Browse 8 Full Categories</div>
+                    <div className="text-[10px] text-slate-600">Browse 6 Core Categories (55 Models)</div>
                   </div>
                 </button>
 
@@ -208,17 +235,7 @@ export const Header: React.FC<HeaderProps> = ({
             )}
           </div>
 
-          <button
-            onClick={() => handleNavClick('about')}
-            className={`px-3 py-2 rounded-xl transition-all ${
-              activeTab === 'about'
-                ? 'bg-[#4ECDC4] text-slate-900 font-bold shadow-xs'
-                : 'text-slate-700 hover:bg-[#E0F7F5] hover:text-slate-900'
-            }`}
-          >
-            About Us
-          </button>
-
+          {/* 4. Blogs */}
           <button
             onClick={() => handleNavClick('blog')}
             className={`px-3 py-2 rounded-xl transition-all ${
@@ -227,9 +244,10 @@ export const Header: React.FC<HeaderProps> = ({
                 : 'text-slate-700 hover:bg-[#FFF4B0] hover:text-slate-900'
             }`}
           >
-            Blog & Guides
+            Blogs
           </button>
 
+          {/* 5. Visit Factory */}
           <button
             onClick={() => handleNavClick('contact')}
             className={`px-3 py-2 rounded-xl transition-all ${
@@ -238,20 +256,20 @@ export const Header: React.FC<HeaderProps> = ({
                 : 'text-slate-700 hover:bg-[#F0EBFA] hover:text-slate-900'
             }`}
           >
-            Contact Factory
+            Visit Factory
           </button>
 
+          {/* 6. Social Hub */}
           <button
-            onClick={() => handleNavClick('admin')}
+            onClick={() => handleNavClick('social')}
             className={`px-3 py-2 rounded-xl transition-all flex items-center gap-1.5 ${
-              activeTab === 'admin'
-                ? 'bg-[#FF6B6B] text-white font-bold shadow-xs'
-                : 'text-slate-700 hover:bg-[#FFF0F0] hover:text-[#FF6B6B]'
+              activeTab === 'social'
+                ? 'bg-[#DD2A7B] text-white font-bold shadow-xs'
+                : 'text-slate-700 hover:bg-[#FDF2F8] hover:text-[#DD2A7B]'
             }`}
-            title="Factory Admin Desk (Password: prittal123)"
           >
-            <ShieldCheck className="w-4 h-4 text-[#FF6B6B]" />
-            <span>Admin</span>
+            <Instagram className="w-4 h-4 text-[#DD2A7B]" />
+            <span>Social Hub</span>
           </button>
         </nav>
 
@@ -296,6 +314,7 @@ export const Header: React.FC<HeaderProps> = ({
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-[#FFFDF9] border-t border-[#FFE8B5] px-4 pt-3 pb-6 space-y-2 animate-in slide-in-from-top duration-200">
+          {/* 1. Home */}
           <button
             onClick={() => handleNavClick('home')}
             className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 ${
@@ -306,27 +325,7 @@ export const Header: React.FC<HeaderProps> = ({
             <span>Home</span>
           </button>
 
-          <div className="py-1">
-            <div className="px-4 text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">
-              Toy Categories
-            </div>
-            {CATEGORIES.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => handleNavClick(cat.id)}
-                className={`w-full flex items-center justify-between px-4 py-2 rounded-xl text-sm font-semibold ${
-                  activeTab === cat.id ? 'bg-[#FF6B6B] text-white font-bold' : 'text-slate-700 hover:bg-slate-100'
-                }`}
-              >
-                <div className="flex items-center gap-2">
-                  {getCategoryIcon(cat.id)}
-                  <span>{cat.name}</span>
-                </div>
-                <span className="text-xs opacity-75">{cat.badge}</span>
-              </button>
-            ))}
-          </div>
-
+          {/* 2. About Us */}
           <button
             onClick={() => handleNavClick('about')}
             className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 ${
@@ -334,9 +333,49 @@ export const Header: React.FC<HeaderProps> = ({
             }`}
           >
             <Info className="w-4 h-4 text-slate-900" />
-            <span>About Young Wheels</span>
+            <span>About Us</span>
           </button>
 
+          {/* 3. Toys Categories */}
+          <div className="py-1">
+            <button
+              onClick={() => handleNavClick('all-categories')}
+              className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-black flex items-center gap-2 mb-1 ${
+                activeTab === 'all-categories' ? 'bg-[#FF6B6B] text-white' : 'bg-[#FFF9EE] text-slate-900 border border-[#FFE8B5]'
+              }`}
+            >
+              <LayoutGrid className="w-4 h-4 text-[#FFD93D]" />
+              <span>Toys (All Categories)</span>
+            </button>
+            {CATEGORIES.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => handleNavClick(cat.id)}
+                className={`w-full flex items-center justify-between px-4 py-2 rounded-xl text-xs font-semibold ${
+                  activeTab === cat.id ? 'bg-[#FF6B6B] text-white font-bold' : 'text-slate-700 hover:bg-slate-100'
+                }`}
+              >
+                <div className="flex items-center gap-2">
+                  {getCategoryIcon(cat.id)}
+                  <span>{cat.name}</span>
+                </div>
+                <span className="text-[10px] opacity-75">{cat.badge}</span>
+              </button>
+            ))}
+          </div>
+
+          {/* 4. Blogs */}
+          <button
+            onClick={() => handleNavClick('blog')}
+            className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 ${
+              activeTab === 'blog' ? 'bg-[#FFD93D] text-slate-900' : 'text-slate-700 hover:bg-slate-100'
+            }`}
+          >
+            <BookOpen className="w-4 h-4 text-slate-900" />
+            <span>Blogs & Guides</span>
+          </button>
+
+          {/* 5. Visit Factory */}
           <button
             onClick={() => handleNavClick('contact')}
             className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 ${
@@ -344,7 +383,18 @@ export const Header: React.FC<HeaderProps> = ({
             }`}
           >
             <PhoneCall className="w-4 h-4 text-slate-900" />
-            <span>Contact Factory</span>
+            <span>Visit Factory</span>
+          </button>
+
+          {/* 6. Social Hub */}
+          <button
+            onClick={() => handleNavClick('social')}
+            className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 ${
+              activeTab === 'social' ? 'bg-[#DD2A7B] text-white' : 'text-slate-700 hover:bg-slate-100'
+            }`}
+          >
+            <Instagram className="w-4 h-4 text-[#DD2A7B]" />
+            <span>Social Hub (Instagram)</span>
           </button>
 
           <div className="pt-2 flex flex-col gap-2">

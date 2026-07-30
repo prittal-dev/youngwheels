@@ -48,7 +48,21 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
   const allProducts = products || PRODUCTS;
   const displayedProducts = selectedTab === 'bestsellers'
     ? allProducts.filter(p => p.isBestSeller)
-    : allProducts.filter(p => p.category === selectedTab);
+    : allProducts.filter(p => {
+        if (selectedTab === 'ride-ons' || selectedTab === 'riders' || selectedTab === 'electric-rideons' || selectedTab === 'rocking-animals') {
+          return p.category === 'ride-ons' || p.category === 'riders' || p.category === 'electric-rideons' || p.category === 'rocking-animals';
+        }
+        if (selectedTab === 'swing-cars' || selectedTab === 'magic-cars') {
+          return p.category === 'swing-cars' || p.category === 'magic-cars';
+        }
+        if (selectedTab === 'tricycles' || selectedTab === 'tri-cycles') {
+          return p.category === 'tricycles' || p.category === 'tri-cycles';
+        }
+        if (selectedTab === 'potty-trainers' || selectedTab === 'potty-chairs') {
+          return p.category === 'potty-trainers' || p.category === 'potty-chairs';
+        }
+        return p.category === selectedTab;
+      });
 
   const totalPages = Math.ceil(displayedProducts.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;

@@ -1002,7 +1002,7 @@ export const AdminPage: React.FC<AdminPageProps> = ({
                     <input
                       type="color"
                       value={customColorHex}
-                      onChange={e => setNewColorHex(e.target.value)}
+                      onChange={e => setCustomColorHex(e.target.value)}
                       className="w-9 h-9 p-0.5 rounded-xl border border-slate-300 cursor-pointer bg-white"
                       title="Choose Custom Color"
                     />

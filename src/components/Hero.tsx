@@ -99,7 +99,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="hidden lg:block absolute top-16 left-12 animate-float-slow opacity-90 z-20"
+        className="hidden xl:block absolute top-4 left-6 animate-float-slow opacity-90 z-10"
       >
         <div className="bg-white/90 backdrop-blur-md border-2 border-[#FFE8B5] rounded-2xl p-3 shadow-xl flex items-center gap-3 icon-box-glow">
           <div className="w-10 h-10 rounded-xl bg-[#FFF0F0] flex items-center justify-center shrink-0">
@@ -116,7 +116,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="hidden lg:block absolute top-36 right-12 animate-float-fast opacity-90 z-20"
+        className="hidden xl:block absolute top-28 right-6 animate-float-fast opacity-90 z-10"
       >
         <div className="bg-white/90 backdrop-blur-md border-2 border-[#4ECDC4]/30 rounded-2xl p-3 shadow-xl flex items-center gap-3 icon-box-glow">
           <div className="w-10 h-10 rounded-xl bg-[#EBFBFA] flex items-center justify-center shrink-0">
