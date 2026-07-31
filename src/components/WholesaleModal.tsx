@@ -58,9 +58,15 @@ export const WholesaleModal: React.FC<WholesaleModalProps> = ({ isOpen, onClose 
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200">
+    <div
+      onClick={onClose}
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200 cursor-pointer"
+    >
       
-      <div className="relative w-full max-w-xl bg-white rounded-[32px] border-4 border-[#FFD93D] p-6 sm:p-8 shadow-2xl max-h-[92vh] overflow-y-auto">
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="relative w-full max-w-xl bg-white rounded-[32px] border-4 border-[#FFD93D] p-6 sm:p-8 shadow-2xl max-h-[92vh] overflow-y-auto cursor-default"
+      >
         
         <button
           onClick={onClose}

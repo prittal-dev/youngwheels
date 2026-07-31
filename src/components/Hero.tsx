@@ -423,7 +423,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
         </div>
 
         {/* Full-Width Centered Wholesale Dealer Quick Banner */}
-        <div className="mt-8 text-center flex justify-center">
+        {/* <div className="mt-8 text-center flex justify-center">
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
@@ -435,7 +435,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
               <span className="font-semibold text-slate-600 underline">Request competitive dealer pricing and unlock special bulk purchase benefits.</span>
             </span>
           </motion.button>
-        </div>
+        </div> */}
 
         {/* Stats Row */}
         <div className="mt-16 pt-8 border-t-2 border-[#FFE8B5] grid grid-cols-2 md:grid-cols-4 gap-6 text-center">

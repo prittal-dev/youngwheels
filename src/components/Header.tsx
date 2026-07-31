@@ -21,7 +21,9 @@ import {
   Zap,
   Bike,
   Instagram,
-  BookOpen
+  BookOpen,
+  Youtube,
+  Facebook
 } from 'lucide-react';
 import { COMPANY_DETAILS, CATEGORIES } from '../data/company';
 import { CategoryId } from '../types';
@@ -44,6 +46,7 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
+  const [socialDropdownOpen, setSocialDropdownOpen] = useState(false);
 
   const handleNavClick = (tabId: string) => {
     setActiveTab(tabId);
@@ -243,18 +246,87 @@ export const Header: React.FC<HeaderProps> = ({
             Visit Factory
           </button>
 
-          {/* 6. Social Hub */}
-          <button
-            onClick={() => handleNavClick('social')}
-            className={`px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-xl transition-all flex items-center gap-1.5 whitespace-nowrap ${
-              activeTab === 'social'
-                ? 'bg-[#DD2A7B] text-white font-bold shadow-xs'
-                : 'text-slate-700 hover:bg-[#FDF2F8] hover:text-[#DD2A7B]'
-            }`}
+          {/* 6. Social Hub Dropdown */}
+          <div 
+            className="relative"
+            onMouseEnter={() => setSocialDropdownOpen(true)}
+            onMouseLeave={() => setSocialDropdownOpen(false)}
           >
-            <Instagram className="w-3.5 h-3.5 text-[#3b3035]" />
-            <span>Social Hub</span>
-          </button>
+            <button
+              onClick={() => handleNavClick('social')}
+              className={`px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-xl flex items-center gap-1.5 transition-all whitespace-nowrap ${
+                ['social', 'social-instagram', 'social-youtube', 'social-facebook'].includes(activeTab)
+                  ? 'bg-[#DD2A7B] text-white font-bold shadow-xs'
+                  : 'text-slate-700 hover:bg-[#FDF2F8] hover:text-[#DD2A7B]'
+              }`}
+            >
+              <Instagram className="w-3.5 h-3.5 text-pink" />
+              <span>Social Hub</span>
+              <ChevronDown className={`w-3.5 h-3.5 transition-transform ${socialDropdownOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            {socialDropdownOpen && (
+              <div className="absolute top-full right-0 mt-1 w-64 bg-white rounded-2xl shadow-2xl border-2 border-[#FFE8B5] p-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1">
+                  Official Social Channels
+                </div>
+
+                {/* 1. Instagram */}
+                <button
+                  onClick={() => handleNavClick('social-instagram')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left transition-all ${
+                    activeTab === 'social-instagram' || activeTab === 'social'
+                      ? 'bg-[#FDF2F8] border border-[#FBCFE8] font-bold text-[#DD2A7B]'
+                      : 'hover:bg-slate-50 text-slate-800'
+                  }`}
+                >
+                  <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#FFD93D] via-[#DD2A7B] to-[#8134AF] text-white flex items-center justify-center shrink-0 shadow-2xs">
+                    <Instagram className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-slate-900">Instagram Hub</div>
+                    <div className="text-[10px] text-slate-500">@youngwheelsindia • Story Highlights</div>
+                  </div>
+                </button>
+
+                {/* 2. YouTube */}
+                <button
+                  onClick={() => handleNavClick('social-youtube')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left transition-all ${
+                    activeTab === 'social-youtube'
+                      ? 'bg-[#FFF0F0] border border-[#FFD6D6] font-bold text-[#FF0000]'
+                      : 'hover:bg-slate-50 text-slate-800'
+                  }`}
+                >
+                  <div className="w-8 h-8 rounded-lg bg-[#FF0000] text-white flex items-center justify-center shrink-0 shadow-2xs">
+                    <Youtube className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-slate-900">YouTube Channel</div>
+                    <div className="text-[10px] text-slate-500">@youngwheelss • Video Demos</div>
+                  </div>
+                </button>
+
+                {/* 3. Facebook */}
+                <button
+                  onClick={() => handleNavClick('social-facebook')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left transition-all ${
+                    activeTab === 'social-facebook'
+                      ? 'bg-[#EFF6FF] border border-[#BFDBFE] font-bold text-[#1877F2]'
+                      : 'hover:bg-slate-50 text-slate-800'
+                  }`}
+                >
+                  <div className="w-8 h-8 rounded-lg bg-[#1877F2] text-white flex items-center justify-center shrink-0 shadow-2xs">
+                    <Facebook className="w-4 h-4 fill-white" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-slate-900">Facebook Page</div>
+                    <div className="text-[10px] text-slate-500">Young Wheels • Community & Posts</div>
+                  </div>
+                </button>
+              </div>
+            )}
+          </div>
         </nav>
 
         {/* Action Buttons */}
@@ -370,16 +442,39 @@ export const Header: React.FC<HeaderProps> = ({
             <span>Visit Factory</span>
           </button>
 
-          {/* 6. Social Hub */}
-          <button
-            onClick={() => handleNavClick('social')}
-            className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 ${
-              activeTab === 'social' ? 'bg-[#DD2A7B] text-white' : 'text-slate-700 hover:bg-slate-100'
-            }`}
-          >
-            <Instagram className="w-4 h-4 text-[#DD2A7B]" />
-            <span>Social Hub (Instagram)</span>
-          </button>
+          {/* 6. Social Hub Mobile Options */}
+          <div className="py-1 border-t border-slate-100 space-y-1">
+            <div className="text-[10px] font-black text-slate-400 uppercase tracking-wider px-4 py-1">
+              Social Hub Channels
+            </div>
+            <button
+              onClick={() => handleNavClick('social-instagram')}
+              className={`w-full flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold ${
+                activeTab === 'social-instagram' || activeTab === 'social' ? 'bg-[#DD2A7B] text-white' : 'text-slate-700 hover:bg-slate-100'
+              }`}
+            >
+              <Instagram className="w-4 h-4" />
+              <span>Instagram (@youngwheelsindia)</span>
+            </button>
+            <button
+              onClick={() => handleNavClick('social-youtube')}
+              className={`w-full flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold ${
+                activeTab === 'social-youtube' ? 'bg-[#FF0000] text-white' : 'text-slate-700 hover:bg-slate-100'
+              }`}
+            >
+              <Youtube className="w-4 h-4" />
+              <span>YouTube (@youngwheelss)</span>
+            </button>
+            <button
+              onClick={() => handleNavClick('social-facebook')}
+              className={`w-full flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold ${
+                activeTab === 'social-facebook' ? 'bg-[#1877F2] text-white' : 'text-slate-700 hover:bg-slate-100'
+              }`}
+            >
+              <Facebook className="w-4 h-4 fill-white" />
+              <span>Facebook (Young Wheels)</span>
+            </button>
+          </div>
 
           <div className="pt-2 flex flex-col gap-2">
             <a

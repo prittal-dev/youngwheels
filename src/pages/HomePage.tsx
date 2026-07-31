@@ -6,6 +6,7 @@ import { ToyFinder } from '../components/ToyFinder';
 import { WhyChooseUs } from '../components/WhyChooseUs';
 import { WholesaleB2B } from '../components/WholesaleB2B';
 import { Testimonials } from '../components/Testimonials';
+import { RetailPartners } from '../components/RetailPartners';
 import { CategoryId, Product } from '../types';
 
 interface HomePageProps {
@@ -52,6 +53,8 @@ export const HomePage: React.FC<HomePageProps> = ({
       <WhyChooseUs />
 
       <WholesaleB2B onOpenWholesaleModal={onOpenWholesaleModal} />
+
+      <RetailPartners />
 
       <Testimonials />
     </main>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, Trash2, MessageCircle, Send, Plus, Minus, ShoppingBag, Sparkles } from 'lucide-react';
 import { EnquiryItem } from '../types';
 import { COMPANY_DETAILS } from '../data/company';
@@ -20,12 +20,24 @@ export const EnquiryDrawer: React.FC<EnquiryDrawerProps> = ({
   onRemoveItem,
   onClearItems,
 }) => {
-  if (!isOpen) return null;
-
   const [customerName, setCustomerName] = useState('');
   const [city, setCity] = useState('');
   const [orderType, setOrderType] = useState<'Retail' | 'Wholesale'>('Retail');
   const [notes, setNotes] = useState('');
+
+  // Close drawer on Escape key
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
 
   const generateWhatsAppMessage = () => {
     let msg = `*NEW TOY ENQUIRY - YOUNG WHEELS*\n`;
@@ -52,9 +64,14 @@ export const EnquiryDrawer: React.FC<EnquiryDrawerProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex justify-end bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200">
-      
-      <div className="relative w-full max-w-md bg-[#FFFDF9] h-full shadow-2xl border-l-4 border-[#FFD93D] p-6 flex flex-col justify-between overflow-y-auto">
+    <div
+      onClick={onClose}
+      className="fixed inset-0 z-50 flex justify-end bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200 cursor-pointer"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="relative w-full max-w-md bg-[#FFFDF9] h-full shadow-2xl border-l-4 border-[#FFD93D] p-6 flex flex-col justify-between overflow-y-auto cursor-default"
+      >
         
         {/* Header */}
         <div>

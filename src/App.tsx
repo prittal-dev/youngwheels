@@ -6,7 +6,6 @@ import { ProductModal } from './components/ProductModal';
 import { EnquiryDrawer } from './components/EnquiryDrawer';
 import { WholesaleModal } from './components/WholesaleModal';
 import { ChatbotWidget } from './components/ChatbotWidget';
-import { RetailPartners } from './components/RetailPartners';
 import { FloatingToyBackground } from './components/FloatingToyBackground';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
@@ -283,7 +282,21 @@ export default function App() {
                 />
               )}
 
-              {activeTab === 'social' && <SocialPage />}
+              {['social', 'social-instagram', 'social-youtube', 'social-facebook'].includes(activeTab) && (
+                <SocialPage
+                  initialPlatform={
+                    activeTab === 'social-youtube'
+                      ? 'youtube'
+                      : activeTab === 'social-facebook'
+                      ? 'facebook'
+                      : 'instagram'
+                  }
+                  onNavigateTab={(tab) => {
+                    setActiveTab(tab);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                />
+              )}
 
               {activeTab === 'admin' && (
                 <AdminPage
@@ -301,8 +314,6 @@ export default function App() {
         </div>
       </main>
 
-      {/* Retail Partners Section */}
-      <RetailPartners />
 
       {/* Footer */}
       <Footer
