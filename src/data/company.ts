@@ -2,7 +2,7 @@ import { Testimonial, CategoryInfo } from '../types';
 
 export const COMPANY_DETAILS = {
   name: 'Young Wheels',
-  tagline: 'A Perfect Place To Explore Your Kid’s Talent',
+  tagline: 'Quality • Trust • Care',
   foundedYear: 2019,
   headquarters: 'Pooth Khurd, New Delhi',
   phone: '+91 8383047505',

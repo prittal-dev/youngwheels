@@ -10,11 +10,19 @@ import {
   CheckCircle2,
   Car,
   Heart,
-  Zap
+  Zap,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import confetti from 'canvas-confetti';
 import { COMPANY_DETAILS } from '../data/company';
+import swingCarNoBg from '../../assets/bg_removed/WhatsApp Image 2026-07-30 at 15.44.11.png';
+import mclarenNoBg from '../../assets/bg_removed/WhatsApp Image 2026-07-30 at 15.43.12.png';
+import nexrideNoBg from '../../assets/bg_removed/WhatsApp Image 2026-07-30 at 15.43.21 (1).png';
+import walkerNoBg from '../../assets/bg_removed/WhatsApp Image 2026-07-30 at 15.43.29.png';
+import policeBikeNoBg from '../../assets/bg_removed/WhatsApp Image 2026-07-30 at 15.44.13.png';
+import pottyChairNoBg from '../../assets/bg_removed/WhatsApp Image 2026-07-30 at 15.44.08.png';
 import { AnimatedCounter } from './AnimatedCounter';
 
 interface HeroProps {
@@ -22,6 +30,81 @@ interface HeroProps {
   onOpenWholesaleModal: () => void;
   heroImage?: string;
 }
+
+const CAROUSEL_SLIDES = [
+  {
+    id: 'swing-cars',
+    categoryName: 'Swing Cars & Magic Cars',
+    title: 'Bear Rider Magic Swing Car',
+    subtitle: 'Model: YW-MC-01 • Musical Horn & 360° Glider',
+    badge: 'Flagship Bestseller',
+    badgeIcon: Star,
+    featureTag: '360° Twist Glide',
+    capacity: 'Up to 30 kg',
+    image: swingCarNoBg,
+    bgGradient: 'from-[#FFF4B0] via-[#FFEBEB] to-[#E0F7F5]',
+  },
+  {
+    id: 'ride-ons',
+    categoryName: 'Ride-Ons & Push Cars',
+    title: 'McLaren Sports Push Car',
+    subtitle: 'Model: YW-RO-13 • Supercar Design & Bucket Seat',
+    badge: '13 Models Available',
+    badgeIcon: Car,
+    featureTag: 'Supercar Styling',
+    capacity: 'Up to 20 kg',
+    image: mclarenNoBg,
+    bgGradient: 'from-[#E6F4EA] via-[#FFF4B0] to-[#E0F7F5]',
+  },
+  {
+    id: 'kick-scooters',
+    categoryName: 'Kick Scooters & Police Bikes',
+    title: 'Turbo Police Patrol Bike',
+    subtitle: 'Model: YW-TC-04 • Electronic Siren & LED Tail Light',
+    badge: '8 Models Available',
+    badgeIcon: Sparkles,
+    featureTag: 'Siren & Flashing Lights',
+    capacity: 'Up to 25 kg',
+    image: policeBikeNoBg,
+    bgGradient: 'from-[#E0F7F5] via-[#E6F4EA] to-[#FFF4B0]',
+  },
+  {
+    id: 'baby-walkers',
+    categoryName: 'Baby Walkers',
+    title: 'Bunny Sit-to-Stand Walker',
+    subtitle: 'Model: YW-BW-01 • Speed Control Wheels & Music',
+    badge: '3 Models Available',
+    badgeIcon: ShieldCheck,
+    featureTag: 'ZED Zero Edge Tech',
+    capacity: 'Up to 15 kg',
+    image: walkerNoBg,
+    bgGradient: 'from-[#FFEBEB] via-[#FFF4B0] to-[#FFE399]',
+  },
+  {
+    id: 'tricycles',
+    categoryName: 'Kids Tricycles',
+    title: 'NexRide Classic Tricycle',
+    subtitle: 'Model: YW-TC-01 • High-Tensile Steel Frame & Pedals',
+    badge: '11 Models Available',
+    badgeIcon: Award,
+    featureTag: 'Carbon Steel Frame',
+    capacity: 'Up to 25 kg',
+    image: nexrideNoBg,
+    bgGradient: 'from-[#FFE399] via-[#E0F7F5] to-[#E6F4EA]',
+  },
+  {
+    id: 'potty-trainers',
+    categoryName: 'Potty Chairs & Trainers',
+    title: 'Scooty Fun Potty Trainer',
+    subtitle: 'Model: YW-PT-01 • Ergonomic Splashtrap & Soft Seat',
+    badge: '8 Models Available',
+    badgeIcon: Heart,
+    featureTag: '100% Non-Toxic ABS',
+    capacity: 'Up to 20 kg',
+    image: pottyChairNoBg,
+    bgGradient: 'from-[#EBF5FF] via-[#FFEBEB] to-[#FFF4B0]',
+  },
+];
 
 const FLIP_ITEMS = [
   { 
@@ -68,6 +151,7 @@ const FLIP_ITEMS = [
 
 export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal, heroImage }) => {
   const [flipIndex, setFlipIndex] = React.useState(0);
+  const [slideIndex, setSlideIndex] = React.useState(0);
 
   React.useEffect(() => {
     const timer = setInterval(() => {
@@ -76,7 +160,16 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
     return () => clearInterval(timer);
   }, []);
 
+  React.useEffect(() => {
+    const slideTimer = setInterval(() => {
+      setSlideIndex((prev) => (prev + 1) % CAROUSEL_SLIDES.length);
+    }, 3200);
+    return () => clearInterval(slideTimer);
+  }, []);
+
   const currentFlip = FLIP_ITEMS[flipIndex];
+  const currentSlide = CAROUSEL_SLIDES[slideIndex];
+  const BadgeIcon = currentSlide.badgeIcon;
 
   const triggerConfetti = () => {
     confetti({
@@ -119,7 +212,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
         data-scroll-speed="-1.2"
-        className="hidden xl:block absolute top-28 right-6 animate-float-fast opacity-90 z-10"
+        className="hidden xl:block absolute top-10 right-6 animate-float-fast opacity-90 z-10"
       >
         <div className="bg-white/90 backdrop-blur-md border-2 border-[#4ECDC4]/30 rounded-2xl p-3 shadow-xl flex items-center gap-3 icon-box-glow">
           <div className="w-10 h-10 rounded-xl bg-[#EBFBFA] flex items-center justify-center shrink-0">
@@ -234,46 +327,90 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
 
           </motion.div>
 
-          {/* Right Visual Hero Card / Product Spotlight */}
-          <div className="lg:col-span-5 relative">
+          {/* Right Visual Hero Card / Product Spotlight Automatic Carousel */}
+          <div className="lg:col-span-5 relative -mt-6 sm:-mt-10 lg:-mt-16 z-20">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               
               {/* Outer Decorative Card Frame */}
-              <div className="relative bg-white p-4 sm:p-6 rounded-[36px] border-4 border-[#FFE8B5] shadow-2xl overflow-hidden">
+              <div className="relative bg-white p-4 sm:p-6 rounded-[36px] border-4 border-[#FFE8B5] shadow-2xl overflow-hidden group">
                 
                 {/* Product Badge */}
                 <div className="absolute top-6 left-6 z-20 bg-[#FFD93D] text-slate-900 px-3 py-1 rounded-full text-xs font-black shadow-xs flex items-center gap-1">
-                  <Star className="w-3.5 h-3.5 fill-slate-900" />
-                  <span>Flagship Bestseller</span>
+                  <BadgeIcon className="w-3.5 h-3.5 fill-slate-900 text-slate-900" />
+                  <span>{currentSlide.badge}</span>
                 </div>
 
-                {/* Hero Product Image */}
-                <div className="relative h-72 sm:h-80 w-full rounded-[28px] overflow-hidden bg-gradient-to-tr from-[#FFF4B0] via-[#FFEBEB] to-[#E0F7F5] flex items-center justify-center p-4">
-                  <img
-                    src={heroImage || "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=800"}
-                    alt="Young Wheels Magic Swing Car"
-                    className="w-full h-full object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-105"
-                  />
+                {/* Category Pill Top Right */}
+                <div className="absolute top-6 right-6 z-20 bg-white/90 backdrop-blur-md text-slate-800 px-2.5 py-1 rounded-full text-[10px] font-bold shadow-xs border border-slate-200">
+                  {slideIndex + 1} / {CAROUSEL_SLIDES.length} • {currentSlide.categoryName}
+                </div>
+
+                {/* Hero Product Image Carousel Container */}
+                <div className={`relative h-72 sm:h-80 w-full rounded-[28px] overflow-hidden bg-gradient-to-tr ${currentSlide.bgGradient} flex items-center justify-center p-4 transition-colors duration-700`}>
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={currentSlide.id}
+                      src={heroImage && slideIndex === 0 ? heroImage : currentSlide.image}
+                      alt={currentSlide.title}
+                      initial={{ opacity: 0, scale: 0.9, x: 40 }}
+                      animate={{ opacity: 1, scale: 1, x: 0 }}
+                      exit={{ opacity: 0, scale: 0.9, x: -40 }}
+                      transition={{ duration: 0.45, ease: [0.34, 1.56, 0.64, 1] }}
+                      className="w-full h-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-300"
+                    />
+                  </AnimatePresence>
                   
-                  {/* Decorative Stickers */}
-                  <div className="absolute bottom-3 right-3 bg-white/95 backdrop-blur-xs px-3 py-1.5 rounded-xl border border-slate-200 text-xs font-black text-slate-800 shadow-md flex items-center gap-1.5">
+                  {/* Decorative Sticker */}
+                  <div className="absolute bottom-3 right-3 bg-white/95 backdrop-blur-xs px-3 py-1.5 rounded-xl border border-slate-200 text-xs font-black text-slate-800 shadow-md flex items-center gap-1.5 z-10">
                     <Zap className="w-3.5 h-3.5 text-[#FF6B6B] fill-[#FF6B6B]" />
-                    <span>360° Twist Glide</span>
+                    <span>{currentSlide.featureTag}</span>
                   </div>
+
+                  {/* Manual Arrow Controls */}
+                  <button
+                    onClick={() => setSlideIndex((prev) => (prev - 1 + CAROUSEL_SLIDES.length) % CAROUSEL_SLIDES.length)}
+                    className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/85 hover:bg-white text-slate-800 flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity z-20 cursor-pointer"
+                    aria-label="Previous slide"
+                  >
+                    <ChevronLeft className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={() => setSlideIndex((prev) => (prev + 1) % CAROUSEL_SLIDES.length)}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/85 hover:bg-white text-slate-800 flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity z-20 cursor-pointer"
+                    aria-label="Next slide"
+                  >
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
                 </div>
 
                 {/* Card Title & Specs Summary */}
                 <div className="mt-4 pt-2 border-t border-slate-100 flex items-center justify-between">
                   <div>
-                    <h3 className="font-heading font-extrabold text-lg text-slate-900">Bear Rider Swing Car</h3>
-                    <p className="text-xs font-semibold text-slate-500">Model: YW-MC-01 • Musical Horn & LED</p>
+                    <h3 className="font-heading font-extrabold text-lg text-slate-900">{currentSlide.title}</h3>
+                    <p className="text-xs font-semibold text-slate-500">{currentSlide.subtitle}</p>
                   </div>
 
-                  <div className="text-right">
-                    <span className="text-xs font-bold bg-[#A8E6CF] text-slate-900 px-2.5 py-1 rounded-full">
-                      Up to 30 kg
+                  <div className="text-right shrink-0">
+                    <span className="text-xs font-bold bg-[#A8E6CF] text-slate-900 px-2.5 py-1 rounded-full whitespace-nowrap">
+                      {currentSlide.capacity}
                     </span>
                   </div>
+                </div>
+
+                {/* Carousel Pagination Dots */}
+                <div className="mt-3 flex items-center justify-center gap-1.5">
+                  {CAROUSEL_SLIDES.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setSlideIndex(idx)}
+                      className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                        idx === slideIndex 
+                          ? 'w-7 bg-[#FF6B6B]' 
+                          : 'w-2 bg-slate-300 hover:bg-slate-400'
+                      }`}
+                      title={`Go to category ${idx + 1}`}
+                    />
+                  ))}
                 </div>
 
               </div>

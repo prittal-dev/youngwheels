@@ -44,9 +44,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
                   className="h-12 w-auto object-contain" 
                 />
               </div>
-              <p className="text-[11px] font-semibold text-[#FFD93D]">
-                {COMPANY_DETAILS.tagline}
-              </p>
+              <div className="font-heading flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider pt-1">
+                <span className="text-[#60A5FA]">Quality</span>
+                <span className="text-slate-500">•</span>
+                <span className="text-[#F472B6]">Trust</span>
+                <span className="text-slate-500">•</span>
+                <span className="text-[#34D399]">Care</span>
+              </div>
             </div>
 
             <p className="text-xs text-slate-400 font-medium leading-relaxed">

@@ -116,21 +116,25 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {/* Main Header Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-2.5 flex items-center justify-between gap-4">
         
         {/* Brand Logo */}
         <button 
           onClick={() => handleNavClick('home')} 
-          className="flex items-center gap-2.5 group text-left focus:outline-none shrink-0"
+          className="flex items-center gap-3 group text-left focus:outline-none shrink-0"
         >
           <img 
             src={logoImg} 
             alt="Young Wheels" 
-            className="h-9 sm:h-11 md:h-12 w-auto object-contain group-hover:scale-105 transition-transform shrink-0" 
+            className="h-12 sm:h-16 md:h-[72px] w-auto object-contain group-hover:scale-105 transition-transform shrink-0" 
           />
-          <div className="hidden xl:block border-l-2 border-[#FFE8B5] pl-2.5 py-0.5 shrink-0">
-            <p className="text-[10px] xl:text-[11px] font-semibold text-[#64748B] tracking-wide leading-tight max-w-[150px]">
-              {COMPANY_DETAILS.tagline}
+          <div className="hidden sm:flex flex-col border-l-2 border-[#FFD93D] pl-3 py-0.5 shrink-0 justify-center">
+            <p className="font-heading text-xs lg:text-sm font-bold tracking-wider leading-tight flex items-center gap-1.5 uppercase">
+              <span className="text-[#2563EB]">Quality</span>
+              <span className="text-slate-300">•</span>
+              <span className="text-[#EC4899]">Trust</span>
+              <span className="text-slate-300">•</span>
+              <span className="text-[#10B981]">Care</span>
             </p>
           </div>
         </button>
