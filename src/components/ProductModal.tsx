@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { X, Check, MessageCircle, ShoppingBag, ShieldCheck, Sparkles, Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Product } from '../types';
 import { COMPANY_DETAILS } from '../data/company';
+import { getProductImageForColor } from '../data/products';
 
 interface ProductModalProps {
   product: Product | null;
@@ -15,8 +16,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose, on
   const [selectedColor, setSelectedColor] = useState(product.colors[0]?.name || 'Default');
   const colorScrollRef = useRef<HTMLDivElement>(null);
 
-  const activeColorObj = product.colors.find(c => c.name === selectedColor);
-  const displayedImage = activeColorObj?.image || product.image;
+  const displayedImage = getProductImageForColor(product, selectedColor);
 
   const scrollColors = (direction: 'left' | 'right') => {
     if (colorScrollRef.current) {

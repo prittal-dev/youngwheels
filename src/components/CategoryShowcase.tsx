@@ -27,69 +27,69 @@ export const CategoryShowcase: React.FC<CategoryShowcaseProps> = ({ onSelectCate
       case 'electric-rideons':
       case 'rocking-animals':
         return {
-          cardBg: 'bg-gradient-to-br from-[#E6F4EA] to-[#A7F3D0]/30',
+          cardBg: 'bg-gradient-to-br from-[#F3E8FF] via-[#FAF5FF] to-[#E9D5FF]/60',
+          borderColor: 'border-[#8B5CF6]',
+          badgeBg: 'bg-[#8B5CF6] text-white',
+          btnBg: 'bg-[#8B5CF6] hover:bg-[#7C3AED] text-white',
+          iconBg: 'bg-[#F3E8FF] text-[#8B5CF6]',
+          icon: <Car className="w-5 h-5 text-[#8B5CF6]" />,
+        };
+      case 'kick-scooters':
+        return {
+          cardBg: 'bg-gradient-to-br from-[#ECFDF5] via-[#F0FDF4] to-[#A7F3D0]/60',
           borderColor: 'border-[#10B981]',
           badgeBg: 'bg-[#10B981] text-white',
           btnBg: 'bg-[#10B981] hover:bg-[#059669] text-white',
-          iconBg: 'bg-[#E6F4EA] text-[#10B981]',
-          icon: <Car className="w-5 h-5 text-[#10B981]" />,
+          iconBg: 'bg-[#ECFDF5] text-[#10B981]',
+          icon: <Sparkles className="w-5 h-5 text-[#10B981]" />,
+        };
+      case 'baby-walkers':
+        return {
+          cardBg: 'bg-gradient-to-br from-[#E0F2FE] via-[#F0F9FF] to-[#BAE6FD]/60',
+          borderColor: 'border-[#0284C7]',
+          badgeBg: 'bg-[#0284C7] text-white',
+          btnBg: 'bg-[#0284C7] hover:bg-[#0369A1] text-white',
+          iconBg: 'bg-[#E0F2FE] text-[#0284C7]',
+          icon: <Footprints className="w-5 h-5 text-[#0284C7]" />,
         };
       case 'swing-cars':
       case 'magic-cars':
         return {
-          cardBg: 'bg-gradient-to-br from-[#FFF9E6] to-[#FFE399]/40',
-          borderColor: 'border-[#FFD93D]',
-          badgeBg: 'bg-[#FFD93D] text-slate-900',
-          btnBg: 'bg-[#FF6B6B] hover:bg-[#FF5252] text-white',
-          iconBg: 'bg-[#FFF0F0] text-[#FF6B6B]',
-          icon: <Car className="w-5 h-5 text-[#FF6B6B]" />,
-        };
-      case 'baby-walkers':
-        return {
-          cardBg: 'bg-gradient-to-br from-[#EBFBFA] to-[#A8E6CF]/30',
-          borderColor: 'border-[#4ECDC4]',
-          badgeBg: 'bg-[#4ECDC4] text-slate-900',
-          btnBg: 'bg-[#4ECDC4] hover:bg-[#3dbdb4] text-slate-900',
-          iconBg: 'bg-[#EBFBFA] text-[#4ECDC4]',
-          icon: <Footprints className="w-5 h-5 text-[#4ECDC4]" />,
-        };
-      case 'potty-trainers':
-      case 'potty-chairs':
-        return {
-          cardBg: 'bg-gradient-to-br from-[#FFF0F0] to-[#FECDD3]/30',
-          borderColor: 'border-[#FCA5A5]',
-          badgeBg: 'bg-[#FCA5A5] text-slate-900',
-          btnBg: 'bg-[#EF4444] hover:bg-[#DC2626] text-white',
-          iconBg: 'bg-[#FFF0F0] text-[#EF4444]',
-          icon: <Sparkles className="w-5 h-5 text-[#EF4444]" />,
+          cardBg: 'bg-gradient-to-br from-[#FEF9C3] via-[#FFFBEB] to-[#FDE68A]/60',
+          borderColor: 'border-[#F59E0B]',
+          badgeBg: 'bg-[#F59E0B] text-slate-900 font-black',
+          btnBg: 'bg-[#D97706] hover:bg-[#B45309] text-white',
+          iconBg: 'bg-[#FEF9C3] text-[#D97706]',
+          icon: <Car className="w-5 h-5 text-[#D97706]" />,
         };
       case 'tricycles':
       case 'tri-cycles':
         return {
-          cardBg: 'bg-gradient-to-br from-[#ECFEFF] to-[#A5F3FC]/30',
-          borderColor: 'border-[#06B6D4]',
-          badgeBg: 'bg-[#06B6D4] text-white',
-          btnBg: 'bg-[#06B6D4] hover:bg-[#0891B2] text-white',
-          iconBg: 'bg-[#ECFEFF] text-[#06B6D4]',
-          icon: <Bike className="w-5 h-5 text-[#06B6D4]" />,
+          cardBg: 'bg-gradient-to-br from-[#FFEDD5] via-[#FFF7ED] to-[#FED7AA]/60',
+          borderColor: 'border-[#F97316]',
+          badgeBg: 'bg-[#F97316] text-white',
+          btnBg: 'bg-[#EA580C] hover:bg-[#C2410C] text-white',
+          iconBg: 'bg-[#FFEDD5] text-[#EA580C]',
+          icon: <Bike className="w-5 h-5 text-[#EA580C]" />,
         };
-      case 'kick-scooters':
+      case 'potty-trainers':
+      case 'potty-chairs':
         return {
-          cardBg: 'bg-gradient-to-br from-[#F0FDF4] to-[#BBF7D0]/30',
-          borderColor: 'border-[#22C55E]',
-          badgeBg: 'bg-[#22C55E] text-white',
-          btnBg: 'bg-[#22C55E] hover:bg-[#16A34A] text-white',
-          iconBg: 'bg-[#F0FDF4] text-[#22C55E]',
-          icon: <Sparkles className="w-5 h-5 text-[#22C55E]" />,
+          cardBg: 'bg-gradient-to-br from-[#FCE7F3] via-[#FDF2F8] to-[#FBCFE8]/60',
+          borderColor: 'border-[#EC4899]',
+          badgeBg: 'bg-[#EC4899] text-white',
+          btnBg: 'bg-[#DB2777] hover:bg-[#BE185D] text-white',
+          iconBg: 'bg-[#FCE7F3] text-[#DB2777]',
+          icon: <Smile className="w-5 h-5 text-[#DB2777]" />,
         };
       default:
         return {
-          cardBg: 'bg-gradient-to-br from-[#FFF9E6] to-[#FFE399]/40',
-          borderColor: 'border-[#FFD93D]',
-          badgeBg: 'bg-[#FFD93D] text-slate-900',
-          btnBg: 'bg-[#FF6B6B] hover:bg-[#FF5252] text-white',
-          iconBg: 'bg-[#FFF0F0] text-[#FF6B6B]',
-          icon: <Car className="w-5 h-5 text-[#FF6B6B]" />,
+          cardBg: 'bg-gradient-to-br from-[#F3E8FF] via-[#FAF5FF] to-[#E9D5FF]/60',
+          borderColor: 'border-[#8B5CF6]',
+          badgeBg: 'bg-[#8B5CF6] text-white',
+          btnBg: 'bg-[#8B5CF6] hover:bg-[#7C3AED] text-white',
+          iconBg: 'bg-[#F3E8FF] text-[#8B5CF6]',
+          icon: <Car className="w-5 h-5 text-[#8B5CF6]" />,
         };
     }
   };

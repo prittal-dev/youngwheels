@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, Filter, Sparkles, MessageCircle, ShoppingBag, Eye, ShieldCheck, Check, CheckCircle2, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { CategoryId, Product } from '../types';
-import { PRODUCTS } from '../data/products';
+import { PRODUCTS, getProductImageForColor } from '../data/products';
 import { CATEGORIES, COMPANY_DETAILS } from '../data/company';
 
 interface CategoryPageProps {
@@ -231,7 +231,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
                         </span>
 
                         <img
-                          src={product.image}
+                          src={getProductImageForColor(product, activeColorName)}
                           alt={product.name}
                           className="w-full h-full object-contain group-hover:scale-108 transition-transform duration-300"
                         />

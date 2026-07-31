@@ -1,10 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { TESTIMONIALS } from '../data/company';
 
 export const Testimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Automatic slide interval every 3.5 seconds
+  useEffect(() => {
+    if (isPaused) return;
+
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % TESTIMONIALS.length);
+    }, 3500);
+
+    return () => clearInterval(timer);
+  }, [isPaused]);
 
   const handleNext = () => {
     setCurrentIndex((prev) => (prev + 1) % TESTIMONIALS.length);
@@ -42,10 +54,12 @@ export const Testimonials: React.FC = () => {
 
         {/* Testimonial Card Display */}
         <motion.div 
+          key={current.id}
           initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4 }}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
           className="max-w-4xl mx-auto bg-gradient-to-tr from-[#FFF9EE] via-white to-[#EBFBFA] rounded-[36px] border-4 border-[#FFE8B5] p-6 sm:p-10 shadow-xl relative"
         >
           
@@ -53,16 +67,14 @@ export const Testimonials: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
             
-            {/* Avatar & User Details */}
+            {/* Initial Avatar Circle & User Details */}
             <div className="md:col-span-4 text-center space-y-3">
               <div className="relative inline-block">
-                <img
-                  src={current.avatar}
-                  alt={current.name}
-                  className="w-24 h-24 rounded-3xl object-cover mx-auto border-4 border-white shadow-md"
-                />
+                <div className={`w-24 h-24 rounded-3xl ${current.bgColor || 'bg-[#059669]'} text-white font-heading font-black text-3xl flex items-center justify-center mx-auto border-4 border-white shadow-md`}>
+                  {current.initial || current.name[0]}
+                </div>
                 <span className="absolute -bottom-2 -right-2 bg-[#FFD93D] text-slate-900 text-xs px-2 py-0.5 rounded-full font-black flex items-center gap-0.5">
-                  <span>4.9</span>
+                  <span>5.0</span>
                   <Star className="w-3 h-3 fill-slate-900 text-slate-900" />
                 </span>
               </div>
@@ -101,15 +113,17 @@ export const Testimonials: React.FC = () => {
                 <div className="flex items-center gap-2">
                   <button
                     onClick={handlePrev}
-                    className="p-2.5 rounded-xl bg-white text-slate-700 hover:bg-[#FFD93D] transition-colors border border-slate-200 shadow-xs"
+                    className="p-2.5 rounded-xl bg-white text-slate-700 hover:bg-[#FFD93D] transition-colors border border-slate-200 shadow-xs cursor-pointer active:scale-95"
                     aria-label="Previous Review"
+                    type="button"
                   >
                     <ChevronLeft className="w-5 h-5" />
                   </button>
                   <button
                     onClick={handleNext}
-                    className="p-2.5 rounded-xl bg-white text-slate-700 hover:bg-[#FFD93D] transition-colors border border-slate-200 shadow-xs"
+                    className="p-2.5 rounded-xl bg-white text-slate-700 hover:bg-[#FFD93D] transition-colors border border-slate-200 shadow-xs cursor-pointer active:scale-95"
                     aria-label="Next Review"
+                    type="button"
                   >
                     <ChevronRight className="w-5 h-5" />
                   </button>

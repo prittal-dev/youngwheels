@@ -163,7 +163,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
   React.useEffect(() => {
     const slideTimer = setInterval(() => {
       setSlideIndex((prev) => (prev + 1) % CAROUSEL_SLIDES.length);
-    }, 3200);
+    }, 1800);
     return () => clearInterval(slideTimer);
   }, []);
 
@@ -194,15 +194,21 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         data-scroll-speed="1.5"
-        className="hidden xl:block absolute top-4 left-6 animate-float-slow opacity-90 z-10"
+        className="hidden xl:block absolute top-14 left-6 animate-float-slow opacity-95 z-10"
       >
-        <div className="bg-white/90 backdrop-blur-md border-2 border-[#FFE8B5] rounded-2xl p-3 shadow-xl flex items-center gap-3 icon-box-glow">
-          <div className="w-10 h-10 rounded-xl bg-[#FFF0F0] flex items-center justify-center shrink-0">
-            <Car className="w-5 h-5 text-[#FF6B6B]" />
+        <div className="bg-white/95 backdrop-blur-md border-2 border-[#FFE8B5] rounded-2xl p-3 shadow-xl flex items-center gap-3 icon-box-glow">
+          <div className="w-10 h-10 rounded-xl bg-[#FFF9EE] border border-[#FFE8B5] flex items-center justify-center shrink-0">
+            <ShieldCheck className="w-5.5 h-5.5 text-[#FF6B6B]" />
           </div>
           <div>
-            <div className="text-xs font-black text-slate-900">360° Magic Cars</div>
-            <div className="text-[10px] font-bold text-slate-500">No Pedals Needed!</div>
+            <div className="font-heading text-xs font-black tracking-wide flex items-center gap-1 uppercase">
+              <span className="text-[#2563EB]">Quality</span>
+              <span className="text-pink-300">•</span>
+              <span className="text-[#EC4899]">Trust</span>
+              <span className="text-lime-300">•</span>
+              <span className="text-[#10B981]">Care</span>
+            </div>
+            <div className="text-[10px] font-bold text-slate-500">Certified Kid Safe & Durable</div>
           </div>
         </div>
       </motion.div>
@@ -212,15 +218,23 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
         data-scroll-speed="-1.2"
-        className="hidden xl:block absolute top-10 right-6 animate-float-fast opacity-90 z-10"
+        className="hidden xl:block absolute top-10 right-6 animate-float-fast opacity-95 z-10"
       >
-        <div className="bg-white/90 backdrop-blur-md border-2 border-[#4ECDC4]/30 rounded-2xl p-3 shadow-xl flex items-center gap-3 icon-box-glow">
-          <div className="w-10 h-10 rounded-xl bg-[#EBFBFA] flex items-center justify-center shrink-0">
-            <Heart className="w-5 h-5 text-[#4ECDC4]" />
+        <div className="bg-white/95 backdrop-blur-md border-2 border-[#4ECDC4]/30 rounded-2xl p-3 shadow-xl flex items-center gap-3 icon-box-glow">
+          <div className="w-10 h-10 rounded-xl bg-[#EBFBFA] border border-[#4ECDC4]/30 flex items-center justify-center shrink-0">
+            <Sparkles className="w-5 h-5 text-[#4ECDC4]" />
           </div>
           <div>
-            <div className="text-xs font-black text-slate-900">Non-Toxic ABS</div>
-            <div className="text-[10px] font-bold text-slate-500">Child Safety First</div>
+            <div className="font-heading text-xs font-black tracking-wide flex items-center gap-1">
+              <span className="text-slate-900">Play</span>
+              <span className="text-[#FF6B6B] font-black text-sm">•</span>
+              <span className="text-slate-900">Learn</span>
+              <span className="text-[#FFD93D] font-black text-sm">•</span>
+              <span className="text-slate-900">Imagine</span>
+              <span className="text-[#4ECDC4] font-black text-sm">•</span>
+              <span className="text-slate-900">Grow</span>
+            </div>
+            <div className="text-[10px] font-bold text-slate-500">Non-Toxic ABS • Child Safety First</div>
           </div>
         </div>
       </motion.div>
@@ -236,17 +250,9 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
             className="lg:col-span-7 text-center lg:text-left space-y-6"
           >
             
-            {/* Top Pill Badge */}
-            <div className="inline-flex items-center gap-2 bg-[#FFE399]/60 border border-[#FFD93D] px-4 py-1.5 rounded-full shadow-xs animate-bounce-slow">
-              <span className="flex h-2 w-2 rounded-full bg-[#FF6B6B] animate-pulse"></span>
-              <span className="text-xs font-extrabold text-slate-900 uppercase tracking-wider">
-                Direct New Delhi Manufacturer • Est. 2019
-              </span>
-              <Sparkles className="w-3.5 h-3.5 text-[#FF6B6B] animate-wiggle" />
-            </div>
 
             {/* Main Playful Heading with Stacked Top Line & Animated Flip Word Below */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black font-heading text-slate-900 tracking-tight leading-[1.2] flex flex-col items-center lg:items-start gap-1">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black font-heading text-slate-900 tracking-tight leading-[1.2] flex flex-col items-center lg:items-start gap-1 mt-11">
               <span className="block text-slate-900">A Perfect Place To Explore Your</span>
               <span className="inline-flex items-center relative min-w-[280px] sm:min-w-[400px] text-left align-bottom h-[1.3em] overflow-hidden">
                 <AnimatePresence mode="wait">
@@ -267,7 +273,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
 
             {/* Description */}
             <p className="text-base sm:text-lg text-slate-600 font-medium max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Crafting vibrant, ultra-durable <strong className="text-slate-900 font-bold">Magic Swing Cars, Baby Walkers, Potty Chairs & Rocking Animals</strong>. Designed with 100% non-toxic materials to help toddlers learn, balance, and play safely!
+             Designed for little explorers, crafted for lasting memories. Our premium range of  <strong className="text-slate-900 font-bold">Magic Swing Cars, Baby Walkers, Potty Chairs, Tri-Cycle & Rocking Animals</strong> combines innovation, safety, and durability to create joyful learning experiences for every child.
             </p>
 
             {/* Feature Highlights Pills */}
@@ -277,12 +283,12 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
                 <span>100% BPA-Free Non-Toxic</span>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} className="bg-white border border-[#FFE8B5] px-3 py-1 rounded-xl text-xs font-bold text-slate-800 flex items-center gap-1.5 shadow-2xs">
-                <Award className="w-4 h-4 text-[#FF6B6B]" />
-                <span>Made in India</span>
+                <img src="../../assets/india_flag.png" className='w-3 inline' alt="" />
+                <span>Proudly Made in India </span>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} className="bg-white border border-[#FFE8B5] px-3 py-1 rounded-xl text-xs font-bold text-slate-800 flex items-center gap-1.5 shadow-2xs">
                 <CheckCircle2 className="w-4 h-4 text-[#FFD93D]" />
-                <span>Pan-India Wholesale & Retail</span>
+                <span>Wholesale and Retail Distribution</span>
               </motion.div>
             </div>
 
@@ -315,16 +321,6 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
               </motion.a>
             </div>
 
-            {/* Wholesale Dealer Quick Banner */}
-            <div className="pt-2">
-              <button
-                onClick={onOpenWholesaleModal}
-                className="text-xs font-bold text-slate-700 hover:text-[#FF6B6B] underline flex items-center gap-1 mx-auto lg:mx-0 transition-colors"
-              >
-                <span>Looking for Bulk / Wholesale Pricing for your Toy Store? Click here to request dealer rates!</span>
-              </button>
-            </div>
-
           </motion.div>
 
           {/* Right Visual Hero Card / Product Spotlight Automatic Carousel */}
@@ -345,28 +341,20 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
                   {slideIndex + 1} / {CAROUSEL_SLIDES.length} • {currentSlide.categoryName}
                 </div>
 
-                {/* Hero Product Image Carousel Container */}
-                <div className={`relative h-72 sm:h-80 w-full rounded-[28px] overflow-hidden bg-gradient-to-tr ${currentSlide.bgGradient} flex items-center justify-center p-4 transition-colors duration-700`}>
+                {/* Main Hero Product Image Carousel Container */}
+                <div className="relative h-64 sm:h-72 w-full rounded-2xl bg-gradient-to-tr from-[#FFFDF9] via-[#FFF9EE] to-[#E0F7F5] flex items-center justify-center p-4 overflow-hidden my-4">
                   <AnimatePresence mode="wait">
                     <motion.img
                       key={currentSlide.id}
-                      src={heroImage && slideIndex === 0 ? heroImage : currentSlide.image}
+                      src={currentSlide.image}
                       alt={currentSlide.title}
-                      initial={{ opacity: 0, scale: 0.9, x: 40 }}
-                      animate={{ opacity: 1, scale: 1, x: 0 }}
-                      exit={{ opacity: 0, scale: 0.9, x: -40 }}
-                      transition={{ duration: 0.45, ease: [0.34, 1.56, 0.64, 1] }}
-                      className="w-full h-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-300"
+                      initial={{ opacity: 0, scale: 0.85, rotate: -3 }}
+                      animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                      exit={{ opacity: 0, scale: 1.05, rotate: 3 }}
+                      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                      className="w-full h-full object-contain filter drop-shadow-xl"
                     />
                   </AnimatePresence>
-                  
-                  {/* Decorative Sticker */}
-                  <div className="absolute bottom-3 right-3 bg-white/95 backdrop-blur-xs px-3 py-1.5 rounded-xl border border-slate-200 text-xs font-black text-slate-800 shadow-md flex items-center gap-1.5 z-10">
-                    <Zap className="w-3.5 h-3.5 text-[#FF6B6B] fill-[#FF6B6B]" />
-                    <span>{currentSlide.featureTag}</span>
-                  </div>
-
-                  {/* Manual Arrow Controls */}
                   <button
                     onClick={() => setSlideIndex((prev) => (prev - 1 + CAROUSEL_SLIDES.length) % CAROUSEL_SLIDES.length)}
                     className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/85 hover:bg-white text-slate-800 flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity z-20 cursor-pointer"
@@ -425,13 +413,28 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
                   <div className="text-xs font-bold flex items-center gap-1">
                     <AnimatedCounter value="150,000+" duration={2} /> Happy Toddlers
                   </div>
-                  <div className="text-[10px] text-slate-300">Certified Kid Safe • Pan-India</div>
+                  <div className="text-[10px] text-slate-300">Certified Kid Safe</div>
                 </div>
               </div>
 
             </div>
           </div>
 
+        </div>
+
+        {/* Full-Width Centered Wholesale Dealer Quick Banner */}
+        <div className="mt-8 text-center flex justify-center">
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            onClick={onOpenWholesaleModal}
+            className="inline-flex items-center justify-center gap-2 bg-white/90 hover:bg-white border-2 border-[#FFE8B5] hover:border-[#FF6B6B] px-6 py-3.5 rounded-2xl shadow-sm hover:shadow-md text-slate-800 hover:text-[#FF6B6B] transition-all cursor-pointer group max-w-3xl"
+          >
+            <span className="text-xs sm:text-sm font-bold text-center">
+              <strong className="text-slate-900 font-extrabold group-hover:text-[#FF6B6B]">Grow Your Toy Business with Exclusive Wholesale Deals:</strong>{' '}
+              <span className="font-semibold text-slate-600 underline">Request competitive dealer pricing and unlock special bulk purchase benefits.</span>
+            </span>
+          </motion.button>
         </div>
 
         {/* Stats Row */}

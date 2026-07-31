@@ -17,7 +17,7 @@ import {
 import { motion } from 'motion/react';
 import confetti from 'canvas-confetti';
 import { Product, CategoryId } from '../types';
-import { PRODUCTS } from '../data/products';
+import { PRODUCTS, getProductImageForColor } from '../data/products';
 import { COMPANY_DETAILS } from '../data/company';
 
 interface FeaturedProductsProps {
@@ -37,9 +37,9 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
   const [selectedColors, setSelectedColors] = useState<Record<string, string>>({});
   const [addedNotice, setAddedNotice] = useState<string | null>(null);
 
-  // Pagination State (10 items per page)
+  // Pagination State (8 items per page)
   const [currentPage, setCurrentPage] = useState(1);
-  const ITEMS_PER_PAGE = 10;
+  const ITEMS_PER_PAGE = 8;
 
   useEffect(() => {
     setCurrentPage(1);
@@ -85,8 +85,17 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
     setTimeout(() => setAddedNotice(null), 2500);
   };
 
+  const scrollToSectionTop = () => {
+    const sectionEl = document.getElementById('featured-products-section');
+    if (sectionEl) {
+      const yOffset = -90;
+      const y = sectionEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="py-16 bg-transparent relative">
+    <section id="featured-products-section" className="py-16 bg-transparent relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -97,10 +106,10 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
               Popular Models
             </div>
             <h2 className="text-3xl sm:text-4xl font-black font-heading text-slate-900 tracking-tight">
-              Featured Best Sellers & New Arrivals
+               Curated Collection of Best Sellers
             </h2>
             <p className="text-slate-600 font-medium text-sm mt-1">
-              Top requested ride-ons and infant mobility toys by parents & wholesale distributors.
+              Explore premium ride-ons and mobility toys designed for comfort, safety, and endless adventures.
             </p>
           </div>
 
@@ -222,12 +231,11 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
         )}
 
         {/* Products Grid */}
-        <div className="space-y-8">
+        <div id="featured-products-grid" className="space-y-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {paginatedProducts.map((product, idx) => {
               const activeColorName = selectedColors[product.id] || product.colors[0]?.name;
-              const activeColorObj = product.colors.find(c => c.name === activeColorName);
-              const displayedImage = activeColorObj?.image || product.image;
+              const displayedImage = getProductImageForColor(product, activeColorName);
 
               return (
                 <motion.div
@@ -363,7 +371,9 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
                 <button
                   disabled={currentPage === 1}
                   onClick={() => {
-                    setCurrentPage(prev => Math.max(1, prev - 1));
+                    const newP = Math.max(1, currentPage - 1);
+                    setCurrentPage(newP);
+                    scrollToSectionTop();
                   }}
                   className="px-3.5 py-2 rounded-xl text-xs font-black bg-slate-50 border border-slate-200 text-slate-700 hover:bg-slate-100 disabled:opacity-40 disabled:cursor-not-allowed transition-all shadow-2xs flex items-center gap-1"
                 >
@@ -376,6 +386,7 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
                     key={pageNum}
                     onClick={() => {
                       setCurrentPage(pageNum);
+                      scrollToSectionTop();
                     }}
                     className={`w-9 h-9 rounded-xl text-xs font-black transition-all shadow-2xs ${
                       currentPage === pageNum
@@ -390,7 +401,9 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
                 <button
                   disabled={currentPage === totalPages}
                   onClick={() => {
-                    setCurrentPage(prev => Math.min(totalPages, prev + 1));
+                    const newP = Math.min(totalPages, currentPage + 1);
+                    setCurrentPage(newP);
+                    scrollToSectionTop();
                   }}
                   className="px-3.5 py-2 rounded-xl text-xs font-black bg-slate-50 border border-slate-200 text-slate-700 hover:bg-slate-100 disabled:opacity-40 disabled:cursor-not-allowed transition-all shadow-2xs flex items-center gap-1"
                 >

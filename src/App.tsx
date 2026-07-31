@@ -5,6 +5,8 @@ import { Footer } from './components/Footer';
 import { ProductModal } from './components/ProductModal';
 import { EnquiryDrawer } from './components/EnquiryDrawer';
 import { WholesaleModal } from './components/WholesaleModal';
+import { ChatbotWidget } from './components/ChatbotWidget';
+import { RetailPartners } from './components/RetailPartners';
 import { FloatingToyBackground } from './components/FloatingToyBackground';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
@@ -69,12 +71,34 @@ export default function App() {
     }
   }, []);
 
+  const [hideFloatingWidgets, setHideFloatingWidgets] = useState<boolean>(false);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 300) {
         setShowScrollTop(true);
       } else {
         setShowScrollTop(false);
+      }
+
+      // Hide floating widgets when scrolled down into footer
+      const footerEl = document.querySelector('footer');
+      if (footerEl) {
+        const rect = footerEl.getBoundingClientRect();
+        if (rect.top <= window.innerHeight - 80) {
+          setHideFloatingWidgets(true);
+        } else {
+          setHideFloatingWidgets(false);
+        }
+      } else {
+        const windowHeight = window.innerHeight;
+        const docHeight = document.documentElement.scrollHeight;
+        const scrollTop = window.scrollY;
+        if (scrollTop + windowHeight >= docHeight - 450) {
+          setHideFloatingWidgets(true);
+        } else {
+          setHideFloatingWidgets(false);
+        }
       }
     };
     window.addEventListener('scroll', handleScroll);
@@ -277,6 +301,9 @@ export default function App() {
         </div>
       </main>
 
+      {/* Retail Partners Section */}
+      <RetailPartners />
+
       {/* Footer */}
       <Footer
         onNavigateTab={(tab) => {
@@ -309,8 +336,18 @@ export default function App() {
         onClose={() => setWholesaleModalOpen(false)}
       />
 
+      {/* Interactive AI Chatbot Widget */}
+      <ChatbotWidget
+        onOpenWholesaleModal={() => setWholesaleModalOpen(true)}
+        onNavigateTab={(tab) => {
+          setActiveTab(tab);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
+        hideInFooter={hideFloatingWidgets}
+      />
+
       {/* Floating Action Bar */}
-      <div className="fixed bottom-6 right-6 z-40 flex items-center gap-3">
+      <div className={`fixed bottom-6 right-6 z-40 flex items-center gap-3 transition-all duration-300 ${hideFloatingWidgets ? 'opacity-0 pointer-events-none translate-y-10' : 'opacity-100 translate-y-0'}`}>
         {/* Quick Basket Floating Button */}
         {totalEnquiryCount > 0 && (
           <button

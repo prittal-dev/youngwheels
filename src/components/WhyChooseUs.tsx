@@ -64,7 +64,7 @@ export const WhyChooseUs: React.FC = () => {
             Trust & Quality First
           </div>
           <h2 className="text-3xl sm:text-4xl font-black font-heading text-slate-900 tracking-tight">
-            Why Parents & Retailers Love Young Wheels
+            Why Parents & Retailers Love <br /> Young Wheels
           </h2>
           <p className="text-slate-600 font-medium text-sm sm:text-base">
             We don’t just make toys — we manufacture trusted childhood companions that encourage active play and give parents complete peace of mind.

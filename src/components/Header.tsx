@@ -121,22 +121,13 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Brand Logo */}
         <button 
           onClick={() => handleNavClick('home')} 
-          className="flex items-center gap-3 group text-left focus:outline-none shrink-0"
+          className="flex items-center gap-2.5 group text-left focus:outline-none shrink-0 ml-3 sm:ml-7 lg:ml-8"
         >
           <img 
             src={logoImg} 
             alt="Young Wheels" 
-            className="h-12 sm:h-16 md:h-[72px] w-auto object-contain group-hover:scale-105 transition-transform shrink-0" 
+            className="h-10 sm:h-12 md:h-13 w-auto object-contain group-hover:scale-105 transition-transform shrink-0" 
           />
-          <div className="hidden sm:flex flex-col border-l-2 border-[#FFD93D] pl-3 py-0.5 shrink-0 justify-center">
-            <p className="font-heading text-xs lg:text-sm font-bold tracking-wider leading-tight flex items-center gap-1.5 uppercase">
-              <span className="text-[#2563EB]">Quality</span>
-              <span className="text-slate-300">•</span>
-              <span className="text-[#EC4899]">Trust</span>
-              <span className="text-slate-300">•</span>
-              <span className="text-[#10B981]">Care</span>
-            </p>
-          </div>
         </button>
 
         {/* Desktop Navigation */}
@@ -233,8 +224,8 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => handleNavClick('blog')}
             className={`px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-xl transition-all whitespace-nowrap ${
               activeTab === 'blog'
-                ? 'bg-[#FFD93D] text-slate-900 font-bold shadow-xs'
-                : 'text-slate-700 hover:bg-[#FFF4B0] hover:text-slate-900'
+                ? 'bg-[#f17350] text-slate-900 font-bold shadow-xs'
+                : 'text-slate-700 hover:bg-[#ffceb0] hover:text-slate-900'
             }`}
           >
             Blogs

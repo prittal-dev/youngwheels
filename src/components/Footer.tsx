@@ -8,7 +8,11 @@ import {
   Sparkles, 
   Car, 
   ExternalLink,
-  ArrowUp
+  ArrowUp,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Youtube
 } from 'lucide-react';
 import { COMPANY_DETAILS, CATEGORIES } from '../data/company';
 import logoImg from '../../assets/logo.png';
@@ -37,11 +41,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
           {/* Brand & Mission Column */}
           <div className="lg:col-span-4 space-y-4">
             <div className="space-y-2">
-              <div className="bg-white p-2 rounded-2xl inline-block shadow-md">
+              <div className="bg-white p-1 rounded-xl inline-block shadow-md">
                 <img 
                   src={logoImg} 
                   alt="Young Wheels" 
-                  className="h-12 w-auto object-contain" 
+                  className="h-16 w-auto object-contain" 
                 />
               </div>
               <div className="font-heading flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider pt-1">
@@ -57,26 +61,75 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
               Delhi-based manufacturer & wholesaler of premium non-toxic ride-on toys, 360° magic swing cars, baby walkers, potty chairs & rocking animals. Bringing childhood joy & learning to families across India since 2019.
             </p>
 
-            <div className="pt-2 flex items-center gap-3">
+            <div className="pt-2 flex items-center gap-2.5 flex-wrap">
+              {/* 1. Facebook */}
+              <a
+                href="https://www.facebook.com/people/Young-Wheels/61577800809594/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-xl bg-[#1877F2] text-white hover:opacity-90 hover:scale-105 transition-all shadow-xs"
+                title="Facebook"
+              >
+                <Facebook className="w-4 h-4 fill-white" />
+              </a>
+
+              {/* 2. Instagram */}
+              <a
+                href="https://www.instagram.com/youngwheelsindia/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-xl bg-gradient-to-tr from-[#833AB4] via-[#FD1D1D] to-[#FCB045] text-white hover:opacity-90 hover:scale-105 transition-all shadow-xs"
+                title="Instagram"
+              >
+                <Instagram className="w-4 h-4 text-white" />
+              </a>
+
+              {/* 3. LinkedIn */}
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-xl bg-[#0A66C2] text-white hover:opacity-90 hover:scale-105 transition-all shadow-xs"
+                title="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4 fill-white" />
+              </a>
+
+              {/* 4. YouTube */}
+              <a
+                href="https://www.youtube.com/@youngwheelss"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-xl bg-[#FF0000] text-white hover:opacity-90 hover:scale-105 transition-all shadow-xs"
+                title="YouTube"
+              >
+                <Youtube className="w-4 h-4 fill-white" />
+              </a>
+
+              {/* 5. WhatsApp */}
               <a
                 href={`https://wa.me/${COMPANY_DETAILS.whatsappRaw}?text=${encodeURIComponent('Hi Young Wheels Team!')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-xl bg-[#25D366] text-white hover:opacity-90 transition-opacity shadow-xs"
+                className="p-2.5 rounded-xl bg-[#25D366] text-white hover:opacity-90 hover:scale-105 transition-all shadow-xs"
                 title="WhatsApp Direct"
               >
                 <MessageCircle className="w-4 h-4 fill-white text-[#25D366]" />
               </a>
+
+              {/* 6. Phone */}
               <a
                 href={`tel:${COMPANY_DETAILS.phone}`}
-                className="p-2.5 rounded-xl bg-slate-800 text-[#FFD93D] hover:bg-slate-700 transition-colors shadow-xs"
+                className="p-2.5 rounded-xl bg-slate-800 text-[#FFD93D] hover:bg-slate-700 hover:scale-105 transition-all shadow-xs"
                 title="Call Factory Desk"
               >
                 <Phone className="w-4 h-4" />
               </a>
+
+              {/* 7. Email */}
               <a
                 href={`mailto:${COMPANY_DETAILS.email}`}
-                className="p-2.5 rounded-xl bg-slate-800 text-[#4ECDC4] hover:bg-slate-700 transition-colors shadow-xs"
+                className="p-2.5 rounded-xl bg-slate-800 text-[#4ECDC4] hover:bg-slate-700 hover:scale-105 transition-all shadow-xs"
                 title="Send Email"
               >
                 <Mail className="w-4 h-4" />
@@ -117,7 +170,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
               </li>
               <li>
                 <button onClick={() => onNavigateTab('about')} className="hover:text-[#FF6B6B] transition-colors">
-                  About Our Factory
+                  About Us
                 </button>
               </li>
               <li>
@@ -136,11 +189,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigateTab('admin')} className="hover:text-slate-200 transition-colors text-slate-400 text-[11px]">
-                  Factory Admin Portal
-                </button>
-              </li>
-              <li>
                 <button onClick={onOpenWholesaleModal} className="hover:text-[#FFD93D] transition-colors font-bold text-[#FFD93D]">
                   Dealer Bulk Enquiry
                 </button>
@@ -151,9 +199,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
           {/* Factory Address & Hours */}
           <div className="lg:col-span-3 space-y-3 text-xs font-medium text-slate-300">
             <h4 className="font-heading font-bold text-sm text-[#FF6B6B] uppercase tracking-wider">
-              Factory Location
+              Factory Location & Tax ID
             </h4>
-
+                  
             <div className="flex items-start gap-2">
               <MapPin className="w-4 h-4 text-[#FFD93D] shrink-0 mt-0.5" />
               <p className="leading-relaxed">{COMPANY_DETAILS.address}</p>
@@ -164,12 +212,29 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
               <span>{COMPANY_DETAILS.phone}</span>
             </div>
 
+
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-[#EC4899] shrink-0" />
               <span className="truncate">{COMPANY_DETAILS.email}</span>
             </div>
 
-            <div className="pt-2">
+            {/* Legal & Government Registrations Card */}
+            <div className="bg-slate-800/90 rounded-2xl p-3 border border-slate-700 space-y-1 text-[11px] font-bold text-slate-300 mt-2 shadow-xs">
+              <div className="flex items-center justify-between">
+                <span className="text-[#FFD93D]">MSME NO:</span>
+                <span className="text-white font-mono">{COMPANY_DETAILS.msmeNo}</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-[#4ECDC4]">GSTIN/UIN:</span>
+                <span className="text-white font-mono">{COMPANY_DETAILS.gstNo}</span>
+              </div>
+              <div className="flex items-center justify-between text-[10px] text-slate-400 pt-0.5 border-t border-slate-700/60">
+                <span>State Name: <strong className="text-slate-200">{COMPANY_DETAILS.stateName}</strong></span>
+                <span>Code: <strong className="text-[#FF6B6B]">{COMPANY_DETAILS.stateCode}</strong></span>
+              </div>
+            </div>
+
+            <div className="pt-1">
               <a
                 href={COMPANY_DETAILS.googleMapsUrl}
                 target="_blank"
@@ -187,12 +252,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
         {/* Bottom Bar & Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-semibold text-slate-400">
           <div>
-            © {new Date().getFullYear()} <strong className="text-white">Young Wheels</strong>. All Rights Reserved. Manufactured in Pooth Khurd, New Delhi – 110039.
+            © {new Date().getFullYear()} <strong className="text-white">Young Wheels</strong>. All Rights Reserved. 
+            
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <span className="text-[11px] bg-slate-800 text-[#4ECDC4] px-2.5 py-1 rounded-full border border-slate-700">
-              100% Non-Toxic ABS
+              Made in India with Trust & Excellence.
             </span>
             <button
               onClick={scrollToTop}

@@ -7,6 +7,81 @@ export const getProductImg = (filename: string): string => {
   return productImages[key] || `/assets/products/${filename}`;
 };
 
+export const getProductImageForColor = (product: Product, selectedColorName?: string): string => {
+  if (!selectedColorName) return product.image;
+
+  // 1. Check if color object in product.colors has explicit image URL
+  const foundColor = product.colors?.find(
+    c => c.name.toLowerCase() === selectedColorName.toLowerCase() ||
+         selectedColorName.toLowerCase().includes(c.name.toLowerCase()) ||
+         c.name.toLowerCase().includes(selectedColorName.toLowerCase())
+  );
+
+  if (foundColor?.image) {
+    return foundColor.image;
+  }
+
+  // 2. Dynamic matching based on color name & category
+  const cName = selectedColorName.toLowerCase();
+  const pId = product.id.toLowerCase();
+
+  // NexRide 2in1 Tricycle series
+  if (pId.includes('2in1') || pId.includes('nexride-2in1') || product.name.toLowerCase().includes('2in1')) {
+    if (cName.includes('red')) return getProductImg('nexride-2in1-red.jpg');
+    if (cName.includes('yellow') || cName.includes('gold')) return getProductImg('nexride-2in1-yellow.jpg');
+    if (cName.includes('teal') || cName.includes('green') || cName.includes('mint')) return getProductImg('nexride-2in1-teal.jpg');
+    if (cName.includes('blue')) return getProductImg('nexride-2in1-blue.jpg');
+  }
+
+  // NexRide Deluxe series
+  if (pId.includes('deluxe') || product.name.toLowerCase().includes('deluxe')) {
+    if (cName.includes('red')) return getProductImg('nexride-2in1-deluxe-red.jpg');
+    if (cName.includes('yellow')) return getProductImg('nexride-2in1-deluxe-yellow.jpg');
+    if (cName.includes('teal') || cName.includes('green')) return getProductImg('nexride-2in1-deluxe-teal.jpg');
+    if (cName.includes('blue')) return getProductImg('nexride-2in1-deluxe-blue.jpg');
+  }
+
+  // NexRide Tricycles
+  if (pId.includes('nexride') || product.category === 'tricycles' || product.category === 'tri-cycles') {
+    if (cName.includes('red')) return getProductImg('nexride-red.jpg');
+    if (cName.includes('yellow')) return getProductImg('nexride-yellow.jpg');
+    if (cName.includes('teal') || cName.includes('green')) return getProductImg('nexride-teal.jpg');
+    if (cName.includes('blue')) return getProductImg('nexride-blue.jpg');
+    if (cName.includes('orange')) return getProductImg('nexride-orange.jpg');
+  }
+
+  // Tiny Rider / Scooters / Walkers
+  if (pId.includes('tiny-rider') || pId.includes('walker') || pId.includes('scooter')) {
+    if (cName.includes('red')) return getProductImg('tiny-rider-2in1-red.jpg');
+    if (cName.includes('mint') || cName.includes('green')) return getProductImg('tiny-rider-mint.jpg');
+    if (cName.includes('pink')) return getProductImg('tiny-rider-pink.jpg');
+    if (cName.includes('blue')) return getProductImg('tiny-rider-blue.jpg');
+    if (cName.includes('yellow')) return getProductImg('tiny-rider-yellow.jpg');
+    if (cName.includes('grey') || cName.includes('gray')) return getProductImg('tiny-rider-grey.jpg');
+  }
+
+  // Magic / Swing Cars
+  if (pId.includes('swing') || pId.includes('magic') || product.category === 'swing-cars' || product.category === 'magic-cars') {
+    if (cName.includes('pink') || cName.includes('magenta')) return getProductImg('candy-swing-car-pink.jpg');
+    if (cName.includes('cyan') || cName.includes('blue')) return getProductImg('candy-swing-car-cyan.jpg');
+  }
+
+  // Potty Chairs
+  if (product.category === 'potty-trainers' || product.category === 'potty-chairs') {
+    if (cName.includes('blue')) return getProductImg('potty-chair-blue.jpg');
+    if (cName.includes('pink')) return getProductImg('potty-chair-pink.jpg');
+  }
+
+  // General Color Fallback across all products
+  if (cName.includes('red')) return getProductImg('mclaren-red.jpg');
+  if (cName.includes('blue')) return getProductImg('mclaren-blue.jpg');
+  if (cName.includes('green') || cName.includes('mint')) return getProductImg('mclaren-green.jpg');
+  if (cName.includes('grey') || cName.includes('gray') || cName.includes('silver')) return getProductImg('mclaren-grey.jpg');
+  if (cName.includes('white')) return getProductImg('mclaren-white.jpg');
+
+  return product.image;
+};
+
 export const PRODUCTS: Product[] = [
   // =========================================================================
   // CATEGORY 1: RIDE-ONS (13 Products)
