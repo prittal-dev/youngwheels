@@ -11,6 +11,7 @@ import {
   ArrowUp
 } from 'lucide-react';
 import { COMPANY_DETAILS, CATEGORIES } from '../data/company';
+import logoImg from '../../assets/logo.png';
 
 interface FooterProps {
   onNavigateTab: (tab: string) => void;
@@ -35,20 +36,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
           
           {/* Brand & Mission Column */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-tr from-[#FFD93D] via-[#FF6B6B] to-[#4ECDC4] rounded-2xl p-0.5 shadow-md">
-                <div className="w-full h-full bg-slate-900 rounded-[14px] flex items-center justify-center font-heading font-black text-white text-lg">
-                  YW
-                </div>
+            <div className="space-y-2">
+              <div className="bg-white p-2 rounded-2xl inline-block shadow-md">
+                <img 
+                  src={logoImg} 
+                  alt="Young Wheels" 
+                  className="h-12 w-auto object-contain" 
+                />
               </div>
-              <div>
-                <span className="text-2xl font-black font-heading tracking-tight text-white">
-                  YOUNG <span className="text-[#FF6B6B]">WHEELS</span>
-                </span>
-                <p className="text-[11px] font-semibold text-[#FFD93D]">
-                  {COMPANY_DETAILS.tagline}
-                </p>
-              </div>
+              <p className="text-[11px] font-semibold text-[#FFD93D]">
+                {COMPANY_DETAILS.tagline}
+              </p>
             </div>
 
             <p className="text-xs text-slate-400 font-medium leading-relaxed">

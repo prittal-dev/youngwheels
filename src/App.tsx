@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { ProductModal } from './components/ProductModal';
@@ -17,6 +18,7 @@ import { CategoryId, Product, EnquiryItem } from './types';
 import { COMPANY_DETAILS } from './data/company';
 import { PRODUCTS } from './data/products';
 import { MessageCircle, ArrowUp, ShoppingBag } from 'lucide-react';
+import { SmoothScrollProvider } from './components/SmoothScroll';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>('home');
@@ -166,85 +168,108 @@ export default function App() {
   const totalEnquiryCount = enquiryBasket.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FFFDF9] text-slate-800 font-sans selection:bg-[#FFD93D] relative">
-      
-      {/* Sticky Top Header */}
-      <Header
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
+    <SmoothScrollProvider activeTab={activeTab}>
+      <div className="min-h-screen flex flex-col bg-[#FFFDF9] text-slate-800 font-sans selection:bg-[#FFD93D] relative">
+        
+        {/* Sticky Top Header */}
+        <Header
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
         enquiryCount={totalEnquiryCount}
         onOpenEnquiryDrawer={() => setEnquiryDrawerOpen(true)}
         onOpenWholesaleModal={() => setWholesaleModalOpen(true)}
       />
 
       {/* Main Page View Content */}
-      <main className="flex-1 relative">
+      <main className="flex-1 relative pt-[100px] sm:pt-[108px]">
+        {/* Top Progress Sweep Indicator on Page Switch */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={`progress-${activeTab}`}
+            initial={{ scaleX: 0, opacity: 1 }}
+            animate={{ scaleX: 1, opacity: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            style={{ transformOrigin: "0% 50%" }}
+            className="fixed top-0 left-0 right-0 h-1 z-50 bg-gradient-to-r from-[#FFD93D] via-[#FF6B6B] to-[#4ECDC4] pointer-events-none shadow-md"
+          />
+        </AnimatePresence>
+
         {/* Interactive Mouse-Repelling Floating Toy Background */}
         <FloatingToyBackground />
 
         <div className="relative z-10">
-          {activeTab === 'home' && (
-            <HomePage
-              onSelectCategory={(catId) => {
-                setActiveTab(catId);
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              onQuickView={(p) => setQuickViewProduct(p)}
-              onAddToEnquiry={handleAddToEnquiry}
-              onOpenWholesaleModal={() => setWholesaleModalOpen(true)}
-              heroImage={heroImage}
-              products={productsList}
-            />
-          )}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 18, scale: 0.99 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -12, scale: 0.99 }}
+              transition={{ duration: 0.38, ease: [0.22, 1, 0.36, 1] }}
+            >
+              {activeTab === 'home' && (
+                <HomePage
+                  onSelectCategory={(catId) => {
+                    setActiveTab(catId);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  onQuickView={(p) => setQuickViewProduct(p)}
+                  onAddToEnquiry={handleAddToEnquiry}
+                  onOpenWholesaleModal={() => setWholesaleModalOpen(true)}
+                  heroImage={heroImage}
+                  products={productsList}
+                />
+              )}
 
-          {activeTab === 'about' && (
-            <AboutPage onOpenWholesaleModal={() => setWholesaleModalOpen(true)} />
-          )}
+              {activeTab === 'about' && (
+                <AboutPage onOpenWholesaleModal={() => setWholesaleModalOpen(true)} />
+              )}
 
-          {activeTab === 'all-categories' && (
-            <AllCategoriesPage
-              onSelectCategory={(catId) => {
-                setActiveTab(catId);
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              products={productsList}
-            />
-          )}
+              {activeTab === 'all-categories' && (
+                <AllCategoriesPage
+                  onSelectCategory={(catId) => {
+                    setActiveTab(catId);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  products={productsList}
+                />
+              )}
 
-          {['ride-ons', 'kick-scooters', 'baby-walkers', 'swing-cars', 'tricycles', 'potty-trainers', 'magic-cars', 'riders', 'potty-chairs', 'electric-rideons', 'rocking-animals', 'tri-cycles'].includes(activeTab) && (
-            <CategoryPage
-              categoryId={activeTab as CategoryId}
-              onQuickView={(p) => setQuickViewProduct(p)}
-              onAddToEnquiry={handleAddToEnquiry}
-              products={productsList}
-            />
-          )}
+              {['ride-ons', 'kick-scooters', 'baby-walkers', 'swing-cars', 'tricycles', 'potty-trainers', 'magic-cars', 'riders', 'potty-chairs', 'electric-rideons', 'rocking-animals', 'tri-cycles'].includes(activeTab) && (
+                <CategoryPage
+                  categoryId={activeTab as CategoryId}
+                  onQuickView={(p) => setQuickViewProduct(p)}
+                  onAddToEnquiry={handleAddToEnquiry}
+                  products={productsList}
+                />
+              )}
 
-          {activeTab === 'contact' && <ContactPage />}
+              {activeTab === 'contact' && <ContactPage />}
 
-          {activeTab === 'blog' && (
-            <BlogPage
-              onOpenWholesaleModal={() => setWholesaleModalOpen(true)}
-              onNavigateHome={() => {
-                setActiveTab('home');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-            />
-          )}
+              {activeTab === 'blog' && (
+                <BlogPage
+                  onOpenWholesaleModal={() => setWholesaleModalOpen(true)}
+                  onNavigateHome={() => {
+                    setActiveTab('home');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                />
+              )}
 
-          {activeTab === 'social' && <SocialPage />}
+              {activeTab === 'social' && <SocialPage />}
 
-          {activeTab === 'admin' && (
-            <AdminPage
-              products={productsList}
-              onAddProduct={handleAddProduct}
-              onUpdateProduct={handleUpdateProduct}
-              onDeleteProduct={handleDeleteProduct}
-              heroImage={heroImage}
-              onUpdateHeroImage={handleUpdateHeroImage}
-              onResetCatalog={handleResetCatalog}
-            />
-          )}
+              {activeTab === 'admin' && (
+                <AdminPage
+                  products={productsList}
+                  onAddProduct={handleAddProduct}
+                  onUpdateProduct={handleUpdateProduct}
+                  onDeleteProduct={handleDeleteProduct}
+                  heroImage={heroImage}
+                  onUpdateHeroImage={handleUpdateHeroImage}
+                  onResetCatalog={handleResetCatalog}
+                />
+              )}
+            </motion.div>
+          </AnimatePresence>
         </div>
       </main>
 
@@ -321,7 +346,7 @@ export default function App() {
           </button>
         )}
       </div>
-
     </div>
-  );
+  </SmoothScrollProvider>
+);
 }

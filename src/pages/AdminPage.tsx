@@ -24,6 +24,7 @@ import {
 } from 'lucide-react';
 import { CategoryId, Product } from '../types';
 import { CATEGORIES } from '../data/company';
+import logoImg from '../../assets/logo.png';
 
 interface AdminPageProps {
   products: Product[];
@@ -364,12 +365,16 @@ export const AdminPage: React.FC<AdminPageProps> = ({
       {/* Top Admin Header Bar */}
       <div className="bg-white rounded-3xl p-6 border-2 border-[#FFE8B5] shadow-lg flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-2xl bg-[#FFD93D] text-slate-900 flex items-center justify-center font-black text-xl shadow-sm">
-            YW
+          <div className="bg-slate-50 p-1.5 rounded-2xl border border-slate-200 shadow-sm shrink-0">
+            <img 
+              src={logoImg} 
+              alt="Young Wheels" 
+              className="h-10 w-auto object-contain" 
+            />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="text-xl font-black font-heading text-slate-900">Young Wheels Admin Dashboard</h1>
+              <h1 className="text-xl font-black font-heading text-slate-900">Admin Dashboard</h1>
               <span className="bg-[#25D366]/15 text-[#25D366] text-[10px] font-black px-2.5 py-0.5 rounded-full border border-[#25D366]/30 uppercase tracking-wider">
                 Live Factory Desk
               </span>

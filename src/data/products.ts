@@ -1,6 +1,6 @@
 import { Product } from '../types';
 
-const productImages: Record<string, string> = import.meta.glob('../assets/products/*.jpg', { eager: true, import: 'default' });
+const productImages: Record<string, string> = (import.meta as any).glob('../assets/products/*.jpg', { eager: true, import: 'default' });
 
 export const getProductImg = (filename: string): string => {
   const key = `../assets/products/${filename}`;
