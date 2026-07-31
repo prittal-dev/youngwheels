@@ -162,6 +162,7 @@
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
   background: #FFFDF9;
@@ -173,6 +174,15 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #FF6B6B;
+}
+
+/* Hide Scrollbars Utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 

@@ -35,7 +35,7 @@ export const CATEGORIES: CategoryInfo[] = [
     accentColor: '#10B981',
     textColor: 'text-[#047857]',
     itemCount: 13,
-    bannerImage: 'https://images.unsplash.com/photo-1594787318286-3d835c1d207f?auto=format&fit=crop&q=80&w=800'
+    bannerImage: '/assets/products/mclaren-green.jpg'
   },
   {
     id: 'kick-scooters',
@@ -47,7 +47,7 @@ export const CATEGORIES: CategoryInfo[] = [
     accentColor: '#22C55E',
     textColor: 'text-[#15803D]',
     itemCount: 8,
-    bannerImage: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=800'
+    bannerImage: '/assets/products/tiny-rider-mint.jpg'
   },
   {
     id: 'baby-walkers',
@@ -59,7 +59,7 @@ export const CATEGORIES: CategoryInfo[] = [
     accentColor: '#84CC16',
     textColor: 'text-[#65A30D]',
     itemCount: 3,
-    bannerImage: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&q=80&w=800'
+    bannerImage: '/assets/products/tiny-rider-2in1-red.jpg'
   },
   {
     id: 'swing-cars',
@@ -71,7 +71,7 @@ export const CATEGORIES: CategoryInfo[] = [
     accentColor: '#FF6B6B',
     textColor: 'text-[#E05353]',
     itemCount: 12,
-    bannerImage: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=800'
+    bannerImage: '/assets/products/candy-swing-car-cyan.jpg'
   },
   {
     id: 'tricycles',
@@ -83,7 +83,7 @@ export const CATEGORIES: CategoryInfo[] = [
     accentColor: '#06B6D4',
     textColor: 'text-[#0E7490]',
     itemCount: 11,
-    bannerImage: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80&w=800'
+    bannerImage: '/assets/products/nexride-orange.jpg'
   },
   {
     id: 'potty-trainers',
@@ -95,7 +95,7 @@ export const CATEGORIES: CategoryInfo[] = [
     accentColor: '#EF4444',
     textColor: 'text-[#B91C1C]',
     itemCount: 8,
-    bannerImage: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&q=80&w=800'
+    bannerImage: '/assets/products/potty-chair-blue.jpg'
   }
 ];
 

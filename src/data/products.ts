@@ -24,7 +24,7 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Silver', hex: '#C0C0C0' }, { name: 'Red', hex: '#FF6B6B' }, { name: 'Green', hex: '#4ECDC4' }, { name: 'Black', hex: '#1E293B' }],
     isBestSeller: true,
     modelCode: 'YW-RO-01',
-    image: 'https://images.unsplash.com/photo-1594787318286-3d835c1d207f?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('mclaren-green.jpg'),
     highlights: ['Executive SUV', 'Easy Steering', 'Back Support']
   },
   {
@@ -40,7 +40,7 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Silver', hex: '#C0C0C0' }, { name: 'Red', hex: '#FF6B6B' }, { name: 'Black', hex: '#1E293B' }, { name: 'Green', hex: '#4ECDC4' }, { name: 'Grey', hex: '#64748B' }],
     isNewArrival: true,
     modelCode: 'YW-RO-02',
-    image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('mclaren-grey.jpg'),
     highlights: ['Toy Storage Trunk', 'LED Lights', 'Wide Stance']
   },
   {
@@ -55,7 +55,7 @@ export const PRODUCTS: Product[] = [
     features: ['4 Variants: Military Van, School Bus, Icecream Van, Fire Truck', 'Comfortable seat', 'Builds balance & motor skills', 'Smooth floor wheels', 'Interactive lights & music'],
     colors: [{ name: 'Fire Red', hex: '#EF4444' }, { name: 'Bus Yellow', hex: '#EAB308' }, { name: 'Icecream Pink', hex: '#EC4899' }, { name: 'Military Green', hex: '#15803D' }],
     modelCode: 'YW-RO-03',
-    image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('mclaren-white.jpg'),
     highlights: ['4 Fun Themes', 'Lights & Music', 'Floor Safe']
   },
   {
@@ -70,7 +70,7 @@ export const PRODUCTS: Product[] = [
     features: ['Comfortable seat & steering handle', 'Stylish lighting accents', 'Big sturdy wheels', 'Easy movement of steering wheel', 'Builds leg strength'],
     colors: [{ name: 'Green', hex: '#22C55E' }, { name: 'Silver', hex: '#94A3B8' }, { name: 'Blue', hex: '#3B82F6' }, { name: 'Yellow', hex: '#EAB308' }, { name: 'Red', hex: '#EF4444' }],
     modelCode: 'YW-RO-04',
-    image: 'https://images.unsplash.com/photo-1594787318286-3d835c1d207f?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('mclaren-blue.jpg'),
     highlights: ['Sport Racer', 'Easy Steering', 'Active Play']
   },
   {
@@ -85,7 +85,7 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Builds balance & confidence', 'Smooth scratch-free wheels', 'Lights & music console', 'Aesthetic pastel colors'],
     colors: [{ name: 'Mint Green', hex: '#A7F3D0' }, { name: 'Pink', hex: '#FBCFE8' }, { name: 'Blue', hex: '#BAE6FD' }],
     modelCode: 'YW-RO-05',
-    image: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('mclaren-red.jpg'),
     highlights: ['Pastel Aesthetics', 'Melody Horn', 'Smooth Wheels']
   },
   {
@@ -100,7 +100,7 @@ export const PRODUCTS: Product[] = [
     features: ['Easy to ride steering', 'Spacious storage under seat', 'Comes with posture back rest', 'Weight capacity 15-20 kg', 'Durable non-toxic build'],
     colors: [{ name: 'Mint Green', hex: '#A7F3D0' }, { name: 'Pink', hex: '#FBCFE8' }, { name: 'Blue', hex: '#BAE6FD' }],
     modelCode: 'YW-RO-06',
-    image: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('mclaren-green.jpg'),
     highlights: ['Under-Seat Storage', 'Dual Backrest', '20kg Capacity']
   },
   {
@@ -115,7 +115,7 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Builds balance & posture', 'Smooth whisper-quiet wheels', 'Lights & music console', 'Jet wing side contouring'],
     colors: [{ name: 'Mint Green', hex: '#6EE7B7' }, { name: 'Red', hex: '#FF6B6B' }, { name: 'Pink', hex: '#F472B6' }, { name: 'Purple', hex: '#C084FC' }],
     modelCode: 'YW-RO-07',
-    image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('mclaren-grey.jpg'),
     highlights: ['Jet Wing Design', 'Sound Module', 'Whisper Quiet']
   },
   {
@@ -131,7 +131,7 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Construction Yellow & Black', hex: '#FFD93D' }],
     isBestSeller: true,
     modelCode: 'YW-RO-08',
-    image: 'https://images.unsplash.com/photo-1558060370-d644479be6f7?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('nexride-yellow.jpg'),
     highlights: ['Excavator Digger', 'Electric & Manual', '20kg Capacity']
   },
   {
@@ -146,7 +146,7 @@ export const PRODUCTS: Product[] = [
     features: ['Easy movement of steering', 'Comes with supportive back rest', 'Weight capacity up to 20 kg', 'Electric and Non-Electric options', 'Multiple vibrant colors'],
     colors: [{ name: 'Royal Blue', hex: '#2563EB' }, { name: 'Bright Orange', hex: '#F97316' }, { name: 'Race Red', hex: '#DC2626' }, { name: 'Pure White', hex: '#F8FAFC' }],
     modelCode: 'YW-RO-09',
-    image: 'https://images.unsplash.com/photo-1558060370-d644479be6f7?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('nexride-orange.jpg'),
     highlights: ['Farm Tractor', 'Deep Tread Wheels', 'Electric & Manual']
   },
   {
@@ -162,7 +162,7 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Blue', hex: '#3B82F6' }, { name: 'Green', hex: '#22C55E' }, { name: 'Pink', hex: '#EC4899' }, { name: 'Yellow', hex: '#EAB308' }],
     isBestSeller: true,
     modelCode: 'YW-RO-10',
-    image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('mclaren-blue.jpg'),
     highlights: ['2-in-1 Rocker & Car', '15° Safe Arc', 'Music Box']
   },
   {
@@ -177,7 +177,7 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Builds balance', 'Smooth floor wheels', 'Lights & music horn', 'Extra wide comfortable seat'],
     colors: [{ name: 'Teal', hex: '#14B8A6' }, { name: 'Orange', hex: '#F97316' }, { name: 'Purple', hex: '#A855F7' }, { name: 'Pink', hex: '#EC4899' }, { name: 'Blue', hex: '#3B82F6' }],
     modelCode: 'YW-RO-11',
-    image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('mclaren-red.jpg'),
     highlights: ['Extra Wide Seat', 'Musical Horn', 'Steel Axle']
   },
   {
@@ -193,7 +193,7 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Mint & Grey', hex: '#4ECDC4' }, { name: 'Pink & White', hex: '#FFB6C1' }, { name: 'Navy & Yellow', hex: '#1E293B' }],
     isNewArrival: true,
     modelCode: 'YW-RO-12',
-    image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('mclaren-white.jpg'),
     highlights: ['360° Swivel Wheels', 'Detachable Push Rod', 'Armrest Safety']
   },
   {
@@ -234,7 +234,7 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Green', hex: '#22C55E' }, { name: 'Blue', hex: '#2563EB' }, { name: 'Red', hex: '#EF4444' }],
     isBestSeller: true,
     modelCode: 'YW-KS-01',
-    image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('tiny-rider-mint.jpg'),
     highlights: ['LED Lighttray Wheels', 'No Batteries Needed', 'Rear Brake']
   },
   {
@@ -249,7 +249,7 @@ export const PRODUCTS: Product[] = [
     features: ['Builds balance & coordination', 'Smooth quiet floor wheels', 'Quality 3-wheel balance design', 'Iconic Smiley mascot badge', 'Anti-skid foot platform'],
     colors: [{ name: 'Yellow-Black', hex: '#EAB308' }, { name: 'Orange', hex: '#F97316' }, { name: 'Blue', hex: '#3B82F6' }],
     modelCode: 'YW-KS-02',
-    image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('tiny-rider-yellow.jpg'),
     highlights: ['Smiley Badge', '3-Wheel Balance', 'Anti-Skid Deck']
   },
   {
@@ -265,7 +265,7 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Yellow', hex: '#EAB308' }, { name: 'Orange', hex: '#F97316' }, { name: 'Blue', hex: '#2563EB' }],
     isNewArrival: true,
     modelCode: 'YW-KS-03',
-    image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('tiny-rider-blue.jpg'),
     highlights: ['Flashing LED Wheels', 'Height Adjustable', 'Reinforced Deck']
   },
   {
@@ -280,7 +280,7 @@ export const PRODUCTS: Product[] = [
     features: ['Comfortable molded hands', 'Big sturdy wheels', 'Stylish Italian racing design', 'Lighttray flashing wheels', 'Lean-to-steer balance system'],
     colors: [{ name: 'Green', hex: '#22C55E' }, { name: 'Red', hex: '#EF4444' }, { name: 'Blue', hex: '#2563EB' }],
     modelCode: 'YW-KS-04',
-    image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('tiny-rider-grey.jpg'),
     highlights: ['Ferrari Styling', 'Lean-to-Steer', 'Lighttray Wheels']
   },
   {
@@ -296,7 +296,7 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Blue', hex: '#2563EB' }, { name: 'Green', hex: '#22C55E' }, { name: 'Black', hex: '#1E293B' }, { name: 'Red', hex: '#EF4444' }],
     isBestSeller: true,
     modelCode: 'YW-KS-05',
-    image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('tiny-rider-pink.jpg'),
     highlights: ['Police Siren', 'LED Tail Light', 'Heavy-Duty']
   },
   {
@@ -311,7 +311,7 @@ export const PRODUCTS: Product[] = [
     features: ['Comfortable handle grips', 'Big sturdy wheels', 'Stylish junior design', 'Anti-skid standing surface', 'Low deck height for easy mounting'],
     colors: [{ name: 'Teal & Yellow', hex: '#14B8A6' }, { name: 'Red & Blue', hex: '#EF4444' }],
     modelCode: 'YW-KS-06',
-    image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('tiny-rider-mint.jpg'),
     highlights: ['Junior Sizing', 'Low Deck Height', 'Easy Balance']
   },
   {
@@ -326,7 +326,7 @@ export const PRODUCTS: Product[] = [
     features: ['Comfortable handle grips', 'Big sturdy wheels', 'Iconic Royal Panda handlebar mascot', 'Anti-skid standing deck', 'Height adjustable handlebar'],
     colors: [{ name: 'Black & White Panda', hex: '#1E293B' }, { name: 'Pink Panda', hex: '#EC4899' }],
     modelCode: 'YW-KS-07',
-    image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('tiny-rider-grey.jpg'),
     highlights: ['Panda Mascot', 'Height Adjustable', 'Wide Deck']
   },
   {
@@ -341,7 +341,7 @@ export const PRODUCTS: Product[] = [
     features: ['Comfortable handle grips', 'Big sturdy wheels', 'Royal Panda front badge', 'Anti-skid standing deck', 'Extra wide front wheel stance'],
     colors: [{ name: 'Mint Panda', hex: '#A7F3D0' }, { name: 'Yellow Panda', hex: '#FEF08A' }],
     modelCode: 'YW-KS-08',
-    image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('tiny-rider-yellow.jpg'),
     highlights: ['Extra Wide Stance', 'Anti-Tip Geometry', 'Panda Badge']
   },
 
@@ -361,7 +361,7 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Brown', hex: '#92400E' }, { name: 'Pink', hex: '#EC4899' }, { name: 'Green', hex: '#22C55E' }, { name: 'Blue', hex: '#2563EB' }],
     isBestSeller: true,
     modelCode: 'YW-BW-01',
-    image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('tiny-rider-2in1-red.jpg'),
     highlights: ['2-in-1 Sit & Push', 'Speed Control Wheels', 'Music Console']
   },
   {
@@ -377,7 +377,7 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Pink', hex: '#F472B6' }, { name: 'Yellow', hex: '#FACC15' }, { name: 'Mint', hex: '#4ECDC4' }, { name: 'Blue', hex: '#60A5FA' }],
     isNewArrival: true,
     modelCode: 'YW-BW-02',
-    image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('tiny-rider-2in1-yellow.jpg'),
     highlights: ['ZED Safety Tech', '3-Position Height Adjust', '360° Swivel Wheels']
   },
   {
@@ -392,7 +392,7 @@ export const PRODUCTS: Product[] = [
     features: ['Grows with your child', 'Teddy bear activity tray', 'Designer parent push bar', 'Thick padded & breathable seat', '360° revolving wheels & ZED safety'],
     colors: [{ name: 'Teal', hex: '#14B8A6' }, { name: 'Red', hex: '#EF4444' }, { name: 'Blue', hex: '#2563EB' }, { name: 'Pink', hex: '#EC4899' }],
     modelCode: 'YW-BW-03',
-    image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('tiny-rider-2in1-mint.jpg'),
     highlights: ['Teddy Toy Bar', 'ZED Zero Edge', 'Flat Folding']
   },
 
@@ -412,7 +412,7 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Monochrome Panda', hex: '#1E293B' }, { name: 'Red Panda', hex: '#EF4444' }, { name: 'Blue Panda', hex: '#2563EB' }],
     isBestSeller: true,
     modelCode: 'YW-SC-01',
-    image: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('candy-swing-car-cyan.jpg'),
     highlights: ['Iconic Panda Face', 'ABEC Bearings', 'Kinetic Motion']
   },
   {
@@ -427,7 +427,7 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Anti-skid footrest pads', 'Builds balance & core strength', 'Smooth silent PU floor wheels', 'Front toy storage basket'],
     colors: [{ name: 'Royal Blue', hex: '#2563EB' }, { name: 'Pastel Pink', hex: '#F472B6' }, { name: 'Mint Green', hex: '#4ECDC4' }],
     modelCode: 'YW-SC-02',
-    image: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('candy-swing-car-cyan.jpg'),
     highlights: ['Front Toy Basket', 'Silent PU Wheels', 'Anti-Skid Pads']
   },
   {
@@ -442,7 +442,7 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Anti-skid footrest pads', 'Builds balance', 'Smooth floor wheels', 'Vibrant pastel & neon panda colors'],
     colors: [{ name: 'Pink', hex: '#EC4899' }, { name: 'Green', hex: '#22C55E' }, { name: 'Blue', hex: '#2563EB' }],
     modelCode: 'YW-SC-03',
-    image: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('candy-swing-car-cyan.jpg'),
     highlights: ['Vibrant Panda Themes', 'Fast Gliding', 'BPA-Free']
   },
   {
@@ -457,7 +457,7 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Anti-skid footrest', 'Builds balance', 'Whisper-quiet PU wheels', 'Scandinavian matte pastel aesthetic'],
     colors: [{ name: 'Blue', hex: '#3B82F6' }, { name: 'Red', hex: '#EF4444' }, { name: 'Green', hex: '#22C55E' }],
     modelCode: 'YW-SC-04',
-    image: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('candy-swing-car-cyan.jpg'),
     highlights: ['Scandinavian Matte', 'Floor Safe PU', 'Low Noise']
   },
   {
@@ -472,7 +472,7 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Anti-skid footrest', 'Builds balance', 'Smooth wheels', 'Compact size for early toddlers'],
     colors: [{ name: 'Pink', hex: '#EC4899' }, { name: 'Blue', hex: '#2563EB' }, { name: 'Red', hex: '#EF4444' }, { name: 'Green', hex: '#22C55E' }],
     modelCode: 'YW-SC-05',
-    image: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('candy-swing-car-cyan.jpg'),
     highlights: ['Early Toddler Sizing', 'Low Seat Height', 'Music Box']
   },
   {
@@ -488,7 +488,7 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Black & White', hex: '#1E293B' }],
     isBestSeller: true,
     modelCode: 'YW-SC-06',
-    image: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('candy-swing-car-cyan.jpg'),
     highlights: ['LED Eye Headlights', 'Monochrome Design', 'Bestseller']
   },
   {
@@ -503,7 +503,7 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Anti-skid footrest', 'Builds balance', 'Smooth floor wheels', 'Teddy bear face with LED lights'],
     colors: [{ name: 'Green & Yellow', hex: '#22C55E' }, { name: 'Sunny Orange', hex: '#F97316' }],
     modelCode: 'YW-SC-07',
-    image: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('candy-swing-car-cyan.jpg'),
     highlights: ['Teddy LED Headlights', 'Green-Yellow Hues', 'Silent PU']
   },
   {
@@ -519,7 +519,7 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Mint', hex: '#4ECDC4' }, { name: 'Black', hex: '#1E293B' }, { name: 'Blue', hex: '#2563EB' }, { name: 'Pink', hex: '#EC4899' }],
     isNewArrival: true,
     modelCode: 'YW-SC-08',
-    image: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('candy-swing-car-cyan.jpg'),
     highlights: ['35kg Load Capacity', 'ABEC Steel Bearings', 'Sports Body']
   },
   {
@@ -534,7 +534,7 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Anti-skid footrest', 'Builds balance', 'Rocket tail fin styling', 'Cosmic sound effects & lights'],
     colors: [{ name: 'Mint', hex: '#4ECDC4' }, { name: 'Blue', hex: '#2563EB' }, { name: 'Pink', hex: '#EC4899' }],
     modelCode: 'YW-SC-09',
-    image: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('candy-swing-car-cyan.jpg'),
     highlights: ['Rocket Tail Fin', 'Cosmic Sound Box', '360° Gliding']
   },
   {
@@ -568,7 +568,7 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Builds balance', 'Smooth wheels', 'Lion character head mask', 'Roaring musical sound buttons'],
     colors: [{ name: 'Safari Blue', hex: '#2563EB' }, { name: 'Roar Red', hex: '#EF4444' }],
     modelCode: 'YW-SC-11',
-    image: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('candy-swing-car-cyan.jpg'),
     highlights: ['Lion Head Mask', 'Roaring Sounds', 'Kinetic Glider']
   },
   {
@@ -583,7 +583,7 @@ export const PRODUCTS: Product[] = [
     features: ['3 Variants: Rabbit, Crazy & Robo', 'Rabbit features bunny ear grips & LED wheels', 'Robo features cyber visor lights', 'Anti-skid footrests', 'ABEC steel bearings'],
     colors: [{ name: 'Rabbit Pink', hex: '#EC4899' }, { name: 'Robo Blue', hex: '#2563EB' }, { name: 'Crazy Green', hex: '#22C55E' }],
     modelCode: 'YW-SC-12',
-    image: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('candy-swing-car-cyan.jpg'),
     highlights: ['3 Character Themes', 'Light-Up LED Wheels', 'Cyber Visor']
   },
 
@@ -645,7 +645,7 @@ export const PRODUCTS: Product[] = [
     features: ['Comfortable seat', 'Big sturdy all-terrain wheels', 'Stylish Ninja Black & Yellow graphics', 'Comfy anti-slip pedals', 'High backrest support'],
     colors: [{ name: 'Ninja Black & Yellow', hex: '#EAB308' }],
     modelCode: 'YW-TC-03',
-    image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('turbo-police-bike-red.jpg'),
     highlights: ['Ninja Graphics', 'All-Terrain Wheels', 'High Backrest']
   },
   {
@@ -680,7 +680,7 @@ export const PRODUCTS: Product[] = [
     features: ['Builds balance', 'Smooth wheels', 'Lights & music console', 'Big sturdy wheels', 'Anti-slip pedal grips'],
     colors: [{ name: 'Mint', hex: '#4ECDC4' }, { name: 'Yellow', hex: '#EAB308' }, { name: 'White', hex: '#F8FAFC' }, { name: 'Blue', hex: '#2563EB' }],
     modelCode: 'YW-TC-05',
-    image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('nexride-yellow.jpg'),
     highlights: ['Front Light Console', 'Melody Tunes', 'Smooth Pedals']
   },
   {
@@ -715,7 +715,7 @@ export const PRODUCTS: Product[] = [
     features: ['Builds balance', 'Smooth wheels', 'Steering wheel musical horn', 'Comfortable seat', 'Low seat center of gravity'],
     colors: [{ name: 'Pastel Mint', hex: '#A7F3D0' }, { name: 'Pastel Pink', hex: '#FBCFE8' }],
     modelCode: 'YW-TC-07',
-    image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('tiny-rider-pink.jpg'),
     highlights: ['Low Seat Height', 'Musical Horn', 'Pastel Aesthetic']
   },
   {
@@ -770,7 +770,7 @@ export const PRODUCTS: Product[] = [
     features: ['Builds balance', 'Smooth wheels', 'Musical horn console button', 'Comfortable seat', 'Steerable parent push handle'],
     colors: [{ name: 'Pastel Mint', hex: '#A7F3D0' }, { name: 'Pastel Pink', hex: '#FBCFE8' }],
     modelCode: 'YW-TC-10',
-    image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('tiny-rider-2in1-mint.jpg'),
     highlights: ['Parent Push Rod', 'Musical Horn', 'Foldaway Footrest']
   },
   {
@@ -786,7 +786,7 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Royal Blue', hex: '#2563EB' }, { name: 'Race Red', hex: '#EF4444' }],
     isNewArrival: true,
     modelCode: 'YW-TC-11',
-    image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('nexride-2in1-deluxe-blue.jpg'),
     highlights: ['Carbon Steel Frame', 'Parent Steering Rod', 'Music & Basket']
   },
 
@@ -806,7 +806,7 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Mint Green', hex: '#4ECDC4' }, { name: 'Sunny Yellow', hex: '#FFD93D' }, { name: 'Coral Pink', hex: '#FF6B6B' }],
     isBestSeller: true,
     modelCode: 'YW-PT-01',
-    image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('potty-chair-blue.jpg'),
     highlights: ['Rattle Toy', 'Removable Bowl', 'Stool Lid Conversion']
   },
   {
@@ -821,7 +821,7 @@ export const PRODUCTS: Product[] = [
     features: ['Wide comfortable seat', 'High posture backrest', 'Removable inner potty bowl', 'Safe, durable & foldable', 'Whimsical spotted cow horn handles'],
     colors: [{ name: 'Blue', hex: '#3B82F6' }, { name: 'Green', hex: '#22C55E' }, { name: 'Orange', hex: '#F97316' }, { name: 'Red', hex: '#EF4444' }],
     modelCode: 'YW-PT-02',
-    image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('potty-chair-blue.jpg'),
     highlights: ['Cow Horn Handles', 'Splash Guard', 'Removable Bowl']
   },
   {
@@ -837,7 +837,7 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Red', hex: '#EF4444' }, { name: 'Pink', hex: '#EC4899' }, { name: 'Green', hex: '#22C55E' }, { name: 'Blue', hex: '#2563EB' }],
     isBestSeller: true,
     modelCode: 'YW-PT-03',
-    image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('potty-chair-blue.jpg'),
     highlights: ['Soft Cushion Seat', 'Side Armrests', 'No Cold Plastic']
   },
   {
@@ -872,7 +872,7 @@ export const PRODUCTS: Product[] = [
     features: ['Builds balance & posture', 'Smooth floor wheels', 'Comfortable ergonomic seat', 'Deep removable waste bowl', 'High front splash guard'],
     colors: [{ name: 'Green', hex: '#22C55E' }, { name: 'Blue', hex: '#2563EB' }, { name: 'Pink', hex: '#EC4899' }],
     modelCode: 'YW-PT-05',
-    image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('potty-chair-blue.jpg'),
     highlights: ['Ride-On Style', 'Floor Wheels', 'High Backrest']
   },
   {
@@ -887,7 +887,7 @@ export const PRODUCTS: Product[] = [
     features: ['Builds balance', 'Smooth floor-safe wheels', 'Comfortable wide seat', 'Cute Kitty face with soft ear grips', 'Removable inner waste bowl'],
     colors: [{ name: 'Green', hex: '#22C55E' }, { name: 'Blue', hex: '#2563EB' }, { name: 'Pink', hex: '#EC4899' }],
     modelCode: 'YW-PT-06',
-    image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('potty-chair-blue.jpg'),
     highlights: ['Kitty Ear Handles', 'Removable Bowl', 'Floor Safe']
   },
   {
@@ -902,7 +902,7 @@ export const PRODUCTS: Product[] = [
     features: ['Comfortable soft foam seat pad', 'Safe & durable construction', 'Prevents cold plastic touch', 'Deep removable waste bowl', 'Easy wipe-clean surface'],
     colors: [{ name: 'Blue', hex: '#2563EB' }, { name: 'Orange', hex: '#F97316' }, { name: 'Red', hex: '#EF4444' }, { name: 'Pink', hex: '#EC4899' }],
     modelCode: 'YW-PT-07',
-    image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('potty-chair-blue.jpg'),
     highlights: ['Soft Foam Cushion', 'No Cold Plastic', 'Removable Basin']
   },
   {
@@ -917,7 +917,7 @@ export const PRODUCTS: Product[] = [
     features: ['Comfortable floor seat', 'Safe & durable non-porous plastic', 'High front splash guard', 'Wide anti-slip base stance', 'Easy rinse-clean surface'],
     colors: [{ name: 'Blue', hex: '#3B82F6' }, { name: 'Peach', hex: '#FDBA74' }, { name: 'Green', hex: '#22C55E' }, { name: 'Pink', hex: '#EC4899' }],
     modelCode: 'YW-PT-08',
-    image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('potty-chair-blue.jpg'),
     highlights: ['Classic Floor Potty', 'High Splash Guard', 'Easy Rinse']
   }
 ];

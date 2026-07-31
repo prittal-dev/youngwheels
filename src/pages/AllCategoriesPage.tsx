@@ -2,6 +2,7 @@ import React from 'react';
 import { CategoryId, Product } from '../types';
 import { Sparkles, ArrowRight, Car, Footprints, Smile, ShieldCheck, Heart, Star } from 'lucide-react';
 import { motion } from 'motion/react';
+import { getProductImg } from '../data/products';
 
 interface AllCategoriesPageProps {
   onSelectCategory: (catId: CategoryId) => void;
@@ -29,7 +30,7 @@ export const ALL_CATEGORY_CARDS: CategoryCardItem[] = [
     bgClass: 'bg-[#6EE7B7]',
     textClass: 'text-slate-900',
     doodleType: 'cloud',
-    image: 'https://images.unsplash.com/photo-1594787318286-3d835c1d207f?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('mclaren-green.jpg'),
     modelCountText: '13 Models'
   },
   {
@@ -40,7 +41,7 @@ export const ALL_CATEGORY_CARDS: CategoryCardItem[] = [
     bgClass: 'bg-[#86EFAC]',
     textClass: 'text-slate-900',
     doodleType: 'cloud',
-    image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('tiny-rider-mint.jpg'),
     modelCountText: '8 Models'
   },
   {
@@ -51,7 +52,7 @@ export const ALL_CATEGORY_CARDS: CategoryCardItem[] = [
     bgClass: 'bg-[#A3E635]',
     textClass: 'text-slate-900',
     doodleType: 'scribble',
-    image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('tiny-rider-2in1-red.jpg'),
     modelCountText: '3 Models'
   },
   {
@@ -62,7 +63,7 @@ export const ALL_CATEGORY_CARDS: CategoryCardItem[] = [
     bgClass: 'bg-[#FEF08A]',
     textClass: 'text-slate-900',
     doodleType: 'cloud',
-    image: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('candy-swing-car-cyan.jpg'),
     modelCountText: '12 Models'
   },
   {
@@ -73,7 +74,7 @@ export const ALL_CATEGORY_CARDS: CategoryCardItem[] = [
     bgClass: 'bg-[#67E8F9]',
     textClass: 'text-slate-900',
     doodleType: 'scribble',
-    image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('nexride-orange.jpg'),
     modelCountText: '11 Models'
   },
   {
@@ -84,7 +85,7 @@ export const ALL_CATEGORY_CARDS: CategoryCardItem[] = [
     bgClass: 'bg-[#FCA5A5]',
     textClass: 'text-slate-900',
     doodleType: 'scribble',
-    image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('potty-chair-blue.jpg'),
     modelCountText: '8 Models'
   }
 ];

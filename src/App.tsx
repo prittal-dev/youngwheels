@@ -16,7 +16,7 @@ import { BlogPage } from './pages/BlogPage';
 import { SocialPage } from './pages/SocialPage';
 import { CategoryId, Product, EnquiryItem } from './types';
 import { COMPANY_DETAILS } from './data/company';
-import { PRODUCTS } from './data/products';
+import { PRODUCTS, getProductImg } from './data/products';
 import { MessageCircle, ArrowUp, ShoppingBag } from 'lucide-react';
 import { SmoothScrollProvider } from './components/SmoothScroll';
 
@@ -30,14 +30,18 @@ export default function App() {
   // Managed Products State (with localStorage persistence & auto-sync to 55 catalog items)
   const [productsList, setProductsList] = useState<Product[]>(() => {
     try {
-      const saved = localStorage.getItem('yw_products_v4');
+      const saved = localStorage.getItem('yw_products_v6');
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length >= PRODUCTS.length) {
-          return parsed;
+          // Check if parsed list still has unsplash URLs and upgrade if needed
+          const hasUnsplash = parsed.some((p: any) => p.image && p.image.includes('unsplash.com'));
+          if (!hasUnsplash) {
+            return parsed;
+          }
         }
       }
-      localStorage.setItem('yw_products_v4', JSON.stringify(PRODUCTS));
+      localStorage.setItem('yw_products_v6', JSON.stringify(PRODUCTS));
       return PRODUCTS;
     } catch {
       return PRODUCTS;
@@ -46,7 +50,7 @@ export default function App() {
 
   // Managed Hero Section Image (with localStorage persistence)
   const [heroImage, setHeroImage] = useState<string>(() => {
-    return localStorage.getItem('yw_hero_image') || 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=800';
+    return localStorage.getItem('yw_hero_image_v6') || getProductImg('mclaren-green.jpg');
   });
 
   const [enquiryBasket, setEnquiryBasket] = useState<EnquiryItem[]>(() => {
