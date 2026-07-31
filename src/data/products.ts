@@ -1,5 +1,12 @@
 import { Product } from '../types';
 
+const productImages: Record<string, string> = import.meta.glob('../assets/products/*.jpg', { eager: true, import: 'default' });
+
+export const getProductImg = (filename: string): string => {
+  const key = `../assets/products/${filename}`;
+  return productImages[key] || `/assets/products/${filename}`;
+};
+
 export const PRODUCTS: Product[] = [
   // =========================================================================
   // CATEGORY 1: RIDE-ONS (13 Products)
@@ -199,9 +206,15 @@ export const PRODUCTS: Product[] = [
     weightCapacity: 'Up to 20 kg',
     material: 'Non-Toxic Virgin ABS Plastic',
     features: ['Builds balance & coordination', 'Smooth scratch-free wheels', 'Comfortable sports bucket seat', 'European supercar design', 'High-gloss non-fading finish'],
-    colors: [{ name: 'Green', hex: '#22C55E' }, { name: 'White', hex: '#F8FAFC' }, { name: 'Grey', hex: '#64748B' }, { name: 'Blue', hex: '#2563EB' }, { name: 'Red', hex: '#EF4444' }],
+    colors: [
+      { name: 'Green', hex: '#22C55E', image: getProductImg('mclaren-green.jpg') },
+      { name: 'Grey', hex: '#64748B', image: getProductImg('mclaren-grey.jpg') },
+      { name: 'White', hex: '#F8FAFC', image: getProductImg('mclaren-white.jpg') },
+      { name: 'Blue', hex: '#2563EB', image: getProductImg('mclaren-blue.jpg') },
+      { name: 'Red', hex: '#EF4444', image: getProductImg('mclaren-red.jpg') }
+    ],
     modelCode: 'YW-RO-13',
-    image: 'https://images.unsplash.com/photo-1594787318286-3d835c1d207f?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('mclaren-green.jpg'),
     highlights: ['Supercar Design', 'Sports Bucket Seat', 'High Gloss']
   },
 
@@ -534,9 +547,13 @@ export const PRODUCTS: Product[] = [
     weightCapacity: 'Up to 30 kg',
     material: 'Virgin ABS Plastic',
     features: ['Develops motor skills', 'Anti-skid footrest', 'Builds balance', 'ABEC steel ball bearings', 'Dual-tone candy color scheme'],
-    colors: [{ name: 'Candy Red', hex: '#EF4444' }, { name: 'Sunshine Yellow', hex: '#EAB308' }, { name: 'Cyan', hex: '#06B6D4' }],
+    colors: [
+      { name: 'Cyan & Mint', hex: '#06B6D4', image: getProductImg('candy-swing-car-cyan.jpg') },
+      { name: 'Candy Red', hex: '#EF4444' },
+      { name: 'Sunshine Yellow', hex: '#EAB308' }
+    ],
     modelCode: 'YW-SC-10',
-    image: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('candy-swing-car-cyan.jpg'),
     highlights: ['Dual-Tone Candy', 'ABEC Steel Bearings', 'Silent PU']
   },
   {
@@ -583,10 +600,16 @@ export const PRODUCTS: Product[] = [
     weightCapacity: 'Up to 25 kg',
     material: 'Carbon Steel Frame & ABS Seat',
     features: ['Builds balance & leg endurance', 'Smooth rubber tread wheels', 'Comfortable ergonomic bucket seat', 'High-tensile carbon steel frame', 'Anti-slip pedal grips'],
-    colors: [{ name: 'Teal', hex: '#14B8A6' }, { name: 'Blue', hex: '#2563EB' }, { name: 'Yellow', hex: '#EAB308' }, { name: 'Red', hex: '#EF4444' }, { name: 'Orange', hex: '#F97316' }],
+    colors: [
+      { name: 'Orange', hex: '#F97316', image: getProductImg('nexride-orange.jpg') },
+      { name: 'Yellow', hex: '#EAB308', image: getProductImg('nexride-yellow.jpg') },
+      { name: 'Teal', hex: '#14B8A6', image: getProductImg('nexride-teal.jpg') },
+      { name: 'Blue', hex: '#2563EB', image: getProductImg('nexride-blue.jpg') },
+      { name: 'Red', hex: '#EF4444', image: getProductImg('nexride-red.jpg') }
+    ],
     isBestSeller: true,
     modelCode: 'YW-TC-01',
-    image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('nexride-orange.jpg'),
     highlights: ['Carbon Steel Frame', 'Anti-Slip Pedals', 'Bestseller']
   },
   {
@@ -599,9 +622,15 @@ export const PRODUCTS: Product[] = [
     weightCapacity: 'Up to 20 kg',
     material: 'Non-Toxic Plastic & Steel',
     features: ['Builds balance', 'Smooth wheels', 'Comfortable seat', 'Low seat height for early toddlers', 'Soft pastel aesthetic'],
-    colors: [{ name: 'Pastel Mint', hex: '#A7F3D0' }, { name: 'Pastel Pink', hex: '#FBCFE8' }, { name: 'Pastel Blue', hex: '#BAE6FD' }],
+    colors: [
+      { name: 'Pastel Mint', hex: '#A7F3D0', image: getProductImg('tiny-rider-mint.jpg') },
+      { name: 'Grey & Black', hex: '#64748B', image: getProductImg('tiny-rider-grey.jpg') },
+      { name: 'Pastel Pink', hex: '#FBCFE8', image: getProductImg('tiny-rider-pink.jpg') },
+      { name: 'Pastel Blue', hex: '#BAE6FD', image: getProductImg('tiny-rider-blue.jpg') },
+      { name: 'Yellow', hex: '#EAB308', image: getProductImg('tiny-rider-yellow.jpg') }
+    ],
     modelCode: 'YW-TC-02',
-    image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('tiny-rider-mint.jpg'),
     highlights: ['Early Toddler Sizing', 'Low Seat Height', 'Pastel Colors']
   },
   {
@@ -629,10 +658,14 @@ export const PRODUCTS: Product[] = [
     weightCapacity: 'Up to 25 kg',
     material: 'High-Impact ABS Plastic',
     features: ['Comfortable seat', 'Big sturdy wheels', 'Electronic Police Siren sound box', 'Musical lighting console', 'Flashing LED tail light'],
-    colors: [{ name: 'Police Red', hex: '#EF4444' }, { name: 'Patrol Blue', hex: '#2563EB' }, { name: 'Pure White', hex: '#F8FAFC' }],
+    colors: [
+      { name: 'Police Red', hex: '#EF4444', image: getProductImg('turbo-police-bike-red.jpg') },
+      { name: 'Patrol Blue', hex: '#2563EB' },
+      { name: 'Pure White', hex: '#F8FAFC' }
+    ],
     isBestSeller: true,
     modelCode: 'YW-TC-04',
-    image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('turbo-police-bike-red.jpg'),
     highlights: ['Police Siren', 'LED Tail Light', 'Motorcycle Style']
   },
   {
@@ -660,9 +693,14 @@ export const PRODUCTS: Product[] = [
     weightCapacity: 'Up to 25 kg',
     material: 'Carbon Steel Frame & ABS',
     features: ['Builds balance', 'Smooth rubber tread wheels', 'Integrated musical horn box', 'Comfortable ergonomic seat', 'High-tensile steel frame'],
-    colors: [{ name: 'Royal Blue', hex: '#2563EB' }, { name: 'Race Red', hex: '#EF4444' }, { name: 'Teal Green', hex: '#14B8A6' }],
+    colors: [
+      { name: 'Yellow', hex: '#EAB308', image: getProductImg('nexride-2in1-deluxe-yellow.jpg') },
+      { name: 'Teal Green', hex: '#14B8A6', image: getProductImg('nexride-2in1-deluxe-teal.jpg') },
+      { name: 'Race Red', hex: '#EF4444', image: getProductImg('nexride-2in1-deluxe-red.jpg') },
+      { name: 'Royal Blue', hex: '#2563EB', image: getProductImg('nexride-2in1-deluxe-blue.jpg') }
+    ],
     modelCode: 'YW-TC-06',
-    image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('nexride-2in1-deluxe-yellow.jpg'),
     highlights: ['Musical Horn', 'Steel Frame', 'Treaded Wheels']
   },
   {
@@ -690,9 +728,14 @@ export const PRODUCTS: Product[] = [
     weightCapacity: 'Up to 22 kg',
     material: 'Steel Frame & ABS Body',
     features: ['Builds balance', 'Smooth wheels', 'Steerable mother push handle', 'Comfortable seat', 'Foldaway toddler footrests'],
-    colors: [{ name: 'Mint & White', hex: '#4ECDC4' }, { name: 'Pink & White', hex: '#FFB6C1' }],
+    colors: [
+      { name: 'Red', hex: '#EF4444', image: getProductImg('tiny-rider-2in1-red.jpg') },
+      { name: 'Yellow', hex: '#EAB308', image: getProductImg('tiny-rider-2in1-yellow.jpg') },
+      { name: 'Sky Blue', hex: '#38BDF8', image: getProductImg('tiny-rider-2in1-blue.jpg') },
+      { name: 'Mint Green', hex: '#4ECDC4', image: getProductImg('tiny-rider-2in1-mint.jpg') }
+    ],
     modelCode: 'YW-TC-08',
-    image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('tiny-rider-2in1-red.jpg'),
     highlights: ['2-in-1 Stroller Trike', 'Parent Push Rod', 'Foldaway Footrests']
   },
   {
@@ -705,9 +748,14 @@ export const PRODUCTS: Product[] = [
     weightCapacity: 'Up to 25 kg',
     material: 'Carbon Steel & High-Impact ABS',
     features: ['Builds balance', 'Smooth rubber tread wheels', 'Steerable parent push handle', 'Comfortable seat', 'Rear plastic luggage basket'],
-    colors: [{ name: 'Red & Black', hex: '#EF4444' }, { name: 'Blue & Yellow', hex: '#2563EB' }],
+    colors: [
+      { name: 'Red & Black', hex: '#EF4444', image: getProductImg('nexride-2in1-red.jpg') },
+      { name: 'Yellow & Black', hex: '#EAB308', image: getProductImg('nexride-2in1-yellow.jpg') },
+      { name: 'Teal & Black', hex: '#14B8A6', image: getProductImg('nexride-2in1-teal.jpg') },
+      { name: 'Blue & Black', hex: '#2563EB', image: getProductImg('nexride-2in1-blue.jpg') }
+    ],
     modelCode: 'YW-TC-09',
-    image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('nexride-2in1-red.jpg'),
     highlights: ['Carbon Steel Frame', 'Parent Steering Rod', 'Luggage Basket']
   },
   {
@@ -802,10 +850,14 @@ export const PRODUCTS: Product[] = [
     weightCapacity: 'Up to 20 kg',
     material: 'Virgin ABS Plastic',
     features: ['Wide comfortable seat', 'Removable inner potty bowl', 'Detachable 4-wheel base', 'Safe & durable non-toxic plastic', 'Turning handles with squeaky horn'],
-    colors: [{ name: 'Blue', hex: '#3B82F6' }, { name: 'Green', hex: '#22C55E' }, { name: 'Pink', hex: '#EC4899' }],
+    colors: [
+      { name: 'Scooter Blue', hex: '#3B82F6', image: getProductImg('potty-chair-blue.jpg') },
+      { name: 'Green', hex: '#22C55E' },
+      { name: 'Pink', hex: '#EC4899' }
+    ],
     isNewArrival: true,
     modelCode: 'YW-PT-04',
-    image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&q=80&w=600',
+    image: getProductImg('potty-chair-blue.jpg'),
     highlights: ['2-in-1 Scooter Potty', 'Detachable Wheels', 'Squeaky Horn']
   },
   {

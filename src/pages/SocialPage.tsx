@@ -25,9 +25,9 @@ export const SocialPage: React.FC = () => {
             {/* Instagram Profile Avatar */}
             <div className="relative shrink-0">
               <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1.5 bg-gradient-to-tr from-[#FFD93D] via-[#DD2A7B] to-[#8134AF] shadow-xl">
-                <div className="w-full h-full rounded-full bg-slate-900 border-4 border-white flex items-center justify-center overflow-hidden relative">
-                  <span className="font-heading font-black text-3xl text-[#FFD93D]">YW</span>
-                </div>
+                <a href="https://instagram.com/youngwheelsindia" target="_blank">
+                <img src="https://scontent.cdninstagram.com/v/t51.2885-19/80792454_184220813020958_4867264150524395520_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=110&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy42NzguQzMifQ%3D%3D&_nc_ohc=N2u0IUGqZ6wQ7kNvwH6buiX&_nc_oc=AdoBr-89mBRk7pUUrzsaxonWauy4ckayfzLX-ANSt22hIvcnViCkm6RcwTE0tZHgd3Gr90UdakWta3Z6fApDlk9U&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_ss=7b689&oh=00_AQHCf0XXpZuvBAOqI2aThHXMIK4KA0oiGBzjlH-Ab3pGYw&oe=6A70F9B1" className="w-full h-full rounded-full" alt="" />
+                </a>
               </div>
               <div className="absolute bottom-1 right-1 bg-blue-500 text-white rounded-full p-1.5 shadow-md" title="Official Verified Brand">
                 <CheckCircle2 className="w-5 h-5" />

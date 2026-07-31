@@ -118,7 +118,7 @@ export const CategoryShowcase: React.FC<CategoryShowcaseProps> = ({ onSelectCate
         </motion.div>
 
         {/* Category Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {CATEGORIES.map((cat, idx) => {
             const theme = getCategoryTheme(cat.id);
             return (

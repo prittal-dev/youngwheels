@@ -14,6 +14,9 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose, on
 
   const [selectedColor, setSelectedColor] = useState(product.colors[0]?.name || 'Default');
 
+  const activeColorObj = product.colors.find(c => c.name === selectedColor);
+  const displayedImage = activeColorObj?.image || product.image;
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200">
       
@@ -33,7 +36,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose, on
           {/* Left Image & Specs */}
           <div className="md:col-span-5 space-y-3">
             <div className="relative h-60 w-full rounded-2xl bg-gradient-to-tr from-[#FFFDF9] via-[#FFF9EE] to-[#E0F7F5] p-3 flex items-center justify-center border border-slate-200">
-              <img src={product.image} alt={product.name} className="h-full object-contain" />
+              <img src={displayedImage} alt={product.name} className="h-full object-contain transition-all duration-300" />
               <span className="absolute top-2 left-2 bg-[#FFD93D] text-slate-900 text-[10px] font-extrabold px-2 py-0.5 rounded-full">
                 {product.modelCode}
               </span>

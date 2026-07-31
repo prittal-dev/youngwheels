@@ -226,6 +226,8 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {paginatedProducts.map((product, idx) => {
               const activeColorName = selectedColors[product.id] || product.colors[0]?.name;
+              const activeColorObj = product.colors.find(c => c.name === activeColorName);
+              const displayedImage = activeColorObj?.image || product.image;
 
               return (
                 <motion.div
@@ -261,9 +263,9 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
 
                       {/* Product Image */}
                       <img
-                        src={product.image}
+                        src={displayedImage}
                         alt={product.name}
-                        className="w-full h-full object-contain group-hover:scale-108 transition-transform duration-300"
+                        className="w-full h-full object-contain group-hover:scale-108 transition-all duration-300"
                       />
 
                       {/* Quick View Hover Overlay */}

@@ -22,7 +22,7 @@ export interface Product {
   weightCapacity: string;
   material: string;
   features: string[];
-  colors: { name: string; hex: string }[];
+  colors: { name: string; hex: string; image?: string }[];
   isBestSeller?: boolean;
   isNewArrival?: boolean;
   modelCode: string;

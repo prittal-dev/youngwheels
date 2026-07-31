@@ -268,7 +268,7 @@ export const Header: React.FC<HeaderProps> = ({
                 : 'text-slate-700 hover:bg-[#FDF2F8] hover:text-[#DD2A7B]'
             }`}
           >
-            <Instagram className="w-4 h-4 text-[#DD2A7B]" />
+            <Instagram className="w-4 h-4 text-[#3b3035]" />
             <span>Social Hub</span>
           </button>
         </nav>
