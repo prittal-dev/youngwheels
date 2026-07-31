@@ -9,7 +9,7 @@ export const COMPANY_DETAILS = {
   whatsapp: '+91 7011227049',
   whatsappRaw: '917011227049',
   email: 'india.youngwheels@gmail.com',
-  address: 'Plot No 182-183, Kh No 155, Lal Doora Village, Pooth Khurd, New Delhi – 110039',
+  address: 'Plot No 182-183, Khasra No 155, Lal Doora Village, Pooth Khurd, New Delhi – 110039',
   googleMapsUrl: 'https://maps.app.goo.gl/B8MxbnP2FN44nA4b8',
   googleMapsEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3497.2498953724457!2d77.04682507501344!3d28.77180467774343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d07001e578161%3A0xc4edc6e6bca7ddb1!2sYoung%20wheel%20toys!5e0!3m2!1sen!2sin!4v1785394044814!5m2!1sen!2sin',
   gstNo: '07AACFY3852A1ZE',
