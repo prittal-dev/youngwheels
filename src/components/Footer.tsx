@@ -16,6 +16,9 @@ import {
 } from 'lucide-react';
 import { COMPANY_DETAILS, CATEGORIES } from '../data/company';
 import logoImg from '../../assets/logo.png';
+import msmeImg from '../assets/msme.png';
+import isoImg from '../assets/iso.png';
+
 
 interface FooterProps {
   onNavigateTab: (tab: string) => void;
@@ -159,6 +162,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
                 </li>
               ))}
             </ul>
+
+            {/* MSME & ISO Logos in the empty space under the category links */}
+            <div className="pt-3 flex items-center gap-3">
+              <div className="bg-white p-2 rounded-xl shadow-md border border-slate-700/50 flex items-center justify-center hover:scale-105 transition-transform" title="MSME Registered Enterprise">
+                <img src={msmeImg} alt="MSME Certified" className="h-9 w-auto object-contain" />
+              </div>
+              <div className="bg-white p-2 rounded-xl shadow-md border border-slate-700/50 flex items-center justify-center hover:scale-105 transition-transform" title="ISO 9001:2015 Quality System">
+                <img src={isoImg} alt="ISO Certified 9001:2015" className="h-9 w-auto object-contain" />
+              </div>
+            </div>
           </div>
 
           {/* Quick Page Links */}
@@ -223,7 +236,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
             </div>
 
             {/* Legal & Government Registrations Card */}
-            <div className="bg-slate-800/90 rounded-2xl p-3 border border-slate-700 space-y-1 text-[11px] font-bold text-slate-300 mt-2 shadow-xs">
+            <div className="bg-slate-800/90 rounded-2xl p-3 border border-slate-700 space-y-2 text-[11px] font-bold text-slate-300 mt-2 shadow-xs">
+              <div className="flex items-center justify-between border-b border-slate-700/60 pb-2">
+                <div className="flex items-center gap-2">
+                  <div className="bg-white px-1.5 py-1 rounded-lg">
+                    <img src={msmeImg} alt="MSME" className="h-5 w-auto object-contain" />
+                  </div>
+                  <div className="bg-white px-1.5 py-1 rounded-lg">
+                    <img src={isoImg} alt="ISO" className="h-5 w-auto object-contain" />
+                  </div>
+                </div>
+                <span className="text-[10px] text-[#34D399] bg-[#34D399]/10 px-2 py-0.5 rounded-full border border-[#34D399]/20 font-semibold">Verified Unit</span>
+              </div>
               <div className="flex items-center justify-between">
                 <span className="text-[#FFD93D]">MSME NO:</span>
                 <span className="text-white font-mono">{COMPANY_DETAILS.msmeNo}</span>
