@@ -53,6 +53,8 @@ export interface Testimonial {
   comment: string;
   avatar: string;
   productBought: string;
+  initial?: string;
+  bgColor?: string;
 }
 
 export interface EnquiryItem {

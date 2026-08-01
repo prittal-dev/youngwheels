@@ -14,7 +14,10 @@ import {
   RotateCcw,
   ExternalLink,
   ChevronRight,
-  ChevronLeft
+  ChevronLeft,
+  Calendar,
+  FileText,
+  Award
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { COMPANY_DETAILS, CATEGORIES } from '../data/company';
@@ -22,7 +25,7 @@ import { COMPANY_DETAILS, CATEGORIES } from '../data/company';
 export interface QuickActionItem {
   label: string;
   action: () => void;
-  iconType?: 'map' | 'contact' | 'whatsapp' | 'call' | 'wholesale' | 'categories' | 'bestseller' | 'about' | 'shipping';
+  iconType?: 'map' | 'contact' | 'whatsapp' | 'call' | 'wholesale' | 'categories' | 'bestseller' | 'about' | 'shipping' | 'events' | 'catalog' | 'certifications';
 }
 
 export interface Message {
@@ -40,12 +43,14 @@ interface ChatbotWidgetProps {
 }
 
 const FAQ_MENU_ITEMS = [
-  { id: 'location', label: 'Address & Location', Icon: MapPin, color: 'text-[#FF6B6B]' },
-  { id: 'contact', label: 'Phone & WhatsApp', Icon: Phone, color: 'text-[#2563EB]' },
-  { id: 'products', label: 'Product Categories', Icon: Car, color: 'text-[#FFD93D]' },
-  { id: 'wholesale', label: 'Bulk / Wholesale Rates', Icon: Building2, color: 'text-[#10B981]' },
-  { id: 'safety', label: 'Plastic Safety & Quality', Icon: ShieldCheck, color: 'text-[#EC4899]' },
-  { id: 'shipping', label: 'Shipping & Delivery', Icon: Truck, color: 'text-[#06B6D4]' },
+  { id: 'events', label: 'Events & Expos Visited', Icon: Calendar, color: 'text-[#FF6B6B]' },
+  { id: 'location', label: 'Address & Google Maps', Icon: MapPin, color: 'text-[#EF4444]' },
+  { id: 'contact', label: 'Phone & WhatsApp Direct', Icon: Phone, color: 'text-[#2563EB]' },
+  { id: 'wholesale', label: 'Bulk / Dealer Rates', Icon: Building2, color: 'text-[#10B981]' },
+  { id: 'products', label: '55+ Toy Models & Types', Icon: Car, color: 'text-[#FFD93D]' },
+  { id: 'certifications', label: 'MSME & ISO Quality', Icon: Award, color: 'text-[#8B5CF6]' },
+  { id: 'safety', label: 'Non-Toxic BPA-Free Plastic', Icon: ShieldCheck, color: 'text-[#EC4899]' },
+  { id: 'shipping', label: 'Pan-India Shipping & MOQ', Icon: Truck, color: 'text-[#06B6D4]' },
 ];
 
 export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({ onOpenWholesaleModal, onNavigateTab, hideInFooter }) => {
@@ -122,6 +127,10 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({ onOpenWholesaleMod
         return <ShieldCheck className="w-3.5 h-3.5 text-[#4ECDC4]" />;
       case 'shipping':
         return <Truck className="w-3.5 h-3.5 text-[#06B6D4]" />;
+      case 'events':
+        return <Calendar className="w-3.5 h-3.5 text-[#FF6B6B]" />;
+      case 'certifications':
+        return <Award className="w-3.5 h-3.5 text-[#8B5CF6]" />;
       default:
         return <ExternalLink className="w-3.5 h-3.5 text-slate-400" />;
     }
@@ -130,6 +139,45 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({ onOpenWholesaleMod
   // Intelligent Answer Generator
   const generateBotResponse = (query: string): { text: string; actions?: QuickActionItem[] } => {
     const q = query.toLowerCase();
+
+    // 0. Events & Expos
+    if (q.includes('event') || q.includes('expo') || q.includes('exhibition') || q.includes('fair') || q.includes('fest') || q.includes('visit') || q.includes('reel') || q.includes('showcase')) {
+      return {
+        text: `**Young Wheels Events & Expos:**\n\nYoung Wheels regularly visits & showcases toys at national trade expos and kids carnivals across India!\n\n• **Featured Reel**: Live exhibition visit footage on Instagram (@youngwheelsindia)\n• **Factory Event Support**: Partnership options for school carnivals & expos`,
+        actions: [
+          {
+            label: 'View Events & Exhibition Highlights Page',
+            action: () => {
+              onNavigateTab('events');
+              setIsOpen(false);
+            },
+            iconType: 'events'
+          },
+          {
+            label: 'Watch Event Reel on Instagram',
+            action: () => window.open('https://www.instagram.com/reel/Dae9OaMTqfK/', '_blank'),
+            iconType: 'whatsapp'
+          }
+        ]
+      };
+    }
+
+    // 0.5 Certifications & MSME / ISO
+    if (q.includes('msme') || q.includes('iso') || q.includes('gst') || q.includes('certificate') || q.includes('gov') || q.includes('registered') || q.includes('legal') || q.includes('udyam')) {
+      return {
+        text: `**Government Registrations & Verification:**\n\n• **MSME Registration No:** ${COMPANY_DETAILS.msmeNo}\n• **GSTIN / UIN:** ${COMPANY_DETAILS.gstNo} (State Code ${COMPANY_DETAILS.stateCode}, ${COMPANY_DETAILS.stateName})\n• **ISO 9001:2015 Certified Quality Facility**\n\nVerified manufacturing unit in Pooth Khurd, New Delhi!`,
+        actions: [
+          {
+            label: 'Request Official MSME / GST Rate Sheet',
+            action: () => {
+              onOpenWholesaleModal();
+              setIsOpen(false);
+            },
+            iconType: 'wholesale'
+          }
+        ]
+      };
+    }
 
     // 1. Address / Location / Directions / Where
     if (q.includes('address') || q.includes('location') || q.includes('where') || q.includes('factory') || q.includes('delhi') || q.includes('map') || q.includes('place') || q.includes('pooth')) {

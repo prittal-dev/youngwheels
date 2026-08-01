@@ -196,6 +196,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
                 </button>
               </li>
               <li>
+                <button onClick={() => onNavigateTab('events')} className="hover:text-[#FF6B6B] transition-colors flex items-center gap-1 font-bold text-[#FFD93D]">
+                  <span>Events 🎟️</span>
+                </button>
+              </li>
+              <li>
                 <button onClick={() => onNavigateTab('social')} className="hover:text-[#DD2A7B] transition-colors flex items-center gap-1">
                   <span>Social Hub (Instagram)</span>
                 </button>

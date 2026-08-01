@@ -23,7 +23,8 @@ import {
   Instagram,
   BookOpen,
   Youtube,
-  Facebook
+  Facebook,
+  Calendar
 } from 'lucide-react';
 import { COMPANY_DETAILS, CATEGORIES } from '../data/company';
 import { CategoryId } from '../types';
@@ -234,6 +235,19 @@ export const Header: React.FC<HeaderProps> = ({
             Blogs
           </button>
 
+          {/* 5. Events */}
+          <button
+            onClick={() => handleNavClick('events')}
+            className={`px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-xl transition-all whitespace-nowrap flex items-center gap-1.5 ${
+              activeTab === 'events'
+                ? 'bg-[#FF6B6B] text-white font-bold shadow-xs'
+                : 'text-slate-700 hover:bg-[#FFE8E8] hover:text-[#FF6B6B]'
+            }`}
+          >
+            <Calendar className="w-3.5 h-3.5 text-[#FFD93D]" />
+            <span>Events</span>
+          </button>
+
           {/* 5. Visit Factory */}
           <button
             onClick={() => handleNavClick('contact')}
@@ -429,6 +443,17 @@ export const Header: React.FC<HeaderProps> = ({
           >
             <BookOpen className="w-4 h-4 text-slate-900" />
             <span>Blogs & Guides</span>
+          </button>
+
+          {/* 4.5. Events */}
+          <button
+            onClick={() => handleNavClick('events')}
+            className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 ${
+              activeTab === 'events' ? 'bg-[#FF6B6B] text-white' : 'text-slate-700 hover:bg-slate-100'
+            }`}
+          >
+            <Calendar className="w-4 h-4 text-[#FFD93D]" />
+            <span>Events</span>
           </button>
 
           {/* 5. Visit Factory */}

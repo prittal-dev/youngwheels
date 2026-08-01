@@ -15,6 +15,7 @@ import { AdminPage } from './pages/AdminPage';
 import { AllCategoriesPage } from './pages/AllCategoriesPage';
 import { BlogPage } from './pages/BlogPage';
 import { SocialPage } from './pages/SocialPage';
+import { EventsPage } from './pages/EventsPage';
 import { CategoryId, Product, EnquiryItem } from './types';
 import { COMPANY_DETAILS } from './data/company';
 import { PRODUCTS, getProductImg } from './data/products';
@@ -274,6 +275,16 @@ export default function App() {
 
               {activeTab === 'blog' && (
                 <BlogPage
+                  onOpenWholesaleModal={() => setWholesaleModalOpen(true)}
+                  onNavigateHome={() => {
+                    setActiveTab('home');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                />
+              )}
+
+              {activeTab === 'events' && (
+                <EventsPage
                   onOpenWholesaleModal={() => setWholesaleModalOpen(true)}
                   onNavigateHome={() => {
                     setActiveTab('home');
