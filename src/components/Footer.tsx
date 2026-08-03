@@ -8,6 +8,7 @@ import {
   Sparkles, 
   Car, 
   ExternalLink,
+  Globe,
   ArrowUp,
   Facebook,
   Instagram,
@@ -238,6 +239,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-[#EC4899] shrink-0" />
               <span className="truncate">{COMPANY_DETAILS.email}</span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <Globe className="w-4 h-4 text-[#10B981] shrink-0" />
+              <a href={COMPANY_DETAILS.website} target="_blank" rel="noopener noreferrer" className="hover:text-[#FF6B6B] hover:underline font-bold text-[#34D399]">
+                {COMPANY_DETAILS.websiteDisplay}
+              </a>
             </div>
 
             {/* Legal & Government Registrations Card */}

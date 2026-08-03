@@ -207,9 +207,9 @@ export const EventsPage: React.FC<EventsPageProps> = ({ onOpenWholesaleModal }) 
                 <Phone className="w-4 h-4 text-[#2563EB]" />
                 <span>Phone: +91 8383047505</span>
               </a>
-              <a href="https://www.youngwheel.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-[#FF6B6B]">
+              <a href={COMPANY_DETAILS.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-[#FF6B6B]">
                 <Globe className="w-4 h-4 text-[#10B981]" />
-                <span>www.youngwheel.com</span>
+                <span>{COMPANY_DETAILS.websiteDisplay}</span>
               </a>
             </div>
 
