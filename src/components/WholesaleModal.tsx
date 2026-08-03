@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Building2, Send, MessageCircle, CheckCircle2 } from 'lucide-react';
+import { X, Building2, Send, MessageCircle, CheckCircle2, Mail, Loader2 } from 'lucide-react';
 import { COMPANY_DETAILS, CATEGORIES } from '../data/company';
 
 interface WholesaleModalProps {
@@ -11,9 +11,11 @@ export const WholesaleModal: React.FC<WholesaleModalProps> = ({ isOpen, onClose 
   if (!isOpen) return null;
 
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     businessName: '',
     contactPerson: '',
+    email: '',
     phone: '',
     city: '',
     gstNumber: '',
@@ -33,9 +35,67 @@ export const WholesaleModal: React.FC<WholesaleModalProps> = ({ isOpen, onClose 
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const sendMailtoFallback = () => {
+    const subject = `Wholesale Enquiry from ${formData.businessName || formData.contactPerson}`;
+    let body = `NEW B2B DISTRIBUTOR ENQUIRY - YOUNG WHEELS\n`;
+    body += `------------------------------------\n`;
+    body += `🏢 Business/Shop Name: ${formData.businessName || 'N/A'}\n`;
+    body += `👤 Contact Person: ${formData.contactPerson}\n`;
+    body += `📧 Distributor Email ID: ${formData.email}\n`;
+    body += `📞 Phone: ${formData.phone}\n`;
+    body += `📍 City / State: ${formData.city}\n`;
+    body += `📋 GST No: ${formData.gstNumber || 'Not provided'}\n`;
+    body += `📦 Est. Order Qty: ${formData.estimatedQuantity}\n`;
+    body += `🧸 Interested Categories: ${formData.interestedCategories.join(', ') || 'All Categories'}\n`;
+    if (formData.message) {
+      body += `💬 Note / Requirements: ${formData.message}\n`;
+    }
+    body += `------------------------------------\n`;
+    body += `Sent via Young Wheels India Wholesale Enquiry Form.`;
+
+    const mailtoUrl = `mailto:${COMPANY_DETAILS.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      // Send direct background email query to india.youngwheels@gmail.com using FormSubmit API
+      const response = await fetch(`https://formsubmit.co/ajax/${COMPANY_DETAILS.email}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: `New B2B Wholesale Enquiry from ${formData.businessName || formData.contactPerson}`,
+          _replyto: formData.email,
+          _template: 'table',
+          "Business / Shop Name": formData.businessName || 'N/A',
+          "Contact Person": formData.contactPerson,
+          "Distributor Email": formData.email,
+          "Phone / Mobile": formData.phone,
+          "City & State": formData.city,
+          "GST Number": formData.gstNumber || 'Not provided',
+          "Estimated Order Volume": formData.estimatedQuantity,
+          "Interested Product Categories": formData.interestedCategories.join(', ') || 'All Categories',
+          "Message / Requirements": formData.message || 'N/A'
+        })
+      });
+
+      if (!response.ok) {
+        // Fallback to mailto if service is blocked or fails
+        sendMailtoFallback();
+      }
+    } catch (err) {
+      console.warn('Direct email API fallback:', err);
+      sendMailtoFallback();
+    } finally {
+      setIsSubmitting(false);
+      setSubmitted(true);
+    }
   };
 
   const sendWhatsAppQuote = () => {
@@ -43,6 +103,7 @@ export const WholesaleModal: React.FC<WholesaleModalProps> = ({ isOpen, onClose 
     msg += `------------------------------------\n`;
     msg += `🏢 *Business Name:* ${formData.businessName || 'N/A'}\n`;
     msg += `👤 *Contact Person:* ${formData.contactPerson}\n`;
+    msg += `📧 *Email ID:* ${formData.email}\n`;
     msg += `📞 *Phone:* ${formData.phone}\n`;
     msg += `📍 *City / State:* ${formData.city}\n`;
     msg += `📋 *GST No:* ${formData.gstNumber || 'Not provided'}\n`;
@@ -70,7 +131,7 @@ export const WholesaleModal: React.FC<WholesaleModalProps> = ({ isOpen, onClose 
         
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200"
+          className="absolute top-4 right-4 p-2 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 cursor-pointer"
         >
           <X className="w-5 h-5" />
         </button>
@@ -80,18 +141,30 @@ export const WholesaleModal: React.FC<WholesaleModalProps> = ({ isOpen, onClose 
             <div className="w-16 h-16 rounded-full bg-[#E6FAD8] text-[#25D366] mx-auto flex items-center justify-center font-black text-2xl shadow-md">
               <CheckCircle2 className="w-8 h-8 text-[#25D366]" />
             </div>
-            <h3 className="font-heading font-black text-2xl text-slate-900">Wholesale Request Received!</h3>
-            <p className="text-xs text-slate-600 max-w-md mx-auto font-medium">
-              Thank you {formData.contactPerson}! Our New Delhi factory wholesale desk will contact you with master pricing shortly.
+            <h3 className="font-heading font-black text-2xl text-slate-900">Wholesale Enquiry Sent!</h3>
+            <p className="text-xs text-slate-600 max-w-md mx-auto font-medium leading-relaxed">
+              Thank you <strong>{formData.contactPerson}</strong>! Your enquiry has been sent directly to Young Wheels India (<span className="text-slate-900 font-bold">{COMPANY_DETAILS.email}</span>). Our New Delhi factory wholesale desk will contact you shortly.
             </p>
 
-            <button
-              onClick={sendWhatsAppQuote}
-              className="py-3 px-6 bg-[#25D366] text-white font-heading font-bold text-xs rounded-xl inline-flex items-center gap-2 shadow-md hover:bg-[#20bd5a]"
-            >
-              <MessageCircle className="w-4 h-4 fill-white" />
-              <span>Connect Instant on WhatsApp</span>
-            </button>
+            <div className="flex flex-col sm:flex-row gap-2 justify-center pt-2">
+              <button
+                type="button"
+                onClick={sendMailtoFallback}
+                className="py-3 px-5 bg-slate-900 hover:bg-slate-800 text-white font-heading font-bold text-xs rounded-xl inline-flex items-center justify-center gap-2 shadow-md cursor-pointer"
+              >
+                <Mail className="w-4 h-4 text-[#FFD93D]" />
+                <span>Open Mail Client</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={sendWhatsAppQuote}
+                className="py-3 px-5 bg-[#25D366] text-white font-heading font-bold text-xs rounded-xl inline-flex items-center justify-center gap-2 shadow-md hover:bg-[#20bd5a] cursor-pointer"
+              >
+                <MessageCircle className="w-4 h-4 fill-white" />
+                <span>Connect Instant on WhatsApp</span>
+              </button>
+            </div>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -111,7 +184,6 @@ export const WholesaleModal: React.FC<WholesaleModalProps> = ({ isOpen, onClose 
                 <label className="text-[11px] font-bold text-slate-700 block mb-1">Business / Shop Name</label>
                 <input
                   type="text"
-                  required
                   placeholder="e.g. Toy World Stores"
                   value={formData.businessName}
                   onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
@@ -127,6 +199,20 @@ export const WholesaleModal: React.FC<WholesaleModalProps> = ({ isOpen, onClose 
                   placeholder="Your Name"
                   value={formData.contactPerson}
                   onChange={(e) => setFormData({ ...formData, contactPerson: e.target.value })}
+                  className="w-full text-xs p-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-hidden focus:border-[#FF6B6B]"
+                />
+              </div>
+
+              <div>
+                <label className="text-[11px] font-bold text-slate-700 block mb-1">
+                  Distributor Email ID * <span className="text-[#FF6B6B] font-bold">(Compulsory)</span>
+                </label>
+                <input
+                  type="email"
+                  required
+                  placeholder="e.g. distributor@example.com"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full text-xs p-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-hidden focus:border-[#FF6B6B]"
                 />
               </div>
@@ -154,9 +240,7 @@ export const WholesaleModal: React.FC<WholesaleModalProps> = ({ isOpen, onClose 
                   className="w-full text-xs p-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-hidden focus:border-[#FF6B6B]"
                 />
               </div>
-            </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
                 <label className="text-[11px] font-bold text-slate-700 block mb-1">GST Number (Optional)</label>
                 <input
@@ -167,7 +251,9 @@ export const WholesaleModal: React.FC<WholesaleModalProps> = ({ isOpen, onClose 
                   className="w-full text-xs p-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-hidden focus:border-[#FF6B6B]"
                 />
               </div>
+            </div>
 
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
                 <label className="text-[11px] font-bold text-slate-700 block mb-1">Estimated Order Volume</label>
                 <select
@@ -193,7 +279,7 @@ export const WholesaleModal: React.FC<WholesaleModalProps> = ({ isOpen, onClose 
                       type="button"
                       key={catObj.id}
                       onClick={() => handleCategoryToggle(cat)}
-                      className={`p-2 rounded-xl text-xs font-bold border text-left transition-all flex items-center justify-between ${
+                      className={`p-2 rounded-xl text-xs font-bold border text-left transition-all flex items-center justify-between cursor-pointer ${
                         checked ? 'bg-[#FFD93D] border-slate-900 text-slate-900 shadow-2xs' : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
                       }`}
                     >
@@ -219,16 +305,26 @@ export const WholesaleModal: React.FC<WholesaleModalProps> = ({ isOpen, onClose 
             <div className="pt-2 flex flex-col sm:flex-row gap-2">
               <button
                 type="submit"
-                className="w-full py-3 bg-slate-900 hover:bg-slate-800 text-white font-heading font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 shadow-md"
+                disabled={isSubmitting}
+                className="w-full py-3 bg-slate-900 hover:bg-slate-800 disabled:opacity-75 text-white font-heading font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 shadow-md cursor-pointer"
               >
-                <Send className="w-4 h-4 text-[#FFD93D]" />
-                <span>Submit Wholesale Request</span>
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="w-4 h-4 text-[#FFD93D] animate-spin" />
+                    <span>Sending Mail Query...</span>
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-4 h-4 text-[#FFD93D]" />
+                    <span>Submit Wholesale Query</span>
+                  </>
+                )}
               </button>
 
               <button
                 type="button"
                 onClick={sendWhatsAppQuote}
-                className="w-full py-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-heading font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 shadow-md"
+                className="w-full py-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-heading font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 shadow-md cursor-pointer"
               >
                 <MessageCircle className="w-4 h-4 fill-white" />
                 <span>Direct WhatsApp</span>
@@ -243,3 +339,5 @@ export const WholesaleModal: React.FC<WholesaleModalProps> = ({ isOpen, onClose 
     </div>
   );
 };
+
+

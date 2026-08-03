@@ -39,7 +39,7 @@ export const SocialPage: React.FC<SocialPageProps> = ({
   }, [initialPlatform]);
 
   // Official Social URLs
-  const INSTAGRAM_PROFILE_URL = COMPANY_DETAILS.instagram || 'https://www.instagram.com/youngwheelsindia/?hl=en';
+  const INSTAGRAM_PROFILE_URL = COMPANY_DETAILS.instagram || 'https://www.instagram.com/youngwheels__?igsh=ZDM3MXNoeGoyNGZk';
   const YOUTUBE_CHANNEL_URL = COMPANY_DETAILS.youtube || 'https://www.youtube.com/@youngwheelss/featured';
   const FACEBOOK_PAGE_URL = COMPANY_DETAILS.facebook || 'https://www.facebook.com/youngwheelsindia/';
 
@@ -209,7 +209,7 @@ export const SocialPage: React.FC<SocialPageProps> = ({
                   <div className="flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
                     <div>
                       <h1 className="font-heading font-black text-2xl sm:text-3xl text-slate-900 flex items-center justify-center sm:justify-start gap-2">
-                        <span>@youngwheelsindia</span>
+                        <span>@youngwheels__</span>
                         <Instagram className="w-7 h-7 text-[#DD2A7B]" />
                       </h1>
                       <p className="text-xs font-extrabold text-slate-500 pt-0.5">
@@ -224,7 +224,7 @@ export const SocialPage: React.FC<SocialPageProps> = ({
                       className="px-6 py-3 bg-gradient-to-r from-[#DD2A7B] to-[#8134AF] hover:opacity-95 text-white font-black text-xs rounded-2xl shadow-lg flex items-center justify-center gap-2 transition-transform active:scale-95 shrink-0"
                     >
                       <Instagram className="w-4 h-4" />
-                      <span>Follow @youngwheelsindia</span>
+                      <span>Follow @youngwheels__</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   </div>
@@ -300,7 +300,7 @@ export const SocialPage: React.FC<SocialPageProps> = ({
                 className="px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl flex items-center justify-center gap-2 shadow-xs transition-colors shrink-0"
               >
                 <Instagram className="w-4 h-4 text-[#DD2A7B]" />
-                <span>Open @youngwheelsindia on Instagram ↗</span>
+                <span>Open @youngwheels__ on Instagram ↗</span>
               </a>
             </div>
 
@@ -353,7 +353,7 @@ export const SocialPage: React.FC<SocialPageProps> = ({
                     <h3 className="font-heading font-black text-xl text-slate-900">
                       Young Wheels Official Instagram Channel
                     </h3>
-                    <p className="text-xs font-bold text-[#DD2A7B]">@youngwheelsindia</p>
+                    <p className="text-xs font-bold text-[#DD2A7B]">@youngwheels__</p>
                   </div>
 
                   <p className="text-xs text-slate-700 font-medium leading-relaxed">

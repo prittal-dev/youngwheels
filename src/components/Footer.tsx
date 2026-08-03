@@ -79,7 +79,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
 
               {/* 2. Instagram */}
               <a
-                href="https://www.instagram.com/youngwheelsindia/?hl=en"
+                href={COMPANY_DETAILS.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-xl bg-gradient-to-tr from-[#833AB4] via-[#FD1D1D] to-[#FCB045] text-white hover:opacity-90 hover:scale-105 transition-all shadow-xs"
@@ -203,7 +203,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
               </li>
               <li>
                 <button onClick={() => onNavigateTab('social')} className="hover:text-[#DD2A7B] transition-colors flex items-center gap-1">
-                  <span>Social Hub (Instagram)</span>
+                  <span>Social Hub</span>
                 </button>
               </li>
               <li>
@@ -222,7 +222,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
           {/* Factory Address & Hours */}
           <div className="lg:col-span-3 space-y-3 text-xs font-medium text-slate-300">
             <h4 className="font-heading font-bold text-sm text-[#FF6B6B] uppercase tracking-wider">
-              Factory Location & Tax ID
+              Factory Location
             </h4>
                   
             <div className="flex items-start gap-2">

@@ -96,7 +96,7 @@ export const WholesaleB2B: React.FC<WholesaleB2BProps> = ({ onOpenWholesaleModal
                 className="w-full py-3.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-heading font-bold text-xs rounded-2xl flex items-center justify-center gap-2 shadow-md"
               >
                 <MessageCircle className="w-4 h-4 fill-white text-[#25D366]" />
-                <span>WhatsApp B2B Desk (+91 7011227049)</span>
+                <span>WhatsApp B2B Desk ({COMPANY_DETAILS.whatsapp})</span>
               </a>
 
             </div>

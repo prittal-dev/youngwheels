@@ -218,7 +218,7 @@ export const ContactPage: React.FC = () => {
                     <input
                       type="tel"
                       required
-                      placeholder="+91 8383047505"
+                      placeholder="+91 7011227049"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full text-xs p-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-hidden focus:border-[#FF6B6B]"

@@ -5,7 +5,7 @@ export const COMPANY_DETAILS = {
   tagline: 'Quality • Trust • Care',
   foundedYear: 2019,
   headquarters: 'Pooth Khurd, New Delhi',
-  phone: '+91 8383047505',
+  phone: '+91 7011227049',
   whatsapp: '+91 7011227049',
   whatsappRaw: '917011227049',
   email: 'india.youngwheels@gmail.com',
@@ -21,7 +21,7 @@ export const COMPANY_DETAILS = {
   operatingHours: 'Mon - Sat: 9:30 AM - 7:00 PM IST',
   facebook: 'https://www.facebook.com/youngwheelsindia/',
   youtube: 'https://www.youtube.com/@youngwheelss/featured',
-  instagram: 'https://www.instagram.com/youngwheelsindia/?hl=en',
+  instagram: 'https://www.instagram.com/youngwheels__?igsh=ZDM3MXNoeGoyNGZk',
   mission: 'To craft high-quality, non-toxic, ergonomic, and durable ride-on toys that spark imagination, foster physical development, and deliver unmatched joy to children across India while providing reliable factory-direct value to parents and retailers.',
   vision: 'To be India’s most trusted and innovative manufacturer of kids mobility toys, setting gold standards for child safety, cheerful designs, and accessible wholesale distribution.',
   stats: [

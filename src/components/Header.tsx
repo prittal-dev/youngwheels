@@ -299,7 +299,7 @@ export const Header: React.FC<HeaderProps> = ({
                   </div>
                   <div>
                     <div className="text-xs font-bold text-slate-900">Instagram Hub</div>
-                    <div className="text-[10px] text-slate-500">@youngwheelsindia • Story Highlights</div>
+                    <div className="text-[10px] text-slate-500">@youngwheels__ • Story Highlights</div>
                   </div>
                 </button>
 
@@ -479,7 +479,7 @@ export const Header: React.FC<HeaderProps> = ({
               }`}
             >
               <Instagram className="w-4 h-4" />
-              <span>Instagram (@youngwheelsindia)</span>
+              <span>Instagram (@youngwheels__)</span>
             </button>
             <button
               onClick={() => handleNavClick('social-youtube')}
