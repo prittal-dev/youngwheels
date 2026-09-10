@@ -53,6 +53,48 @@ export const AdminPage: React.FC<AdminPageProps> = ({
   const [showPassword, setShowPassword] = useState(false);
   const [authError, setAuthError] = useState('');
 
+  // Prevent Google, Bing and other search engines from crawling, indexing, or archiving the admin portal
+  useEffect(() => {
+    const originalTitle = document.title;
+    document.title = 'Young Wheels | Factory Management';
+
+    let metaRobots = document.querySelector('meta[name="robots"]') as HTMLMetaElement | null;
+    let createdRobots = false;
+    if (!metaRobots) {
+      metaRobots = document.createElement('meta');
+      metaRobots.name = 'robots';
+      document.head.appendChild(metaRobots);
+      createdRobots = true;
+    }
+    const prevRobots = metaRobots.content;
+    metaRobots.content = 'noindex, nofollow, noarchive, nosnippet';
+
+    let metaGooglebot = document.querySelector('meta[name="googlebot"]') as HTMLMetaElement | null;
+    let createdGooglebot = false;
+    if (!metaGooglebot) {
+      metaGooglebot = document.createElement('meta');
+      metaGooglebot.name = 'googlebot';
+      document.head.appendChild(metaGooglebot);
+      createdGooglebot = true;
+    }
+    const prevGooglebot = metaGooglebot.content;
+    metaGooglebot.content = 'noindex, nofollow, noarchive, nosnippet';
+
+    return () => {
+      document.title = originalTitle;
+      if (createdRobots && metaRobots) {
+        metaRobots.remove();
+      } else if (metaRobots) {
+        metaRobots.content = prevRobots || 'index, follow';
+      }
+      if (createdGooglebot && metaGooglebot) {
+        metaGooglebot.remove();
+      } else if (metaGooglebot) {
+        metaGooglebot.content = prevGooglebot || 'index, follow';
+      }
+    };
+  }, []);
+
   // Active Admin View Tab: 'products' | 'hero'
   const [activeTab, setActiveTab] = useState<'products' | 'hero'>('products');
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
@@ -156,7 +198,8 @@ export const AdminPage: React.FC<AdminPageProps> = ({
   // Handle Login
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (passwordInput.trim() === 'prittal123') {
+    const adminPassword = (import.meta as any).env?.VITE_ADMIN_PASSWORD || 'prittal123';
+    if (passwordInput.trim() === adminPassword) {
       setIsAuthenticated(true);
       localStorage.setItem('yw_admin_auth', 'true');
       setAuthError('');
@@ -321,13 +364,15 @@ export const AdminPage: React.FC<AdminPageProps> = ({
                   type={showPassword ? 'text' : 'password'}
                   value={passwordInput}
                   onChange={(e) => setPasswordInput(e.target.value)}
-                  placeholder="Enter Password (prittal123)"
+                  placeholder="Enter Admin Password"
+                  autoComplete="current-password"
                   className="w-full pl-10 pr-10 py-3 rounded-xl border border-slate-200 text-sm font-bold bg-slate-50 focus:bg-white focus:outline-none focus:border-[#FF6B6B] focus:ring-4 focus:ring-[#FF6B6B]/10"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
+                  title={showPassword ? "Hide password" : "Show password"}
                 >
                   {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                 </button>
@@ -348,12 +393,6 @@ export const AdminPage: React.FC<AdminPageProps> = ({
               Login to Admin Portal
             </button>
           </form>
-
-          <div className="text-center pt-2 border-t border-slate-100">
-            <span className="text-[11px] font-semibold text-slate-400">
-              Default password for reviewer: <code className="bg-slate-100 px-1.5 py-0.5 rounded text-slate-800">prittal123</code>
-            </span>
-          </div>
         </div>
       </div>
     );
@@ -542,7 +581,7 @@ export const AdminPage: React.FC<AdminPageProps> = ({
                             <img
                               src={p.image}
                               alt={p.name}
-                              className="w-12 h-12 rounded-xl object-cover bg-slate-100 border border-slate-200 shrink-0"
+                              className="w-12 h-12 rounded-xl object-contain p-1 bg-white border border-slate-200 shrink-0"
                             />
                             <div>
                               <div className="font-extrabold text-slate-900 text-sm flex items-center gap-1.5">

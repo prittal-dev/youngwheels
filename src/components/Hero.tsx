@@ -35,8 +35,8 @@ const CAROUSEL_SLIDES = [
   {
     id: 'swing-cars',
     categoryName: 'Swing Cars & Magic Cars',
-    title: 'Bear Rider Magic Swing Car',
-    subtitle: 'Model: YW-MC-01 • Musical Horn & 360° Glider',
+    title: 'Candy Swing Car',
+    subtitle: 'Model: YW-SC-01 • 360° Glider & Smooth Wheels',
     badge: 'Flagship Bestseller',
     badgeIcon: Star,
     featureTag: '360° Twist Glide',
@@ -47,9 +47,9 @@ const CAROUSEL_SLIDES = [
   {
     id: 'ride-ons',
     categoryName: 'Ride-Ons & Push Cars',
-    title: 'McLaren Sports Push Car',
-    subtitle: 'Model: YW-RO-13 • Supercar Design & Bucket Seat',
-    badge: '13 Models Available',
+    title: 'McLaren Push Car',
+    subtitle: 'Model: YW-RO-01 • Supercar Design & Bucket Seat',
+    badge: '5 Colors Available',
     badgeIcon: Car,
     featureTag: 'Supercar Styling',
     capacity: 'Up to 20 kg',
@@ -57,35 +57,11 @@ const CAROUSEL_SLIDES = [
     bgGradient: 'from-[#E6F4EA] via-[#FFF4B0] to-[#E0F7F5]',
   },
   {
-    id: 'kick-scooters',
-    categoryName: 'Kick Scooters & Police Bikes',
-    title: 'Turbo Police Patrol Bike',
-    subtitle: 'Model: YW-TC-04 • Electronic Siren & LED Tail Light',
-    badge: '8 Models Available',
-    badgeIcon: Sparkles,
-    featureTag: 'Siren & Flashing Lights',
-    capacity: 'Up to 25 kg',
-    image: policeBikeNoBg,
-    bgGradient: 'from-[#E0F7F5] via-[#E6F4EA] to-[#FFF4B0]',
-  },
-  {
-    id: 'baby-walkers',
-    categoryName: 'Baby Walkers',
-    title: 'Bunny Sit-to-Stand Walker',
-    subtitle: 'Model: YW-BW-01 • Speed Control Wheels & Music',
-    badge: '3 Models Available',
-    badgeIcon: ShieldCheck,
-    featureTag: 'ZED Zero Edge Tech',
-    capacity: 'Up to 15 kg',
-    image: walkerNoBg,
-    bgGradient: 'from-[#FFEBEB] via-[#FFF4B0] to-[#FFE399]',
-  },
-  {
-    id: 'tricycles',
+    id: 'tricycles-nexride',
     categoryName: 'Kids Tricycles',
-    title: 'NexRide Classic Tricycle',
+    title: 'NexRide',
     subtitle: 'Model: YW-TC-01 • High-Tensile Steel Frame & Pedals',
-    badge: '11 Models Available',
+    badge: '5 Colors Available',
     badgeIcon: Award,
     featureTag: 'Carbon Steel Frame',
     capacity: 'Up to 25 kg',
@@ -93,11 +69,35 @@ const CAROUSEL_SLIDES = [
     bgGradient: 'from-[#FFE399] via-[#E0F7F5] to-[#E6F4EA]',
   },
   {
+    id: 'baby-walkers',
+    categoryName: 'Baby Walkers & Push Trikes',
+    title: 'Tiny Rider 2-in-1',
+    subtitle: 'Model: YW-BW-01 • Steerable Parent Push Handle',
+    badge: '4 Colors Available',
+    badgeIcon: ShieldCheck,
+    featureTag: 'Parent Push Handle',
+    capacity: 'Up to 25 kg',
+    image: walkerNoBg,
+    bgGradient: 'from-[#FFEBEB] via-[#FFF4B0] to-[#FFE399]',
+  },
+  {
+    id: 'kick-scooters',
+    categoryName: 'Kick Scooters & Police Bikes',
+    title: 'Turbo Police Tricycle',
+    subtitle: 'Model: YW-KS-01 • Electronic Siren & LED Tail Light',
+    badge: 'Bestseller',
+    badgeIcon: Sparkles,
+    featureTag: 'Siren & Flashing Lights',
+    capacity: 'Up to 25 kg',
+    image: policeBikeNoBg,
+    bgGradient: 'from-[#E0F7F5] via-[#E6F4EA] to-[#FFF4B0]',
+  },
+  {
     id: 'potty-trainers',
     categoryName: 'Potty Chairs & Trainers',
-    title: 'Scooty Fun Potty Trainer',
-    subtitle: 'Model: YW-PT-01 • Ergonomic Splashtrap & Soft Seat',
-    badge: '8 Models Available',
+    title: 'Potty Chair',
+    subtitle: 'Model: YW-PT-01 • Ergonomic Splashtrap & Handlebar',
+    badge: 'Kid Safe ABS',
     badgeIcon: Heart,
     featureTag: '100% Non-Toxic ABS',
     capacity: 'Up to 20 kg',
@@ -163,7 +163,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
   React.useEffect(() => {
     const slideTimer = setInterval(() => {
       setSlideIndex((prev) => (prev + 1) % CAROUSEL_SLIDES.length);
-    }, 1800);
+    }, 5000);
     return () => clearInterval(slideTimer);
   }, []);
 
@@ -194,9 +194,9 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         data-scroll-speed="1.5"
-        className="hidden xl:block absolute top-14 left-6 animate-float-slow opacity-95 z-10"
+        className="hidden xl:block absolute top-14 left-6 animate-float-slow opacity-95 z-30 pointer-events-none"
       >
-        <div className="bg-white/95 backdrop-blur-md border-2 border-[#FFE8B5] rounded-2xl p-3 shadow-xl flex items-center gap-3 icon-box-glow">
+        <div className="bg-white/95 backdrop-blur-md border-2 border-[#FFE8B5] rounded-2xl p-3 shadow-xl flex items-center gap-3 icon-box-glow pointer-events-auto">
           <div className="w-10 h-10 rounded-xl bg-[#FFF9EE] border border-[#FFE8B5] flex items-center justify-center shrink-0">
             <ShieldCheck className="w-5.5 h-5.5 text-[#FF6B6B]" />
           </div>
@@ -218,7 +218,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
         data-scroll-speed="-1.2"
-        className="hidden xl:block absolute top-10 right-6 animate-float-fast opacity-95 z-10"
+        className="hidden xl:block absolute top-10 right-6 animate-float-fast opacity-95 z-30 pointer-events-none"
       >
         <div className="bg-white/95 backdrop-blur-md border-2 border-[#4ECDC4]/30 rounded-2xl p-3 shadow-xl flex items-center gap-3 icon-box-glow">
           <div className="w-10 h-10 rounded-xl bg-[#EBFBFA] border border-[#4ECDC4]/30 flex items-center justify-center shrink-0">
@@ -292,34 +292,8 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
               </motion.div>
             </div>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => {
-                  triggerConfetti();
-                  onExploreClick();
-                }}
-                className="w-full sm:w-auto toy-button bg-[#FF6B6B] hover:bg-[#FF5252] text-white font-heading font-bold text-base px-8 py-4 rounded-2xl flex items-center justify-center gap-3 shadow-lg group"
-              >
-                <span>Explore All Toys</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
-              </motion.button>
+            {/* CTAs moved to bottom row for horizontal alignment */}
 
-              <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href={`https://wa.me/${COMPANY_DETAILS.whatsappRaw}?text=${encodeURIComponent('Hi Young Wheels! I am looking for kids ride-on toys / swing cars. Please share catalog & price details.')}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={triggerConfetti}
-                className="w-full sm:w-auto toy-button bg-[#25D366] hover:bg-[#20bd5a] text-white font-heading font-bold text-base px-7 py-4 rounded-2xl flex items-center justify-center gap-2 shadow-md"
-              >
-                <MessageCircle className="w-5 h-5 fill-white text-[#25D366]" />
-                <span>WhatsApp Catalog & Prices</span>
-              </motion.a>
-            </div>
 
           </motion.div>
 
@@ -343,28 +317,30 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
 
                 {/* Main Hero Product Image Carousel Container */}
                 <div className="relative h-64 sm:h-72 w-full rounded-2xl bg-gradient-to-tr from-[#FFFDF9] via-[#FFF9EE] to-[#E0F7F5] flex items-center justify-center p-4 overflow-hidden my-4">
-                  <AnimatePresence mode="wait">
+                  <AnimatePresence mode="popLayout">
                     <motion.img
                       key={currentSlide.id}
                       src={currentSlide.image}
                       alt={currentSlide.title}
-                      initial={{ opacity: 0, scale: 0.85, rotate: -3 }}
-                      animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                      exit={{ opacity: 0, scale: 1.05, rotate: 3 }}
-                      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                      loading="eager"
+                      decoding="async"
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 1.05 }}
+                      transition={{ duration: 0.35, ease: 'easeInOut' }}
                       className="w-full h-full object-contain filter drop-shadow-xl"
                     />
                   </AnimatePresence>
                   <button
                     onClick={() => setSlideIndex((prev) => (prev - 1 + CAROUSEL_SLIDES.length) % CAROUSEL_SLIDES.length)}
-                    className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/85 hover:bg-white text-slate-800 flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity z-20 cursor-pointer"
+                    className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center shadow-md opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity z-20 cursor-pointer"
                     aria-label="Previous slide"
                   >
                     <ChevronLeft className="w-5 h-5" />
                   </button>
                   <button
                     onClick={() => setSlideIndex((prev) => (prev + 1) % CAROUSEL_SLIDES.length)}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/85 hover:bg-white text-slate-800 flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity z-20 cursor-pointer"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center shadow-md opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity z-20 cursor-pointer"
                     aria-label="Next slide"
                   >
                     <ChevronRight className="w-5 h-5" />
@@ -403,23 +379,66 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
 
               </div>
 
-              {/* Floating Review Ribbon */}
-              <div className="absolute -bottom-6 -left-4 sm:-left-6 z-30 bg-slate-900 text-white p-3.5 rounded-2xl shadow-xl flex items-center gap-3 border-2 border-white">
-                <div className="w-10 h-10 rounded-xl bg-[#FFD93D] text-slate-900 font-black text-xs flex items-center justify-center gap-0.5">
-                  <span>4.9</span>
-                  <Star className="w-3 h-3 fill-slate-900 text-slate-900" />
-                </div>
-                <div className="text-left">
-                  <div className="text-xs font-bold flex items-center gap-1">
-                    <AnimatedCounter value="150,000+" duration={2} /> Happy Toddlers
-                  </div>
-                  <div className="text-[10px] text-slate-300">Certified Kid Safe</div>
-                </div>
-              </div>
-
+              {/* Review Ribbon moved to bottom row for horizontal alignment */}
             </div>
           </div>
 
+        </div>
+
+        {/* Aligned Bottom Row: CTAs & Review Ribbon */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mt-8 sm:mt-12 lg:mt-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="lg:col-span-7 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
+          >
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                triggerConfetti();
+                onExploreClick();
+              }}
+              className="w-full sm:w-auto toy-button bg-[#FF6B6B] hover:bg-[#FF5252] text-white font-heading font-bold text-base px-8 h-[60px] rounded-2xl flex items-center justify-center gap-3 shadow-lg group"
+            >
+              <span>Explore All Toys</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
+            </motion.button>
+
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href={`https://wa.me/${COMPANY_DETAILS.whatsappRaw}?text=${encodeURIComponent('Hi Young Wheels! I am looking for kids ride-on toys / swing cars. Please share catalog & price details.')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={triggerConfetti}
+              className="w-full sm:w-auto toy-button bg-[#25D366] hover:bg-[#20bd5a] text-white font-heading font-bold text-base px-7 h-[60px] rounded-2xl flex items-center justify-center gap-2 shadow-md"
+            >
+              <MessageCircle className="w-5 h-5 fill-white text-[#25D366]" />
+              <span>WhatsApp Catalog & Prices</span>
+            </motion.a>
+          </motion.div>
+          
+          <div className="lg:col-span-5 flex justify-center z-30">
+            <motion.div
+            whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              > 
+              <div className="inline-flex flex-row items-center justify-center gap-3 bg-slate-900 text-white h-[65px] px-6 rounded-2xl shadow-xl border-2 border-[#FFE8B5]">
+              <div className="w-10 h-10 rounded-xl bg-[#FFD93D] text-slate-900 font-black text-xs flex items-center justify-center gap-0.5 shrink-0">
+                <span>4.9</span>
+                <Star className="w-3 h-3 fill-slate-900 text-slate-900" />
+              </div>
+              <div className="text-left">
+                <div className="text-xs font-bold flex items-center gap-1 whitespace-nowrap">
+                  <AnimatedCounter value="150,000+" duration={2} /> Happy Toddlers
+                </div>
+                <div className="text-[10px] text-slate-300">Certified Kid Safe</div>
+              </div>
+            </div>
+              </motion.div>
+          </div>
         </div>
 
         {/* Full-Width Centered Wholesale Dealer Quick Banner */}

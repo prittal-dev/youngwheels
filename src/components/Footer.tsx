@@ -62,7 +62,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
             </div>
 
             <p className="text-xs text-slate-400 font-medium leading-relaxed">
-              Delhi-based manufacturer & wholesaler of premium non-toxic ride-on toys, 360° magic swing cars, baby walkers, potty chairs & rocking animals. Bringing childhood joy & learning to families across India since 2019.
+              Delhi-based manufacturer & wholesaler of premium non-toxic Ride-Ons, Kick Scooters, Walkers, Swing Cars, Tricycles & Potty Trainers. Bringing childhood joy & learning to families across India since 2019.
             </p>
 
             <div className="pt-2 flex items-center gap-2.5 flex-wrap">
@@ -155,10 +155,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
                 <li key={cat.id}>
                   <button
                     onClick={() => onNavigateTab(cat.id)}
-                    className="hover:text-[#FF6B6B] transition-colors flex items-center gap-1.5"
+                    className="hover:text-[#FF6B6B] transition-colors flex items-center justify-between w-full group pr-2 text-left"
                   >
-                    <span className="text-[#FFD93D]">›</span>
-                    <span>{cat.name}</span>
+                    <span className="flex items-center gap-1.5">
+                      <span className="text-[#FFD93D] group-hover:translate-x-0.5 transition-transform">›</span>
+                      <span className="group-hover:text-white transition-colors">{cat.name}</span>
+                    </span>
+                    <span className="text-[10px] bg-slate-800 text-slate-400 group-hover:bg-[#FFD93D] group-hover:text-slate-900 px-2 py-0.5 rounded-full transition-colors font-bold">
+                      {cat.itemCount}
+                    </span>
                   </button>
                 </li>
               ))}

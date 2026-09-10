@@ -40,22 +40,24 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
     setCurrentPage(1);
   }, [searchQuery, categoryId]);
 
+  const normalizedCategory = (() => {
+    if (categoryId === 'magic-cars') return 'swing-cars';
+    if (categoryId === 'riders' || categoryId === 'electric-rideons' || categoryId === 'rocking-animals') return 'ride-ons';
+    if (categoryId === 'tri-cycles') return 'tricycles';
+    if (categoryId === 'potty-chairs') return 'potty-trainers';
+    return categoryId;
+  })();
+
   const allProducts = products || PRODUCTS;
-  const categoryInfo = CATEGORIES.find((c) => c.id === categoryId) || CATEGORIES.find((c) => c.id === 'ride-ons') || CATEGORIES[0];
+  const categoryInfo = CATEGORIES.find((c) => c.id === normalizedCategory) || CATEGORIES[0];
   const categoryProducts = allProducts.filter((p) => {
-    if (categoryId === 'ride-ons' || categoryId === 'riders' || categoryId === 'electric-rideons' || categoryId === 'rocking-animals') {
-      return p.category === 'ride-ons' || p.category === 'riders' || p.category === 'electric-rideons' || p.category === 'rocking-animals';
-    }
-    if (categoryId === 'swing-cars' || categoryId === 'magic-cars') {
-      return p.category === 'swing-cars' || p.category === 'magic-cars';
-    }
-    if (categoryId === 'tricycles' || categoryId === 'tri-cycles') {
-      return p.category === 'tricycles' || p.category === 'tri-cycles';
-    }
-    if (categoryId === 'potty-trainers' || categoryId === 'potty-chairs') {
-      return p.category === 'potty-trainers' || p.category === 'potty-chairs';
-    }
-    return p.category === categoryId;
+    if (normalizedCategory === 'ride-ons') return p.category === 'ride-ons';
+    if (normalizedCategory === 'kick-scooters') return p.category === 'kick-scooters';
+    if (normalizedCategory === 'baby-walkers') return p.category === 'baby-walkers';
+    if (normalizedCategory === 'swing-cars') return p.category === 'swing-cars';
+    if (normalizedCategory === 'tricycles') return p.category === 'tricycles';
+    if (normalizedCategory === 'potty-trainers') return p.category === 'potty-trainers';
+    return p.category === normalizedCategory;
   });
 
   const filteredProducts = categoryProducts.filter((p) => {
@@ -70,53 +72,47 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
   const paginatedProducts = filteredProducts.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   const getCategoryDetails = () => {
-    switch (categoryId) {
+    switch (normalizedCategory) {
       case 'ride-ons':
-      case 'riders':
-      case 'electric-rideons':
-      case 'rocking-animals':
         return {
           title: 'Ride-Ons & Push Cars',
-          subtitle: 'Sturdy push-along ride-ons with back support, under-seat storage, and interactive lights.',
-          highlights: ['Under-Seat Storage Trunk', 'Ergonomic Backrest', 'Anti-Flip Rear Bumper', 'Squeaker Steering Horn']
-        };
-      case 'swing-cars':
-      case 'magic-cars':
-        return {
-          title: 'Magic Swing Cars & Twisters',
-          subtitle: 'No batteries, no gears, no pedals needed! Twist the steering wheel left and right to glide forward using gravity & centrifugal force.',
-          highlights: ['360° Polyurethane Wheels', 'Up to 30-35 kg Capacity', '100% Non-Toxic Virgin ABS', 'Indoor & Outdoor Safe']
-        };
-      case 'baby-walkers':
-        return {
-          title: 'Baby Activity Walkers & Push Toys',
-          subtitle: 'Designed to encourage first steps safely with multi-position height adjustments, speed-controlled wheels, and removable activity trays.',
-          highlights: ['3-Position Height Adjustment', 'Speed Control Tension Wheels', 'Removable Toy/Snack Tray', 'Padded Washable Seat']
-        };
-      case 'potty-trainers':
-      case 'potty-chairs':
-        return {
-          title: 'Ergonomic Potty Chairs & Ride-On Trainers',
-          subtitle: 'Make potty training gentle and exciting! Features high splash guards, easy-clean removable bowls, and fun animal & scooter designs.',
-          highlights: ['Removable Inner Bowl', 'Non-Slip Tile Grips', 'Splash Guard & Lid', '2-in-1 Scooter Ride-Ons']
-        };
-      case 'tricycles':
-      case 'tri-cycles':
-        return {
-          title: 'Kids Activity Tri Cycles & Tricycles',
-          subtitle: 'Heavy-duty 3-wheel tricycles with adjustable parent push handles, safety seat harnesses, and storage baskets.',
-          highlights: ['Parent Steering Push Handle', 'Rear Storage Basket', 'Safety Seat Belt', 'Anti-Slip Foot Pedals']
+          subtitle: 'European supercar styling push cars with steering wheel horn, ergonomic back support, and hidden under-seat storage trunk.',
+          highlights: ['Under-Seat Storage Trunk', 'Ergonomic High Backrest', 'Anti-Flip Safety Rear Bumper', 'Squeaker Steering Horn']
         };
       case 'kick-scooters':
         return {
-          title: '3-Wheel Light-Up Kick Scooters',
-          subtitle: 'Lean-to-steer balance scooters with 3-level height adjustable T-bar, magnetic flashing LED wheels, and rear foot brake.',
-          highlights: ['Self-Generating LED Wheels', '3-Level Adjustable Height', 'Lean-to-Steer Balance', 'Wide Non-Slip Deck']
+          title: 'Kick Scooters & Police Bikes',
+          subtitle: 'Thrilling police patrol bikes and kick balance trikes with electronic sirens, flashing emergency beacons, and rugged wide wheels.',
+          highlights: ['Electronic Police Siren', 'Flashing Emergency Light', 'Superbike Decal Styling', 'Wide High-Traction Wheels']
+        };
+      case 'baby-walkers':
+        return {
+          title: 'Baby Walkers & Push Trikes',
+          subtitle: 'Grow-with-me 2-in-1 stroller push trikes with steerable parent handles, safety harnesses, and retractable toddler footrests.',
+          highlights: ['Steerable Parent Push Handle', 'Foldaway Footrests', 'Safety Strap Harness', 'Heavy-Duty Steel Frame']
+        };
+      case 'swing-cars':
+        return {
+          title: 'Magic Swing Cars & Twisters',
+          subtitle: 'No batteries, no gears, no pedals needed! Twist the steering wheel left and right to glide forward with smooth 360° rotation.',
+          highlights: ['360° Polyurethane Smooth Wheels', 'Up to 35 kg Weight Capacity', '100% Non-Toxic Virgin ABS', 'Indoor & Outdoor Safe']
+        };
+      case 'tricycles':
+        return {
+          title: 'Kids Activity Tricycles & Trikes',
+          subtitle: 'Classic heavy-duty carbon steel tricycles, robot mascot trikes, and deluxe musical cushion models.',
+          highlights: ['Carbon Steel Sturdy Frame', 'Wide Non-Slip Foot Pedals', 'Ergonomic Contoured Seat', 'Front & Rear Storage Baskets']
+        };
+      case 'potty-trainers':
+        return {
+          title: 'Ergonomic Potty Chairs & Trainers',
+          subtitle: 'Make potty training gentle and exciting with real scooty scooter handles, deep removable bowl, and splash-guard lid.',
+          highlights: ['Deep Removable Inner Bowl', 'Non-Slip Grippy Base', 'High Splash Guard & Lid', 'Fun Ergonomic Handlebars']
         };
       default:
         return {
-          title: 'Young Wheels Premium Toys',
-          subtitle: 'Safe, durable, and joyful ride-on toys manufactured with love in New Delhi, India.',
+          title: categoryInfo.name,
+          subtitle: categoryInfo.shortDesc,
           highlights: ['100% Non-Toxic Virgin ABS', 'Factory Direct Quality', 'Ergonomic Toddler Safety', 'BIS Certified']
         };
     }
@@ -155,8 +151,12 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
             </div>
 
             <div className="lg:col-span-4 hidden lg:block">
-              <div className="h-48 w-full rounded-2xl overflow-hidden bg-white/80 p-3 shadow-md border border-slate-200">
-                <img src={categoryInfo.bannerImage} alt={categoryInfo.name} className="w-full h-full object-cover rounded-xl" />
+              <div className="h-52 w-full rounded-2xl overflow-hidden bg-white/95 p-3 shadow-md border border-slate-200 flex items-center justify-center">
+                <img 
+                  src={categoryInfo.bannerImage} 
+                  alt={categoryInfo.name} 
+                  className="w-full h-full object-contain p-1 rounded-xl filter drop-shadow-sm" 
+                />
               </div>
             </div>
           </div>

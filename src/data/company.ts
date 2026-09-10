@@ -35,75 +35,75 @@ export const COMPANY_DETAILS = {
 export const CATEGORIES: CategoryInfo[] = [
   {
     id: 'ride-ons',
-    name: 'Ride-Ons & Push Cars',
-    shortDesc: 'Sturdy push-along ride-ons with back support, under-seat storage, and lights.',
+    name: 'Ride-Ons',
+    shortDesc: 'G-Vagon riders, McClaren supercars, racing cars, tractors, scooby riders & rocking animals.',
     iconName: 'Car',
     badge: '13 Models',
     bgGradient: 'from-[#F3E8FF] via-[#FAF5FF] to-[#E9D5FF]',
     accentColor: '#8B5CF6',
     textColor: 'text-[#6D28D9]',
     itemCount: 13,
-    bannerImage: '/assets/products/mclaren-green.jpg'
+    bannerImage: '/assets/Ride-Ons/MCCLAREN/mclaren-green.jpg'
   },
   {
     id: 'kick-scooters',
     name: 'Kick Scooters',
-    shortDesc: 'Lean-to-steer 3-wheel scooters with flashing LED wheels & anti-skid surface.',
+    shortDesc: 'Speedy, Smiley, Ferrarii, Stylo & Royal Panda kick scooters with sturdy wheels & LED lights.',
     iconName: 'Sparkles',
     badge: '8 Models',
     bgGradient: 'from-[#ECFDF5] via-[#F0FDF4] to-[#A7F3D0]',
     accentColor: '#10B981',
     textColor: 'text-[#047857]',
     itemCount: 8,
-    bannerImage: '/assets/products/tiny-rider-mint.jpg'
+    bannerImage: '/assets/Kick Scooters/SPEEDY KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.44.08.jpeg'
   },
   {
     id: 'baby-walkers',
-    name: 'Baby Walkers',
-    shortDesc: 'Multi-height activity walkers with ZED (Zero Edge Design) & 360° revolving wheels.',
+    name: 'Walkers',
+    shortDesc: 'Bunny rider, Casper Deluxe and Bearyboo activity push walkers with 360° revolving wheels & ZED.',
     iconName: 'Footprints',
     badge: '3 Models',
     bgGradient: 'from-[#E0F2FE] via-[#F0F9FF] to-[#BAE6FD]',
     accentColor: '#0284C7',
     textColor: 'text-[#0369A1]',
     itemCount: 3,
-    bannerImage: '/assets/products/tiny-rider-2in1-red.jpg'
+    bannerImage: '/assets/Walkers/CASPER DELUXE WALKER/WhatsApp Image 2026-09-09 at 16.22.27.jpeg'
   },
   {
     id: 'swing-cars',
-    name: 'Swing Cars & Magic Cars',
-    shortDesc: 'Twist & glide ride-ons with 360° rotation! No pedals, no batteries required.',
+    name: 'Swing Cars',
+    shortDesc: 'Pandaa, Wendy, Cutiee, Bear, Boo Rider, Spacy, Candy & Roar Rider 360° twist kinetic cars.',
     iconName: 'Car',
     badge: '12 Models',
     bgGradient: 'from-[#FEF9C3] via-[#FFFBEB] to-[#FDE68A]',
     accentColor: '#F59E0B',
     textColor: 'text-[#B45309]',
     itemCount: 12,
-    bannerImage: '/assets/products/candy-swing-car-cyan.jpg'
+    bannerImage: '/assets/Swing Cars/CANDY SWING CAR/candy-swing-car-cyan.jpg'
   },
   {
     id: 'tricycles',
-    name: 'Kids Tricycles',
-    shortDesc: 'Sturdy 3-wheel tricycles with parent push handles & musical lighting.',
+    name: 'Tricycles',
+    shortDesc: 'NexRide, Tiny Rider, Ninja Rider, Turbo Police Bike, Hello Rider & convertible 2-in-1 trikes.',
     iconName: 'Car',
     badge: '11 Models',
     bgGradient: 'from-[#FFEDD5] via-[#FFF7ED] to-[#FED7AA]',
     accentColor: '#F97316',
     textColor: 'text-[#C2410C]',
     itemCount: 11,
-    bannerImage: '/assets/products/nexride-orange.jpg'
+    bannerImage: '/assets/Tricycles/NexRide Tricycle/nexride-orange.jpg'
   },
   {
     id: 'potty-trainers',
-    name: 'Potty Chairs & Trainers',
-    shortDesc: 'Ergonomic, easy-clean potty trainers with removable bowls & splash guards.',
+    name: 'Potty Trainers',
+    shortDesc: 'Teddy, Cow, Sofa, Scooty, Joy Rider, My Qitty, Foam and Plastic ergonomic potty chairs.',
     iconName: 'Sparkles',
     badge: '8 Models',
     bgGradient: 'from-[#FCE7F3] via-[#FDF2F8] to-[#FBCFE8]',
     accentColor: '#EC4899',
     textColor: 'text-[#BE185D]',
     itemCount: 8,
-    bannerImage: '/assets/products/potty-chair-blue.jpg'
+    bannerImage: '/assets/Potty Trainers/SCOOTY POTTY/WhatsApp Image 2026-09-09 at 17.25.13.jpeg'
   }
 ];
 

@@ -133,11 +133,11 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenWholesaleModal, onNavi
                 </div>
 
                 <div className="md:col-span-5 flex justify-center md:justify-end">
-                  <div className="w-48 h-36 sm:w-56 sm:h-44 rounded-2xl overflow-hidden border-2 border-white/90 shadow-lg bg-white">
+                  <div className="w-48 h-36 sm:w-56 sm:h-44 rounded-2xl overflow-hidden border-2 border-white/90 shadow-lg bg-white flex items-center justify-center p-2">
                     <img 
                       src={selectedPost.cardImage} 
                       alt={selectedPost.title} 
-                      className="w-full h-full object-cover rounded-2xl"
+                      className="w-full h-full object-contain rounded-2xl"
                     />
                   </div>
                 </div>
@@ -352,11 +352,11 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenWholesaleModal, onNavi
                       </div>
 
                       {/* Card Image Thumbnail */}
-                      <div className="mt-4 h-36 w-full rounded-xl overflow-hidden border-2 border-white bg-white shadow-2xs">
+                      <div className="mt-4 h-36 w-full rounded-xl overflow-hidden border-2 border-white bg-white shadow-2xs flex items-center justify-center p-2">
                         <img 
                           src={post.cardImage} 
                           alt={post.title} 
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                         />
                       </div>
                     </div>

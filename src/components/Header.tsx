@@ -86,34 +86,36 @@ export const Header: React.FC<HeaderProps> = ({
       {/* Top Banner Bar */}
       <div className="bg-gradient-to-r from-[#FFD93D] via-[#FF6B6B] to-[#4ECDC4] text-slate-900 py-1.5 px-4 text-xs md:text-sm font-semibold">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
-          <div className="flex items-center gap-2 overflow-hidden whitespace-nowrap">
-            <span className="bg-slate-900 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase shadow-xs flex items-center gap-1">
-              <Flag className="w-3 h-3 text-[#FF9933]" />
+          <div className="flex items-center gap-1.5 overflow-hidden whitespace-nowrap min-w-0">
+            <span className="bg-slate-900 text-white px-2 py-0.5 rounded-full text-[9px] sm:text-[10px] font-bold tracking-wider uppercase shadow-xs flex items-center gap-1 shrink-0">
+              <Flag className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#FF9933]" />
               Factory Direct
             </span>
             <span className="hidden sm:inline font-medium text-slate-900">
               India’s Premier Kids Toys Manufacturer • Pooth Khurd, New Delhi
             </span>
-            <span className="sm:hidden font-medium text-slate-900 truncate">
-              Young Wheels • Wholesale & Retail
+            <span className="sm:hidden font-semibold text-slate-900 text-[11px] truncate">
+              Wholesale & Retail
             </span>
           </div>
 
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center gap-2 shrink-0">
             <a 
               href={`tel:${COMPANY_DETAILS.phone}`} 
               className="flex items-center gap-1 hover:underline text-slate-900 font-bold"
+              title="Call Hotline"
             >
               <Phone className="w-3.5 h-3.5" />
               <span className="hidden md:inline">{COMPANY_DETAILS.phone}</span>
             </a>
-            <span className="opacity-40">|</span>
+            <span className="hidden sm:inline opacity-40">|</span>
             <button
               onClick={onOpenWholesaleModal}
-              className="flex items-center gap-1 bg-slate-900 text-white px-2.5 py-0.5 rounded-full text-xs font-bold hover:bg-slate-800 transition-colors shadow-xs"
+              className="flex items-center gap-1 bg-slate-900 text-white px-2 sm:px-2.5 py-0.5 rounded-full text-[11px] sm:text-xs font-bold hover:bg-slate-800 transition-colors shadow-xs shrink-0 cursor-pointer"
             >
               <Building2 className="w-3 h-3 text-[#FFD93D]" />
-              <span>Bulk / Dealer Enquiries</span>
+              <span className="hidden sm:inline">Bulk / Dealer Enquiries</span>
+              <span className="sm:hidden">Dealer Form</span>
             </button>
           </div>
         </div>
@@ -193,7 +195,7 @@ export const Header: React.FC<HeaderProps> = ({
                   </div>
                   <div>
                     <div className="text-xs font-black">All Categories View</div>
-                    <div className="text-[10px] text-slate-600">Browse 6 Core Categories (55 Models)</div>
+                    <div className="text-[10px] text-slate-600">Browse Factory Categories & Models</div>
                   </div>
                 </button>
 

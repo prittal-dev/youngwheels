@@ -396,12 +396,12 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({ onOpenWholesaleMod
   return (
     <>
       {/* Floating Chat Trigger Button */}
-      <div className={`fixed bottom-6 left-6 z-40 transition-all duration-300 ${hideInFooter && !isOpen ? 'opacity-0 pointer-events-none translate-y-10' : 'opacity-100 translate-y-0'}`}>
+      <div className={`fixed bottom-4 sm:bottom-6 left-3 sm:left-6 z-40 transition-all duration-300 ${hideInFooter && !isOpen ? 'opacity-0 pointer-events-none translate-y-10' : 'opacity-100 translate-y-0'}`}>
         <motion.button
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.94 }}
           onClick={() => setIsOpen(prev => !prev)}
-          className="relative group bg-gradient-to-r from-[#FF6B6B] to-[#FF8E53] text-white p-3.5 sm:px-4 sm:py-3 rounded-full shadow-2xl flex items-center gap-2.5 border-2 border-white cursor-pointer"
+          className="relative group bg-gradient-to-r from-[#FF6B6B] to-[#FF8E53] text-white p-2.5 sm:px-4 sm:py-3 rounded-full shadow-xl flex items-center gap-2 border-2 border-white cursor-pointer"
           aria-label="Open AI Assistant Chat"
           type="button"
         >
@@ -409,12 +409,10 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({ onOpenWholesaleMod
             <span className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-[#FFD93D] rounded-full border-2 border-white animate-ping" />
           )}
           
-          <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center shrink-0">
-            <Bot className="w-4 h-4 text-white" />
-          </div>
+          <Bot className="w-5 h-5" />
           
-          <span className="hidden sm:inline font-heading font-black text-xs text-white tracking-wide">
-            {isOpen ? 'Close Assistant' : 'Ask Young Wheels AI'}
+          <span className="hidden md:inline font-heading font-bold text-xs tracking-wide">
+            Ask Young Wheels AI
           </span>
 
           <Sparkles className="w-3.5 h-3.5 text-[#FFD93D] animate-wiggle hidden sm:inline" />
@@ -429,7 +427,7 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({ onOpenWholesaleMod
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 30, scale: 0.92 }}
             transition={{ type: 'spring', stiffness: 350, damping: 25 }}
-            className="fixed bottom-22 left-4 sm:left-6 z-50 w-[calc(100vw-32px)] sm:w-[380px] bg-white rounded-[28px] border-4 border-[#FFE8B5] shadow-2xl overflow-hidden flex flex-col max-h-[580px] h-[80vh]"
+            className="fixed bottom-18 sm:bottom-22 left-2 sm:left-6 z-50 w-[calc(100vw-16px)] sm:w-[380px] bg-white rounded-3xl sm:rounded-[28px] border-2 sm:border-4 border-[#FFE8B5] shadow-2xl overflow-hidden flex flex-col max-h-[580px] h-[80vh]"
           >
             {/* Header Bar */}
             <div className="bg-gradient-to-r from-[#FF6B6B] via-[#FF8E53] to-[#FFD93D] p-3.5 text-white flex items-center justify-between shrink-0 shadow-xs">

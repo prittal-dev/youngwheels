@@ -1,0 +1,1804 @@
+﻿[
+    {
+        "Category":  "Ride-Ons",
+        "ProductName":  "AERO RIDE ON",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.33.00.jpeg",
+                           "Path":  "/assets/Ride-Ons/AERO RIDE ON/WhatsApp Image 2026-09-09 at 15.33.00.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#AF4B49"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.33.01 (1).jpeg",
+                           "Path":  "/assets/Ride-Ons/AERO RIDE ON/WhatsApp Image 2026-09-09 at 15.33.01 (1).jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#8EB0AE"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.33.01.jpeg",
+                           "Path":  "/assets/Ride-Ons/AERO RIDE ON/WhatsApp Image 2026-09-09 at 15.33.01.jpeg",
+                           "DetectedColor":  "Purple",
+                           "AvgHex":  "#B4889B"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.33.02.jpeg",
+                           "Path":  "/assets/Ride-Ons/AERO RIDE ON/WhatsApp Image 2026-09-09 at 15.33.02.jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#A695BA"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Ride-Ons",
+        "ProductName":  "G-VAGON PLUS RIDER",
+        "ImageCount":  5,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.27.37.jpeg",
+                           "Path":  "/assets/Ride-Ons/G-VAGON PLUS RIDER/WhatsApp Image 2026-09-09 at 15.27.37.jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#6E736F"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.27.38 (1).jpeg",
+                           "Path":  "/assets/Ride-Ons/G-VAGON PLUS RIDER/WhatsApp Image 2026-09-09 at 15.27.38 (1).jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#79787C"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.27.38.jpeg",
+                           "Path":  "/assets/Ride-Ons/G-VAGON PLUS RIDER/WhatsApp Image 2026-09-09 at 15.27.38.jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#594649"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.27.39 (1).jpeg",
+                           "Path":  "/assets/Ride-Ons/G-VAGON PLUS RIDER/WhatsApp Image 2026-09-09 at 15.27.39 (1).jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#454D4F"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.27.39.jpeg",
+                           "Path":  "/assets/Ride-Ons/G-VAGON PLUS RIDER/WhatsApp Image 2026-09-09 at 15.27.39.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#8F4B4F"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Ride-Ons",
+        "ProductName":  "G-VAGON RIDER",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.27.13 (1).jpeg",
+                           "Path":  "/assets/Ride-Ons/G-VAGON RIDER/WhatsApp Image 2026-09-09 at 15.27.13 (1).jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#48383C"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.27.13 (2).jpeg",
+                           "Path":  "/assets/Ride-Ons/G-VAGON RIDER/WhatsApp Image 2026-09-09 at 15.27.13 (2).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#854147"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.27.13.jpeg",
+                           "Path":  "/assets/Ride-Ons/G-VAGON RIDER/WhatsApp Image 2026-09-09 at 15.27.13.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#434A4C"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.27.14.jpeg",
+                           "Path":  "/assets/Ride-Ons/G-VAGON RIDER/WhatsApp Image 2026-09-09 at 15.27.14.jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#6B756C"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Ride-Ons",
+        "ProductName":  "JCV RIDER",
+        "ImageCount":  1,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.35.16.jpeg",
+                           "Path":  "/assets/Ride-Ons/JCV RIDER/WhatsApp Image 2026-09-09 at 15.35.16.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#756B51"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Ride-Ons",
+        "ProductName":  "JUMBO PLUS RIDE ON",
+        "ImageCount":  5,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.39.46 (1).jpeg",
+                           "Path":  "/assets/Ride-Ons/JUMBO PLUS RIDE ON/WhatsApp Image 2026-09-09 at 15.39.46 (1).jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#B5A8CB"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.39.46.jpeg",
+                           "Path":  "/assets/Ride-Ons/JUMBO PLUS RIDE ON/WhatsApp Image 2026-09-09 at 15.39.46.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#4EBBC1"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.39.47 (1).jpeg",
+                           "Path":  "/assets/Ride-Ons/JUMBO PLUS RIDE ON/WhatsApp Image 2026-09-09 at 15.39.47 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#D2A369"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.39.47 (2).jpeg",
+                           "Path":  "/assets/Ride-Ons/JUMBO PLUS RIDE ON/WhatsApp Image 2026-09-09 at 15.39.47 (2).jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#62A2C5"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.39.47.jpeg",
+                           "Path":  "/assets/Ride-Ons/JUMBO PLUS RIDE ON/WhatsApp Image 2026-09-09 at 15.39.47.jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#D787B2"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Ride-Ons",
+        "ProductName":  "JUMBO RIDE ON",
+        "ImageCount":  5,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.38.37 (1).jpeg",
+                           "Path":  "/assets/Ride-Ons/JUMBO RIDE ON/WhatsApp Image 2026-09-09 at 15.38.37 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#61B6C2"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.38.37.jpeg",
+                           "Path":  "/assets/Ride-Ons/JUMBO RIDE ON/WhatsApp Image 2026-09-09 at 15.38.37.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#6FA1C1"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.38.38 (1).jpeg",
+                           "Path":  "/assets/Ride-Ons/JUMBO RIDE ON/WhatsApp Image 2026-09-09 at 15.38.38 (1).jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#D992B7"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.38.38.jpeg",
+                           "Path":  "/assets/Ride-Ons/JUMBO RIDE ON/WhatsApp Image 2026-09-09 at 15.38.38.jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#B2A4C6"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.39.20.jpeg",
+                           "Path":  "/assets/Ride-Ons/JUMBO RIDE ON/WhatsApp Image 2026-09-09 at 15.39.20.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#C79E71"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Ride-Ons",
+        "ProductName":  "MCCLAREN",
+        "ImageCount":  10,
+        "Images":  [
+                       {
+                           "FileName":  "mclaren-blue.jpg",
+                           "Path":  "/assets/Ride-Ons/MCCLAREN/mclaren-blue.jpg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#3A5B6D"
+                       },
+                       {
+                           "FileName":  "mclaren-green.jpg",
+                           "Path":  "/assets/Ride-Ons/MCCLAREN/mclaren-green.jpg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#394645"
+                       },
+                       {
+                           "FileName":  "mclaren-grey.jpg",
+                           "Path":  "/assets/Ride-Ons/MCCLAREN/mclaren-grey.jpg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#555455"
+                       },
+                       {
+                           "FileName":  "mclaren-red.jpg",
+                           "Path":  "/assets/Ride-Ons/MCCLAREN/mclaren-red.jpg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#6B393C"
+                       },
+                       {
+                           "FileName":  "mclaren-white.jpg",
+                           "Path":  "/assets/Ride-Ons/MCCLAREN/mclaren-white.jpg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#636363"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.40.12 (1).jpeg",
+                           "Path":  "/assets/Ride-Ons/MCCLAREN/WhatsApp Image 2026-09-09 at 15.40.12 (1).jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#555455"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.40.12.jpeg",
+                           "Path":  "/assets/Ride-Ons/MCCLAREN/WhatsApp Image 2026-09-09 at 15.40.12.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#6B393C"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.40.13 (1).jpeg",
+                           "Path":  "/assets/Ride-Ons/MCCLAREN/WhatsApp Image 2026-09-09 at 15.40.13 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#3A5B6D"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.40.13 (2).jpeg",
+                           "Path":  "/assets/Ride-Ons/MCCLAREN/WhatsApp Image 2026-09-09 at 15.40.13 (2).jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#394645"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.40.13.jpeg",
+                           "Path":  "/assets/Ride-Ons/MCCLAREN/WhatsApp Image 2026-09-09 at 15.40.13.jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#646364"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Ride-Ons",
+        "ProductName":  "MY FIRST TRUCK",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.28.10.jpeg",
+                           "Path":  "/assets/Ride-Ons/MY FIRST TRUCK/WhatsApp Image 2026-09-09 at 15.28.10.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#49564E"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.28.11 (1).jpeg",
+                           "Path":  "/assets/Ride-Ons/MY FIRST TRUCK/WhatsApp Image 2026-09-09 at 15.28.11 (1).jpeg",
+                           "DetectedColor":  "Silver",
+                           "AvgHex":  "#B3AAA5"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.28.11 (2).jpeg",
+                           "Path":  "/assets/Ride-Ons/MY FIRST TRUCK/WhatsApp Image 2026-09-09 at 15.28.11 (2).jpeg",
+                           "DetectedColor":  "Yellow",
+                           "AvgHex":  "#A6453E"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.28.11.jpeg",
+                           "Path":  "/assets/Ride-Ons/MY FIRST TRUCK/WhatsApp Image 2026-09-09 at 15.28.11.jpeg",
+                           "DetectedColor":  "Yellow",
+                           "AvgHex":  "#C19144"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Ride-Ons",
+        "ProductName":  "RACING CAR",
+        "ImageCount":  5,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.28.40.jpeg",
+                           "Path":  "/assets/Ride-Ons/RACING CAR/WhatsApp Image 2026-09-09 at 15.28.40.jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#808288"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.28.41.jpeg",
+                           "Path":  "/assets/Ride-Ons/RACING CAR/WhatsApp Image 2026-09-09 at 15.28.41.jpeg",
+                           "DetectedColor":  "Yellow",
+                           "AvgHex":  "#A78247"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.28.42 (1).jpeg",
+                           "Path":  "/assets/Ride-Ons/RACING CAR/WhatsApp Image 2026-09-09 at 15.28.42 (1).jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#4F7CAD"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.28.42.jpeg",
+                           "Path":  "/assets/Ride-Ons/RACING CAR/WhatsApp Image 2026-09-09 at 15.28.42.jpeg",
+                           "DetectedColor":  "Yellow",
+                           "AvgHex":  "#8CA959"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.31.26.jpeg",
+                           "Path":  "/assets/Ride-Ons/RACING CAR/WhatsApp Image 2026-09-09 at 15.31.26.jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#A8494E"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Ride-Ons",
+        "ProductName":  "ROCKING RIDER",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.42.24.jpeg",
+                           "Path":  "/assets/Ride-Ons/ROCKING RIDER/WhatsApp Image 2026-09-09 at 15.42.24.jpeg",
+                           "DetectedColor":  "Yellow",
+                           "AvgHex":  "#D0B764"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.42.26 (1).jpeg",
+                           "Path":  "/assets/Ride-Ons/ROCKING RIDER/WhatsApp Image 2026-09-09 at 15.42.26 (1).jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#CFB0B6"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.42.26.jpeg",
+                           "Path":  "/assets/Ride-Ons/ROCKING RIDER/WhatsApp Image 2026-09-09 at 15.42.26.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#AFB8A6"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.42.27.jpeg",
+                           "Path":  "/assets/Ride-Ons/ROCKING RIDER/WhatsApp Image 2026-09-09 at 15.42.27.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#A7B5C3"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Ride-Ons",
+        "ProductName":  "SCOOBY PLUS RIDER",
+        "ImageCount":  3,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.32.05.jpeg",
+                           "Path":  "/assets/Ride-Ons/SCOOBY PLUS RIDER/WhatsApp Image 2026-09-09 at 15.32.05.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#ACC9C1"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.32.06 (1).jpeg",
+                           "Path":  "/assets/Ride-Ons/SCOOBY PLUS RIDER/WhatsApp Image 2026-09-09 at 15.32.06 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#A2B9C4"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.32.06.jpeg",
+                           "Path":  "/assets/Ride-Ons/SCOOBY PLUS RIDER/WhatsApp Image 2026-09-09 at 15.32.06.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#CEB2B7"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Ride-Ons",
+        "ProductName":  "SCOOBY RIDER",
+        "ImageCount":  3,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.29.16.jpeg",
+                           "Path":  "/assets/Ride-Ons/SCOOBY RIDER/WhatsApp Image 2026-09-09 at 15.29.16.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#769BB2"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.29.17 (1).jpeg",
+                           "Path":  "/assets/Ride-Ons/SCOOBY RIDER/WhatsApp Image 2026-09-09 at 15.29.17 (1).jpeg",
+                           "DetectedColor":  "Purple",
+                           "AvgHex":  "#C3A2B0"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.29.17.jpeg",
+                           "Path":  "/assets/Ride-Ons/SCOOBY RIDER/WhatsApp Image 2026-09-09 at 15.29.17.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#84A6A3"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Ride-Ons",
+        "ProductName":  "TRACTOR RIDER",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.35.56 (1).jpeg",
+                           "Path":  "/assets/Ride-Ons/TRACTOR RIDER/WhatsApp Image 2026-09-09 at 15.35.56 (1).jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#50717A"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.35.56 (2).jpeg",
+                           "Path":  "/assets/Ride-Ons/TRACTOR RIDER/WhatsApp Image 2026-09-09 at 15.35.56 (2).jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#74525A"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.35.56.jpeg",
+                           "Path":  "/assets/Ride-Ons/TRACTOR RIDER/WhatsApp Image 2026-09-09 at 15.35.56.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#70574F"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.35.57.jpeg",
+                           "Path":  "/assets/Ride-Ons/TRACTOR RIDER/WhatsApp Image 2026-09-09 at 15.35.57.jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#595158"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Kick Scooters",
+        "ProductName":  "FERRARII KICK SCOOTER",
+        "ImageCount":  3,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.44.27 (1).jpeg",
+                           "Path":  "/assets/Kick Scooters/FERRARII KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.44.27 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#756B63"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.44.27.jpeg",
+                           "Path":  "/assets/Kick Scooters/FERRARII KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.44.27.jpeg",
+                           "DetectedColor":  "Purple",
+                           "AvgHex":  "#B25D64"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.44.28.jpeg",
+                           "Path":  "/assets/Kick Scooters/FERRARII KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.44.28.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#666A69"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Kick Scooters",
+        "ProductName":  "ROYAL PANDA JUNIOR KICK SCOOTER",
+        "ImageCount":  5,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.57.34 (1).jpeg",
+                           "Path":  "/assets/Kick Scooters/ROYAL PANDA JUNIOR KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.57.34 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#AC7C7D"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.57.34 (2).jpeg",
+                           "Path":  "/assets/Kick Scooters/ROYAL PANDA JUNIOR KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.57.34 (2).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#A7756B"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.57.34.jpeg",
+                           "Path":  "/assets/Kick Scooters/ROYAL PANDA JUNIOR KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.57.34.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#A4AC66"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.57.35 (1).jpeg",
+                           "Path":  "/assets/Kick Scooters/ROYAL PANDA JUNIOR KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.57.35 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#8E6760"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.57.35.jpeg",
+                           "Path":  "/assets/Kick Scooters/ROYAL PANDA JUNIOR KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.57.35.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#B79670"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Kick Scooters",
+        "ProductName":  "Royal Panda Kick Scooter",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.08.36 (1).jpeg",
+                           "Path":  "/assets/Kick Scooters/Royal Panda Kick Scooter/WhatsApp Image 2026-09-09 at 16.08.36 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#ACB470"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.08.36 (2).jpeg",
+                           "Path":  "/assets/Kick Scooters/Royal Panda Kick Scooter/WhatsApp Image 2026-09-09 at 16.08.36 (2).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#83605C"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.08.36.jpeg",
+                           "Path":  "/assets/Kick Scooters/Royal Panda Kick Scooter/WhatsApp Image 2026-09-09 at 16.08.36.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#AC7166"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.09.17.jpeg",
+                           "Path":  "/assets/Kick Scooters/Royal Panda Kick Scooter/WhatsApp Image 2026-09-09 at 16.09.17.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#AB7B7D"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Kick Scooters",
+        "ProductName":  "Smiley Deluxe Kick Scooter",
+        "ImageCount":  3,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.10.42 (1).jpeg",
+                           "Path":  "/assets/Kick Scooters/Smiley Deluxe Kick Scooter/WhatsApp Image 2026-09-09 at 17.10.42 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#AD9F64"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.10.42 (2).jpeg",
+                           "Path":  "/assets/Kick Scooters/Smiley Deluxe Kick Scooter/WhatsApp Image 2026-09-09 at 17.10.42 (2).jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#AE6268"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.10.42.jpeg",
+                           "Path":  "/assets/Kick Scooters/Smiley Deluxe Kick Scooter/WhatsApp Image 2026-09-09 at 17.10.42.jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#667EB1"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Kick Scooters",
+        "ProductName":  "Smiley Kick Scooter",
+        "ImageCount":  3,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.12.06 (1).jpeg",
+                           "Path":  "/assets/Kick Scooters/Smiley Kick Scooter/WhatsApp Image 2026-09-09 at 16.12.06 (1).jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#5772AA"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.12.06.jpeg",
+                           "Path":  "/assets/Kick Scooters/Smiley Kick Scooter/WhatsApp Image 2026-09-09 at 16.12.06.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#AD9E5E"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.15.34.jpeg",
+                           "Path":  "/assets/Kick Scooters/Smiley Kick Scooter/WhatsApp Image 2026-09-09 at 16.15.34.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#844B53"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Kick Scooters",
+        "ProductName":  "SPEEDY KICK SCOOTER",
+        "ImageCount":  3,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.44.08 (1).jpeg",
+                           "Path":  "/assets/Kick Scooters/SPEEDY KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.44.08 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#ACB062"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.44.08 (2).jpeg",
+                           "Path":  "/assets/Kick Scooters/SPEEDY KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.44.08 (2).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#845D57"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.44.08.jpeg",
+                           "Path":  "/assets/Kick Scooters/SPEEDY KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.44.08.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#A09486"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Kick Scooters",
+        "ProductName":  "stylo Junior kick scooter",
+        "ImageCount":  5,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.51.24 (1).jpeg",
+                           "Path":  "/assets/Kick Scooters/stylo Junior kick scooter/WhatsApp Image 2026-09-09 at 15.51.24 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#B07F7E"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.51.24.jpeg",
+                           "Path":  "/assets/Kick Scooters/stylo Junior kick scooter/WhatsApp Image 2026-09-09 at 15.51.24.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#AFB558"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.51.25 (1).jpeg",
+                           "Path":  "/assets/Kick Scooters/stylo Junior kick scooter/WhatsApp Image 2026-09-09 at 15.51.25 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#B9955F"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.51.25.jpeg",
+                           "Path":  "/assets/Kick Scooters/stylo Junior kick scooter/WhatsApp Image 2026-09-09 at 15.51.25.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#A66254"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.51.26.jpeg",
+                           "Path":  "/assets/Kick Scooters/stylo Junior kick scooter/WhatsApp Image 2026-09-09 at 15.51.26.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#7E5A54"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Kick Scooters",
+        "ProductName":  "stylo Kick scooter",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.50.47.jpeg",
+                           "Path":  "/assets/Kick Scooters/stylo Kick scooter/WhatsApp Image 2026-09-09 at 15.50.47.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#AA7D80"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.50.48 (1).jpeg",
+                           "Path":  "/assets/Kick Scooters/stylo Kick scooter/WhatsApp Image 2026-09-09 at 15.50.48 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#AAB560"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.50.48.jpeg",
+                           "Path":  "/assets/Kick Scooters/stylo Kick scooter/WhatsApp Image 2026-09-09 at 15.50.48.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#9E6254"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 15.50.49.jpeg",
+                           "Path":  "/assets/Kick Scooters/stylo Kick scooter/WhatsApp Image 2026-09-09 at 15.50.49.jpeg",
+                           "DetectedColor":  "Yellow",
+                           "AvgHex":  "#774A47"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Walkers",
+        "ProductName":  "Bearyboo Walker",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.21.41.jpeg",
+                           "Path":  "/assets/Walkers/Bearyboo Walker/WhatsApp Image 2026-09-09 at 16.21.41.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#7EB1B3"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.21.42 (1).jpeg",
+                           "Path":  "/assets/Walkers/Bearyboo Walker/WhatsApp Image 2026-09-09 at 16.21.42 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#92C4CF"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.21.42.jpeg",
+                           "Path":  "/assets/Walkers/Bearyboo Walker/WhatsApp Image 2026-09-09 at 16.21.42.jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#C68195"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.21.44.jpeg",
+                           "Path":  "/assets/Walkers/Bearyboo Walker/WhatsApp Image 2026-09-09 at 16.21.44.jpeg",
+                           "DetectedColor":  "Yellow",
+                           "AvgHex":  "#CB9391"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Walkers",
+        "ProductName":  "Bunny rider",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.20.28 (1).jpeg",
+                           "Path":  "/assets/Walkers/Bunny rider/WhatsApp Image 2026-09-09 at 16.20.28 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#B8CCB4"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.20.28 (2).jpeg",
+                           "Path":  "/assets/Walkers/Bunny rider/WhatsApp Image 2026-09-09 at 16.20.28 (2).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#BBA29B"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.20.28.jpeg",
+                           "Path":  "/assets/Walkers/Bunny rider/WhatsApp Image 2026-09-09 at 16.20.28.jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#D5ADB7"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.20.29.jpeg",
+                           "Path":  "/assets/Walkers/Bunny rider/WhatsApp Image 2026-09-09 at 16.20.29.jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#CBB3D0"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Walkers",
+        "ProductName":  "CASPER DELUXE WALKER",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.22.27 (1).jpeg",
+                           "Path":  "/assets/Walkers/CASPER DELUXE WALKER/WhatsApp Image 2026-09-09 at 16.22.27 (1).jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#8EBAB0"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.22.27.jpeg",
+                           "Path":  "/assets/Walkers/CASPER DELUXE WALKER/WhatsApp Image 2026-09-09 at 16.22.27.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#8AB1C5"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.22.28 (1).jpeg",
+                           "Path":  "/assets/Walkers/CASPER DELUXE WALKER/WhatsApp Image 2026-09-09 at 16.22.28 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#BD947B"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.22.28.jpeg",
+                           "Path":  "/assets/Walkers/CASPER DELUXE WALKER/WhatsApp Image 2026-09-09 at 16.22.28.jpeg",
+                           "DetectedColor":  "Purple",
+                           "AvgHex":  "#C289A0"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Swing Cars",
+        "ProductName":  "BEAR COLOUR SWING CAR",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.36.47 (1).jpeg",
+                           "Path":  "/assets/Swing Cars/BEAR COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.47 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#81A769"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.36.47.jpeg",
+                           "Path":  "/assets/Swing Cars/BEAR COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.47.jpeg",
+                           "DetectedColor":  "Yellow",
+                           "AvgHex":  "#BEA635"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.36.48 (1).jpeg",
+                           "Path":  "/assets/Swing Cars/BEAR COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.48 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#BCA64D"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.36.48.jpeg",
+                           "Path":  "/assets/Swing Cars/BEAR COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.48.jpeg",
+                           "DetectedColor":  "Yellow",
+                           "AvgHex":  "#A68E33"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Swing Cars",
+        "ProductName":  "BEAR SWING CAR",
+        "ImageCount":  1,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.36.19.jpeg",
+                           "Path":  "/assets/Swing Cars/BEAR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.19.jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#65696B"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Swing Cars",
+        "ProductName":  "BOO RIDER SWING CAR",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.10.04 (1).jpeg",
+                           "Path":  "/assets/Swing Cars/BOO RIDER SWING CAR/WhatsApp Image 2026-09-09 at 17.10.04 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#A4B9A3"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.10.04.jpeg",
+                           "Path":  "/assets/Swing Cars/BOO RIDER SWING CAR/WhatsApp Image 2026-09-09 at 17.10.04.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#534B4A"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.10.05 (1).jpeg",
+                           "Path":  "/assets/Swing Cars/BOO RIDER SWING CAR/WhatsApp Image 2026-09-09 at 17.10.05 (1).jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#7DA1BF"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.10.05.jpeg",
+                           "Path":  "/assets/Swing Cars/BOO RIDER SWING CAR/WhatsApp Image 2026-09-09 at 17.10.05.jpeg",
+                           "DetectedColor":  "Purple",
+                           "AvgHex":  "#AC878D"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Swing Cars",
+        "ProductName":  "CANDY SWING CAR",
+        "ImageCount":  5,
+        "Images":  [
+                       {
+                           "FileName":  "candy-swing-car-cyan.jpg",
+                           "Path":  "/assets/Swing Cars/CANDY SWING CAR/candy-swing-car-cyan.jpg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#478786"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.45.37.jpeg",
+                           "Path":  "/assets/Swing Cars/CANDY SWING CAR/WhatsApp Image 2026-09-09 at 16.45.37.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#897C1A"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.45.38.jpeg",
+                           "Path":  "/assets/Swing Cars/CANDY SWING CAR/WhatsApp Image 2026-09-09 at 16.45.38.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#7B251C"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.45.39 (1).jpeg",
+                           "Path":  "/assets/Swing Cars/CANDY SWING CAR/WhatsApp Image 2026-09-09 at 16.45.39 (1).jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#468685"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.45.39.jpeg",
+                           "Path":  "/assets/Swing Cars/CANDY SWING CAR/WhatsApp Image 2026-09-09 at 16.45.39.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#798083"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Swing Cars",
+        "ProductName":  "CUTIEE SWING CAR",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.33.53 (1).jpeg",
+                           "Path":  "/assets/Swing Cars/CUTIEE SWING CAR/WhatsApp Image 2026-09-09 at 16.33.53 (1).jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#427DAD"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.33.53 (2).jpeg",
+                           "Path":  "/assets/Swing Cars/CUTIEE SWING CAR/WhatsApp Image 2026-09-09 at 16.33.53 (2).jpeg",
+                           "DetectedColor":  "Purple",
+                           "AvgHex":  "#D2A4AD"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.33.53.jpeg",
+                           "Path":  "/assets/Swing Cars/CUTIEE SWING CAR/WhatsApp Image 2026-09-09 at 16.33.53.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#87B98E"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.35.09.jpeg",
+                           "Path":  "/assets/Swing Cars/CUTIEE SWING CAR/WhatsApp Image 2026-09-09 at 16.35.09.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#B94339"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Swing Cars",
+        "ProductName":  "PANDAA BASKET SWING CAR",
+        "ImageCount":  5,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.25.54 (1).jpeg",
+                           "Path":  "/assets/Swing Cars/PANDAA BASKET SWING CAR/WhatsApp Image 2026-09-09 at 16.25.54 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#59403E"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.25.54.jpeg",
+                           "Path":  "/assets/Swing Cars/PANDAA BASKET SWING CAR/WhatsApp Image 2026-09-09 at 16.25.54.jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#475357"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.25.55 (1).jpeg",
+                           "Path":  "/assets/Swing Cars/PANDAA BASKET SWING CAR/WhatsApp Image 2026-09-09 at 16.25.55 (1).jpeg",
+                           "DetectedColor":  "Orange",
+                           "AvgHex":  "#58473C"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.25.55.jpeg",
+                           "Path":  "/assets/Swing Cars/PANDAA BASKET SWING CAR/WhatsApp Image 2026-09-09 at 16.25.55.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#59404C"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.33.20.jpeg",
+                           "Path":  "/assets/Swing Cars/PANDAA BASKET SWING CAR/WhatsApp Image 2026-09-09 at 16.33.20.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#767C83"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Swing Cars",
+        "ProductName":  "PANDAA FACE COLOUR SWING CAR",
+        "ImageCount":  3,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.25.16.jpeg",
+                           "Path":  "/assets/Swing Cars/PANDAA FACE COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.25.16.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#65A1B6"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.25.17 (1).jpeg",
+                           "Path":  "/assets/Swing Cars/PANDAA FACE COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.25.17 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#84B89D"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.25.17.jpeg",
+                           "Path":  "/assets/Swing Cars/PANDAA FACE COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.25.17.jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#BC8D91"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Swing Cars",
+        "ProductName":  "PANDAA FACE SWING CAR",
+        "ImageCount":  5,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.24.47.jpeg",
+                           "Path":  "/assets/Swing Cars/PANDAA FACE SWING CAR/WhatsApp Image 2026-09-09 at 16.24.47.jpeg",
+                           "DetectedColor":  "Yellow",
+                           "AvgHex":  "#71423F"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.24.48 (1).jpeg",
+                           "Path":  "/assets/Swing Cars/PANDAA FACE SWING CAR/WhatsApp Image 2026-09-09 at 16.24.48 (1).jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#5E5F5E"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.24.48.jpeg",
+                           "Path":  "/assets/Swing Cars/PANDAA FACE SWING CAR/WhatsApp Image 2026-09-09 at 16.24.48.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#4A6069"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.24.49.jpeg",
+                           "Path":  "/assets/Swing Cars/PANDAA FACE SWING CAR/WhatsApp Image 2026-09-09 at 16.24.49.jpeg",
+                           "DetectedColor":  "Orange",
+                           "AvgHex":  "#6F5039"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.32.13.jpeg",
+                           "Path":  "/assets/Swing Cars/PANDAA FACE SWING CAR/WhatsApp Image 2026-09-09 at 16.32.13.jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#3A3A3C"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Swing Cars",
+        "ProductName":  "ROAR RIDER",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.46.38 (1).jpeg",
+                           "Path":  "/assets/Swing Cars/ROAR RIDER/WhatsApp Image 2026-09-09 at 16.46.38 (1).jpeg",
+                           "DetectedColor":  "Orange",
+                           "AvgHex":  "#F09713"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.46.38.jpeg",
+                           "Path":  "/assets/Swing Cars/ROAR RIDER/WhatsApp Image 2026-09-09 at 16.46.38.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#78B8A3"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.46.39 (1).jpeg",
+                           "Path":  "/assets/Swing Cars/ROAR RIDER/WhatsApp Image 2026-09-09 at 16.46.39 (1).jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#F08576"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.46.39.jpeg",
+                           "Path":  "/assets/Swing Cars/ROAR RIDER/WhatsApp Image 2026-09-09 at 16.46.39.jpeg",
+                           "DetectedColor":  "Orange",
+                           "AvgHex":  "#E28633"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Swing Cars",
+        "ProductName":  "SPACY SWING CAR",
+        "ImageCount":  3,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.40.16.jpeg",
+                           "Path":  "/assets/Swing Cars/SPACY SWING CAR/WhatsApp Image 2026-09-09 at 16.40.16.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#9ACCCA"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.40.17 (1).jpeg",
+                           "Path":  "/assets/Swing Cars/SPACY SWING CAR/WhatsApp Image 2026-09-09 at 16.40.17 (1).jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#3B9FD7"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.40.17.jpeg",
+                           "Path":  "/assets/Swing Cars/SPACY SWING CAR/WhatsApp Image 2026-09-09 at 16.40.17.jpeg",
+                           "DetectedColor":  "Purple",
+                           "AvgHex":  "#D2B1C1"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Swing Cars",
+        "ProductName":  "SWING CAR (Rabbit - Crazy - Robo)",
+        "ImageCount":  0,
+        "Images":  [
+
+                   ]
+    },
+    {
+        "Category":  "Swing Cars",
+        "ProductName":  "WENDY SWING CAR",
+        "ImageCount":  3,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.27.43.jpeg",
+                           "Path":  "/assets/Swing Cars/WENDY SWING CAR/WhatsApp Image 2026-09-09 at 16.27.43.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#738145"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.27.44 (1).jpeg",
+                           "Path":  "/assets/Swing Cars/WENDY SWING CAR/WhatsApp Image 2026-09-09 at 16.27.44 (1).jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#2A5E81"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 16.27.44.jpeg",
+                           "Path":  "/assets/Swing Cars/WENDY SWING CAR/WhatsApp Image 2026-09-09 at 16.27.44.jpeg",
+                           "DetectedColor":  "Yellow",
+                           "AvgHex":  "#AC4033"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Tricycles",
+        "ProductName":  "Hello Rider",
+        "ImageCount":  5,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.18.41.jpeg",
+                           "Path":  "/assets/Tricycles/Hello Rider/WhatsApp Image 2026-09-09 at 17.18.41.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#675623"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.18.42 (1).jpeg",
+                           "Path":  "/assets/Tricycles/Hello Rider/WhatsApp Image 2026-09-09 at 17.18.42 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#592625"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.18.42 (2).jpeg",
+                           "Path":  "/assets/Tricycles/Hello Rider/WhatsApp Image 2026-09-09 at 17.18.42 (2).jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#545956"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.18.42.jpeg",
+                           "Path":  "/assets/Tricycles/Hello Rider/WhatsApp Image 2026-09-09 at 17.18.42.jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#374B5C"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.18.43.jpeg",
+                           "Path":  "/assets/Tricycles/Hello Rider/WhatsApp Image 2026-09-09 at 17.18.43.jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#5B5357"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Tricycles",
+        "ProductName":  "NexRide 2in1",
+        "ImageCount":  8,
+        "Images":  [
+                       {
+                           "FileName":  "nexride-2in1-blue.jpg",
+                           "Path":  "/assets/Tricycles/NexRide 2in1/nexride-2in1-blue.jpg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#39525C"
+                       },
+                       {
+                           "FileName":  "nexride-2in1-red.jpg",
+                           "Path":  "/assets/Tricycles/NexRide 2in1/nexride-2in1-red.jpg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#63413E"
+                       },
+                       {
+                           "FileName":  "nexride-2in1-teal.jpg",
+                           "Path":  "/assets/Tricycles/NexRide 2in1/nexride-2in1-teal.jpg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#415856"
+                       },
+                       {
+                           "FileName":  "nexride-2in1-yellow.jpg",
+                           "Path":  "/assets/Tricycles/NexRide 2in1/nexride-2in1-yellow.jpg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#6D664E"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.14.26 (1).jpeg",
+                           "Path":  "/assets/Tricycles/NexRide 2in1/WhatsApp Image 2026-09-09 at 17.14.26 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#39525C"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.14.26.jpeg",
+                           "Path":  "/assets/Tricycles/NexRide 2in1/WhatsApp Image 2026-09-09 at 17.14.26.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#6D664E"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.14.27 (1).jpeg",
+                           "Path":  "/assets/Tricycles/NexRide 2in1/WhatsApp Image 2026-09-09 at 17.14.27 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#63413E"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.14.27.jpeg",
+                           "Path":  "/assets/Tricycles/NexRide 2in1/WhatsApp Image 2026-09-09 at 17.14.27.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#415856"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Tricycles",
+        "ProductName":  "NexRide 2in1 Deluxe",
+        "ImageCount":  8,
+        "Images":  [
+                       {
+                           "FileName":  "nexride-2in1-deluxe-blue.jpg",
+                           "Path":  "/assets/Tricycles/NexRide 2in1 Deluxe/nexride-2in1-deluxe-blue.jpg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#3D555E"
+                       },
+                       {
+                           "FileName":  "nexride-2in1-deluxe-red.jpg",
+                           "Path":  "/assets/Tricycles/NexRide 2in1 Deluxe/nexride-2in1-deluxe-red.jpg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#604240"
+                       },
+                       {
+                           "FileName":  "nexride-2in1-deluxe-teal.jpg",
+                           "Path":  "/assets/Tricycles/NexRide 2in1 Deluxe/nexride-2in1-deluxe-teal.jpg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#455B5A"
+                       },
+                       {
+                           "FileName":  "nexride-2in1-deluxe-yellow.jpg",
+                           "Path":  "/assets/Tricycles/NexRide 2in1 Deluxe/nexride-2in1-deluxe-yellow.jpg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#6E6851"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.15.01.jpeg",
+                           "Path":  "/assets/Tricycles/NexRide 2in1 Deluxe/WhatsApp Image 2026-09-09 at 17.15.01.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#604240"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.15.02 (1).jpeg",
+                           "Path":  "/assets/Tricycles/NexRide 2in1 Deluxe/WhatsApp Image 2026-09-09 at 17.15.02 (1).jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#3D555E"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.15.02 (2).jpeg",
+                           "Path":  "/assets/Tricycles/NexRide 2in1 Deluxe/WhatsApp Image 2026-09-09 at 17.15.02 (2).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#455B5A"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.15.02.jpeg",
+                           "Path":  "/assets/Tricycles/NexRide 2in1 Deluxe/WhatsApp Image 2026-09-09 at 17.15.02.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#6E6851"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Tricycles",
+        "ProductName":  "Nexride Deluxe",
+        "ImageCount":  5,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.12.22.jpeg",
+                           "Path":  "/assets/Tricycles/Nexride Deluxe/WhatsApp Image 2026-09-09 at 17.12.22.jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#5B4543"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.12.23 (1).jpeg",
+                           "Path":  "/assets/Tricycles/Nexride Deluxe/WhatsApp Image 2026-09-09 at 17.12.23 (1).jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#404F57"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.12.23 (2).jpeg",
+                           "Path":  "/assets/Tricycles/Nexride Deluxe/WhatsApp Image 2026-09-09 at 17.12.23 (2).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#625B45"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.12.23 (3).jpeg",
+                           "Path":  "/assets/Tricycles/Nexride Deluxe/WhatsApp Image 2026-09-09 at 17.12.23 (3).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#57453D"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.12.23.jpeg",
+                           "Path":  "/assets/Tricycles/Nexride Deluxe/WhatsApp Image 2026-09-09 at 17.12.23.jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#4D605F"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Tricycles",
+        "ProductName":  "NexRide Tricycle",
+        "ImageCount":  10,
+        "Images":  [
+                       {
+                           "FileName":  "nexride-blue.jpg",
+                           "Path":  "/assets/Tricycles/NexRide Tricycle/nexride-blue.jpg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#404F57"
+                       },
+                       {
+                           "FileName":  "nexride-orange.jpg",
+                           "Path":  "/assets/Tricycles/NexRide Tricycle/nexride-orange.jpg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#57453D"
+                       },
+                       {
+                           "FileName":  "nexride-red.jpg",
+                           "Path":  "/assets/Tricycles/NexRide Tricycle/nexride-red.jpg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#5B4543"
+                       },
+                       {
+                           "FileName":  "nexride-teal.jpg",
+                           "Path":  "/assets/Tricycles/NexRide Tricycle/nexride-teal.jpg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#4D605F"
+                       },
+                       {
+                           "FileName":  "nexride-yellow.jpg",
+                           "Path":  "/assets/Tricycles/NexRide Tricycle/nexride-yellow.jpg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#625B45"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.11.05 (1).jpeg",
+                           "Path":  "/assets/Tricycles/NexRide Tricycle/WhatsApp Image 2026-09-09 at 17.11.05 (1).jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#425456"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.11.05.jpeg",
+                           "Path":  "/assets/Tricycles/NexRide Tricycle/WhatsApp Image 2026-09-09 at 17.11.05.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#5D4940"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.11.06 (1).jpeg",
+                           "Path":  "/assets/Tricycles/NexRide Tricycle/WhatsApp Image 2026-09-09 at 17.11.06 (1).jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#5D5743"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.11.06 (2).jpeg",
+                           "Path":  "/assets/Tricycles/NexRide Tricycle/WhatsApp Image 2026-09-09 at 17.11.06 (2).jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#374B56"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.11.06.jpeg",
+                           "Path":  "/assets/Tricycles/NexRide Tricycle/WhatsApp Image 2026-09-09 at 17.11.06.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#513837"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Tricycles",
+        "ProductName":  "NINJA RIDER",
+        "ImageCount":  3,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.19.25 (1).jpeg",
+                           "Path":  "/assets/Tricycles/NINJA RIDER/WhatsApp Image 2026-09-09 at 17.19.25 (1).jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#503839"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.19.26 (1).jpeg",
+                           "Path":  "/assets/Tricycles/NINJA RIDER/WhatsApp Image 2026-09-09 at 17.19.26 (1).jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#2F4B58"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.19.26.jpeg",
+                           "Path":  "/assets/Tricycles/NINJA RIDER/WhatsApp Image 2026-09-09 at 17.19.26.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#515030"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Tricycles",
+        "ProductName":  "Tiny Rider 2in1",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.13.24 (1).jpeg",
+                           "Path":  "/assets/Tricycles/Tiny Rider 2in1/WhatsApp Image 2026-09-09 at 17.13.24 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#B2A682"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.13.24.jpeg",
+                           "Path":  "/assets/Tricycles/Tiny Rider 2in1/WhatsApp Image 2026-09-09 at 17.13.24.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#9F8281"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.13.25 (1).jpeg",
+                           "Path":  "/assets/Tricycles/Tiny Rider 2in1/WhatsApp Image 2026-09-09 at 17.13.25 (1).jpeg",
+                           "DetectedColor":  "Silver",
+                           "AvgHex":  "#9DA8A4"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.13.25.jpeg",
+                           "Path":  "/assets/Tricycles/Tiny Rider 2in1/WhatsApp Image 2026-09-09 at 17.13.25.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#94A2AA"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Tricycles",
+        "ProductName":  "Tiny Rider 2in1 Deluxe",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.15.39 (1).jpeg",
+                           "Path":  "/assets/Tricycles/Tiny Rider 2in1 Deluxe/WhatsApp Image 2026-09-09 at 17.15.39 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#AFA17F"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.15.39 (2).jpeg",
+                           "Path":  "/assets/Tricycles/Tiny Rider 2in1 Deluxe/WhatsApp Image 2026-09-09 at 17.15.39 (2).jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#929EA4"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.15.39.jpeg",
+                           "Path":  "/assets/Tricycles/Tiny Rider 2in1 Deluxe/WhatsApp Image 2026-09-09 at 17.15.39.jpeg",
+                           "DetectedColor":  "Silver",
+                           "AvgHex":  "#9EA8A3"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.15.40.jpeg",
+                           "Path":  "/assets/Tricycles/Tiny Rider 2in1 Deluxe/WhatsApp Image 2026-09-09 at 17.15.40.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#A48785"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Tricycles",
+        "ProductName":  "Tiny Rider Deluxe",
+        "ImageCount":  5,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.12.40 (1).jpeg",
+                           "Path":  "/assets/Tricycles/Tiny Rider Deluxe/WhatsApp Image 2026-09-09 at 17.12.40 (1).jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#8F9AA2"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.12.40 (2).jpeg",
+                           "Path":  "/assets/Tricycles/Tiny Rider Deluxe/WhatsApp Image 2026-09-09 at 17.12.40 (2).jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#7C7C7F"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.12.40 (3).jpeg",
+                           "Path":  "/assets/Tricycles/Tiny Rider Deluxe/WhatsApp Image 2026-09-09 at 17.12.40 (3).jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#939C9C"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.12.40.jpeg",
+                           "Path":  "/assets/Tricycles/Tiny Rider Deluxe/WhatsApp Image 2026-09-09 at 17.12.40.jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#98969C"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.12.41.jpeg",
+                           "Path":  "/assets/Tricycles/Tiny Rider Deluxe/WhatsApp Image 2026-09-09 at 17.12.41.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#A49782"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Tricycles",
+        "ProductName":  "Tiny Rider Tricycle",
+        "ImageCount":  10,
+        "Images":  [
+                       {
+                           "FileName":  "tiny-rider-blue.jpg",
+                           "Path":  "/assets/Tricycles/Tiny Rider Tricycle/tiny-rider-blue.jpg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#8F9AA2"
+                       },
+                       {
+                           "FileName":  "tiny-rider-grey.jpg",
+                           "Path":  "/assets/Tricycles/Tiny Rider Tricycle/tiny-rider-grey.jpg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#7C7C7F"
+                       },
+                       {
+                           "FileName":  "tiny-rider-mint.jpg",
+                           "Path":  "/assets/Tricycles/Tiny Rider Tricycle/tiny-rider-mint.jpg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#939C9C"
+                       },
+                       {
+                           "FileName":  "tiny-rider-pink.jpg",
+                           "Path":  "/assets/Tricycles/Tiny Rider Tricycle/tiny-rider-pink.jpg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#98969C"
+                       },
+                       {
+                           "FileName":  "tiny-rider-yellow.jpg",
+                           "Path":  "/assets/Tricycles/Tiny Rider Tricycle/tiny-rider-yellow.jpg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#A49782"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.11.27.jpeg",
+                           "Path":  "/assets/Tricycles/Tiny Rider Tricycle/WhatsApp Image 2026-09-09 at 17.11.27.jpeg",
+                           "DetectedColor":  "Silver",
+                           "AvgHex":  "#A0A1AB"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.11.28 (1).jpeg",
+                           "Path":  "/assets/Tricycles/Tiny Rider Tricycle/WhatsApp Image 2026-09-09 at 17.11.28 (1).jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#B0A591"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.11.28 (2).jpeg",
+                           "Path":  "/assets/Tricycles/Tiny Rider Tricycle/WhatsApp Image 2026-09-09 at 17.11.28 (2).jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#96A3B1"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.11.28.jpeg",
+                           "Path":  "/assets/Tricycles/Tiny Rider Tricycle/WhatsApp Image 2026-09-09 at 17.11.28.jpeg",
+                           "DetectedColor":  "Silver",
+                           "AvgHex":  "#9BA5A9"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.11.29.jpeg",
+                           "Path":  "/assets/Tricycles/Tiny Rider Tricycle/WhatsApp Image 2026-09-09 at 17.11.29.jpeg",
+                           "DetectedColor":  "Grey",
+                           "AvgHex":  "#888A90"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Tricycles",
+        "ProductName":  "Turbo Police Bike",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "turbo-police-bike-red.jpg",
+                           "Path":  "/assets/Tricycles/Turbo Police Bike/turbo-police-bike-red.jpg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#633744"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.21.49 (1).jpeg",
+                           "Path":  "/assets/Tricycles/Turbo Police Bike/WhatsApp Image 2026-09-09 at 17.21.49 (1).jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#25486B"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.21.49 (2).jpeg",
+                           "Path":  "/assets/Tricycles/Turbo Police Bike/WhatsApp Image 2026-09-09 at 17.21.49 (2).jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#633744"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.21.49.jpeg",
+                           "Path":  "/assets/Tricycles/Turbo Police Bike/WhatsApp Image 2026-09-09 at 17.21.49.jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#4C454B"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Potty Trainers",
+        "ProductName":  "COW BABY CHAIR \u0026 POTTY TRAINER",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.21.04 (1).jpeg",
+                           "Path":  "/assets/Potty Trainers/COW BABY CHAIR \u0026 POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.21.04 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#ABC78D"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.21.04 (2).jpeg",
+                           "Path":  "/assets/Potty Trainers/COW BABY CHAIR \u0026 POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.21.04 (2).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#D6A58F"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.21.04.jpeg",
+                           "Path":  "/assets/Potty Trainers/COW BABY CHAIR \u0026 POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.21.04.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#D28C8A"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.21.05.jpeg",
+                           "Path":  "/assets/Potty Trainers/COW BABY CHAIR \u0026 POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.21.05.jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#9EC3DB"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Potty Trainers",
+        "ProductName":  "FOAM POTTY",
+        "ImageCount":  5,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.21.49 (1).jpeg",
+                           "Path":  "/assets/Potty Trainers/FOAM POTTY/WhatsApp Image 2026-09-09 at 17.21.49 (1).jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#82B6E3"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.21.49 (2).jpeg",
+                           "Path":  "/assets/Potty Trainers/FOAM POTTY/WhatsApp Image 2026-09-09 at 17.21.49 (2).jpeg",
+                           "DetectedColor":  "Purple",
+                           "AvgHex":  "#F39EC6"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.21.49.jpeg",
+                           "Path":  "/assets/Potty Trainers/FOAM POTTY/WhatsApp Image 2026-09-09 at 17.21.49.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#E1D099"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.21.50 (1).jpeg",
+                           "Path":  "/assets/Potty Trainers/FOAM POTTY/WhatsApp Image 2026-09-09 at 17.21.50 (1).jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#E2CD9B"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.21.50.jpeg",
+                           "Path":  "/assets/Potty Trainers/FOAM POTTY/WhatsApp Image 2026-09-09 at 17.21.50.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#F39897"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Potty Trainers",
+        "ProductName":  "Joy Rider Potty Trainer",
+        "ImageCount":  3,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.23.31.jpeg",
+                           "Path":  "/assets/Potty Trainers/Joy Rider Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.31.jpeg",
+                           "DetectedColor":  "Pink",
+                           "AvgHex":  "#E6A5BD"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.23.32 (1).jpeg",
+                           "Path":  "/assets/Potty Trainers/Joy Rider Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.32 (1).jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#71BCDB"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.23.32.jpeg",
+                           "Path":  "/assets/Potty Trainers/Joy Rider Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.32.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#A9D754"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Potty Trainers",
+        "ProductName":  "MY QITTY Rider \u0026 Potty Trainer",
+        "ImageCount":  3,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.23.49.jpeg",
+                           "Path":  "/assets/Potty Trainers/MY QITTY Rider \u0026 Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.49.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#B0C73B"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.23.50 (1).jpeg",
+                           "Path":  "/assets/Potty Trainers/MY QITTY Rider \u0026 Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.50 (1).jpeg",
+                           "DetectedColor":  "Purple",
+                           "AvgHex":  "#EBB0C4"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.23.50.jpeg",
+                           "Path":  "/assets/Potty Trainers/MY QITTY Rider \u0026 Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.50.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#57B7D6"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Potty Trainers",
+        "ProductName":  "PLASTIC POTTY",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.22.13 (1).jpeg",
+                           "Path":  "/assets/Potty Trainers/PLASTIC POTTY/WhatsApp Image 2026-09-09 at 17.22.13 (1).jpeg",
+                           "DetectedColor":  "Orange",
+                           "AvgHex":  "#EDBB9F"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.22.13 (2).jpeg",
+                           "Path":  "/assets/Potty Trainers/PLASTIC POTTY/WhatsApp Image 2026-09-09 at 17.22.13 (2).jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#96BFDE"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.22.13.jpeg",
+                           "Path":  "/assets/Potty Trainers/PLASTIC POTTY/WhatsApp Image 2026-09-09 at 17.22.13.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#CED9BA"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.22.14.jpeg",
+                           "Path":  "/assets/Potty Trainers/PLASTIC POTTY/WhatsApp Image 2026-09-09 at 17.22.14.jpeg",
+                           "DetectedColor":  "Pink",
+                           "AvgHex":  "#EFABC3"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Potty Trainers",
+        "ProductName":  "SCOOTY POTTY",
+        "ImageCount":  3,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.25.13 (1).jpeg",
+                           "Path":  "/assets/Potty Trainers/SCOOTY POTTY/WhatsApp Image 2026-09-09 at 17.25.13 (1).jpeg",
+                           "DetectedColor":  "Purple",
+                           "AvgHex":  "#E398A7"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.25.13.jpeg",
+                           "Path":  "/assets/Potty Trainers/SCOOTY POTTY/WhatsApp Image 2026-09-09 at 17.25.13.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#9FC159"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.25.14.jpeg",
+                           "Path":  "/assets/Potty Trainers/SCOOTY POTTY/WhatsApp Image 2026-09-09 at 17.25.14.jpeg",
+                           "DetectedColor":  "Teal",
+                           "AvgHex":  "#4AABC3"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Potty Trainers",
+        "ProductName":  "SOFA BABY CHAIR \u0026 POTTY TRAINER",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.21.25 (1).jpeg",
+                           "Path":  "/assets/Potty Trainers/SOFA BABY CHAIR \u0026 POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.21.25 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#AFCC71"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.21.25.jpeg",
+                           "Path":  "/assets/Potty Trainers/SOFA BABY CHAIR \u0026 POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.21.25.jpeg",
+                           "DetectedColor":  "Blue",
+                           "AvgHex":  "#8DBDE0"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.21.26 (1).jpeg",
+                           "Path":  "/assets/Potty Trainers/SOFA BABY CHAIR \u0026 POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.21.26 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#D8716F"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.21.26.jpeg",
+                           "Path":  "/assets/Potty Trainers/SOFA BABY CHAIR \u0026 POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.21.26.jpeg",
+                           "DetectedColor":  "Pink",
+                           "AvgHex":  "#E689B2"
+                       }
+                   ]
+    },
+    {
+        "Category":  "Potty Trainers",
+        "ProductName":  "TEDDY BABY CHAIR \u0026 POTTY TRAINER",
+        "ImageCount":  4,
+        "Images":  [
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.20.21 (1).jpeg",
+                           "Path":  "/assets/Potty Trainers/TEDDY BABY CHAIR \u0026 POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.20.21 (1).jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#EA954F"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.20.21.jpeg",
+                           "Path":  "/assets/Potty Trainers/TEDDY BABY CHAIR \u0026 POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.20.21.jpeg",
+                           "DetectedColor":  "Green",
+                           "AvgHex":  "#C0A060"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.20.22 (1).jpeg",
+                           "Path":  "/assets/Potty Trainers/TEDDY BABY CHAIR \u0026 POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.20.22 (1).jpeg",
+                           "DetectedColor":  "Yellow",
+                           "AvgHex":  "#EDB04B"
+                       },
+                       {
+                           "FileName":  "WhatsApp Image 2026-09-09 at 17.20.22.jpeg",
+                           "Path":  "/assets/Potty Trainers/TEDDY BABY CHAIR \u0026 POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.20.22.jpeg",
+                           "DetectedColor":  "Yellow",
+                           "AvgHex":  "#DBB345"
+                       }
+                   ]
+    }
+]

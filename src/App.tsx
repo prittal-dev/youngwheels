@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -8,19 +8,28 @@ import { WholesaleModal } from './components/WholesaleModal';
 import { ChatbotWidget } from './components/ChatbotWidget';
 import { FloatingToyBackground } from './components/FloatingToyBackground';
 import { HomePage } from './pages/HomePage';
-import { AboutPage } from './pages/AboutPage';
-import { CategoryPage } from './pages/CategoryPage';
-import { ContactPage } from './pages/ContactPage';
-import { AdminPage } from './pages/AdminPage';
-import { AllCategoriesPage } from './pages/AllCategoriesPage';
-import { BlogPage } from './pages/BlogPage';
-import { SocialPage } from './pages/SocialPage';
-import { EventsPage } from './pages/EventsPage';
 import { CategoryId, Product, EnquiryItem } from './types';
 import { COMPANY_DETAILS } from './data/company';
 import { PRODUCTS, getProductImg } from './data/products';
 import { MessageCircle, ArrowUp, ShoppingBag } from 'lucide-react';
 import { SmoothScrollProvider } from './components/SmoothScroll';
+
+// Code-split secondary pages to optimize initial bundle size & load speed
+const AboutPage = lazy(() => import('./pages/AboutPage').then(m => ({ default: m.AboutPage })));
+const CategoryPage = lazy(() => import('./pages/CategoryPage').then(m => ({ default: m.CategoryPage })));
+const ContactPage = lazy(() => import('./pages/ContactPage').then(m => ({ default: m.ContactPage })));
+const AdminPage = lazy(() => import('./pages/AdminPage').then(m => ({ default: m.AdminPage })));
+const AllCategoriesPage = lazy(() => import('./pages/AllCategoriesPage').then(m => ({ default: m.AllCategoriesPage })));
+const BlogPage = lazy(() => import('./pages/BlogPage').then(m => ({ default: m.BlogPage })));
+const SocialPage = lazy(() => import('./pages/SocialPage').then(m => ({ default: m.SocialPage })));
+const EventsPage = lazy(() => import('./pages/EventsPage').then(m => ({ default: m.EventsPage })));
+
+const PageLoadingFallback = () => (
+  <div className="py-28 flex flex-col items-center justify-center gap-3">
+    <div className="w-10 h-10 border-4 border-[#FFD93D] border-t-[#FF6B6B] rounded-full animate-spin"></div>
+    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider font-heading">Loading Young Wheels...</span>
+  </div>
+);
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>('home');
@@ -29,21 +38,11 @@ export default function App() {
   const [wholesaleModalOpen, setWholesaleModalOpen] = useState<boolean>(false);
   const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
 
-  // Managed Products State (with localStorage persistence & auto-sync to 55 catalog items)
+  // Managed Products State (always synced with authentic catalog items from products.ts)
   const [productsList, setProductsList] = useState<Product[]>(() => {
     try {
-      const saved = localStorage.getItem('yw_products_v6');
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length >= PRODUCTS.length) {
-          // Check if parsed list still has unsplash URLs and upgrade if needed
-          const hasUnsplash = parsed.some((p: any) => p.image && p.image.includes('unsplash.com'));
-          if (!hasUnsplash) {
-            return parsed;
-          }
-        }
-      }
-      localStorage.setItem('yw_products_v6', JSON.stringify(PRODUCTS));
+      ['yw_products_v6', 'yw_products_v7', 'yw_products_v8', 'yw_products_v9', 'yw_products_v10', 'yw_products_v12', 'yw_products_v13'].forEach(k => localStorage.removeItem(k));
+      localStorage.setItem('yw_products_v14', JSON.stringify(PRODUCTS));
       return PRODUCTS;
     } catch {
       return PRODUCTS;
@@ -64,11 +63,18 @@ export default function App() {
     }
   });
 
-  // Check URL pathname for /admin route
+  // Check URL pathname, search query, or hash for /admin route
   useEffect(() => {
-    if (window.location.pathname === '/admin') {
-      setActiveTab('admin');
-    }
+    const checkAdminRoute = () => {
+      const cleanPath = window.location.pathname.replace(/\/+$/, '');
+      const searchParams = new URLSearchParams(window.location.search);
+      if (cleanPath === '/admin' || searchParams.get('tab') === 'admin' || window.location.hash === '#admin') {
+        setActiveTab('admin');
+      }
+    };
+    checkAdminRoute();
+    window.addEventListener('popstate', checkAdminRoute);
+    return () => window.removeEventListener('popstate', checkAdminRoute);
   }, []);
 
   const [hideFloatingWidgets, setHideFloatingWidgets] = useState<boolean>(false);
@@ -248,83 +254,84 @@ export default function App() {
                 />
               )}
 
-              {activeTab === 'about' && (
-                <AboutPage onOpenWholesaleModal={() => setWholesaleModalOpen(true)} />
-              )}
+              <Suspense fallback={<PageLoadingFallback />}>
+                {activeTab === 'about' && (
+                  <AboutPage onOpenWholesaleModal={() => setWholesaleModalOpen(true)} />
+                )}
 
-              {activeTab === 'all-categories' && (
-                <AllCategoriesPage
-                  onSelectCategory={(catId) => {
-                    setActiveTab(catId);
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}
-                  products={productsList}
-                />
-              )}
+                {activeTab === 'all-categories' && (
+                  <AllCategoriesPage
+                    onSelectCategory={(catId) => {
+                      setActiveTab(catId);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    products={productsList}
+                  />
+                )}
 
-              {['ride-ons', 'kick-scooters', 'baby-walkers', 'swing-cars', 'tricycles', 'potty-trainers', 'magic-cars', 'riders', 'potty-chairs', 'electric-rideons', 'rocking-animals', 'tri-cycles'].includes(activeTab) && (
-                <CategoryPage
-                  categoryId={activeTab as CategoryId}
-                  onQuickView={(p) => setQuickViewProduct(p)}
-                  onAddToEnquiry={handleAddToEnquiry}
-                  products={productsList}
-                />
-              )}
+                {['ride-ons', 'kick-scooters', 'baby-walkers', 'swing-cars', 'tricycles', 'potty-trainers', 'magic-cars', 'riders', 'potty-chairs', 'electric-rideons', 'rocking-animals', 'tri-cycles'].includes(activeTab) && (
+                  <CategoryPage
+                    categoryId={activeTab as CategoryId}
+                    onQuickView={(p) => setQuickViewProduct(p)}
+                    onAddToEnquiry={handleAddToEnquiry}
+                    products={productsList}
+                  />
+                )}
 
-              {activeTab === 'contact' && <ContactPage />}
+                {activeTab === 'contact' && <ContactPage />}
 
-              {activeTab === 'blog' && (
-                <BlogPage
-                  onOpenWholesaleModal={() => setWholesaleModalOpen(true)}
-                  onNavigateHome={() => {
-                    setActiveTab('home');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}
-                />
-              )}
+                {activeTab === 'blog' && (
+                  <BlogPage
+                    onOpenWholesaleModal={() => setWholesaleModalOpen(true)}
+                    onNavigateHome={() => {
+                      setActiveTab('home');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                  />
+                )}
 
-              {activeTab === 'events' && (
-                <EventsPage
-                  onOpenWholesaleModal={() => setWholesaleModalOpen(true)}
-                  onNavigateHome={() => {
-                    setActiveTab('home');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}
-                />
-              )}
+                {activeTab === 'events' && (
+                  <EventsPage
+                    onOpenWholesaleModal={() => setWholesaleModalOpen(true)}
+                    onNavigateHome={() => {
+                      setActiveTab('home');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                  />
+                )}
 
-              {['social', 'social-instagram', 'social-youtube', 'social-facebook'].includes(activeTab) && (
-                <SocialPage
-                  initialPlatform={
-                    activeTab === 'social-youtube'
-                      ? 'youtube'
-                      : activeTab === 'social-facebook'
-                      ? 'facebook'
-                      : 'instagram'
-                  }
-                  onNavigateTab={(tab) => {
-                    setActiveTab(tab);
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}
-                />
-              )}
+                {['social', 'social-instagram', 'social-youtube', 'social-facebook'].includes(activeTab) && (
+                  <SocialPage
+                    initialPlatform={
+                      activeTab === 'social-youtube'
+                        ? 'youtube'
+                        : activeTab === 'social-facebook'
+                        ? 'facebook'
+                        : 'instagram'
+                    }
+                    onNavigateTab={(tab) => {
+                      setActiveTab(tab);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                  />
+                )}
 
-              {activeTab === 'admin' && (
-                <AdminPage
-                  products={productsList}
-                  onAddProduct={handleAddProduct}
-                  onUpdateProduct={handleUpdateProduct}
-                  onDeleteProduct={handleDeleteProduct}
-                  heroImage={heroImage}
-                  onUpdateHeroImage={handleUpdateHeroImage}
-                  onResetCatalog={handleResetCatalog}
-                />
-              )}
+                {activeTab === 'admin' && (
+                  <AdminPage
+                    products={productsList}
+                    onAddProduct={handleAddProduct}
+                    onUpdateProduct={handleUpdateProduct}
+                    onDeleteProduct={handleDeleteProduct}
+                    heroImage={heroImage}
+                    onUpdateHeroImage={handleUpdateHeroImage}
+                    onResetCatalog={handleResetCatalog}
+                  />
+                )}
+              </Suspense>
             </motion.div>
           </AnimatePresence>
         </div>
       </main>
-
 
       {/* Footer */}
       <Footer
@@ -369,12 +376,12 @@ export default function App() {
       />
 
       {/* Floating Action Bar */}
-      <div className={`fixed bottom-6 right-6 z-40 flex items-center gap-3 transition-all duration-300 ${hideFloatingWidgets ? 'opacity-0 pointer-events-none translate-y-10' : 'opacity-100 translate-y-0'}`}>
-        {/* Quick Basket Floating Button */}
+      <div className={`fixed bottom-4 sm:bottom-6 right-3 sm:right-6 z-40 flex items-center gap-2 sm:gap-3 transition-all duration-300 ${hideFloatingWidgets ? 'opacity-0 pointer-events-none translate-y-10' : 'opacity-100 translate-y-0'}`}>
+        {/* Quick Basket Floating Button (Desktop/Tablet - mobile has sticky header basket) */}
         {totalEnquiryCount > 0 && (
           <button
             onClick={() => setEnquiryDrawerOpen(true)}
-            className="bg-[#FF6B6B] text-white p-3.5 sm:px-4 sm:py-3 rounded-full flex items-center gap-2 shadow-2xl hover:bg-[#FF5252] transition-transform hover:scale-105 active:scale-95"
+            className="hidden sm:flex bg-[#FF6B6B] text-white px-4 py-3 rounded-full items-center gap-2 shadow-xl hover:bg-[#FF5252] transition-transform hover:scale-105 active:scale-95 cursor-pointer"
             title="View Enquiry Basket"
           >
             <ShoppingBag className="w-5 h-5 text-white" />
@@ -389,23 +396,23 @@ export default function App() {
           href={`https://wa.me/${COMPANY_DETAILS.whatsappRaw}?text=${encodeURIComponent('Hi Young Wheels! I am on your website and would like to ask about your toys.')}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="toy-button bg-[#25D366] text-white p-3.5 sm:px-4 sm:py-3 rounded-full flex items-center gap-2 shadow-2xl hover:bg-[#20bd5a] group"
+          className="toy-button bg-[#25D366] text-white p-2.5 sm:px-4 sm:py-3 rounded-full flex items-center gap-2 shadow-xl hover:bg-[#20bd5a] group cursor-pointer"
           title="Chat on WhatsApp"
         >
-          <MessageCircle className="w-6 h-6 fill-white text-[#25D366] group-hover:rotate-12 transition-transform" />
-          <span className="hidden sm:inline font-heading font-bold text-xs">
+          <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 fill-white text-[#25D366] group-hover:rotate-12 transition-transform" />
+          <span className="hidden md:inline font-heading font-bold text-xs">
             WhatsApp Direct Desk
           </span>
         </a>
 
-        {/* Scroll To Top Floating Button (Hidden at top) */}
+        {/* Scroll To Top Floating Button (Desktop only to prevent mobile crowding) */}
         {showScrollTop && (
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="bg-slate-900 text-white p-3.5 rounded-full shadow-2xl hover:bg-slate-800 transition-all hover:scale-105 active:scale-95 border border-slate-700 animate-in fade-in duration-200"
+            className="hidden sm:flex bg-slate-900 text-white p-2.5 sm:p-3.5 rounded-full shadow-xl hover:bg-slate-800 transition-all hover:scale-105 active:scale-95 border border-slate-700 animate-in fade-in duration-200 cursor-pointer"
             title="Scroll to Top"
           >
-            <ArrowUp className="w-5 h-5 text-[#FFD93D]" />
+            <ArrowUp className="w-4 h-4 sm:w-5 sm:h-5 text-[#FFD93D]" />
           </button>
         )}
       </div>

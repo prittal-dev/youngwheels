@@ -124,95 +124,73 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
               }`}
             >
               <Star className="w-3.5 h-3.5 text-[#FFD93D] fill-[#FFD93D]" />
-              <span>Best Sellers</span>
+              <span>All / Bestsellers</span>
             </button>
             <button
-              onClick={() => setSelectedTab('magic-cars')}
+              onClick={() => setSelectedTab('ride-ons')}
               className={`px-4 py-2 rounded-2xl text-xs font-heading font-bold transition-all flex items-center gap-1.5 ${
-                selectedTab === 'magic-cars'
-                  ? 'bg-[#FF6B6B] text-white shadow-md'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-              }`}
-            >
-              <Car className="w-3.5 h-3.5 text-[#FF6B6B]" />
-              <span>Magic Cars</span>
-            </button>
-            <button
-              onClick={() => setSelectedTab('baby-walkers')}
-              className={`px-4 py-2 rounded-2xl text-xs font-heading font-bold transition-all flex items-center gap-1.5 ${
-                selectedTab === 'baby-walkers'
-                  ? 'bg-[#4ECDC4] text-slate-900 shadow-md'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-              }`}
-            >
-              <Footprints className="w-3.5 h-3.5 text-[#4ECDC4]" />
-              <span>Walkers</span>
-            </button>
-            <button
-              onClick={() => setSelectedTab('potty-chairs')}
-              className={`px-4 py-2 rounded-2xl text-xs font-heading font-bold transition-all flex items-center gap-1.5 ${
-                selectedTab === 'potty-chairs'
+                selectedTab === 'ride-ons' || selectedTab === 'riders'
                   ? 'bg-[#8B5CF6] text-white shadow-md'
                   : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
               }`}
             >
-              <Sparkles className="w-3.5 h-3.5 text-[#8B5CF6]" />
-              <span>Potty Chairs</span>
-            </button>
-            <button
-              onClick={() => setSelectedTab('rocking-animals')}
-              className={`px-4 py-2 rounded-2xl text-xs font-heading font-bold transition-all flex items-center gap-1.5 ${
-                selectedTab === 'rocking-animals'
-                  ? 'bg-[#EC4899] text-white shadow-md'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-              }`}
-            >
-              <Smile className="w-3.5 h-3.5 text-[#EC4899]" />
-              <span>Rockers</span>
-            </button>
-            <button
-              onClick={() => setSelectedTab('riders')}
-              className={`px-4 py-2 rounded-2xl text-xs font-heading font-bold transition-all flex items-center gap-1.5 ${
-                selectedTab === 'riders'
-                  ? 'bg-[#10B981] text-white shadow-md'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-              }`}
-            >
-              <Car className="w-3.5 h-3.5 text-[#10B981]" />
-              <span>Riders</span>
-            </button>
-            <button
-              onClick={() => setSelectedTab('electric-rideons')}
-              className={`px-4 py-2 rounded-2xl text-xs font-heading font-bold transition-all flex items-center gap-1.5 ${
-                selectedTab === 'electric-rideons'
-                  ? 'bg-[#F97316] text-white shadow-md'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-              }`}
-            >
-              <Sparkles className="w-3.5 h-3.5 text-[#F97316]" />
-              <span>Electric</span>
-            </button>
-            <button
-              onClick={() => setSelectedTab('tri-cycles')}
-              className={`px-4 py-2 rounded-2xl text-xs font-heading font-bold transition-all flex items-center gap-1.5 ${
-                selectedTab === 'tri-cycles'
-                  ? 'bg-[#06B6D4] text-white shadow-md'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-              }`}
-            >
-              <Car className="w-3.5 h-3.5 text-[#06B6D4]" />
-              <span>Tri Cycles</span>
+              <Car className="w-3.5 h-3.5 text-[#8B5CF6]" />
+              <span>Ride-Ons & Push Cars</span>
             </button>
             <button
               onClick={() => setSelectedTab('kick-scooters')}
               className={`px-4 py-2 rounded-2xl text-xs font-heading font-bold transition-all flex items-center gap-1.5 ${
                 selectedTab === 'kick-scooters'
-                  ? 'bg-[#22C55E] text-white shadow-md'
+                  ? 'bg-[#10B981] text-white shadow-md'
                   : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
               }`}
             >
-              <Sparkles className="w-3.5 h-3.5 text-[#22C55E]" />
-              <span>Scooters</span>
+              <Sparkles className="w-3.5 h-3.5 text-[#10B981]" />
+              <span>Kick Scooters & Police Bikes</span>
+            </button>
+            <button
+              onClick={() => setSelectedTab('baby-walkers')}
+              className={`px-4 py-2 rounded-2xl text-xs font-heading font-bold transition-all flex items-center gap-1.5 ${
+                selectedTab === 'baby-walkers'
+                  ? 'bg-[#0284C7] text-white shadow-md'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+              }`}
+            >
+              <Footprints className="w-3.5 h-3.5 text-[#0284C7]" />
+              <span>Baby Walkers & Push Trikes</span>
+            </button>
+            <button
+              onClick={() => setSelectedTab('swing-cars')}
+              className={`px-4 py-2 rounded-2xl text-xs font-heading font-bold transition-all flex items-center gap-1.5 ${
+                selectedTab === 'swing-cars' || selectedTab === 'magic-cars'
+                  ? 'bg-[#FF6B6B] text-white shadow-md'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+              }`}
+            >
+              <Car className="w-3.5 h-3.5 text-[#FF6B6B]" />
+              <span>Swing & Magic Cars</span>
+            </button>
+            <button
+              onClick={() => setSelectedTab('tricycles')}
+              className={`px-4 py-2 rounded-2xl text-xs font-heading font-bold transition-all flex items-center gap-1.5 ${
+                selectedTab === 'tricycles' || selectedTab === 'tri-cycles'
+                  ? 'bg-[#F97316] text-white shadow-md'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+              }`}
+            >
+              <Car className="w-3.5 h-3.5 text-[#F97316]" />
+              <span>Kids Tricycles</span>
+            </button>
+            <button
+              onClick={() => setSelectedTab('potty-trainers')}
+              className={`px-4 py-2 rounded-2xl text-xs font-heading font-bold transition-all flex items-center gap-1.5 ${
+                selectedTab === 'potty-trainers' || selectedTab === 'potty-chairs'
+                  ? 'bg-[#EC4899] text-white shadow-md'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+              }`}
+            >
+              <Sparkles className="w-3.5 h-3.5 text-[#EC4899]" />
+              <span>Potty Chairs</span>
             </button>
           </div>
         </div>
@@ -273,6 +251,8 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
                       <img
                         src={displayedImage}
                         alt={product.name}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-contain group-hover:scale-108 transition-all duration-300"
                       />
 
@@ -280,7 +260,7 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
                       <div className="absolute inset-0 bg-slate-900/30 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <button
                           onClick={() => onQuickView(product)}
-                          className="bg-white text-slate-900 px-4 py-2 rounded-xl text-xs font-bold font-heading shadow-lg flex items-center gap-1.5 hover:bg-[#FFD93D] transition-colors"
+                          className="bg-white text-slate-900 px-4 py-2 rounded-xl text-xs font-bold font-heading shadow-lg flex items-center gap-1.5 hover:bg-[#FFD93D] transition-colors cursor-pointer"
                         >
                           <Eye className="w-4 h-4" />
                           <span>Quick Details</span>
@@ -316,16 +296,17 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
                         <span>Color Options</span>
                         <span className="text-slate-600 font-extrabold">{activeColorName}</span>
                       </div>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-2.5 flex-wrap">
                         {product.colors.map((c, i) => (
                           <button
                             key={i}
                             onClick={() => handleColorSelect(product.id, c.name)}
-                            className={`w-5 h-5 rounded-full border-2 transition-transform ${
+                            className={`w-6 h-6 rounded-full border-2 transition-transform cursor-pointer shadow-xs ${
                               activeColorName === c.name ? 'scale-125 border-slate-900 ring-2 ring-[#FFD93D]' : 'border-white hover:scale-110'
                             }`}
                             style={{ backgroundColor: c.hex }}
                             title={c.name}
+                            aria-label={`Select ${c.name} color`}
                           />
                         ))}
                       </div>
@@ -337,20 +318,20 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
                     <div className="grid grid-cols-2 gap-2">
                       <button
                         onClick={() => handleAddWithNotice(product)}
-                        className="py-2 px-3 bg-[#FFD93D] hover:bg-[#ffe366] text-slate-900 font-heading font-bold text-xs rounded-xl flex items-center justify-center gap-1 shadow-2xs active:scale-95 transition-transform"
+                        className="min-h-[42px] py-2 px-2.5 bg-[#FFD93D] hover:bg-[#ffe366] text-slate-900 font-heading font-bold text-xs rounded-xl flex items-center justify-center gap-1 shadow-2xs active:scale-95 transition-transform cursor-pointer"
                       >
-                        <ShoppingBag className="w-3.5 h-3.5" />
-                        <span>Enquire</span>
+                        <ShoppingBag className="w-3.5 h-3.5 shrink-0" />
+                        <span className="truncate">Enquire</span>
                       </button>
 
                       <a
-                        href={`https://wa.me/${COMPANY_DETAILS.whatsappRaw}?text=${encodeURIComponent(`Hi Young Wheels! I want to inquire about ${product.name} (Model: ${product.modelCode}) in ${activeColorName} color.`)}`}
+                        href={`https://wa.me/${COMPANY_DETAILS.whatsappRaw}?text=${encodeURIComponent(`Hi Young Wheels! I am interested in ${product.name} (${product.modelCode}) in ${activeColorName} color.`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="py-2 px-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-heading font-bold text-xs rounded-xl flex items-center justify-center gap-1 shadow-2xs active:scale-95 transition-transform"
+                        className="min-h-[42px] py-2 px-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-heading font-bold text-xs rounded-xl flex items-center justify-center gap-1 shadow-2xs active:scale-95 transition-transform"
                       >
-                        <MessageCircle className="w-3.5 h-3.5 fill-white" />
-                        <span>WhatsApp</span>
+                        <MessageCircle className="w-3.5 h-3.5 fill-white shrink-0" />
+                        <span className="truncate">WhatsApp</span>
                       </a>
                     </div>
                   </div>

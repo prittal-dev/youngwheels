@@ -25,68 +25,68 @@ export const ALL_CATEGORY_CARDS: CategoryCardItem[] = [
   {
     id: 'ride-ons',
     name: 'Ride-Ons &\nPush Cars',
-    subtitle: 'For Little Feet and Big Adventures',
+    subtitle: 'G-Vagon, McClaren, Racing & Animal Riders',
     bgHex: '#6EE7B7',
     bgClass: 'bg-[#6EE7B7]',
     textClass: 'text-slate-900',
     doodleType: 'cloud',
-    image: getProductImg('mclaren-green.jpg'),
-    modelCountText: '13 Models'
+    image: '/assets/Ride-Ons/MCCLAREN/mclaren-green.jpg',
+    modelCountText: '13 Models Available'
   },
   {
     id: 'kick-scooters',
-    name: 'Kick\nScooters',
-    subtitle: 'For Little Feet and Big Adventures',
+    name: 'Kick Scooters &\nPolice Bikes',
+    subtitle: 'Speedy, Smiley, Ferrarii, Stylo & Panda Scooters',
     bgHex: '#86EFAC',
     bgClass: 'bg-[#86EFAC]',
     textClass: 'text-slate-900',
     doodleType: 'cloud',
-    image: getProductImg('tiny-rider-mint.jpg'),
-    modelCountText: '8 Models'
+    image: '/assets/Kick Scooters/SPEEDY KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.44.08.jpeg',
+    modelCountText: '8 Models Available'
   },
   {
     id: 'baby-walkers',
-    name: 'Baby\nWalkers',
-    subtitle: 'For Little Feet and Big Adventures',
+    name: 'Baby Walkers &\nPush Trikes',
+    subtitle: 'Bunny, Casper Deluxe & Bearyboo Walkers',
     bgHex: '#A3E635',
     bgClass: 'bg-[#A3E635]',
     textClass: 'text-slate-900',
     doodleType: 'scribble',
-    image: getProductImg('tiny-rider-2in1-red.jpg'),
-    modelCountText: '3 Models'
+    image: '/assets/Walkers/CASPER DELUXE WALKER/WhatsApp Image 2026-09-09 at 16.22.27.jpeg',
+    modelCountText: '3 Models Available'
   },
   {
     id: 'swing-cars',
     name: 'Swing Cars &\nMagic Cars',
-    subtitle: 'For Little Feet and Big Adventures',
+    subtitle: 'Pandaa, Wendy, Cutiee, Bear, Boo & Candy',
     bgHex: '#FEF08A',
     bgClass: 'bg-[#FEF08A]',
     textClass: 'text-slate-900',
     doodleType: 'cloud',
-    image: getProductImg('candy-swing-car-cyan.jpg'),
-    modelCountText: '12 Models'
+    image: '/assets/Swing Cars/CANDY SWING CAR/candy-swing-car-cyan.jpg',
+    modelCountText: '12 Models Available'
   },
   {
     id: 'tricycles',
-    name: 'Kids\nTricycles',
-    subtitle: 'For Little Feet and Big Adventures',
+    name: 'Kids Tricycles\n& Trikes',
+    subtitle: 'NexRide, Tiny Rider, Ninja, Police & 2in1 Trikes',
     bgHex: '#67E8F9',
     bgClass: 'bg-[#67E8F9]',
     textClass: 'text-slate-900',
     doodleType: 'scribble',
-    image: getProductImg('nexride-orange.jpg'),
-    modelCountText: '11 Models'
+    image: '/assets/Tricycles/NexRide Tricycle/nexride-orange.jpg',
+    modelCountText: '11 Models Available'
   },
   {
     id: 'potty-trainers',
     name: 'Potty Chairs &\nTrainers',
-    subtitle: 'For Little Feet and Big Adventures',
+    subtitle: 'Teddy, Cow, Sofa, Scooty, Joy & Qitty Chairs',
     bgHex: '#FCA5A5',
     bgClass: 'bg-[#FCA5A5]',
     textClass: 'text-slate-900',
     doodleType: 'scribble',
-    image: getProductImg('potty-chair-blue.jpg'),
-    modelCountText: '8 Models'
+    image: '/assets/Potty Trainers/SCOOTY POTTY/WhatsApp Image 2026-09-09 at 17.25.13.jpeg',
+    modelCountText: '8 Models Available'
   }
 ];
 
@@ -144,6 +144,9 @@ export const AllCategoriesPage: React.FC<AllCategoriesPageProps> = ({ onSelectCa
 
             {/* Left Content */}
             <div className="relative z-10 space-y-1 pr-32">
+              <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-black tracking-wider uppercase bg-white/90 text-slate-800 border border-slate-900/10 shadow-2xs mb-1">
+                {cat.modelCountText}
+              </span>
               <h2 className="text-xl sm:text-2xl font-black font-heading text-slate-900 leading-tight whitespace-pre-line">
                 {cat.name}
               </h2>
@@ -161,11 +164,11 @@ export const AllCategoriesPage: React.FC<AllCategoriesPageProps> = ({ onSelectCa
             </div>
 
             {/* Right Rounded Corner Image Container */}
-            <div className="absolute right-3 bottom-3 w-28 h-24 sm:w-32 sm:h-28 rounded-2xl overflow-hidden border-2 border-white/90 shadow-md bg-white flex items-center justify-center pointer-events-none">
+            <div className="absolute right-3 bottom-3 w-28 h-24 sm:w-32 sm:h-28 rounded-2xl overflow-hidden border-2 border-white/90 shadow-md bg-white/95 p-1.5 flex items-center justify-center pointer-events-none">
               <img
                 src={cat.image}
                 alt={cat.name.replace('\n', ' ')}
-                className="w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-300"
+                className="w-full h-full object-contain rounded-xl group-hover:scale-110 transition-transform duration-300"
               />
             </div>
           </motion.div>

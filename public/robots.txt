@@ -1,0 +1,21 @@
+# Young Wheels Robots.txt
+# Controls crawling and indexing for search engines
+
+User-agent: *
+Disallow: /admin
+Disallow: /admin/
+Disallow: /*?*tab=admin
+Disallow: /*?*admin
+Allow: /
+
+# Googlebot specific directives
+User-agent: Googlebot
+Disallow: /admin
+Disallow: /admin/
+Disallow: /*?*tab=admin
+
+# Bingbot specific directives
+User-agent: Bingbot
+Disallow: /admin
+Disallow: /admin/
+Disallow: /*?*tab=admin
