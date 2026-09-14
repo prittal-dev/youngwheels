@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { COMPANY_DETAILS } from '../data/company';
 import { Phone, MessageCircle, Mail, MapPin, Clock, Send, CheckCircle2, PhoneCall, ExternalLink } from 'lucide-react';
 
-export const ContactPage: React.FC = () => {
+interface ContactPageProps {
+  onNavigateTab?: (tab: string) => void;
+}
+
+export const ContactPage: React.FC<ContactPageProps> = ({ onNavigateTab }) => {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -16,6 +20,9 @@ export const ContactPage: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
+    if (onNavigateTab) {
+      onNavigateTab('thank-you');
+    }
   };
 
   const sendWhatsAppDirect = () => {

@@ -13,6 +13,7 @@ import { COMPANY_DETAILS } from './data/company';
 import { PRODUCTS, getProductImg } from './data/products';
 import { MessageCircle, ArrowUp, ShoppingBag } from 'lucide-react';
 import { SmoothScrollProvider } from './components/SmoothScroll';
+import { getTabFromPath, getPathFromTab } from './utils/router';
 
 // Code-split secondary pages to optimize initial bundle size & load speed
 const AboutPage = lazy(() => import('./pages/AboutPage').then(m => ({ default: m.AboutPage })));
@@ -23,6 +24,8 @@ const AllCategoriesPage = lazy(() => import('./pages/AllCategoriesPage').then(m 
 const BlogPage = lazy(() => import('./pages/BlogPage').then(m => ({ default: m.BlogPage })));
 const SocialPage = lazy(() => import('./pages/SocialPage').then(m => ({ default: m.SocialPage })));
 const EventsPage = lazy(() => import('./pages/EventsPage').then(m => ({ default: m.EventsPage })));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(m => ({ default: m.NotFoundPage })));
+const ThankYouPage = lazy(() => import('./pages/ThankYouPage').then(m => ({ default: m.ThankYouPage })));
 
 const PageLoadingFallback = () => (
   <div className="py-28 flex flex-col items-center justify-center gap-3">
@@ -32,11 +35,25 @@ const PageLoadingFallback = () => (
 );
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<string>('home');
+  const [activeTab, setActiveTab] = useState<string>(() => {
+    return getTabFromPath(window.location.pathname);
+  });
   const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
   const [enquiryDrawerOpen, setEnquiryDrawerOpen] = useState<boolean>(false);
   const [wholesaleModalOpen, setWholesaleModalOpen] = useState<boolean>(false);
   const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
+
+  const navigateToTab = (tab: string, replace = false) => {
+    const targetPath = getPathFromTab(tab);
+    if (window.location.pathname !== targetPath) {
+      if (replace) {
+        window.history.replaceState({ tab }, '', targetPath);
+      } else {
+        window.history.pushState({ tab }, '', targetPath);
+      }
+    }
+    setActiveTab(tab);
+  };
 
   // Managed Products State (always synced with authentic catalog items from products.ts)
   const [productsList, setProductsList] = useState<Product[]>(() => {
@@ -63,18 +80,26 @@ export default function App() {
     }
   });
 
-  // Check URL pathname, search query, or hash for /admin route
+  // Handle URL changes (popstate listener & initial route canonicalization)
   useEffect(() => {
-    const checkAdminRoute = () => {
-      const cleanPath = window.location.pathname.replace(/\/+$/, '');
+    const handleRouteSync = () => {
+      const currentTab = getTabFromPath(window.location.pathname);
       const searchParams = new URLSearchParams(window.location.search);
-      if (cleanPath === '/admin' || searchParams.get('tab') === 'admin' || window.location.hash === '#admin') {
-        setActiveTab('admin');
+      if (searchParams.get('tab') === 'admin' || window.location.hash === '#admin') {
+        navigateToTab('admin', true);
+      } else {
+        setActiveTab(currentTab);
       }
     };
-    checkAdminRoute();
-    window.addEventListener('popstate', checkAdminRoute);
-    return () => window.removeEventListener('popstate', checkAdminRoute);
+
+    handleRouteSync();
+
+    const handlePopState = () => {
+      handleRouteSync();
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
   const [hideFloatingWidgets, setHideFloatingWidgets] = useState<boolean>(false);
@@ -208,7 +233,9 @@ export default function App() {
         {/* Sticky Top Header */}
         <Header
           activeTab={activeTab}
-          setActiveTab={setActiveTab}
+          setActiveTab={(tab) => {
+            navigateToTab(tab);
+          }}
         enquiryCount={totalEnquiryCount}
         onOpenEnquiryDrawer={() => setEnquiryDrawerOpen(true)}
         onOpenWholesaleModal={() => setWholesaleModalOpen(true)}
@@ -243,7 +270,7 @@ export default function App() {
               {activeTab === 'home' && (
                 <HomePage
                   onSelectCategory={(catId) => {
-                    setActiveTab(catId);
+                    navigateToTab(catId);
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
                   onQuickView={(p) => setQuickViewProduct(p)}
@@ -262,7 +289,7 @@ export default function App() {
                 {activeTab === 'all-categories' && (
                   <AllCategoriesPage
                     onSelectCategory={(catId) => {
-                      setActiveTab(catId);
+                      navigateToTab(catId);
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
                     products={productsList}
@@ -278,13 +305,20 @@ export default function App() {
                   />
                 )}
 
-                {activeTab === 'contact' && <ContactPage />}
+                {activeTab === 'contact' && (
+                  <ContactPage
+                    onNavigateTab={(tab) => {
+                      navigateToTab(tab);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                  />
+                )}
 
                 {activeTab === 'blog' && (
                   <BlogPage
                     onOpenWholesaleModal={() => setWholesaleModalOpen(true)}
                     onNavigateHome={() => {
-                      setActiveTab('home');
+                      navigateToTab('home');
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
                   />
@@ -294,7 +328,7 @@ export default function App() {
                   <EventsPage
                     onOpenWholesaleModal={() => setWholesaleModalOpen(true)}
                     onNavigateHome={() => {
-                      setActiveTab('home');
+                      navigateToTab('home');
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
                   />
@@ -310,7 +344,7 @@ export default function App() {
                         : 'instagram'
                     }
                     onNavigateTab={(tab) => {
-                      setActiveTab(tab);
+                      navigateToTab(tab);
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
                   />
@@ -327,6 +361,24 @@ export default function App() {
                     onResetCatalog={handleResetCatalog}
                   />
                 )}
+
+                {activeTab === 'thank-you' && (
+                  <ThankYouPage
+                    onNavigateTab={(tab) => {
+                      navigateToTab(tab);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                  />
+                )}
+
+                {activeTab === 'not-found' && (
+                  <NotFoundPage
+                    onNavigateTab={(tab) => {
+                      navigateToTab(tab);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                  />
+                )}
               </Suspense>
             </motion.div>
           </AnimatePresence>
@@ -336,7 +388,7 @@ export default function App() {
       {/* Footer */}
       <Footer
         onNavigateTab={(tab) => {
-          setActiveTab(tab);
+          navigateToTab(tab);
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
         onOpenWholesaleModal={() => setWholesaleModalOpen(true)}
@@ -357,19 +409,27 @@ export default function App() {
         onUpdateQuantity={handleUpdateQuantity}
         onRemoveItem={handleRemoveFromEnquiry}
         onClearItems={handleClearBasket}
+        onNavigateTab={(tab) => {
+          navigateToTab(tab);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
       />
 
       {/* Wholesale Dealer Modal */}
       <WholesaleModal
         isOpen={wholesaleModalOpen}
         onClose={() => setWholesaleModalOpen(false)}
+        onNavigateTab={(tab) => {
+          navigateToTab(tab);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
       />
 
       {/* Interactive AI Chatbot Widget */}
       <ChatbotWidget
         onOpenWholesaleModal={() => setWholesaleModalOpen(true)}
         onNavigateTab={(tab) => {
-          setActiveTab(tab);
+          navigateToTab(tab);
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
         hideInFooter={hideFloatingWidgets}

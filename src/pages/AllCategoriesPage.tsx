@@ -3,6 +3,8 @@ import { CategoryId, Product } from '../types';
 import { Sparkles, ArrowRight, Car, Footprints, Smile, ShieldCheck, Heart, Star } from 'lucide-react';
 import { motion } from 'motion/react';
 import { getProductImg } from '../data/products';
+import { getPathFromTab } from '../utils/router';
+
 
 interface AllCategoriesPageProps {
   onSelectCategory: (catId: CategoryId) => void;
@@ -111,15 +113,20 @@ export const AllCategoriesPage: React.FC<AllCategoriesPageProps> = ({ onSelectCa
       {/* 8 Categories Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {ALL_CATEGORY_CARDS.map((cat, idx) => (
-          <motion.div
+          <motion.a
             key={idx}
+            href={getPathFromTab(cat.id)}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35, delay: idx * 0.06 }}
             whileHover={{ scale: 1.03, y: -4 }}
-            onClick={() => onSelectCategory(cat.id)}
+            onClick={(e) => {
+              e.preventDefault();
+              onSelectCategory(cat.id);
+            }}
             className={`relative rounded-[32px] p-5 sm:p-6 cursor-pointer border-2 border-dashed border-slate-800/15 shadow-sm hover:shadow-xl transition-all overflow-hidden flex flex-col justify-between min-h-[230px] group ${cat.bgClass}`}
           >
+
             {/* Background SVG Doodle */}
             {cat.doodleType === 'scribble' ? (
               <svg
@@ -171,8 +178,9 @@ export const AllCategoriesPage: React.FC<AllCategoriesPageProps> = ({ onSelectCa
                 className="w-full h-full object-contain rounded-xl group-hover:scale-110 transition-transform duration-300"
               />
             </div>
-          </motion.div>
+          </motion.a>
         ))}
+
       </div>
 
     </div>

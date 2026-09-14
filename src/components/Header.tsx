@@ -28,6 +28,7 @@ import {
 } from 'lucide-react';
 import { COMPANY_DETAILS, CATEGORIES } from '../data/company';
 import { CategoryId } from '../types';
+import { getPathFromTab } from '../utils/router';
 import logoImg from '../../assets/logo.png';
 
 interface HeaderProps {
@@ -125,8 +126,9 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-2.5 flex items-center justify-between gap-4">
         
         {/* Brand Logo */}
-        <button 
-          onClick={() => handleNavClick('home')} 
+        <a 
+          href={getPathFromTab('home')}
+          onClick={(e) => { e.preventDefault(); handleNavClick('home'); }} 
           className="flex items-center gap-2.5 group text-left focus:outline-none shrink-0 ml-3 sm:ml-7 lg:ml-8"
         >
           <img 
@@ -134,13 +136,14 @@ export const Header: React.FC<HeaderProps> = ({
             alt="Young Wheels" 
             className="h-10 sm:h-12 md:h-13 w-auto object-contain group-hover:scale-105 transition-transform shrink-0" 
           />
-        </button>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-1 font-semibold text-xs xl:text-sm">
           {/* 1. Home */}
-          <button
-            onClick={() => handleNavClick('home')}
+          <a
+            href={getPathFromTab('home')}
+            onClick={(e) => { e.preventDefault(); handleNavClick('home'); }}
             className={`px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-xl transition-all whitespace-nowrap ${
               activeTab === 'home'
                 ? 'bg-[#FFD93D] text-slate-900 font-bold shadow-xs'
@@ -148,11 +151,12 @@ export const Header: React.FC<HeaderProps> = ({
             }`}
           >
             Home
-          </button>
+          </a>
 
           {/* 2. About Us */}
-          <button
-            onClick={() => handleNavClick('about')}
+          <a
+            href={getPathFromTab('about')}
+            onClick={(e) => { e.preventDefault(); handleNavClick('about'); }}
             className={`px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-xl transition-all whitespace-nowrap ${
               activeTab === 'about'
                 ? 'bg-[#4ECDC4] text-slate-900 font-bold shadow-xs'
@@ -160,7 +164,7 @@ export const Header: React.FC<HeaderProps> = ({
             }`}
           >
             About Us
-          </button>
+          </a>
 
           {/* 3. Toys Dropdown */}
           <div 
@@ -168,8 +172,9 @@ export const Header: React.FC<HeaderProps> = ({
             onMouseEnter={() => setProductsDropdownOpen(true)}
             onMouseLeave={() => setProductsDropdownOpen(false)}
           >
-            <button
-              onClick={() => handleNavClick('all-categories')}
+            <a
+              href={getPathFromTab('all-categories')}
+              onClick={(e) => { e.preventDefault(); handleNavClick('all-categories'); }}
               className={`px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-xl flex items-center gap-1 transition-all whitespace-nowrap ${
                 activeTab === 'all-categories' || ['ride-ons', 'kick-scooters', 'baby-walkers', 'swing-cars', 'tricycles', 'potty-trainers', 'magic-cars', 'riders', 'potty-chairs', 'electric-rideons', 'rocking-animals', 'tri-cycles'].includes(activeTab)
                   ? 'bg-[#FF6B6B] text-white font-bold shadow-xs'
@@ -178,12 +183,13 @@ export const Header: React.FC<HeaderProps> = ({
             >
               <span>Toys</span>
               <ChevronDown className={`w-3.5 h-3.5 transition-transform ${productsDropdownOpen ? 'rotate-180' : ''}`} />
-            </button>
+            </a>
 
             {productsDropdownOpen && (
               <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-2xl shadow-2xl border-2 border-[#FFE8B5] p-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                <button
-                  onClick={() => handleNavClick('all-categories')}
+                <a
+                  href={getPathFromTab('all-categories')}
+                  onClick={(e) => { e.preventDefault(); handleNavClick('all-categories'); }}
                   className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left transition-all mb-1 ${
                     activeTab === 'all-categories' 
                       ? 'bg-[#FFD93D] font-black text-slate-900 shadow-2xs' 
@@ -197,15 +203,16 @@ export const Header: React.FC<HeaderProps> = ({
                     <div className="text-xs font-black">All Categories View</div>
                     <div className="text-[10px] text-slate-600">Browse Factory Categories & Models</div>
                   </div>
-                </button>
+                </a>
 
                 <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1 border-t border-slate-100">
                   Individual Category Models
                 </div>
                 {CATEGORIES.map((cat) => (
-                  <button
+                  <a
                     key={cat.id}
-                    onClick={() => handleNavClick(cat.id)}
+                    href={getPathFromTab(cat.id)}
+                    onClick={(e) => { e.preventDefault(); handleNavClick(cat.id); }}
                     className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-left transition-all ${
                       activeTab === cat.id 
                         ? 'bg-[#FFFDF9] border border-[#FF6B6B] font-bold text-[#FF6B6B]' 
@@ -219,15 +226,16 @@ export const Header: React.FC<HeaderProps> = ({
                       <div className="text-xs font-bold text-slate-900">{cat.name}</div>
                       <div className="text-[10px] text-slate-500 line-clamp-1">{cat.badge}</div>
                     </div>
-                  </button>
+                  </a>
                 ))}
               </div>
             )}
           </div>
 
           {/* 4. Blogs */}
-          <button
-            onClick={() => handleNavClick('blog')}
+          <a
+            href={getPathFromTab('blog')}
+            onClick={(e) => { e.preventDefault(); handleNavClick('blog'); }}
             className={`px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-xl transition-all whitespace-nowrap ${
               activeTab === 'blog'
                 ? 'bg-[#f17350] text-slate-900 font-bold shadow-xs'
@@ -235,11 +243,12 @@ export const Header: React.FC<HeaderProps> = ({
             }`}
           >
             Blogs
-          </button>
+          </a>
 
           {/* 5. Events */}
-          <button
-            onClick={() => handleNavClick('events')}
+          <a
+            href={getPathFromTab('events')}
+            onClick={(e) => { e.preventDefault(); handleNavClick('events'); }}
             className={`px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-xl transition-all whitespace-nowrap flex items-center gap-1.5 ${
               activeTab === 'events'
                 ? 'bg-[#FF6B6B] text-white font-bold shadow-xs'
@@ -248,11 +257,12 @@ export const Header: React.FC<HeaderProps> = ({
           >
             <Calendar className="w-3.5 h-3.5 text-[#FFD93D]" />
             <span>Events</span>
-          </button>
+          </a>
 
           {/* 5. Visit Factory */}
-          <button
-            onClick={() => handleNavClick('contact')}
+          <a
+            href={getPathFromTab('contact')}
+            onClick={(e) => { e.preventDefault(); handleNavClick('contact'); }}
             className={`px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-xl transition-all whitespace-nowrap ${
               activeTab === 'contact'
                 ? 'bg-[#C7B8EA] text-slate-900 font-bold shadow-xs'
@@ -260,7 +270,7 @@ export const Header: React.FC<HeaderProps> = ({
             }`}
           >
             Visit Factory
-          </button>
+          </a>
 
           {/* 6. Social Hub Dropdown */}
           <div 
@@ -268,8 +278,9 @@ export const Header: React.FC<HeaderProps> = ({
             onMouseEnter={() => setSocialDropdownOpen(true)}
             onMouseLeave={() => setSocialDropdownOpen(false)}
           >
-            <button
-              onClick={() => handleNavClick('social')}
+            <a
+              href={getPathFromTab('social')}
+              onClick={(e) => { e.preventDefault(); handleNavClick('social'); }}
               className={`px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-xl flex items-center gap-1.5 transition-all whitespace-nowrap ${
                 ['social', 'social-instagram', 'social-youtube', 'social-facebook'].includes(activeTab)
                   ? 'bg-[#DD2A7B] text-white font-bold shadow-xs'
@@ -279,7 +290,7 @@ export const Header: React.FC<HeaderProps> = ({
               <Instagram className="w-3.5 h-3.5 text-pink" />
               <span>Social Hub</span>
               <ChevronDown className={`w-3.5 h-3.5 transition-transform ${socialDropdownOpen ? 'rotate-180' : ''}`} />
-            </button>
+            </a>
 
             {socialDropdownOpen && (
               <div className="absolute top-full right-0 mt-1 w-64 bg-white rounded-2xl shadow-2xl border-2 border-[#FFE8B5] p-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
@@ -288,8 +299,9 @@ export const Header: React.FC<HeaderProps> = ({
                 </div>
 
                 {/* 1. Instagram */}
-                <button
-                  onClick={() => handleNavClick('social-instagram')}
+                <a
+                  href={getPathFromTab('social-instagram')}
+                  onClick={(e) => { e.preventDefault(); handleNavClick('social-instagram'); }}
                   className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left transition-all ${
                     activeTab === 'social-instagram' || activeTab === 'social'
                       ? 'bg-[#FDF2F8] border border-[#FBCFE8] font-bold text-[#DD2A7B]'
@@ -303,11 +315,12 @@ export const Header: React.FC<HeaderProps> = ({
                     <div className="text-xs font-bold text-slate-900">Instagram Hub</div>
                     <div className="text-[10px] text-slate-500">@youngwheels__ • Story Highlights</div>
                   </div>
-                </button>
+                </a>
 
                 {/* 2. YouTube */}
-                <button
-                  onClick={() => handleNavClick('social-youtube')}
+                <a
+                  href={getPathFromTab('social-youtube')}
+                  onClick={(e) => { e.preventDefault(); handleNavClick('social-youtube'); }}
                   className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left transition-all ${
                     activeTab === 'social-youtube'
                       ? 'bg-[#FFF0F0] border border-[#FFD6D6] font-bold text-[#FF0000]'
@@ -321,11 +334,12 @@ export const Header: React.FC<HeaderProps> = ({
                     <div className="text-xs font-bold text-slate-900">YouTube Channel</div>
                     <div className="text-[10px] text-slate-500">@youngwheelss • Video Demos</div>
                   </div>
-                </button>
+                </a>
 
                 {/* 3. Facebook */}
-                <button
-                  onClick={() => handleNavClick('social-facebook')}
+                <a
+                  href={getPathFromTab('social-facebook')}
+                  onClick={(e) => { e.preventDefault(); handleNavClick('social-facebook'); }}
                   className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left transition-all ${
                     activeTab === 'social-facebook'
                       ? 'bg-[#EFF6FF] border border-[#BFDBFE] font-bold text-[#1877F2]'
@@ -339,7 +353,7 @@ export const Header: React.FC<HeaderProps> = ({
                     <div className="text-xs font-bold text-slate-900">Facebook Page</div>
                     <div className="text-[10px] text-slate-500">Young Wheels • Community & Posts</div>
                   </div>
-                </button>
+                </a>
               </div>
             )}
           </div>
@@ -387,42 +401,46 @@ export const Header: React.FC<HeaderProps> = ({
       {mobileMenuOpen && (
         <div className="lg:hidden bg-[#FFFDF9] border-t border-[#FFE8B5] px-4 pt-3 pb-6 space-y-2 animate-in slide-in-from-top duration-200">
           {/* 1. Home */}
-          <button
-            onClick={() => handleNavClick('home')}
+          <a
+            href={getPathFromTab('home')}
+            onClick={(e) => { e.preventDefault(); handleNavClick('home'); }}
             className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 ${
               activeTab === 'home' ? 'bg-[#FFD93D] text-slate-900' : 'text-slate-700 hover:bg-slate-100'
             }`}
           >
             <Home className="w-4 h-4 text-slate-900" />
             <span>Home</span>
-          </button>
+          </a>
 
           {/* 2. About Us */}
-          <button
-            onClick={() => handleNavClick('about')}
+          <a
+            href={getPathFromTab('about')}
+            onClick={(e) => { e.preventDefault(); handleNavClick('about'); }}
             className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 ${
               activeTab === 'about' ? 'bg-[#4ECDC4] text-slate-900' : 'text-slate-700 hover:bg-slate-100'
             }`}
           >
             <Info className="w-4 h-4 text-slate-900" />
             <span>About Us</span>
-          </button>
+          </a>
 
           {/* 3. Toys Categories */}
           <div className="py-1">
-            <button
-              onClick={() => handleNavClick('all-categories')}
+            <a
+              href={getPathFromTab('all-categories')}
+              onClick={(e) => { e.preventDefault(); handleNavClick('all-categories'); }}
               className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-black flex items-center gap-2 mb-1 ${
                 activeTab === 'all-categories' ? 'bg-[#FF6B6B] text-white' : 'bg-[#FFF9EE] text-slate-900 border border-[#FFE8B5]'
               }`}
             >
               <LayoutGrid className="w-4 h-4 text-[#FFD93D]" />
               <span>Toys (All Categories)</span>
-            </button>
+            </a>
             {CATEGORIES.map((cat) => (
-              <button
+              <a
                 key={cat.id}
-                onClick={() => handleNavClick(cat.id)}
+                href={getPathFromTab(cat.id)}
+                onClick={(e) => { e.preventDefault(); handleNavClick(cat.id); }}
                 className={`w-full flex items-center justify-between px-4 py-2 rounded-xl text-xs font-semibold ${
                   activeTab === cat.id ? 'bg-[#FF6B6B] text-white font-bold' : 'text-slate-700 hover:bg-slate-100'
                 }`}
@@ -432,75 +450,81 @@ export const Header: React.FC<HeaderProps> = ({
                   <span>{cat.name}</span>
                 </div>
                 <span className="text-[10px] opacity-75">{cat.badge}</span>
-              </button>
+              </a>
             ))}
           </div>
 
           {/* 4. Blogs */}
-          <button
-            onClick={() => handleNavClick('blog')}
+          <a
+            href={getPathFromTab('blog')}
+            onClick={(e) => { e.preventDefault(); handleNavClick('blog'); }}
             className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 ${
               activeTab === 'blog' ? 'bg-[#FFD93D] text-slate-900' : 'text-slate-700 hover:bg-slate-100'
             }`}
           >
             <BookOpen className="w-4 h-4 text-slate-900" />
             <span>Blogs & Guides</span>
-          </button>
+          </a>
 
           {/* 4.5. Events */}
-          <button
-            onClick={() => handleNavClick('events')}
+          <a
+            href={getPathFromTab('events')}
+            onClick={(e) => { e.preventDefault(); handleNavClick('events'); }}
             className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 ${
               activeTab === 'events' ? 'bg-[#FF6B6B] text-white' : 'text-slate-700 hover:bg-slate-100'
             }`}
           >
             <Calendar className="w-4 h-4 text-[#FFD93D]" />
             <span>Events</span>
-          </button>
+          </a>
 
           {/* 5. Visit Factory */}
-          <button
-            onClick={() => handleNavClick('contact')}
+          <a
+            href={getPathFromTab('contact')}
+            onClick={(e) => { e.preventDefault(); handleNavClick('contact'); }}
             className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 ${
               activeTab === 'contact' ? 'bg-[#C7B8EA] text-slate-900' : 'text-slate-700 hover:bg-slate-100'
             }`}
           >
             <PhoneCall className="w-4 h-4 text-slate-900" />
             <span>Visit Factory</span>
-          </button>
+          </a>
 
           {/* 6. Social Hub Mobile Options */}
           <div className="py-1 border-t border-slate-100 space-y-1">
             <div className="text-[10px] font-black text-slate-400 uppercase tracking-wider px-4 py-1">
               Social Hub Channels
             </div>
-            <button
-              onClick={() => handleNavClick('social-instagram')}
+            <a
+              href={getPathFromTab('social-instagram')}
+              onClick={(e) => { e.preventDefault(); handleNavClick('social-instagram'); }}
               className={`w-full flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold ${
                 activeTab === 'social-instagram' || activeTab === 'social' ? 'bg-[#DD2A7B] text-white' : 'text-slate-700 hover:bg-slate-100'
               }`}
             >
               <Instagram className="w-4 h-4" />
               <span>Instagram (@youngwheels__)</span>
-            </button>
-            <button
-              onClick={() => handleNavClick('social-youtube')}
+            </a>
+            <a
+              href={getPathFromTab('social-youtube')}
+              onClick={(e) => { e.preventDefault(); handleNavClick('social-youtube'); }}
               className={`w-full flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold ${
                 activeTab === 'social-youtube' ? 'bg-[#FF0000] text-white' : 'text-slate-700 hover:bg-slate-100'
               }`}
             >
               <Youtube className="w-4 h-4" />
               <span>YouTube (@youngwheelss)</span>
-            </button>
-            <button
-              onClick={() => handleNavClick('social-facebook')}
+            </a>
+            <a
+              href={getPathFromTab('social-facebook')}
+              onClick={(e) => { e.preventDefault(); handleNavClick('social-facebook'); }}
               className={`w-full flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold ${
                 activeTab === 'social-facebook' ? 'bg-[#1877F2] text-white' : 'text-slate-700 hover:bg-slate-100'
               }`}
             >
               <Facebook className="w-4 h-4 fill-white" />
               <span>Facebook (Young Wheels)</span>
-            </button>
+            </a>
           </div>
 
           <div className="pt-2 flex flex-col gap-2">

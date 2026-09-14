@@ -16,6 +16,7 @@ import {
   Youtube
 } from 'lucide-react';
 import { COMPANY_DETAILS, CATEGORIES } from '../data/company';
+import { getPathFromTab } from '../utils/router';
 import logoImg from '../../assets/logo.png';
 import msmeImg from '../assets/msme.png';
 import isoImg from '../assets/iso.png';
@@ -153,8 +154,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
             <ul className="space-y-2 text-xs font-semibold text-slate-300">
               {CATEGORIES.map((cat) => (
                 <li key={cat.id}>
-                  <button
-                    onClick={() => onNavigateTab(cat.id)}
+                  <a
+                    href={getPathFromTab(cat.id)}
+                    onClick={(e) => { e.preventDefault(); onNavigateTab(cat.id); }}
                     className="hover:text-[#FF6B6B] transition-colors flex items-center justify-between w-full group pr-2 text-left"
                   >
                     <span className="flex items-center gap-1.5">
@@ -164,7 +166,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
                     <span className="text-[10px] bg-slate-800 text-slate-400 group-hover:bg-[#FFD93D] group-hover:text-slate-900 px-2 py-0.5 rounded-full transition-colors font-bold">
                       {cat.itemCount}
                     </span>
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -187,34 +189,34 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
             </h4>
             <ul className="space-y-2 text-xs font-semibold text-slate-300">
               <li>
-                <button onClick={() => onNavigateTab('home')} className="hover:text-[#FF6B6B] transition-colors">
+                <a href={getPathFromTab('home')} onClick={(e) => { e.preventDefault(); onNavigateTab('home'); }} className="hover:text-[#FF6B6B] transition-colors">
                   Home Page
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => onNavigateTab('about')} className="hover:text-[#FF6B6B] transition-colors">
+                <a href={getPathFromTab('about')} onClick={(e) => { e.preventDefault(); onNavigateTab('about'); }} className="hover:text-[#FF6B6B] transition-colors">
                   About Us
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => onNavigateTab('blog')} className="hover:text-[#FF6B6B] transition-colors">
+                <a href={getPathFromTab('blog')} onClick={(e) => { e.preventDefault(); onNavigateTab('blog'); }} className="hover:text-[#FF6B6B] transition-colors">
                   Blog & Buying Guides
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => onNavigateTab('events')} className="hover:text-[#FF6B6B] transition-colors flex items-center gap-1 font-bold text-[#FFD93D]">
+                <a href={getPathFromTab('events')} onClick={(e) => { e.preventDefault(); onNavigateTab('events'); }} className="hover:text-[#FF6B6B] transition-colors flex items-center gap-1 font-bold text-[#FFD93D]">
                   <span>Events 🎟️</span>
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => onNavigateTab('social')} className="hover:text-[#DD2A7B] transition-colors flex items-center gap-1">
+                <a href={getPathFromTab('social')} onClick={(e) => { e.preventDefault(); onNavigateTab('social'); }} className="hover:text-[#DD2A7B] transition-colors flex items-center gap-1">
                   <span>Social Hub</span>
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => onNavigateTab('contact')} className="hover:text-[#FF6B6B] transition-colors">
+                <a href={getPathFromTab('contact')} onClick={(e) => { e.preventDefault(); onNavigateTab('contact'); }} className="hover:text-[#FF6B6B] transition-colors">
                   Contact & Location
-                </button>
+                </a>
               </li>
               <li>
                 <button onClick={onOpenWholesaleModal} className="hover:text-[#FFD93D] transition-colors font-bold text-[#FFD93D]">

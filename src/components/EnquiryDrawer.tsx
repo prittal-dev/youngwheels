@@ -10,6 +10,7 @@ interface EnquiryDrawerProps {
   onUpdateQuantity: (productId: string, qty: number) => void;
   onRemoveItem: (productId: string) => void;
   onClearItems: () => void;
+  onNavigateTab?: (tab: string) => void;
 }
 
 export const EnquiryDrawer: React.FC<EnquiryDrawerProps> = ({
@@ -19,6 +20,7 @@ export const EnquiryDrawer: React.FC<EnquiryDrawerProps> = ({
   onUpdateQuantity,
   onRemoveItem,
   onClearItems,
+  onNavigateTab,
 }) => {
   const [customerName, setCustomerName] = useState('');
   const [city, setCity] = useState('');
@@ -212,6 +214,12 @@ export const EnquiryDrawer: React.FC<EnquiryDrawerProps> = ({
               href={`https://wa.me/${COMPANY_DETAILS.whatsappRaw}?text=${generateWhatsAppMessage()}`}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => {
+                onClose();
+                if (onNavigateTab) {
+                  onNavigateTab('thank-you');
+                }
+              }}
               className="w-full py-3.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-heading font-bold text-xs rounded-2xl flex items-center justify-center gap-2 shadow-lg transition-transform active:scale-98"
             >
               <MessageCircle className="w-4 h-4 fill-white" />

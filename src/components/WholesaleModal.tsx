@@ -5,9 +5,10 @@ import { COMPANY_DETAILS, CATEGORIES } from '../data/company';
 interface WholesaleModalProps {
   isOpen: boolean;
   onClose: () => void;
+  onNavigateTab?: (tab: string) => void;
 }
 
-export const WholesaleModal: React.FC<WholesaleModalProps> = ({ isOpen, onClose }) => {
+export const WholesaleModal: React.FC<WholesaleModalProps> = ({ isOpen, onClose, onNavigateTab }) => {
   if (!isOpen) return null;
 
   const [submitted, setSubmitted] = useState(false);
@@ -95,6 +96,10 @@ export const WholesaleModal: React.FC<WholesaleModalProps> = ({ isOpen, onClose 
     } finally {
       setIsSubmitting(false);
       setSubmitted(true);
+      if (onNavigateTab) {
+        onClose();
+        onNavigateTab('thank-you');
+      }
     }
   };
 
