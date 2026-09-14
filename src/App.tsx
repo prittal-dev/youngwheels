@@ -102,6 +102,93 @@ export default function App() {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
+  // Dynamic SEO Title & Meta Description Manager
+  useEffect(() => {
+    let title = "India’s Premier Kids Toys Manufacturers in Delhi, India | Young Wheels";
+    let metaDesc = "Young Wheels is a leading kids’ toy manufacturer in Delhi, India, offering premium, non-toxic ride-ons, scooters, walkers, tricycles, swing cars & potty trainers.";
+
+    switch (activeTab) {
+      case 'home':
+        title = "India’s Premier Kids Toys Manufacturers in Delhi, India | Young Wheels";
+        metaDesc = "Young Wheels is a leading kids’ toy manufacturer in Delhi, India, offering premium, non-toxic ride-ons, scooters, walkers, tricycles, swing cars & potty trainers.";
+        break;
+      case 'about':
+        title = "About Us | Young Wheels - Premier Kids Toy Manufacturer in Delhi, India";
+        metaDesc = "Learn about Young Wheels, India's leading ISO certified kids toy manufacturer in Pooth Khurd, New Delhi producing safe ride-ons, swing cars, and tricycles.";
+        break;
+      case 'contact':
+        title = "Contact Us | Young Wheels Factory Pooth Khurd, New Delhi";
+        metaDesc = "Get in touch with Young Wheels for wholesale inquiries, dealership distribution, and factory visits in Pooth Khurd, New Delhi, India.";
+        break;
+      case 'blog':
+        title = "Kids Toys Insights & Buying Guides | Young Wheels Blog";
+        metaDesc = "Read expert safety guides, manufacturing standards, and buying tips for children ride-on toys, swing cars, walkers & tricycles.";
+        break;
+      case 'events':
+        title = "Toy Exhibitions & Factory Events | Young Wheels Delhi";
+        metaDesc = "Discover upcoming toy industry exhibitions, trade fairs, and manufacturing showcases by Young Wheels in Delhi, India.";
+        break;
+      case 'tricycles':
+      case 'tri-cycles':
+        title = "Best Children Tricycle Manufacturer in Delhi, India | Young Wheels";
+        metaDesc = "Young Wheels is the best children tricycle manufacturer in Delhi, India. Explore durable 2-in-1 push trikes, pedal tricycles & police bikes.";
+        break;
+      case 'swing-cars':
+      case 'magic-cars':
+        title = "Kids Swing Car Manufacturer in Delhi, India | Young Wheels";
+        metaDesc = "Leading kids swing car and magic car manufacturer in Delhi, India. 360° twist kinetic motion cars made from virgin non-toxic plastic.";
+        break;
+      case 'potty-trainers':
+      case 'potty-chairs':
+        title = "Baby Potty Trainer Manufacturer in Delhi, India | Young Wheels";
+        metaDesc = "Top baby potty trainer and potty chair manufacturer in Delhi, India. Ergonomic, easy-to-clean, non-toxic potty chairs for toddlers.";
+        break;
+      case 'ride-ons':
+      case 'riders':
+      case 'electric-rideons':
+      case 'rocking-animals':
+        title = "Kids Ride On Car Manufacturer in Delhi, India | Young Wheels";
+        metaDesc = "Premier kids ride-on car and push car manufacturer in Delhi, India. Heavy-duty G-Vagon riders, McClaren supercars, and rocking animals.";
+        break;
+      case 'baby-walkers':
+        title = "Baby Walkers Manufacturers in India | Young Wheels Delhi";
+        metaDesc = "Leading baby walker manufacturer in Delhi, India. 360° revolving wheels, 3-level height adjustments & interactive musical activity trays.";
+        break;
+      case 'kick-scooters':
+        title = "Kids Kick Scooter Manufacturer in Delhi, India | Young Wheels";
+        metaDesc = "Top kids kick scooter manufacturer in Delhi, India. Foldable 3-wheel scooters with height-adjustable handlebars & LED light-up wheels.";
+        break;
+      case 'all-categories':
+        title = "Toys Manufacturer in India | Explore All Categories | Young Wheels";
+        metaDesc = "Explore all toy categories manufactured by Young Wheels in Delhi, India — ride-ons, swing cars, walkers, kick scooters, tricycles & potty trainers.";
+        break;
+      case 'admin':
+        title = "Young Wheels | Factory Management Admin";
+        metaDesc = "Young Wheels Factory Management portal.";
+        break;
+      case 'thank-you':
+        title = "Thank You! | Young Wheels Factory";
+        metaDesc = "Thank you for reaching out to Young Wheels. Our team will get back to you shortly.";
+        break;
+      default:
+        title = "India’s Premier Kids Toys Manufacturers in Delhi, India | Young Wheels";
+        metaDesc = "Young Wheels is a leading kids’ toy manufacturer in Delhi, India, offering premium, non-toxic ride-ons, scooters, walkers, tricycles, swing cars & potty trainers.";
+    }
+
+    document.title = title;
+    
+    let metaDescriptionTag = document.querySelector('meta[name="description"]');
+    if (metaDescriptionTag) {
+      metaDescriptionTag.setAttribute('content', metaDesc);
+    } else {
+      metaDescriptionTag = document.createElement('meta');
+      metaDescriptionTag.setAttribute('name', 'description');
+      metaDescriptionTag.setAttribute('content', metaDesc);
+      document.head.appendChild(metaDescriptionTag);
+    }
+  }, [activeTab]);
+
+
   const [hideFloatingWidgets, setHideFloatingWidgets] = useState<boolean>(false);
 
   useEffect(() => {
