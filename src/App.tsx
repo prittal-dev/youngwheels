@@ -26,6 +26,8 @@ const SocialPage = lazy(() => import('./pages/SocialPage').then(m => ({ default:
 const EventsPage = lazy(() => import('./pages/EventsPage').then(m => ({ default: m.EventsPage })));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(m => ({ default: m.NotFoundPage })));
 const ThankYouPage = lazy(() => import('./pages/ThankYouPage').then(m => ({ default: m.ThankYouPage })));
+const SitemapPage = lazy(() => import('./pages/SitemapPage').then(m => ({ default: m.SitemapPage })));
+
 
 const PageLoadingFallback = () => (
   <div className="py-28 flex flex-col items-center justify-center gap-3">
@@ -421,13 +423,15 @@ export default function App() {
                   />
                 )}
 
-                {['social', 'social-instagram', 'social-youtube', 'social-facebook'].includes(activeTab) && (
+                {['social', 'social-instagram', 'social-youtube', 'social-facebook', 'social-linkedin'].includes(activeTab) && (
                   <SocialPage
                     initialPlatform={
                       activeTab === 'social-youtube'
                         ? 'youtube'
                         : activeTab === 'social-facebook'
                         ? 'facebook'
+                        : activeTab === 'social-linkedin'
+                        ? 'linkedin'
                         : 'instagram'
                     }
                     onNavigateTab={(tab) => {
@@ -436,6 +440,7 @@ export default function App() {
                     }}
                   />
                 )}
+
 
                 {activeTab === 'admin' && (
                   <AdminPage
@@ -458,6 +463,17 @@ export default function App() {
                   />
                 )}
 
+                {activeTab === 'sitemap' && (
+                  <SitemapPage
+                    onNavigateTab={(tab) => {
+                      navigateToTab(tab);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    onQuickView={(p) => setQuickViewProduct(p)}
+                    onAddToEnquiry={handleAddToEnquiry}
+                  />
+                )}
+
                 {activeTab === 'not-found' && (
                   <NotFoundPage
                     onNavigateTab={(tab) => {
@@ -466,6 +482,7 @@ export default function App() {
                     }}
                   />
                 )}
+
               </Suspense>
             </motion.div>
           </AnimatePresence>

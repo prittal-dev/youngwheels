@@ -91,7 +91,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
 
               {/* 3. LinkedIn */}
               <a
-                href="https://linkedin.com"
+                href={COMPANY_DETAILS.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-xl bg-[#0A66C2] text-white hover:opacity-90 hover:scale-105 transition-all shadow-xs"
@@ -99,6 +99,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
               >
                 <Linkedin className="w-4 h-4 fill-white" />
               </a>
+
 
               {/* 4. YouTube */}
               <a
@@ -219,10 +220,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
                 </a>
               </li>
               <li>
+                <a href={getPathFromTab('sitemap')} onClick={(e) => { e.preventDefault(); onNavigateTab('sitemap'); }} className="hover:text-[#4ECDC4] transition-colors flex items-center gap-1 font-bold text-[#4ECDC4]">
+                  <span>Sitemap 🗺️</span>
+                </a>
+              </li>
+              <li>
                 <button onClick={onOpenWholesaleModal} className="hover:text-[#FFD93D] transition-colors font-bold text-[#FFD93D]">
                   Dealer Bulk Enquiry
                 </button>
               </li>
+
             </ul>
           </div>
 

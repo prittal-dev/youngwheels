@@ -16,9 +16,13 @@ export function getTabFromPath(path: string): string {
   if (cleanPath === '/social/instagram' || cleanPath === '/social-instagram') return 'social-instagram';
   if (cleanPath === '/social/youtube' || cleanPath === '/social-youtube') return 'social-youtube';
   if (cleanPath === '/social/facebook' || cleanPath === '/social-facebook') return 'social-facebook';
+  if (cleanPath === '/social/linkedin' || cleanPath === '/social-linkedin') return 'social-linkedin';
+
   if (cleanPath === '/admin') return 'admin';
   if (cleanPath === '/thank-you' || cleanPath === '/thankyou') return 'thank-you';
+  if (cleanPath === '/sitemap' || cleanPath === '/site-map' || cleanPath === '/sitemap.xml') return 'sitemap';
   if (cleanPath === '/404') return 'not-found';
+
 
   // Specific SEO Manufacturer URLs requested by user
   if (cleanPath === '/toys-manufacturer-in-india' || cleanPath === '/toys-manufacturer-in-india/') return 'all-categories';
@@ -87,12 +91,18 @@ export function getPathFromTab(tab: string): string {
       return '/social/youtube';
     case 'social-facebook':
       return '/social/facebook';
+    case 'social-linkedin':
+      return '/social/linkedin';
     case 'admin':
+
       return '/admin';
     case 'thank-you':
       return '/thank-you';
+    case 'sitemap':
+      return '/sitemap';
     case 'not-found':
       return '/404';
+
 
     // Category SEO Manufacturer URLs
     case 'ride-ons':

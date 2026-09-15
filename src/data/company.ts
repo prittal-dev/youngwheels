@@ -22,6 +22,8 @@ export const COMPANY_DETAILS = {
   facebook: 'https://www.facebook.com/youngwheelsindia/',
   youtube: 'https://www.youtube.com/@youngwheelss/featured',
   instagram: 'https://www.instagram.com/youngwheels__?igsh=ZDM3MXNoeGoyNGZk',
+  linkedin: 'https://www.linkedin.com/company/youngwheels/',
+
   mission: 'To craft high-quality, non-toxic, ergonomic, and durable ride-on toys that spark imagination, foster physical development, and deliver unmatched joy to children across India while providing reliable factory-direct value to parents and retailers.',
   vision: 'To be India’s most trusted and innovative manufacturer of kids mobility toys, setting gold standards for child safety, cheerful designs, and accessible wholesale distribution.',
   stats: [

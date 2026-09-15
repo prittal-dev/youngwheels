@@ -13,16 +13,25 @@ import {
   Heart,
   Youtube,
   Facebook,
+  Linkedin,
   Play,
   ThumbsUp,
   MessageCircle,
-  Building2
+  Building2,
+  Send,
+  Users,
+  Briefcase,
+  Share2,
+  Globe,
+  MapPin,
+  Home,
+  Info
 } from 'lucide-react';
 import { getProductImg } from '../data/products';
 import { COMPANY_DETAILS } from '../data/company';
 
 interface SocialPageProps {
-  initialPlatform?: 'instagram' | 'youtube' | 'facebook';
+  initialPlatform?: 'instagram' | 'youtube' | 'facebook' | 'linkedin';
   onNavigateTab?: (tab: string) => void;
 }
 
@@ -30,7 +39,8 @@ export const SocialPage: React.FC<SocialPageProps> = ({
   initialPlatform = 'instagram',
   onNavigateTab 
 }) => {
-  const [activePlatform, setActivePlatform] = useState<'instagram' | 'youtube' | 'facebook'>(initialPlatform);
+  const [activePlatform, setActivePlatform] = useState<'instagram' | 'youtube' | 'facebook' | 'linkedin'>(initialPlatform);
+  const [activeLinkedInTab, setActiveLinkedInTab] = useState<'home' | 'about' | 'posts' | 'jobs' | 'people'>('about');
 
   useEffect(() => {
     if (initialPlatform) {
@@ -42,6 +52,8 @@ export const SocialPage: React.FC<SocialPageProps> = ({
   const INSTAGRAM_PROFILE_URL = COMPANY_DETAILS.instagram || 'https://www.instagram.com/youngwheels__?igsh=ZDM3MXNoeGoyNGZk';
   const YOUTUBE_CHANNEL_URL = COMPANY_DETAILS.youtube || 'https://www.youtube.com/@youngwheelss/featured';
   const FACEBOOK_PAGE_URL = COMPANY_DETAILS.facebook || 'https://www.facebook.com/youngwheelsindia/';
+  const LINKEDIN_PROFILE_URL = COMPANY_DETAILS.linkedin || 'https://www.linkedin.com/company/youngwheels/';
+
 
   const REEL_1_URL = 'https://www.instagram.com/youngwheelsindia/reel/DbS1EHyzh_K/?hl=en';
   const REEL_1_SHORTCODE = 'DbS1EHyzh_K';
@@ -178,7 +190,22 @@ export const SocialPage: React.FC<SocialPageProps> = ({
           <span>Facebook</span>
           <span className="hidden sm:inline">Community</span>
         </button>
+
+        {/* LinkedIn Tab */}
+        <button
+          onClick={() => setActivePlatform('linkedin')}
+          className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl font-heading font-black text-xs sm:text-sm transition-all duration-200 cursor-pointer shrink-0 ${
+            activePlatform === 'linkedin'
+              ? 'bg-[#0A66C2] text-white shadow-md'
+              : 'text-slate-700 hover:bg-slate-100'
+          }`}
+        >
+          <Linkedin className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-white" />
+          <span>LinkedIn</span>
+          <span className="hidden sm:inline">Profile</span>
+        </button>
       </div>
+
 
       {/* ========================================================================= */}
       {/* 1. INSTAGRAM PLATFORM PANEL */}
@@ -823,6 +850,281 @@ export const SocialPage: React.FC<SocialPageProps> = ({
         </div>
       )}
 
+      {/* ========================================================================= */}
+      {/* 4. LINKEDIN PLATFORM PANEL */}
+
+      {/* ========================================================================= */}
+      {activePlatform === 'linkedin' && (
+        <div className="space-y-8 sm:space-y-12 animate-in fade-in duration-300">
+          
+          {/* LINKEDIN OFFICIAL COMPANY PROFILE CARD (MATCHING USER SCREENSHOT) */}
+          <div className="max-w-5xl mx-auto bg-white rounded-3xl sm:rounded-[36px] border-2 border-slate-200/90 shadow-xl overflow-hidden">
+            
+            {/* Top Cover Banner Image */}
+            <div className="relative h-48 sm:h-64 md:h-80 w-full bg-slate-100 border-b border-slate-200 overflow-hidden">
+              <img 
+                src="/assets/linkedin_banner.jpg" 
+                alt="Young Wheels Official LinkedIn Corporate Banner" 
+                className="w-full h-full object-cover object-center"
+              />
+              <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between bg-gradient-to-b from-black/25 via-transparent to-transparent">
+                <div className="flex items-center justify-between z-10">
+                  <span className="bg-slate-900/85 backdrop-blur-xs text-white text-[10px] sm:text-xs font-black px-3 py-1 rounded-full flex items-center gap-1.5 shadow-md">
+                    <Linkedin className="w-3.5 h-3.5 fill-[#0A66C2] text-[#0A66C2]" />
+                    <span>Official LinkedIn Company Page</span>
+                  </span>
+                  <a 
+                    href={LINKEDIN_PROFILE_URL} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-white/95 hover:bg-white text-slate-900 text-xs font-black px-3.5 py-1.5 rounded-full shadow-md flex items-center gap-1 transition-transform hover:scale-105"
+                  >
+                    <span>View on LinkedIn</span>
+                    <ExternalLink className="w-3.5 h-3.5 text-[#0A66C2]" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Profile Info Container */}
+            <div className="px-5 sm:px-8 pb-6 sm:pb-8 pt-0 relative">
+              
+              {/* Profile Avatar Frame (Overlapping Cover Banner) */}
+              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 -mt-14 sm:-mt-16 mb-4">
+                <div className="relative">
+                  <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl sm:rounded-3xl bg-white p-2 border-4 border-white shadow-2xl overflow-hidden ring-2 ring-slate-200">
+                    <img 
+                      src="/assets/logo.png" 
+                      alt="Young Wheels LinkedIn Logo" 
+                      className="w-full h-full object-contain rounded-xl"
+                    />
+                  </div>
+                </div>
+
+                {/* Action Buttons (Matches Screenshot: + Follow, Message, More) */}
+                <div className="flex items-center gap-2.5 flex-wrap pt-2 sm:pt-0">
+                  <a
+                    href={LINKEDIN_PROFILE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-2.5 bg-[#0A66C2] hover:bg-[#004182] text-white font-heading font-black text-xs sm:text-sm rounded-full shadow-md flex items-center gap-1.5 transition-transform active:scale-95"
+                  >
+                    <span>+ Follow</span>
+                  </a>
+
+                  <a
+                    href={LINKEDIN_PROFILE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-2 bg-white hover:bg-[#F0F7FF] text-[#0A66C2] border-2 border-[#0A66C2] font-heading font-black text-xs sm:text-sm rounded-full shadow-2xs flex items-center gap-1.5 transition-colors"
+                  >
+                    <Send className="w-3.5 h-3.5 rotate-45" />
+                    <span>Message</span>
+                  </a>
+
+                  <button
+                    type="button"
+                    onClick={() => window.open(LINKEDIN_PROFILE_URL, '_blank')}
+                    className="w-9 h-9 rounded-full border-2 border-slate-300 hover:border-slate-400 bg-white text-slate-700 flex items-center justify-center font-black text-base transition-colors"
+                    title="More options"
+                  >
+                    •••
+                  </button>
+                </div>
+              </div>
+
+              {/* Profile Name & Taglines */}
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <h1 className="font-heading font-black text-2xl sm:text-3xl text-slate-900 tracking-tight">
+                    Young Wheels
+                  </h1>
+                  <span className="bg-[#E8F3FF] text-[#0A66C2] p-1 rounded-full" title="Verified Organization">
+                    <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </span>
+                </div>
+
+                <h2 className="text-xs sm:text-sm font-bold text-slate-800 leading-snug">
+                  Quality • Trust • Care Certified Kid Safe & Durable
+                </h2>
+
+                <p className="text-xs text-slate-500 font-semibold flex items-center gap-2 flex-wrap pt-0.5">
+                  <span className="flex items-center gap-1 text-slate-700">
+                    <Building2 className="w-3.5 h-3.5 text-[#0A66C2]" />
+                    Manufacturing
+                  </span>
+                  <span>•</span>
+                  <span className="flex items-center gap-1 text-slate-700">
+                    <Users className="w-3.5 h-3.5 text-[#0A66C2]" />
+                    11-50 employees
+                  </span>
+                  <span>•</span>
+                  <span className="flex items-center gap-1 text-slate-700">
+                    <MapPin className="w-3.5 h-3.5 text-[#FF6B6B]" />
+                    Pooth Khurd, New Delhi 🇮🇳
+                  </span>
+                </p>
+              </div>
+
+              {/* LINKEDIN SUB-NAVIGATION TABS (MATCHES USER SCREENSHOT: Home, About, Posts, Jobs, People) */}
+              <div className="pt-6 border-b border-slate-200 flex items-center gap-4 sm:gap-8 overflow-x-auto no-scrollbar">
+                {[
+                  { id: 'home', label: 'Home', icon: Home },
+                  { id: 'about', label: 'About', icon: Info },
+                  { id: 'posts', label: 'Posts', icon: Share2 },
+                  { id: 'jobs', label: 'Jobs', icon: Briefcase },
+                  { id: 'people', label: 'People', icon: Users },
+                ].map((tab) => {
+                  const isActive = activeLinkedInTab === tab.id;
+                  return (
+                    <button
+                      key={tab.id}
+                      onClick={() => setActiveLinkedInTab(tab.id as any)}
+                      className={`pb-3 font-heading font-black text-xs sm:text-sm relative transition-colors cursor-pointer shrink-0 flex items-center gap-1.5 ${
+                        isActive ? 'text-[#057642]' : 'text-slate-600 hover:text-slate-900'
+                      }`}
+                    >
+                      <span>{tab.label}</span>
+                      {isActive && (
+                        <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#057642] rounded-full" />
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* LINKEDIN SUB-TAB PANELS CONTENT */}
+              <div className="pt-6 space-y-6">
+                
+                {/* 1. ABOUT SUB-TAB */}
+                {(activeLinkedInTab === 'about' || activeLinkedInTab === 'home') && (
+                  <div className="space-y-6 animate-in fade-in duration-200">
+                    
+                    <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 space-y-3">
+                      <h3 className="font-heading font-black text-base text-slate-900">
+                        Overview
+                      </h3>
+                      <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
+                        Young Wheels is a premier kids’ toy manufacturer based in Pooth Khurd, New Delhi, India. We specialize in producing high-grade, non-toxic, ergonomic, and durable ride-on toys including 360° magic swing cars, baby walkers, kick scooters, tricycles, and toddler potty chairs. Engineered with BIS compliance and 100% virgin ABS plastics, our products serve over 850+ distributors and retailers across India.
+                      </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+                      <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1">
+                        <div className="font-bold text-slate-400 uppercase text-[10px]">Website</div>
+                        <a href="https://www.youngwheels.in" target="_blank" rel="noopener noreferrer" className="font-black text-[#0A66C2] hover:underline flex items-center gap-1">
+                          <span>www.youngwheels.in</span>
+                          <Globe className="w-3.5 h-3.5" />
+                        </a>
+                      </div>
+
+                      <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1">
+                        <div className="font-bold text-slate-400 uppercase text-[10px]">Industry</div>
+                        <div className="font-black text-slate-900">Toys & Children Mobility Manufacturing</div>
+                      </div>
+
+                      <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1">
+                        <div className="font-bold text-slate-400 uppercase text-[10px]">Certifications</div>
+                        <div className="font-black text-[#10B981] flex items-center gap-1">
+                          <CheckCircle2 className="w-3.5 h-3.5" />
+                          <span>MSME & ISO 9001:2015</span>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                )}
+
+                {/* 2. POSTS SUB-TAB */}
+                {activeLinkedInTab === 'posts' && (
+                  <div className="space-y-4 animate-in fade-in duration-200">
+                    <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-3">
+                      <div className="flex items-center justify-between text-xs">
+                        <div className="flex items-center gap-2">
+                          <img src="/assets/logo.png" alt="Young Wheels" className="w-8 h-8 rounded-lg border border-slate-200 p-0.5 object-contain" />
+                          <div>
+                            <div className="font-black text-slate-900">Young Wheels</div>
+                            <div className="text-[10px] text-slate-500">11-50 employees • Manufacturing</div>
+                          </div>
+                        </div>
+                        <span className="text-[10px] text-slate-400 font-bold">2 days ago</span>
+                      </div>
+                      <p className="text-xs text-slate-700 font-medium leading-relaxed">
+                        🏭 <strong>Corporate Announcement:</strong> Young Wheels has expanded its Pooth Khurd manufacturing plant with automated injection molding machinery. 100% virgin plastic quality assurance for all bulk ride-on orders across India!
+                      </p>
+                      <a href={LINKEDIN_PROFILE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs font-black text-[#0A66C2] hover:underline">
+                        <span>Read full post on LinkedIn</span>
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                    </div>
+                  </div>
+                )}
+
+                {/* 3. JOBS SUB-TAB */}
+                {activeLinkedInTab === 'jobs' && (
+                  <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-center space-y-3 animate-in fade-in duration-200">
+                    <Briefcase className="w-8 h-8 text-[#0A66C2] mx-auto" />
+                    <h4 className="font-heading font-black text-slate-900 text-base">Careers at Young Wheels</h4>
+                    <p className="text-xs text-slate-600 font-medium max-w-md mx-auto">
+                      We are growing our manufacturing & distribution teams in New Delhi! Connect with us on LinkedIn for job openings in Production, Quality Assurance & B2B Sales.
+                    </p>
+                    <a href={LINKEDIN_PROFILE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#0A66C2] text-white font-black text-xs rounded-xl shadow-xs hover:bg-[#004182]">
+                      <span>View Openings on LinkedIn</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                )}
+
+                {/* 4. PEOPLE SUB-TAB */}
+                {activeLinkedInTab === 'people' && (
+                  <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-center space-y-3 animate-in fade-in duration-200">
+                    <Users className="w-8 h-8 text-[#0A66C2] mx-auto" />
+                    <h4 className="font-heading font-black text-slate-900 text-base">Our Manufacturing Team</h4>
+                    <p className="text-xs text-slate-600 font-medium max-w-md mx-auto">
+                      Over 11-50 skilled engineers, mold specialists, quality assurance technicians, and warehouse logistics personnel working at our Pooth Khurd facility.
+                    </p>
+                  </div>
+                )}
+
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* B2B LINKEDIN CALLOUT BANNER */}
+          <div className="max-w-5xl mx-auto bg-gradient-to-r from-[#004182] via-[#0A66C2] to-[#002244] text-white rounded-3xl sm:rounded-[32px] p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-2 border-[#0A66C2] shadow-xl">
+            <div className="flex items-center gap-3.5 w-full sm:w-auto">
+              <div className="w-12 h-12 rounded-2xl bg-white text-[#0A66C2] flex items-center justify-center shrink-0 shadow-md">
+                <Linkedin className="w-6 h-6 fill-[#0A66C2]" />
+              </div>
+              <div>
+                <h4 className="font-heading font-black text-sm sm:text-base text-white">
+                  Connect with Young Wheels on LinkedIn
+                </h4>
+                <p className="text-xs text-slate-200 font-medium">
+                  Follow for B2B supplier updates, factory innovations & wholesale announcements.
+                </p>
+              </div>
+            </div>
+
+            <a
+              href={LINKEDIN_PROFILE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto shrink-0 bg-white hover:bg-slate-100 text-[#0A66C2] px-6 py-3 rounded-2xl font-heading font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg transition-transform active:scale-95"
+            >
+              <Linkedin className="w-4 h-4 fill-[#0A66C2]" />
+              <span>Follow on LinkedIn</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          </div>
+
+        </div>
+      )}
+
     </div>
   );
 };
+
+

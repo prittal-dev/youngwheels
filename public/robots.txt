@@ -19,3 +19,7 @@ User-agent: Bingbot
 Disallow: /admin
 Disallow: /admin/
 Disallow: /*?*tab=admin
+
+# XML Sitemap Location
+Sitemap: https://www.youngwheels.in/sitemap.xml
+

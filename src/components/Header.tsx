@@ -24,8 +24,10 @@ import {
   BookOpen,
   Youtube,
   Facebook,
+  Linkedin,
   Calendar
 } from 'lucide-react';
+
 import { COMPANY_DETAILS, CATEGORIES } from '../data/company';
 import { CategoryId } from '../types';
 import { getPathFromTab } from '../utils/router';
@@ -282,7 +284,7 @@ export const Header: React.FC<HeaderProps> = ({
               href={getPathFromTab('social')}
               onClick={(e) => { e.preventDefault(); handleNavClick('social'); }}
               className={`px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-xl flex items-center gap-1.5 transition-all whitespace-nowrap ${
-                ['social', 'social-instagram', 'social-youtube', 'social-facebook'].includes(activeTab)
+                ['social', 'social-instagram', 'social-youtube', 'social-facebook', 'social-linkedin'].includes(activeTab)
                   ? 'bg-[#DD2A7B] text-white font-bold shadow-xs'
                   : 'text-slate-700 hover:bg-[#FDF2F8] hover:text-[#DD2A7B]'
               }`}
@@ -354,8 +356,28 @@ export const Header: React.FC<HeaderProps> = ({
                     <div className="text-[10px] text-slate-500">Young Wheels • Community & Posts</div>
                   </div>
                 </a>
+
+                {/* 4. LinkedIn */}
+                <a
+                  href={getPathFromTab('social-linkedin')}
+                  onClick={(e) => { e.preventDefault(); handleNavClick('social-linkedin'); }}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left transition-all ${
+                    activeTab === 'social-linkedin'
+                      ? 'bg-[#EFF6FF] border border-[#93C5FD] font-bold text-[#0A66C2]'
+                      : 'hover:bg-slate-50 text-slate-800'
+                  }`}
+                >
+                  <div className="w-8 h-8 rounded-lg bg-[#0A66C2] text-white flex items-center justify-center shrink-0 shadow-2xs">
+                    <Linkedin className="w-4 h-4 fill-white" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-slate-900">LinkedIn Profile</div>
+                    <div className="text-[10px] text-slate-500">Young Wheels • B2B & Corporate</div>
+                  </div>
+                </a>
               </div>
             )}
+
           </div>
         </nav>
 
@@ -523,7 +545,17 @@ export const Header: React.FC<HeaderProps> = ({
               }`}
             >
               <Facebook className="w-4 h-4 fill-white" />
-              <span>Facebook (Young Wheels)</span>
+              <span>Facebook (@youngwheelsindia)</span>
+            </a>
+            <a
+              href={getPathFromTab('social-linkedin')}
+              onClick={(e) => { e.preventDefault(); handleNavClick('social-linkedin'); }}
+              className={`w-full flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold ${
+                activeTab === 'social-linkedin' ? 'bg-[#0A66C2] text-white' : 'text-slate-700 hover:bg-slate-100'
+              }`}
+            >
+              <Linkedin className="w-4 h-4 fill-white" />
+              <span>LinkedIn (Young Wheels)</span>
             </a>
           </div>
 
