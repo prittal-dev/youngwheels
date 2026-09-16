@@ -20,7 +20,7 @@ export function getTabFromPath(path: string): string {
 
   if (cleanPath === '/admin') return 'admin';
   if (cleanPath === '/thank-you' || cleanPath === '/thankyou') return 'thank-you';
-  if (cleanPath === '/sitemap' || cleanPath === '/site-map' || cleanPath === '/sitemap.xml') return 'sitemap';
+  if (cleanPath === '/sitemap' || cleanPath === '/site-map' || cleanPath === '/sitemap.xml' || cleanPath === '/sitemap.html') return 'sitemap';
   if (cleanPath === '/404') return 'not-found';
 
 

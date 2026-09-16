@@ -187,7 +187,7 @@ export const SitemapPage: React.FC<SitemapPageProps> = ({
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-slate-900 tracking-tight leading-tight">
-            Complete Website Sitemap & Directory
+            Complete Website Sitemap
           </h1>
 
           <p className="text-sm sm:text-base text-slate-600 font-medium max-w-2xl mx-auto leading-relaxed">
@@ -225,9 +225,8 @@ export const SitemapPage: React.FC<SitemapPageProps> = ({
             </div>
             <div>
               <h2 className="text-xl sm:text-2xl font-black font-heading text-slate-900 tracking-tight">
-                Main Website Pages ({filteredMainPages.length})
+                Main Website 
               </h2>
-              <p className="text-xs font-semibold text-slate-500">Core navigation links & search crawler sitemap for youngwheels.in</p>
             </div>
           </div>
 
@@ -304,7 +303,7 @@ export const SitemapPage: React.FC<SitemapPageProps> = ({
             </div>
             <div>
               <h2 className="text-xl sm:text-2xl font-black font-heading text-slate-900 tracking-tight">
-                Toy Category Pages — SEO Manufacturer URLs ({filteredCategories.length})
+                Toy Category 
               </h2>
               <p className="text-xs font-semibold text-slate-500">Official product category landing pages</p>
             </div>
@@ -360,7 +359,7 @@ export const SitemapPage: React.FC<SitemapPageProps> = ({
             </div>
             <div>
               <h2 className="text-xl sm:text-2xl font-black font-heading text-slate-900 tracking-tight">
-                Blog Posts & Manufacturing Guides ({filteredBlogs.length})
+                Blog Posts 
               </h2>
               <p className="text-xs font-semibold text-slate-500">In-depth guides on safety, standards & toddler toys</p>
             </div>
@@ -412,7 +411,7 @@ export const SitemapPage: React.FC<SitemapPageProps> = ({
               </div>
               <div>
                 <h2 className="text-xl sm:text-2xl font-black font-heading text-slate-900 tracking-tight">
-                  Featured Toy Models ({filteredProductsList.length})
+                  Featured Toy Models
                 </h2>
                 <p className="text-xs font-semibold text-slate-500">Popular manufactured products at Young Wheels</p>
               </div>

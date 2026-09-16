@@ -127,8 +127,16 @@ export default function App() {
         metaDesc = "Read expert safety guides, manufacturing standards, and buying tips for children ride-on toys, swing cars, walkers & tricycles.";
         break;
       case 'events':
-        title = "Toy Exhibitions & Factory Events | Young Wheels Delhi";
-        metaDesc = "Discover upcoming toy industry exhibitions, trade fairs, and manufacturing showcases by Young Wheels in Delhi, India.";
+        title = "Young Wheels Events | Kids Toy Exhibitions & Events in India";
+        metaDesc = "Explore Young Wheels events, exhibitions and industry showcases featuring premium kids’ ride-ons, scooters, tricycles and innovative toys across India.";
+        break;
+      case 'social':
+      case 'social-instagram':
+      case 'social-youtube':
+      case 'social-facebook':
+      case 'social-linkedin':
+        title = "Young Wheels | Follow Us on Facebook, Instagram, YouTube & LinkedIn";
+        metaDesc = "Discover Young Wheels on Facebook, Instagram, YouTube & LinkedIn. Follow us for kids’ ride-ons, toys, product updates, ideas and more.";
         break;
       case 'tricycles':
       case 'tri-cycles':

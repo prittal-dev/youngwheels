@@ -190,18 +190,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
             </h4>
             <ul className="space-y-2 text-xs font-semibold text-slate-300">
               <li>
-                <a href={getPathFromTab('home')} onClick={(e) => { e.preventDefault(); onNavigateTab('home'); }} className="hover:text-[#FF6B6B] transition-colors">
-                  Home Page
-                </a>
-              </li>
-              <li>
                 <a href={getPathFromTab('about')} onClick={(e) => { e.preventDefault(); onNavigateTab('about'); }} className="hover:text-[#FF6B6B] transition-colors">
                   About Us
                 </a>
               </li>
               <li>
                 <a href={getPathFromTab('blog')} onClick={(e) => { e.preventDefault(); onNavigateTab('blog'); }} className="hover:text-[#FF6B6B] transition-colors">
-                  Blog & Buying Guides
+                  Blog
                 </a>
               </li>
               <li>
