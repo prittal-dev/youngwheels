@@ -59,7 +59,7 @@ const CAROUSEL_SLIDES = [
   {
     id: 'tricycles-nexride',
     categoryName: 'Kids Tricycles',
-    title: 'NexRide',
+    title: 'Deluxe NexRide',
     subtitle: 'Model: YW-TC-01 • High-Tensile Steel Frame & Pedals',
     badge: '5 Colors Available',
     badgeIcon: Award,

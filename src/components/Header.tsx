@@ -25,7 +25,8 @@ import {
   Youtube,
   Facebook,
   Linkedin,
-  Calendar
+  Calendar,
+  FileText
 } from 'lucide-react';
 
 import { COMPANY_DETAILS, CATEGORIES } from '../data/company';
@@ -113,12 +114,16 @@ export const Header: React.FC<HeaderProps> = ({
             </a>
             <span className="hidden sm:inline opacity-40">|</span>
             <button
-              onClick={onOpenWholesaleModal}
-              className="flex items-center gap-1 bg-slate-900 text-white px-2 sm:px-2.5 py-0.5 rounded-full text-[11px] sm:text-xs font-bold hover:bg-slate-800 transition-colors shadow-xs shrink-0 cursor-pointer"
+              onClick={onOpenEnquiryDrawer}
+              className="flex items-center gap-1.5 bg-[#FF6B6B] hover:bg-[#FF5252] text-white px-2.5 sm:px-3 py-0.5 rounded-full text-[11px] sm:text-xs font-bold transition-all shadow-xs shrink-0 cursor-pointer hover:scale-105 active:scale-95"
             >
-              <Building2 className="w-3 h-3 text-[#FFD93D]" />
-              <span className="hidden sm:inline">Bulk / Dealer Enquiries</span>
-              <span className="sm:hidden">Dealer Form</span>
+              <ShoppingBag className="w-3.5 h-3.5 text-white shrink-0" />
+              <span>Enquiry Basket</span>
+              {enquiryCount > 0 && (
+                <span className="bg-[#FFD93D] text-slate-900 font-black px-1.5 py-0.2 rounded-full text-[10px] animate-bounce">
+                  {enquiryCount}
+                </span>
+              )}
             </button>
           </div>
         </div>
@@ -384,28 +389,25 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Action Buttons */}
         <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           
+          {/* Business Catalog Button */}
+          <a
+            href="/assets/Young_Wheels_Business_Catalog.pdf"
+            download="Young_Wheels_Business_Catalog.pdf"
+            className="hidden sm:flex items-center gap-1.5 bg-[#10B981] hover:bg-[#059669] text-white px-3 py-2 rounded-2xl font-bold text-xs transition-all shadow-xs hover:scale-105 active:scale-95 whitespace-nowrap cursor-pointer"
+            title="Download High-Quality Young Wheels Business Catalog PDF"
+          >
+            <FileText className="w-3.5 h-3.5 text-[#FFD93D] shrink-0" />
+            <span className="whitespace-nowrap">Business Catalog</span>
+          </a>
+
           {/* Dealer & Distributor Form Button */}
           <button
             onClick={onOpenWholesaleModal}
-            className="hidden sm:flex items-center gap-1.5 bg-[#2563EB] hover:bg-[#1d4ed8] text-white px-3 py-2 rounded-2xl font-bold text-xs transition-all shadow-xs hover:scale-105 active:scale-95 whitespace-nowrap"
+            className="flex items-center gap-1.5 bg-[#2563EB] hover:bg-[#1d4ed8] text-white px-3 py-2 rounded-2xl font-bold text-xs transition-all shadow-md hover:scale-105 active:scale-95 whitespace-nowrap cursor-pointer"
             title="Dealer & Distributor Registration Form"
           >
             <Building2 className="w-3.5 h-3.5 text-[#FFD93D] shrink-0" />
             <span className="whitespace-nowrap">Dealer & Distributor Form</span>
-          </button>
-
-          {/* Enquiry Basket Badge Button */}
-          <button
-            onClick={onOpenEnquiryDrawer}
-            className="relative flex items-center gap-1.5 bg-[#FF6B6B] hover:bg-[#FF5252] text-white px-3 py-2 rounded-2xl font-bold text-xs transition-all shadow-md hover:scale-105 active:scale-95 whitespace-nowrap"
-          >
-            <ShoppingBag className="w-3.5 h-3.5 shrink-0" />
-            <span className="hidden md:inline whitespace-nowrap">Enquiry Basket</span>
-            {enquiryCount > 0 && (
-              <span className="bg-[#FFD93D] text-slate-900 font-black px-1.5 py-0.5 rounded-full text-[10px] animate-bounce">
-                {enquiryCount}
-              </span>
-            )}
           </button>
 
           {/* Mobile Menu Toggle */}
@@ -560,6 +562,16 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
 
           <div className="pt-2 flex flex-col gap-2">
+            <a
+              href="/assets/Young_Wheels_Business_Catalog.pdf"
+              download="Young_Wheels_Business_Catalog.pdf"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full flex items-center justify-center gap-2 bg-[#10B981] hover:bg-[#059669] text-white py-2.5 rounded-xl font-bold text-sm shadow-xs"
+            >
+              <FileText className="w-4 h-4 text-[#FFD93D]" />
+              <span>Download Business Catalog PDF</span>
+            </a>
+
             <a
               href={`https://wa.me/${COMPANY_DETAILS.whatsappRaw}?text=${encodeURIComponent('Hi Young Wheels Team! I am visiting your website and would like to enquire about your kids toys.')}`}
               target="_blank"

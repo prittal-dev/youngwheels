@@ -139,34 +139,34 @@ export const PRODUCTS: Product[] = [
     features: ['Comfortable seat & soft-grip handle', 'Stylish LED lighting', 'Big sturdy wheels', 'Under-seat storage trunk', 'Easy steering movement'],
     colors: [
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Ride-Ons/G-VAGON PLUS RIDER/WhatsApp Image 2026-09-09 at 15.27.39.jpeg'
+        name: 'Green',
+        hex: '#22C55E',
+        image: '/assets/Ride-Ons/G-VAGON PLUS RIDER/WhatsApp Image 2026-09-09 at 15.27.37.jpeg'
       },
       {
-            name: 'Green',
-            hex: '#22C55E',
-            image: '/assets/Ride-Ons/G-VAGON PLUS RIDER/WhatsApp Image 2026-09-09 at 15.27.37.jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Ride-Ons/G-VAGON PLUS RIDER/WhatsApp Image 2026-09-09 at 15.27.39.jpeg'
       },
       {
-            name: 'Teal',
-            hex: '#14B8A6',
-            image: '/assets/Ride-Ons/G-VAGON PLUS RIDER/WhatsApp Image 2026-09-09 at 15.27.39 (1).jpeg'
+        name: 'Teal',
+        hex: '#14B8A6',
+        image: '/assets/Ride-Ons/G-VAGON PLUS RIDER/WhatsApp Image 2026-09-09 at 15.27.39 (1).jpeg'
       },
       {
-            name: 'Silver',
-            hex: '#94A3B8',
-            image: '/assets/Ride-Ons/G-VAGON PLUS RIDER/WhatsApp Image 2026-09-09 at 15.27.38 (1).jpeg'
+        name: 'Silver',
+        hex: '#94A3B8',
+        image: '/assets/Ride-Ons/G-VAGON PLUS RIDER/WhatsApp Image 2026-09-09 at 15.27.38 (1).jpeg'
       },
       {
-            name: 'Black',
-            hex: '#1E293B',
-            image: '/assets/Ride-Ons/G-VAGON PLUS RIDER/WhatsApp Image 2026-09-09 at 15.27.38.jpeg'
+        name: 'Black',
+        hex: '#1E293B',
+        image: '/assets/Ride-Ons/G-VAGON PLUS RIDER/WhatsApp Image 2026-09-09 at 15.27.38.jpeg'
       }
-],
+    ],
     isNewArrival: true,
     modelCode: 'YW-RO-02',
-    image: '/assets/Ride-Ons/G-VAGON PLUS RIDER/WhatsApp Image 2026-09-09 at 15.27.39.jpeg',
+    image: '/assets/Ride-Ons/G-VAGON PLUS RIDER/WhatsApp Image 2026-09-09 at 15.27.37.jpeg',
     highlights: ['Toy Storage Trunk', 'LED Lights', 'Wide Stance']
   },
   {
@@ -181,28 +181,28 @@ export const PRODUCTS: Product[] = [
     features: ['4 Variants: Military Van, School Bus, Icecream Van, Fire Truck', 'Comfortable seat', 'Builds balance & motor skills', 'Smooth floor wheels', 'Interactive lights & music'],
     colors: [
       {
-            name: 'Fire Truck (Red)',
-            hex: '#EF4444',
-            image: '/assets/Ride-Ons/MY FIRST TRUCK/WhatsApp Image 2026-09-09 at 15.28.11 (2).jpeg'
+        name: 'School Bus (Yellow)',
+        hex: '#EAB308',
+        image: '/assets/Ride-Ons/MY FIRST TRUCK/WhatsApp Image 2026-09-09 at 15.28.11.jpeg'
       },
       {
-            name: 'School Bus (Yellow)',
-            hex: '#EAB308',
-            image: '/assets/Ride-Ons/MY FIRST TRUCK/WhatsApp Image 2026-09-09 at 15.28.11.jpeg'
+        name: 'Fire Truck (Red)',
+        hex: '#EF4444',
+        image: '/assets/Ride-Ons/MY FIRST TRUCK/WhatsApp Image 2026-09-09 at 15.28.11 (2).jpeg'
       },
       {
-            name: 'Military Van (Olive)',
-            hex: '#4D7C0F',
-            image: '/assets/Ride-Ons/MY FIRST TRUCK/WhatsApp Image 2026-09-09 at 15.28.10.jpeg'
+        name: 'Military Van (Olive)',
+        hex: '#4D7C0F',
+        image: '/assets/Ride-Ons/MY FIRST TRUCK/WhatsApp Image 2026-09-09 at 15.28.10.jpeg'
       },
       {
-            name: 'Ice Cream Van (Pink)',
-            hex: '#EC4899',
-            image: '/assets/Ride-Ons/MY FIRST TRUCK/WhatsApp Image 2026-09-09 at 15.28.11 (1).jpeg'
+        name: 'Ice Cream Van (Pink)',
+        hex: '#EC4899',
+        image: '/assets/Ride-Ons/MY FIRST TRUCK/WhatsApp Image 2026-09-09 at 15.28.11 (1).jpeg'
       }
-],
+    ],
     modelCode: 'YW-RO-03',
-    image: '/assets/Ride-Ons/MY FIRST TRUCK/WhatsApp Image 2026-09-09 at 15.28.11 (2).jpeg',
+    image: '/assets/Ride-Ons/MY FIRST TRUCK/WhatsApp Image 2026-09-09 at 15.28.11.jpeg',
     highlights: ['4 Fun Themes', 'Lights & Music', 'Floor Safe']
   },
   {
@@ -217,33 +217,33 @@ export const PRODUCTS: Product[] = [
     features: ['Comfortable seat & steering handle', 'Stylish lighting accents', 'Big sturdy wheels', 'Easy movement of steering wheel', 'Builds leg strength'],
     colors: [
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Ride-Ons/RACING CAR/WhatsApp Image 2026-09-09 at 15.31.26.jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Ride-Ons/RACING CAR/WhatsApp Image 2026-09-09 at 15.28.42 (1).jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Ride-Ons/RACING CAR/WhatsApp Image 2026-09-09 at 15.28.42 (1).jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Ride-Ons/RACING CAR/WhatsApp Image 2026-09-09 at 15.31.26.jpeg'
       },
       {
-            name: 'Green',
-            hex: '#22C55E',
-            image: '/assets/Ride-Ons/RACING CAR/WhatsApp Image 2026-09-09 at 15.28.42.jpeg'
+        name: 'Green',
+        hex: '#22C55E',
+        image: '/assets/Ride-Ons/RACING CAR/WhatsApp Image 2026-09-09 at 15.28.42.jpeg'
       },
       {
-            name: 'Orange',
-            hex: '#F97316',
-            image: '/assets/Ride-Ons/RACING CAR/WhatsApp Image 2026-09-09 at 15.28.41.jpeg'
+        name: 'Orange',
+        hex: '#F97316',
+        image: '/assets/Ride-Ons/RACING CAR/WhatsApp Image 2026-09-09 at 15.28.41.jpeg'
       },
       {
-            name: 'Silver',
-            hex: '#94A3B8',
-            image: '/assets/Ride-Ons/RACING CAR/WhatsApp Image 2026-09-09 at 15.28.40.jpeg'
+        name: 'Silver',
+        hex: '#94A3B8',
+        image: '/assets/Ride-Ons/RACING CAR/WhatsApp Image 2026-09-09 at 15.28.40.jpeg'
       }
-],
+    ],
     modelCode: 'YW-RO-04',
-    image: '/assets/Ride-Ons/RACING CAR/WhatsApp Image 2026-09-09 at 15.31.26.jpeg',
+    image: '/assets/Ride-Ons/RACING CAR/WhatsApp Image 2026-09-09 at 15.28.42 (1).jpeg',
     highlights: ['Sport Racer', 'Easy Steering', 'Active Play']
   },
   {
@@ -258,23 +258,23 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Builds balance & confidence', 'Smooth scratch-free wheels', 'Lights & music console', 'Aesthetic pastel colors'],
     colors: [
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Ride-Ons/SCOOBY RIDER/WhatsApp Image 2026-09-09 at 15.29.16.jpeg'
+        name: 'Pink',
+        hex: '#EC4899',
+        image: '/assets/Ride-Ons/SCOOBY RIDER/WhatsApp Image 2026-09-09 at 15.29.17 (1).jpeg'
       },
       {
-            name: 'Pink',
-            hex: '#EC4899',
-            image: '/assets/Ride-Ons/SCOOBY RIDER/WhatsApp Image 2026-09-09 at 15.29.17 (1).jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Ride-Ons/SCOOBY RIDER/WhatsApp Image 2026-09-09 at 15.29.16.jpeg'
       },
       {
-            name: 'Mint',
-            hex: '#14B8A6',
-            image: '/assets/Ride-Ons/SCOOBY RIDER/WhatsApp Image 2026-09-09 at 15.29.17.jpeg'
+        name: 'Mint',
+        hex: '#14B8A6',
+        image: '/assets/Ride-Ons/SCOOBY RIDER/WhatsApp Image 2026-09-09 at 15.29.17.jpeg'
       }
-],
+    ],
     modelCode: 'YW-RO-05',
-    image: '/assets/Ride-Ons/SCOOBY RIDER/WhatsApp Image 2026-09-09 at 15.29.16.jpeg',
+    image: '/assets/Ride-Ons/SCOOBY RIDER/WhatsApp Image 2026-09-09 at 15.29.17 (1).jpeg',
     highlights: ['Pastel Aesthetics', 'Melody Horn', 'Smooth Wheels']
   },
   {
@@ -289,23 +289,23 @@ export const PRODUCTS: Product[] = [
     features: ['Easy to ride steering', 'Spacious storage under seat', 'Comes with posture back rest', 'Weight capacity 15-20 kg', 'Durable non-toxic build'],
     colors: [
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Ride-Ons/SCOOBY PLUS RIDER/WhatsApp Image 2026-09-09 at 15.32.06.jpeg'
+        name: 'Mint',
+        hex: '#14B8A6',
+        image: '/assets/Ride-Ons/SCOOBY PLUS RIDER/WhatsApp Image 2026-09-09 at 15.32.05.jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Ride-Ons/SCOOBY PLUS RIDER/WhatsApp Image 2026-09-09 at 15.32.06 (1).jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Ride-Ons/SCOOBY PLUS RIDER/WhatsApp Image 2026-09-09 at 15.32.06.jpeg'
       },
       {
-            name: 'Mint',
-            hex: '#14B8A6',
-            image: '/assets/Ride-Ons/SCOOBY PLUS RIDER/WhatsApp Image 2026-09-09 at 15.32.05.jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Ride-Ons/SCOOBY PLUS RIDER/WhatsApp Image 2026-09-09 at 15.32.06 (1).jpeg'
       }
-],
+    ],
     modelCode: 'YW-RO-06',
-    image: '/assets/Ride-Ons/SCOOBY PLUS RIDER/WhatsApp Image 2026-09-09 at 15.32.06.jpeg',
+    image: '/assets/Ride-Ons/SCOOBY PLUS RIDER/WhatsApp Image 2026-09-09 at 15.32.05.jpeg',
     highlights: ['Under-Seat Storage', 'Dual Backrest', '20kg Capacity']
   },
   {
@@ -320,28 +320,28 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Builds balance & posture', 'Smooth whisper-quiet wheels', 'Lights & music console', 'Jet wing side contouring'],
     colors: [
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Ride-Ons/AERO RIDE ON/WhatsApp Image 2026-09-09 at 15.33.00.jpeg'
+        name: 'Purple',
+        hex: '#A855F7',
+        image: '/assets/Ride-Ons/AERO RIDE ON/WhatsApp Image 2026-09-09 at 15.33.02.jpeg'
       },
       {
-            name: 'Mint',
-            hex: '#14B8A6',
-            image: '/assets/Ride-Ons/AERO RIDE ON/WhatsApp Image 2026-09-09 at 15.33.01 (1).jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Ride-Ons/AERO RIDE ON/WhatsApp Image 2026-09-09 at 15.33.00.jpeg'
       },
       {
-            name: 'Pink',
-            hex: '#EC4899',
-            image: '/assets/Ride-Ons/AERO RIDE ON/WhatsApp Image 2026-09-09 at 15.33.01.jpeg'
+        name: 'Mint',
+        hex: '#14B8A6',
+        image: '/assets/Ride-Ons/AERO RIDE ON/WhatsApp Image 2026-09-09 at 15.33.01 (1).jpeg'
       },
       {
-            name: 'Purple',
-            hex: '#A855F7',
-            image: '/assets/Ride-Ons/AERO RIDE ON/WhatsApp Image 2026-09-09 at 15.33.02.jpeg'
+        name: 'Pink',
+        hex: '#EC4899',
+        image: '/assets/Ride-Ons/AERO RIDE ON/WhatsApp Image 2026-09-09 at 15.33.01.jpeg'
       }
-],
+    ],
     modelCode: 'YW-RO-07',
-    image: '/assets/Ride-Ons/AERO RIDE ON/WhatsApp Image 2026-09-09 at 15.33.00.jpeg',
+    image: '/assets/Ride-Ons/AERO RIDE ON/WhatsApp Image 2026-09-09 at 15.33.02.jpeg',
     highlights: ['Jet Wing Design', 'Sound Module', 'Whisper Quiet']
   },
   {
@@ -414,29 +414,29 @@ export const PRODUCTS: Product[] = [
     features: ['Fun with music console', 'Smooth & safe ride-on wheels', 'Sturdy build for active play', 'Cute animal design', '2-in-1 Rocker & Rolling Car'],
     colors: [
       {
-            name: 'Yellow',
-            hex: '#EAB308',
-            image: '/assets/Ride-Ons/ROCKING RIDER/WhatsApp Image 2026-09-09 at 15.42.24.jpeg'
+        name: 'Green',
+        hex: '#22C55E',
+        image: '/assets/Ride-Ons/ROCKING RIDER/WhatsApp Image 2026-09-09 at 15.42.26.jpeg'
       },
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Ride-Ons/ROCKING RIDER/WhatsApp Image 2026-09-09 at 15.42.26 (1).jpeg'
+        name: 'Yellow',
+        hex: '#EAB308',
+        image: '/assets/Ride-Ons/ROCKING RIDER/WhatsApp Image 2026-09-09 at 15.42.24.jpeg'
       },
       {
-            name: 'Green',
-            hex: '#22C55E',
-            image: '/assets/Ride-Ons/ROCKING RIDER/WhatsApp Image 2026-09-09 at 15.42.26.jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Ride-Ons/ROCKING RIDER/WhatsApp Image 2026-09-09 at 15.42.26 (1).jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Ride-Ons/ROCKING RIDER/WhatsApp Image 2026-09-09 at 15.42.27.jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Ride-Ons/ROCKING RIDER/WhatsApp Image 2026-09-09 at 15.42.27.jpeg'
       }
-],
+    ],
     isBestSeller: true,
     modelCode: 'YW-RO-10',
-    image: '/assets/Ride-Ons/ROCKING RIDER/WhatsApp Image 2026-09-09 at 15.42.24.jpeg',
+    image: '/assets/Ride-Ons/ROCKING RIDER/WhatsApp Image 2026-09-09 at 15.42.26.jpeg',
     highlights: ['2-in-1 Rocker & Car', '15° Safe Arc', 'Music Box']
   },
   {
@@ -451,31 +451,31 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Builds balance', 'Smooth floor wheels', 'Lights & music horn', 'Extra wide comfortable seat'],
     colors: [
       {
-            name: 'Cyan',
-            hex: '#06B6D4',
-            image: '/assets/Ride-Ons/JUMBO RIDE ON/WhatsApp Image 2026-09-09 at 15.38.37 (1).jpeg'
+        name: 'Cyan',
+        hex: '#06B6D4',
+        image: '/assets/Ride-Ons/JUMBO RIDE ON/WhatsApp Image 2026-09-09 at 15.38.37 (1).jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Ride-Ons/JUMBO RIDE ON/WhatsApp Image 2026-09-09 at 15.38.37.jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Ride-Ons/JUMBO RIDE ON/WhatsApp Image 2026-09-09 at 15.38.37.jpeg'
       },
       {
-            name: 'Orange',
-            hex: '#F97316',
-            image: '/assets/Ride-Ons/JUMBO RIDE ON/WhatsApp Image 2026-09-09 at 15.39.20.jpeg'
+        name: 'Orange',
+        hex: '#F97316',
+        image: '/assets/Ride-Ons/JUMBO RIDE ON/WhatsApp Image 2026-09-09 at 15.39.20.jpeg'
       },
       {
-            name: 'Pink',
-            hex: '#EC4899',
-            image: '/assets/Ride-Ons/JUMBO RIDE ON/WhatsApp Image 2026-09-09 at 15.38.38 (1).jpeg'
+        name: 'Pink',
+        hex: '#EC4899',
+        image: '/assets/Ride-Ons/JUMBO RIDE ON/WhatsApp Image 2026-09-09 at 15.38.38 (1).jpeg'
       },
       {
-            name: 'Purple',
-            hex: '#A855F7',
-            image: '/assets/Ride-Ons/JUMBO RIDE ON/WhatsApp Image 2026-09-09 at 15.38.38.jpeg'
+        name: 'Purple',
+        hex: '#A855F7',
+        image: '/assets/Ride-Ons/JUMBO RIDE ON/WhatsApp Image 2026-09-09 at 15.38.38.jpeg'
       }
-],
+    ],
     modelCode: 'YW-RO-11',
     image: '/assets/Ride-Ons/JUMBO RIDE ON/WhatsApp Image 2026-09-09 at 15.38.37 (1).jpeg',
     highlights: ['Extra Wide Seat', 'Musical Horn', 'Steel Axle']
@@ -492,34 +492,34 @@ export const PRODUCTS: Product[] = [
     features: ['Grows with your child', 'Stylish design', 'Detachable parent push bar', 'Thick padded & breathable seat', '360° revolving front wheels'],
     colors: [
       {
-            name: 'Teal',
-            hex: '#14B8A6',
-            image: '/assets/Ride-Ons/JUMBO PLUS RIDE ON/WhatsApp Image 2026-09-09 at 15.39.46.jpeg'
+        name: 'Orange',
+        hex: '#F97316',
+        image: '/assets/Ride-Ons/JUMBO PLUS RIDE ON/WhatsApp Image 2026-09-09 at 15.39.47 (1).jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Ride-Ons/JUMBO PLUS RIDE ON/WhatsApp Image 2026-09-09 at 15.39.47 (2).jpeg'
+        name: 'Teal',
+        hex: '#14B8A6',
+        image: '/assets/Ride-Ons/JUMBO PLUS RIDE ON/WhatsApp Image 2026-09-09 at 15.39.46.jpeg'
       },
       {
-            name: 'Orange',
-            hex: '#F97316',
-            image: '/assets/Ride-Ons/JUMBO PLUS RIDE ON/WhatsApp Image 2026-09-09 at 15.39.47 (1).jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Ride-Ons/JUMBO PLUS RIDE ON/WhatsApp Image 2026-09-09 at 15.39.47 (2).jpeg'
       },
       {
-            name: 'Pink',
-            hex: '#EC4899',
-            image: '/assets/Ride-Ons/JUMBO PLUS RIDE ON/WhatsApp Image 2026-09-09 at 15.39.47.jpeg'
+        name: 'Pink',
+        hex: '#EC4899',
+        image: '/assets/Ride-Ons/JUMBO PLUS RIDE ON/WhatsApp Image 2026-09-09 at 15.39.47.jpeg'
       },
       {
-            name: 'Purple',
-            hex: '#A855F7',
-            image: '/assets/Ride-Ons/JUMBO PLUS RIDE ON/WhatsApp Image 2026-09-09 at 15.39.46 (1).jpeg'
+        name: 'Purple',
+        hex: '#A855F7',
+        image: '/assets/Ride-Ons/JUMBO PLUS RIDE ON/WhatsApp Image 2026-09-09 at 15.39.46 (1).jpeg'
       }
-],
+    ],
     isNewArrival: true,
     modelCode: 'YW-RO-12',
-    image: '/assets/Ride-Ons/JUMBO PLUS RIDE ON/WhatsApp Image 2026-09-09 at 15.39.46.jpeg',
+    image: '/assets/Ride-Ons/JUMBO PLUS RIDE ON/WhatsApp Image 2026-09-09 at 15.39.47 (1).jpeg',
     highlights: ['360° Swivel Wheels', 'Detachable Push Rod', 'Armrest Safety']
   },
   {
@@ -674,23 +674,23 @@ export const PRODUCTS: Product[] = [
     features: ['Comfortable molded hands', 'Big sturdy wheels', 'Stylish Italian racing design', 'Lighttray flashing wheels', 'Lean-to-steer balance system'],
     colors: [
       {
-            name: 'Green',
-            hex: '#22C55E',
-            image: '/assets/Kick Scooters/FERRARII KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.44.27 (1).jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Kick Scooters/FERRARII KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.44.27.jpeg'
       },
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Kick Scooters/FERRARII KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.44.27.jpeg'
+        name: 'Green',
+        hex: '#22C55E',
+        image: '/assets/Kick Scooters/FERRARII KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.44.27 (1).jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Kick Scooters/FERRARII KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.44.28.jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Kick Scooters/FERRARII KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.44.28.jpeg'
       }
-],
+    ],
     modelCode: 'YW-KS-04',
-    image: '/assets/Kick Scooters/FERRARII KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.44.27 (1).jpeg',
+    image: '/assets/Kick Scooters/FERRARII KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.44.27.jpeg',
     highlights: ['Ferrari Styling', 'Lean-to-Steer', 'Lighttray Wheels']
   },
   {
@@ -705,26 +705,26 @@ export const PRODUCTS: Product[] = [
     features: ['Comfortable handle grips', 'Big sturdy wheels', 'Electronic Police Siren sound box', 'Flashing LED tail light module', 'Anti-skid standing platform'],
     colors: [
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Kick Scooters/stylo Kick scooter/WhatsApp Image 2026-09-09 at 15.50.47.jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Kick Scooters/stylo Kick scooter/WhatsApp Image 2026-09-09 at 15.50.47.jpeg'
       },
       {
-            name: 'Green',
-            hex: '#22C55E',
-            image: '/assets/Kick Scooters/stylo Kick scooter/WhatsApp Image 2026-09-09 at 15.50.48 (1).jpeg'
+        name: 'Green',
+        hex: '#22C55E',
+        image: '/assets/Kick Scooters/stylo Kick scooter/WhatsApp Image 2026-09-09 at 15.50.48 (1).jpeg'
       },
       {
-            name: 'Orange',
-            hex: '#F97316',
-            image: '/assets/Kick Scooters/stylo Kick scooter/WhatsApp Image 2026-09-09 at 15.50.48.jpeg'
+        name: 'Orange',
+        hex: '#F97316',
+        image: '/assets/Kick Scooters/stylo Kick scooter/WhatsApp Image 2026-09-09 at 15.50.48.jpeg'
       },
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Kick Scooters/stylo Kick scooter/WhatsApp Image 2026-09-09 at 15.50.49.jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Kick Scooters/stylo Kick scooter/WhatsApp Image 2026-09-09 at 15.50.49.jpeg'
       }
-],
+    ],
     isBestSeller: true,
     modelCode: 'YW-KS-05',
     image: '/assets/Kick Scooters/stylo Kick scooter/WhatsApp Image 2026-09-09 at 15.50.47.jpeg',
@@ -742,33 +742,33 @@ export const PRODUCTS: Product[] = [
     features: ['Comfortable handle grips', 'Big sturdy wheels', 'Stylish junior design', 'Anti-skid standing surface', 'Low deck height for easy mounting'],
     colors: [
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Kick Scooters/stylo Junior kick scooter/WhatsApp Image 2026-09-09 at 15.51.24 (1).jpeg'
+        name: 'Green',
+        hex: '#22C55E',
+        image: '/assets/Kick Scooters/stylo Junior kick scooter/WhatsApp Image 2026-09-09 at 15.51.24.jpeg'
       },
       {
-            name: 'Green',
-            hex: '#22C55E',
-            image: '/assets/Kick Scooters/stylo Junior kick scooter/WhatsApp Image 2026-09-09 at 15.51.24.jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Kick Scooters/stylo Junior kick scooter/WhatsApp Image 2026-09-09 at 15.51.24 (1).jpeg'
       },
       {
-            name: 'Pink',
-            hex: '#EC4899',
-            image: '/assets/Kick Scooters/stylo Junior kick scooter/WhatsApp Image 2026-09-09 at 15.51.25 (1).jpeg'
+        name: 'Pink',
+        hex: '#EC4899',
+        image: '/assets/Kick Scooters/stylo Junior kick scooter/WhatsApp Image 2026-09-09 at 15.51.25 (1).jpeg'
       },
       {
-            name: 'Orange',
-            hex: '#F97316',
-            image: '/assets/Kick Scooters/stylo Junior kick scooter/WhatsApp Image 2026-09-09 at 15.51.25.jpeg'
+        name: 'Orange',
+        hex: '#F97316',
+        image: '/assets/Kick Scooters/stylo Junior kick scooter/WhatsApp Image 2026-09-09 at 15.51.25.jpeg'
       },
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Kick Scooters/stylo Junior kick scooter/WhatsApp Image 2026-09-09 at 15.51.26.jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Kick Scooters/stylo Junior kick scooter/WhatsApp Image 2026-09-09 at 15.51.26.jpeg'
       }
-],
+    ],
     modelCode: 'YW-KS-06',
-    image: '/assets/Kick Scooters/stylo Junior kick scooter/WhatsApp Image 2026-09-09 at 15.51.24 (1).jpeg',
+    image: '/assets/Kick Scooters/stylo Junior kick scooter/WhatsApp Image 2026-09-09 at 15.51.24.jpeg',
     highlights: ['Junior Sizing', 'Low Deck Height', 'Easy Balance']
   },
   {
@@ -783,28 +783,28 @@ export const PRODUCTS: Product[] = [
     features: ['Comfortable handle grips', 'Big sturdy wheels', 'Iconic Royal Panda handlebar mascot', 'Anti-skid standing deck', 'Height adjustable handlebar'],
     colors: [
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Kick Scooters/Royal Panda Kick Scooter/WhatsApp Image 2026-09-09 at 16.08.36 (2).jpeg'
+        name: 'Orange',
+        hex: '#F97316',
+        image: '/assets/Kick Scooters/Royal Panda Kick Scooter/WhatsApp Image 2026-09-09 at 16.08.36.jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Kick Scooters/Royal Panda Kick Scooter/WhatsApp Image 2026-09-09 at 16.09.17.jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Kick Scooters/Royal Panda Kick Scooter/WhatsApp Image 2026-09-09 at 16.08.36 (2).jpeg'
       },
       {
-            name: 'Green',
-            hex: '#22C55E',
-            image: '/assets/Kick Scooters/Royal Panda Kick Scooter/WhatsApp Image 2026-09-09 at 16.08.36 (1).jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Kick Scooters/Royal Panda Kick Scooter/WhatsApp Image 2026-09-09 at 16.09.17.jpeg'
       },
       {
-            name: 'Orange',
-            hex: '#F97316',
-            image: '/assets/Kick Scooters/Royal Panda Kick Scooter/WhatsApp Image 2026-09-09 at 16.08.36.jpeg'
+        name: 'Green',
+        hex: '#22C55E',
+        image: '/assets/Kick Scooters/Royal Panda Kick Scooter/WhatsApp Image 2026-09-09 at 16.08.36 (1).jpeg'
       }
-],
+    ],
     modelCode: 'YW-KS-07',
-    image: '/assets/Kick Scooters/Royal Panda Kick Scooter/WhatsApp Image 2026-09-09 at 16.08.36 (2).jpeg',
+    image: '/assets/Kick Scooters/Royal Panda Kick Scooter/WhatsApp Image 2026-09-09 at 16.08.36.jpeg',
     highlights: ['Panda Mascot', 'Height Adjustable', 'Wide Deck']
   },
   {
@@ -819,33 +819,33 @@ export const PRODUCTS: Product[] = [
     features: ['Comfortable handle grips', 'Big sturdy wheels', 'Royal Panda front badge', 'Anti-skid standing deck', 'Extra wide front wheel stance'],
     colors: [
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Kick Scooters/ROYAL PANDA JUNIOR KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.57.34 (1).jpeg'
+        name: 'Pink',
+        hex: '#EC4899',
+        image: '/assets/Kick Scooters/ROYAL PANDA JUNIOR KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.57.35.jpeg'
       },
       {
-            name: 'Black',
-            hex: '#1E293B',
-            image: '/assets/Kick Scooters/ROYAL PANDA JUNIOR KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.57.34 (2).jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Kick Scooters/ROYAL PANDA JUNIOR KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.57.34 (1).jpeg'
       },
       {
-            name: 'Green',
-            hex: '#22C55E',
-            image: '/assets/Kick Scooters/ROYAL PANDA JUNIOR KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.57.34.jpeg'
+        name: 'Black',
+        hex: '#1E293B',
+        image: '/assets/Kick Scooters/ROYAL PANDA JUNIOR KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.57.34 (2).jpeg'
       },
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Kick Scooters/ROYAL PANDA JUNIOR KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.57.35 (1).jpeg'
+        name: 'Green',
+        hex: '#22C55E',
+        image: '/assets/Kick Scooters/ROYAL PANDA JUNIOR KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.57.34.jpeg'
       },
       {
-            name: 'Pink',
-            hex: '#EC4899',
-            image: '/assets/Kick Scooters/ROYAL PANDA JUNIOR KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.57.35.jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Kick Scooters/ROYAL PANDA JUNIOR KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.57.35 (1).jpeg'
       }
-],
+    ],
     modelCode: 'YW-KS-08',
-    image: '/assets/Kick Scooters/ROYAL PANDA JUNIOR KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.57.34 (1).jpeg',
+    image: '/assets/Kick Scooters/ROYAL PANDA JUNIOR KICK SCOOTER/WhatsApp Image 2026-09-09 at 15.57.35.jpeg',
     highlights: ['Extra Wide Stance', 'Anti-Tip Geometry', 'Panda Badge']
   },
 
@@ -864,26 +864,26 @@ export const PRODUCTS: Product[] = [
     features: ['Learn to walk assistance', 'Builds balance & leg strength', 'Smooth non-slip wheels with speed control', 'Lights & music console', '2-in-1 Sit & Push design'],
     colors: [
       {
-            name: 'Mint',
-            hex: '#14B8A6',
-            image: '/assets/Walkers/Bunny rider/WhatsApp Image 2026-09-09 at 16.20.28 (1).jpeg'
+        name: 'Mint',
+        hex: '#14B8A6',
+        image: '/assets/Walkers/Bunny rider/WhatsApp Image 2026-09-09 at 16.20.28 (1).jpeg'
       },
       {
-            name: 'Brown',
-            hex: '#78350F',
-            image: '/assets/Walkers/Bunny rider/WhatsApp Image 2026-09-09 at 16.20.28 (2).jpeg'
+        name: 'Brown',
+        hex: '#78350F',
+        image: '/assets/Walkers/Bunny rider/WhatsApp Image 2026-09-09 at 16.20.28 (2).jpeg'
       },
       {
-            name: 'Pink',
-            hex: '#EC4899',
-            image: '/assets/Walkers/Bunny rider/WhatsApp Image 2026-09-09 at 16.20.28.jpeg'
+        name: 'Pink',
+        hex: '#EC4899',
+        image: '/assets/Walkers/Bunny rider/WhatsApp Image 2026-09-09 at 16.20.28.jpeg'
       },
       {
-            name: 'Purple',
-            hex: '#A855F7',
-            image: '/assets/Walkers/Bunny rider/WhatsApp Image 2026-09-09 at 16.20.29.jpeg'
+        name: 'Purple',
+        hex: '#A855F7',
+        image: '/assets/Walkers/Bunny rider/WhatsApp Image 2026-09-09 at 16.20.29.jpeg'
       }
-],
+    ],
     isBestSeller: true,
     modelCode: 'YW-BW-01',
     image: '/assets/Walkers/Bunny rider/WhatsApp Image 2026-09-09 at 16.20.28 (1).jpeg',
@@ -901,29 +901,29 @@ export const PRODUCTS: Product[] = [
     features: ['Grows with your child (3-height adjust)', 'Stylish design with ZED Zero Edge Design', 'Designer parent push bar', 'Thick padded & breathable seat', '360° revolving swivel wheels'],
     colors: [
       {
-            name: 'Mint',
-            hex: '#14B8A6',
-            image: '/assets/Walkers/CASPER DELUXE WALKER/WhatsApp Image 2026-09-09 at 16.22.27 (1).jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Walkers/CASPER DELUXE WALKER/WhatsApp Image 2026-09-09 at 16.22.27.jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Walkers/CASPER DELUXE WALKER/WhatsApp Image 2026-09-09 at 16.22.27.jpeg'
+        name: 'Mint',
+        hex: '#14B8A6',
+        image: '/assets/Walkers/CASPER DELUXE WALKER/WhatsApp Image 2026-09-09 at 16.22.27 (1).jpeg'
       },
       {
-            name: 'Yellow',
-            hex: '#EAB308',
-            image: '/assets/Walkers/CASPER DELUXE WALKER/WhatsApp Image 2026-09-09 at 16.22.28 (1).jpeg'
+        name: 'Yellow',
+        hex: '#EAB308',
+        image: '/assets/Walkers/CASPER DELUXE WALKER/WhatsApp Image 2026-09-09 at 16.22.28 (1).jpeg'
       },
       {
-            name: 'Pink',
-            hex: '#EC4899',
-            image: '/assets/Walkers/CASPER DELUXE WALKER/WhatsApp Image 2026-09-09 at 16.22.28.jpeg'
+        name: 'Pink',
+        hex: '#EC4899',
+        image: '/assets/Walkers/CASPER DELUXE WALKER/WhatsApp Image 2026-09-09 at 16.22.28.jpeg'
       }
-],
+    ],
     isNewArrival: true,
     modelCode: 'YW-BW-02',
-    image: '/assets/Walkers/CASPER DELUXE WALKER/WhatsApp Image 2026-09-09 at 16.22.27 (1).jpeg',
+    image: '/assets/Walkers/CASPER DELUXE WALKER/WhatsApp Image 2026-09-09 at 16.22.27.jpeg',
     highlights: ['ZED Safety Tech', '3-Position Height Adjust', '360° Swivel Wheels']
   },
   {
@@ -938,28 +938,28 @@ export const PRODUCTS: Product[] = [
     features: ['Grows with your child', 'Teddy bear activity tray', 'Designer parent push bar', 'Thick padded & breathable seat', '360° revolving wheels & ZED safety'],
     colors: [
       {
-            name: 'Mint',
-            hex: '#14B8A6',
-            image: '/assets/Walkers/Bearyboo Walker/WhatsApp Image 2026-09-09 at 16.21.41.jpeg'
+        name: 'Pink',
+        hex: '#EC4899',
+        image: '/assets/Walkers/Bearyboo Walker/WhatsApp Image 2026-09-09 at 16.21.42.jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Walkers/Bearyboo Walker/WhatsApp Image 2026-09-09 at 16.21.42 (1).jpeg'
+        name: 'Mint',
+        hex: '#14B8A6',
+        image: '/assets/Walkers/Bearyboo Walker/WhatsApp Image 2026-09-09 at 16.21.41.jpeg'
       },
       {
-            name: 'Pink',
-            hex: '#EC4899',
-            image: '/assets/Walkers/Bearyboo Walker/WhatsApp Image 2026-09-09 at 16.21.42.jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Walkers/Bearyboo Walker/WhatsApp Image 2026-09-09 at 16.21.42 (1).jpeg'
       },
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Walkers/Bearyboo Walker/WhatsApp Image 2026-09-09 at 16.21.44.jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Walkers/Bearyboo Walker/WhatsApp Image 2026-09-09 at 16.21.44.jpeg'
       }
-],
+    ],
     modelCode: 'YW-BW-03',
-    image: '/assets/Walkers/Bearyboo Walker/WhatsApp Image 2026-09-09 at 16.21.41.jpeg',
+    image: '/assets/Walkers/Bearyboo Walker/WhatsApp Image 2026-09-09 at 16.21.42.jpeg',
     highlights: ['Teddy Toy Bar', 'ZED Zero Edge', 'Flat Folding']
   },
 
@@ -1020,33 +1020,33 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Anti-skid footrest pads', 'Builds balance & core strength', 'Smooth silent PU floor wheels', 'Front toy storage basket'],
     colors: [
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Swing Cars/PANDAA BASKET SWING CAR/WhatsApp Image 2026-09-09 at 16.25.54 (1).jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Swing Cars/PANDAA BASKET SWING CAR/WhatsApp Image 2026-09-09 at 16.25.54.jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Swing Cars/PANDAA BASKET SWING CAR/WhatsApp Image 2026-09-09 at 16.25.54.jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Swing Cars/PANDAA BASKET SWING CAR/WhatsApp Image 2026-09-09 at 16.25.54 (1).jpeg'
       },
       {
-            name: 'Orange',
-            hex: '#F97316',
-            image: '/assets/Swing Cars/PANDAA BASKET SWING CAR/WhatsApp Image 2026-09-09 at 16.25.55 (1).jpeg'
+        name: 'Orange',
+        hex: '#F97316',
+        image: '/assets/Swing Cars/PANDAA BASKET SWING CAR/WhatsApp Image 2026-09-09 at 16.25.55 (1).jpeg'
       },
       {
-            name: 'Pink',
-            hex: '#EC4899',
-            image: '/assets/Swing Cars/PANDAA BASKET SWING CAR/WhatsApp Image 2026-09-09 at 16.25.55.jpeg'
+        name: 'Pink',
+        hex: '#EC4899',
+        image: '/assets/Swing Cars/PANDAA BASKET SWING CAR/WhatsApp Image 2026-09-09 at 16.25.55.jpeg'
       },
       {
-            name: 'Mint',
-            hex: '#14B8A6',
-            image: '/assets/Swing Cars/PANDAA BASKET SWING CAR/WhatsApp Image 2026-09-09 at 16.33.20.jpeg'
+        name: 'Mint',
+        hex: '#14B8A6',
+        image: '/assets/Swing Cars/PANDAA BASKET SWING CAR/WhatsApp Image 2026-09-09 at 16.33.20.jpeg'
       }
-],
+    ],
     modelCode: 'YW-SC-02',
-    image: '/assets/Swing Cars/PANDAA BASKET SWING CAR/WhatsApp Image 2026-09-09 at 16.25.54 (1).jpeg',
+    image: '/assets/Swing Cars/PANDAA BASKET SWING CAR/WhatsApp Image 2026-09-09 at 16.25.54.jpeg',
     highlights: ['Front Toy Basket', 'Silent PU Wheels', 'Anti-Skid Pads']
   },
   {
@@ -1061,23 +1061,23 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Anti-skid footrest pads', 'Builds balance', 'Smooth floor wheels', 'Vibrant pastel & neon panda colors'],
     colors: [
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Swing Cars/PANDAA FACE COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.25.16.jpeg'
+        name: 'Green',
+        hex: '#22C55E',
+        image: '/assets/Swing Cars/PANDAA FACE COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.25.17 (1).jpeg'
       },
       {
-            name: 'Green',
-            hex: '#22C55E',
-            image: '/assets/Swing Cars/PANDAA FACE COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.25.17 (1).jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Swing Cars/PANDAA FACE COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.25.16.jpeg'
       },
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Swing Cars/PANDAA FACE COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.25.17.jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Swing Cars/PANDAA FACE COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.25.17.jpeg'
       }
-],
+    ],
     modelCode: 'YW-SC-03',
-    image: '/assets/Swing Cars/PANDAA FACE COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.25.16.jpeg',
+    image: '/assets/Swing Cars/PANDAA FACE COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.25.17 (1).jpeg',
     highlights: ['Vibrant Panda Themes', 'Fast Gliding', 'BPA-Free']
   },
   {
@@ -1092,23 +1092,23 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Anti-skid footrest', 'Builds balance', 'Whisper-quiet PU wheels', 'Scandinavian matte pastel aesthetic'],
     colors: [
       {
-            name: 'Green',
-            hex: '#22C55E',
-            image: '/assets/Swing Cars/WENDY SWING CAR/WhatsApp Image 2026-09-09 at 16.27.43.jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Swing Cars/WENDY SWING CAR/WhatsApp Image 2026-09-09 at 16.27.44.jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Swing Cars/WENDY SWING CAR/WhatsApp Image 2026-09-09 at 16.27.44 (1).jpeg'
+        name: 'Green',
+        hex: '#22C55E',
+        image: '/assets/Swing Cars/WENDY SWING CAR/WhatsApp Image 2026-09-09 at 16.27.43.jpeg'
       },
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Swing Cars/WENDY SWING CAR/WhatsApp Image 2026-09-09 at 16.27.44.jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Swing Cars/WENDY SWING CAR/WhatsApp Image 2026-09-09 at 16.27.44 (1).jpeg'
       }
-],
+    ],
     modelCode: 'YW-SC-04',
-    image: '/assets/Swing Cars/WENDY SWING CAR/WhatsApp Image 2026-09-09 at 16.27.43.jpeg',
+    image: '/assets/Swing Cars/WENDY SWING CAR/WhatsApp Image 2026-09-09 at 16.27.44.jpeg',
     highlights: ['Scandinavian Matte', 'Floor Safe PU', 'Low Noise']
   },
   {
@@ -1123,28 +1123,28 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Anti-skid footrest', 'Builds balance', 'Smooth wheels', 'Compact size for early toddlers'],
     colors: [
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Swing Cars/CUTIEE SWING CAR/WhatsApp Image 2026-09-09 at 16.33.53 (1).jpeg'
+        name: 'Pink',
+        hex: '#EC4899',
+        image: '/assets/Swing Cars/CUTIEE SWING CAR/WhatsApp Image 2026-09-09 at 16.33.53 (2).jpeg'
       },
       {
-            name: 'Pink',
-            hex: '#EC4899',
-            image: '/assets/Swing Cars/CUTIEE SWING CAR/WhatsApp Image 2026-09-09 at 16.33.53 (2).jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Swing Cars/CUTIEE SWING CAR/WhatsApp Image 2026-09-09 at 16.33.53 (1).jpeg'
       },
       {
-            name: 'Green',
-            hex: '#22C55E',
-            image: '/assets/Swing Cars/CUTIEE SWING CAR/WhatsApp Image 2026-09-09 at 16.33.53.jpeg'
+        name: 'Green',
+        hex: '#22C55E',
+        image: '/assets/Swing Cars/CUTIEE SWING CAR/WhatsApp Image 2026-09-09 at 16.33.53.jpeg'
       },
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Swing Cars/CUTIEE SWING CAR/WhatsApp Image 2026-09-09 at 16.35.09.jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Swing Cars/CUTIEE SWING CAR/WhatsApp Image 2026-09-09 at 16.35.09.jpeg'
       }
-],
+    ],
     modelCode: 'YW-SC-05',
-    image: '/assets/Swing Cars/CUTIEE SWING CAR/WhatsApp Image 2026-09-09 at 16.33.53 (1).jpeg',
+    image: '/assets/Swing Cars/CUTIEE SWING CAR/WhatsApp Image 2026-09-09 at 16.33.53 (2).jpeg',
     highlights: ['Early Toddler Sizing', 'Low Seat Height', 'Music Box']
   },
   {
@@ -1159,11 +1159,11 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Anti-skid footrest', 'Builds balance', 'Smooth wheels', 'Teddy bear head mask with LED eyes'],
     colors: [
       {
-            name: 'Cyan/Blue',
-            hex: '#06B6D4',
-            image: '/assets/Swing Cars/BEAR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.19.jpeg'
+        name: 'Cyan/Blue',
+        hex: '#06B6D4',
+        image: '/assets/Swing Cars/BEAR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.19.jpeg'
       }
-],
+    ],
     isBestSeller: true,
     modelCode: 'YW-SC-06',
     image: '/assets/Swing Cars/BEAR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.19.jpeg',
@@ -1181,26 +1181,26 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Anti-skid footrest', 'Builds balance', 'Smooth floor wheels', 'Teddy bear face with LED lights'],
     colors: [
       {
-            name: 'Green',
-            hex: '#22C55E',
-            image: '/assets/Swing Cars/BEAR COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.47 (1).jpeg'
+        name: 'Green',
+        hex: '#22C55E',
+        image: '/assets/Swing Cars/BEAR COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.47 (1).jpeg'
       },
       {
-            name: 'Orange',
-            hex: '#F97316',
-            image: '/assets/Swing Cars/BEAR COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.47.jpeg'
+        name: 'Orange',
+        hex: '#F97316',
+        image: '/assets/Swing Cars/BEAR COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.47.jpeg'
       },
       {
-            name: 'Yellow',
-            hex: '#EAB308',
-            image: '/assets/Swing Cars/BEAR COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.48 (1).jpeg'
+        name: 'Yellow',
+        hex: '#EAB308',
+        image: '/assets/Swing Cars/BEAR COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.48 (1).jpeg'
       },
       {
-            name: 'Brown',
-            hex: '#78350F',
-            image: '/assets/Swing Cars/BEAR COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.48.jpeg'
+        name: 'Brown',
+        hex: '#78350F',
+        image: '/assets/Swing Cars/BEAR COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.48.jpeg'
       }
-],
+    ],
     modelCode: 'YW-SC-07',
     image: '/assets/Swing Cars/BEAR COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.47 (1).jpeg',
     highlights: ['Teddy LED Headlights', 'Green-Yellow Hues', 'Silent PU']
@@ -1217,29 +1217,29 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Anti-skid footrest', 'Builds balance', 'High-speed ABEC steel bearings', '35 kg load capacity'],
     colors: [
       {
-            name: 'Green',
-            hex: '#22C55E',
-            image: '/assets/Swing Cars/BOO RIDER SWING CAR/WhatsApp Image 2026-09-09 at 17.10.04 (1).jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Swing Cars/BOO RIDER SWING CAR/WhatsApp Image 2026-09-09 at 17.10.04.jpeg'
       },
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Swing Cars/BOO RIDER SWING CAR/WhatsApp Image 2026-09-09 at 17.10.04.jpeg'
+        name: 'Green',
+        hex: '#22C55E',
+        image: '/assets/Swing Cars/BOO RIDER SWING CAR/WhatsApp Image 2026-09-09 at 17.10.04 (1).jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Swing Cars/BOO RIDER SWING CAR/WhatsApp Image 2026-09-09 at 17.10.05 (1).jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Swing Cars/BOO RIDER SWING CAR/WhatsApp Image 2026-09-09 at 17.10.05 (1).jpeg'
       },
       {
-            name: 'Pink',
-            hex: '#EC4899',
-            image: '/assets/Swing Cars/BOO RIDER SWING CAR/WhatsApp Image 2026-09-09 at 17.10.05.jpeg'
+        name: 'Pink',
+        hex: '#EC4899',
+        image: '/assets/Swing Cars/BOO RIDER SWING CAR/WhatsApp Image 2026-09-09 at 17.10.05.jpeg'
       }
-],
+    ],
     isNewArrival: true,
     modelCode: 'YW-SC-08',
-    image: '/assets/Swing Cars/BOO RIDER SWING CAR/WhatsApp Image 2026-09-09 at 17.10.04 (1).jpeg',
+    image: '/assets/Swing Cars/BOO RIDER SWING CAR/WhatsApp Image 2026-09-09 at 17.10.04.jpeg',
     highlights: ['35kg Load Capacity', 'ABEC Steel Bearings', 'Sports Body']
   },
   {
@@ -1485,23 +1485,23 @@ export const PRODUCTS: Product[] = [
     features: ['Comfortable seat', 'Big sturdy all-terrain wheels', 'Stylish Ninja Black & Yellow graphics', 'Comfy anti-slip pedals', 'High backrest support'],
     colors: [
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Tricycles/NINJA RIDER/WhatsApp Image 2026-09-09 at 17.19.25 (1).jpeg'
+        name: 'Yellow',
+        hex: '#EAB308',
+        image: '/assets/Tricycles/NINJA RIDER/WhatsApp Image 2026-09-09 at 17.19.26.jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Tricycles/NINJA RIDER/WhatsApp Image 2026-09-09 at 17.19.26 (1).jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Tricycles/NINJA RIDER/WhatsApp Image 2026-09-09 at 17.19.25 (1).jpeg'
       },
       {
-            name: 'Yellow',
-            hex: '#EAB308',
-            image: '/assets/Tricycles/NINJA RIDER/WhatsApp Image 2026-09-09 at 17.19.26.jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Tricycles/NINJA RIDER/WhatsApp Image 2026-09-09 at 17.19.26 (1).jpeg'
       }
-],
+    ],
     modelCode: 'YW-TC-03',
-    image: '/assets/Tricycles/NINJA RIDER/WhatsApp Image 2026-09-09 at 17.19.25 (1).jpeg',
+    image: '/assets/Tricycles/NINJA RIDER/WhatsApp Image 2026-09-09 at 17.19.26.jpeg',
     highlights: ['Ninja Graphics', 'All-Terrain Wheels', 'High Backrest']
   },
   {
@@ -1516,19 +1516,19 @@ export const PRODUCTS: Product[] = [
     features: ['Comfortable seat', 'Big sturdy wheels', 'Electronic Police Siren sound box', 'Musical lighting console', 'Flashing LED tail light'],
     colors: [
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/products/turbo-police-bike-red.jpg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Tricycles/Turbo Police Bike/WhatsApp Image 2026-09-09 at 17.21.49 (1).jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Tricycles/Turbo Police Bike/WhatsApp Image 2026-09-09 at 17.21.49 (1).jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/products/turbo-police-bike-red.jpg'
       }
-],
+    ],
     isBestSeller: true,
     modelCode: 'YW-TC-04',
-    image: '/assets/products/turbo-police-bike-red.jpg',
+    image: '/assets/Tricycles/Turbo Police Bike/WhatsApp Image 2026-09-09 at 17.21.49 (1).jpeg',
     highlights: ['Police Siren', 'LED Tail Light', 'Motorcycle Style']
   },
   {
@@ -1543,28 +1543,28 @@ export const PRODUCTS: Product[] = [
     features: ['Builds balance', 'Smooth wheels', 'Lights & music console', 'Big sturdy wheels', 'Anti-slip pedal grips'],
     colors: [
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Tricycles/Hello Rider/WhatsApp Image 2026-09-09 at 17.18.42 (1).jpeg'
+        name: 'Mint',
+        hex: '#14B8A6',
+        image: '/assets/Tricycles/Hello Rider/WhatsApp Image 2026-09-09 at 17.18.42 (2).jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Tricycles/Hello Rider/WhatsApp Image 2026-09-09 at 17.18.42.jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Tricycles/Hello Rider/WhatsApp Image 2026-09-09 at 17.18.42 (1).jpeg'
       },
       {
-            name: 'Yellow',
-            hex: '#EAB308',
-            image: '/assets/Tricycles/Hello Rider/WhatsApp Image 2026-09-09 at 17.18.41.jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Tricycles/Hello Rider/WhatsApp Image 2026-09-09 at 17.18.42.jpeg'
       },
       {
-            name: 'Mint',
-            hex: '#14B8A6',
-            image: '/assets/Tricycles/Hello Rider/WhatsApp Image 2026-09-09 at 17.18.42 (2).jpeg'
+        name: 'Yellow',
+        hex: '#EAB308',
+        image: '/assets/Tricycles/Hello Rider/WhatsApp Image 2026-09-09 at 17.18.41.jpeg'
       }
-],
+    ],
     modelCode: 'YW-TC-05',
-    image: '/assets/Tricycles/Hello Rider/WhatsApp Image 2026-09-09 at 17.18.42 (1).jpeg',
+    image: '/assets/Tricycles/Hello Rider/WhatsApp Image 2026-09-09 at 17.18.42 (2).jpeg',
     highlights: ['Front Light Console', 'Melody Tunes', 'Smooth Pedals']
   },
   {
@@ -1579,33 +1579,33 @@ export const PRODUCTS: Product[] = [
     features: ['Builds balance', 'Smooth rubber tread wheels', 'Integrated musical horn box', 'Comfortable ergonomic seat', 'High-tensile steel frame'],
     colors: [
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Tricycles/Nexride Deluxe/WhatsApp Image 2026-09-09 at 17.12.22.jpeg'
+        name: 'Yellow',
+        hex: '#EAB308',
+        image: '/assets/Tricycles/Nexride Deluxe/WhatsApp Image 2026-09-09 at 17.12.23 (2).jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Tricycles/Nexride Deluxe/WhatsApp Image 2026-09-09 at 17.12.23 (1).jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Tricycles/Nexride Deluxe/WhatsApp Image 2026-09-09 at 17.12.22.jpeg'
       },
       {
-            name: 'Yellow',
-            hex: '#EAB308',
-            image: '/assets/Tricycles/Nexride Deluxe/WhatsApp Image 2026-09-09 at 17.12.23 (2).jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Tricycles/Nexride Deluxe/WhatsApp Image 2026-09-09 at 17.12.23 (1).jpeg'
       },
       {
-            name: 'Orange',
-            hex: '#F97316',
-            image: '/assets/Tricycles/Nexride Deluxe/WhatsApp Image 2026-09-09 at 17.12.23 (3).jpeg'
+        name: 'Orange',
+        hex: '#F97316',
+        image: '/assets/Tricycles/Nexride Deluxe/WhatsApp Image 2026-09-09 at 17.12.23 (3).jpeg'
       },
       {
-            name: 'Teal',
-            hex: '#14B8A6',
-            image: '/assets/Tricycles/Nexride Deluxe/WhatsApp Image 2026-09-09 at 17.12.23.jpeg'
+        name: 'Teal',
+        hex: '#14B8A6',
+        image: '/assets/Tricycles/Nexride Deluxe/WhatsApp Image 2026-09-09 at 17.12.23.jpeg'
       }
-],
+    ],
     modelCode: 'YW-TC-06',
-    image: '/assets/Tricycles/Nexride Deluxe/WhatsApp Image 2026-09-09 at 17.12.22.jpeg',
+    image: '/assets/Tricycles/Nexride Deluxe/WhatsApp Image 2026-09-09 at 17.12.23 (2).jpeg',
     highlights: ['Musical Horn', 'Steel Frame', 'Treaded Wheels']
   },
   {
@@ -1620,33 +1620,33 @@ export const PRODUCTS: Product[] = [
     features: ['Builds balance', 'Smooth wheels', 'Steering wheel musical horn', 'Comfortable seat', 'Low seat center of gravity'],
     colors: [
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Tricycles/Tiny Rider Deluxe/WhatsApp Image 2026-09-09 at 17.12.40 (1).jpeg'
+        name: 'Pink',
+        hex: '#EC4899',
+        image: '/assets/Tricycles/Tiny Rider Deluxe/WhatsApp Image 2026-09-09 at 17.12.40.jpeg'
       },
       {
-            name: 'Mint',
-            hex: '#14B8A6',
-            image: '/assets/Tricycles/Tiny Rider Deluxe/WhatsApp Image 2026-09-09 at 17.12.40 (3).jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Tricycles/Tiny Rider Deluxe/WhatsApp Image 2026-09-09 at 17.12.40 (1).jpeg'
       },
       {
-            name: 'Pink',
-            hex: '#EC4899',
-            image: '/assets/Tricycles/Tiny Rider Deluxe/WhatsApp Image 2026-09-09 at 17.12.40.jpeg'
+        name: 'Mint',
+        hex: '#14B8A6',
+        image: '/assets/Tricycles/Tiny Rider Deluxe/WhatsApp Image 2026-09-09 at 17.12.40 (3).jpeg'
       },
       {
-            name: 'Yellow',
-            hex: '#EAB308',
-            image: '/assets/Tricycles/Tiny Rider Deluxe/WhatsApp Image 2026-09-09 at 17.12.41.jpeg'
+        name: 'Yellow',
+        hex: '#EAB308',
+        image: '/assets/Tricycles/Tiny Rider Deluxe/WhatsApp Image 2026-09-09 at 17.12.41.jpeg'
       },
       {
-            name: 'Grey',
-            hex: '#94A3B8',
-            image: '/assets/Tricycles/Tiny Rider Deluxe/WhatsApp Image 2026-09-09 at 17.12.40 (2).jpeg'
+        name: 'Grey',
+        hex: '#94A3B8',
+        image: '/assets/Tricycles/Tiny Rider Deluxe/WhatsApp Image 2026-09-09 at 17.12.40 (2).jpeg'
       }
-],
+    ],
     modelCode: 'YW-TC-07',
-    image: '/assets/Tricycles/Tiny Rider Deluxe/WhatsApp Image 2026-09-09 at 17.12.40 (1).jpeg',
+    image: '/assets/Tricycles/Tiny Rider Deluxe/WhatsApp Image 2026-09-09 at 17.12.40.jpeg',
     highlights: ['Low Seat Height', 'Musical Horn', 'Pastel Aesthetic']
   },
   {
@@ -1661,28 +1661,28 @@ export const PRODUCTS: Product[] = [
     features: ['Builds balance', 'Smooth wheels', 'Steerable mother push handle', 'Comfortable seat', 'Foldaway toddler footrests'],
     colors: [
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/products/tiny-rider-2in1-blue.jpg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/products/tiny-rider-2in1-red.jpg'
       },
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/products/tiny-rider-2in1-red.jpg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/products/tiny-rider-2in1-blue.jpg'
       },
       {
-            name: 'Mint',
-            hex: '#14B8A6',
-            image: '/assets/products/tiny-rider-2in1-mint.jpg'
+        name: 'Mint',
+        hex: '#14B8A6',
+        image: '/assets/products/tiny-rider-2in1-mint.jpg'
       },
       {
-            name: 'Yellow',
-            hex: '#EAB308',
-            image: '/assets/products/tiny-rider-2in1-yellow.jpg'
+        name: 'Yellow',
+        hex: '#EAB308',
+        image: '/assets/products/tiny-rider-2in1-yellow.jpg'
       }
-],
+    ],
     modelCode: 'YW-TC-08',
-    image: '/assets/products/tiny-rider-2in1-blue.jpg',
+    image: '/assets/products/tiny-rider-2in1-red.jpg',
     highlights: ['2-in-1 Stroller Trike', 'Parent Push Rod', 'Foldaway Footrests']
   },
   {
@@ -1697,28 +1697,28 @@ export const PRODUCTS: Product[] = [
     features: ['Builds balance', 'Smooth rubber tread wheels', 'Steerable parent push handle', 'Comfortable seat', 'Rear plastic luggage basket'],
     colors: [
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/products/nexride-2in1-blue.jpg'
+        name: 'Yellow',
+        hex: '#EAB308',
+        image: '/assets/products/nexride-2in1-yellow.jpg'
       },
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/products/nexride-2in1-red.jpg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/products/nexride-2in1-blue.jpg'
       },
       {
-            name: 'Teal',
-            hex: '#14B8A6',
-            image: '/assets/products/nexride-2in1-teal.jpg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/products/nexride-2in1-red.jpg'
       },
       {
-            name: 'Yellow',
-            hex: '#EAB308',
-            image: '/assets/products/nexride-2in1-yellow.jpg'
+        name: 'Teal',
+        hex: '#14B8A6',
+        image: '/assets/products/nexride-2in1-teal.jpg'
       }
-],
+    ],
     modelCode: 'YW-TC-09',
-    image: '/assets/products/nexride-2in1-blue.jpg',
+    image: '/assets/products/nexride-2in1-yellow.jpg',
     highlights: ['Carbon Steel Frame', 'Parent Steering Rod', 'Luggage Basket']
   },
   {
@@ -1733,28 +1733,28 @@ export const PRODUCTS: Product[] = [
     features: ['Builds balance', 'Smooth wheels', 'Musical horn console button', 'Comfortable seat', 'Steerable parent push handle'],
     colors: [
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Tricycles/Tiny Rider 2in1 Deluxe/WhatsApp Image 2026-09-09 at 17.15.40.jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Tricycles/Tiny Rider 2in1 Deluxe/WhatsApp Image 2026-09-09 at 17.15.39 (2).jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Tricycles/Tiny Rider 2in1 Deluxe/WhatsApp Image 2026-09-09 at 17.15.39 (2).jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Tricycles/Tiny Rider 2in1 Deluxe/WhatsApp Image 2026-09-09 at 17.15.40.jpeg'
       },
       {
-            name: 'Mint',
-            hex: '#14B8A6',
-            image: '/assets/Tricycles/Tiny Rider 2in1 Deluxe/WhatsApp Image 2026-09-09 at 17.15.39.jpeg'
+        name: 'Mint',
+        hex: '#14B8A6',
+        image: '/assets/Tricycles/Tiny Rider 2in1 Deluxe/WhatsApp Image 2026-09-09 at 17.15.39.jpeg'
       },
       {
-            name: 'Yellow',
-            hex: '#EAB308',
-            image: '/assets/Tricycles/Tiny Rider 2in1 Deluxe/WhatsApp Image 2026-09-09 at 17.15.39 (1).jpeg'
+        name: 'Yellow',
+        hex: '#EAB308',
+        image: '/assets/Tricycles/Tiny Rider 2in1 Deluxe/WhatsApp Image 2026-09-09 at 17.15.39 (1).jpeg'
       }
-],
+    ],
     modelCode: 'YW-TC-10',
-    image: '/assets/Tricycles/Tiny Rider 2in1 Deluxe/WhatsApp Image 2026-09-09 at 17.15.40.jpeg',
+    image: '/assets/Tricycles/Tiny Rider 2in1 Deluxe/WhatsApp Image 2026-09-09 at 17.15.39 (2).jpeg',
     highlights: ['Parent Push Rod', 'Musical Horn', 'Foldaway Footrest']
   },
   {
@@ -1769,29 +1769,29 @@ export const PRODUCTS: Product[] = [
     features: ['Builds balance', 'Smooth wheels', 'Musical horn button console', 'Comfortable padded seat', 'Steerable parent handle & rear basket'],
     colors: [
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/products/nexride-2in1-deluxe-blue.jpg'
+        name: 'Teal',
+        hex: '#14B8A6',
+        image: '/assets/products/nexride-2in1-deluxe-teal.jpg'
       },
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/products/nexride-2in1-deluxe-red.jpg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/products/nexride-2in1-deluxe-blue.jpg'
       },
       {
-            name: 'Teal',
-            hex: '#14B8A6',
-            image: '/assets/products/nexride-2in1-deluxe-teal.jpg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/products/nexride-2in1-deluxe-red.jpg'
       },
       {
-            name: 'Yellow',
-            hex: '#EAB308',
-            image: '/assets/products/nexride-2in1-deluxe-yellow.jpg'
+        name: 'Yellow',
+        hex: '#EAB308',
+        image: '/assets/products/nexride-2in1-deluxe-yellow.jpg'
       }
-],
+    ],
     isNewArrival: true,
     modelCode: 'YW-TC-11',
-    image: '/assets/products/nexride-2in1-deluxe-blue.jpg',
+    image: '/assets/products/nexride-2in1-deluxe-teal.jpg',
     highlights: ['Carbon Steel Frame', 'Parent Steering Rod', 'Music & Basket']
   },
 
@@ -1883,29 +1883,29 @@ export const PRODUCTS: Product[] = [
     features: ['Comfortable sofa cushion seat', 'Removable inner potty bowl', 'Safe & durable structure', 'Side safety armrest handles', 'Non-skid safety grip strips'],
     colors: [
       {
-            name: 'Green',
-            hex: '#22C55E',
-            image: '/assets/Potty Trainers/SOFA BABY CHAIR & POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.21.25 (1).jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Potty Trainers/SOFA BABY CHAIR & POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.21.25.jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Potty Trainers/SOFA BABY CHAIR & POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.21.25.jpeg'
+        name: 'Green',
+        hex: '#22C55E',
+        image: '/assets/Potty Trainers/SOFA BABY CHAIR & POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.21.25 (1).jpeg'
       },
       {
-            name: 'Red',
-            hex: '#EF4444',
-            image: '/assets/Potty Trainers/SOFA BABY CHAIR & POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.21.26 (1).jpeg'
+        name: 'Red',
+        hex: '#EF4444',
+        image: '/assets/Potty Trainers/SOFA BABY CHAIR & POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.21.26 (1).jpeg'
       },
       {
-            name: 'Pink',
-            hex: '#EC4899',
-            image: '/assets/Potty Trainers/SOFA BABY CHAIR & POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.21.26.jpeg'
+        name: 'Pink',
+        hex: '#EC4899',
+        image: '/assets/Potty Trainers/SOFA BABY CHAIR & POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.21.26.jpeg'
       }
-],
+    ],
     isBestSeller: true,
     modelCode: 'YW-PT-03',
-    image: '/assets/Potty Trainers/SOFA BABY CHAIR & POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.21.25 (1).jpeg',
+    image: '/assets/Potty Trainers/SOFA BABY CHAIR & POTTY TRAINER/WhatsApp Image 2026-09-09 at 17.21.25.jpeg',
     highlights: ['Soft Cushion Seat', 'Side Armrests', 'No Cold Plastic']
   },
   {
@@ -1920,24 +1920,24 @@ export const PRODUCTS: Product[] = [
     features: ['Wide comfortable seat', 'Removable inner potty bowl', 'Detachable 4-wheel base', 'Safe & durable non-toxic plastic', 'Turning handles with squeaky horn'],
     colors: [
       {
-            name: 'Green',
-            hex: '#22C55E',
-            image: '/assets/Potty Trainers/SCOOTY POTTY/WhatsApp Image 2026-09-09 at 17.25.13.jpeg'
+        name: 'Pink',
+        hex: '#EC4899',
+        image: '/assets/Potty Trainers/SCOOTY POTTY/WhatsApp Image 2026-09-09 at 17.25.13 (1).jpeg'
       },
       {
-            name: 'Pink',
-            hex: '#EC4899',
-            image: '/assets/Potty Trainers/SCOOTY POTTY/WhatsApp Image 2026-09-09 at 17.25.13 (1).jpeg'
+        name: 'Green',
+        hex: '#22C55E',
+        image: '/assets/Potty Trainers/SCOOTY POTTY/WhatsApp Image 2026-09-09 at 17.25.13.jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Potty Trainers/SCOOTY POTTY/WhatsApp Image 2026-09-09 at 17.25.14.jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Potty Trainers/SCOOTY POTTY/WhatsApp Image 2026-09-09 at 17.25.14.jpeg'
       }
-],
+    ],
     isNewArrival: true,
     modelCode: 'YW-PT-04',
-    image: '/assets/Potty Trainers/SCOOTY POTTY/WhatsApp Image 2026-09-09 at 17.25.13.jpeg',
+    image: '/assets/Potty Trainers/SCOOTY POTTY/WhatsApp Image 2026-09-09 at 17.25.13 (1).jpeg',
     highlights: ['2-in-1 Scooter Potty', 'Detachable Wheels', 'Squeaky Horn']
   },
   {
@@ -1952,21 +1952,21 @@ export const PRODUCTS: Product[] = [
     features: ['Builds balance & posture', 'Smooth floor wheels', 'Comfortable ergonomic seat', 'Deep removable waste bowl', 'High front splash guard'],
     colors: [
       {
-            name: 'Green',
-            hex: '#22C55E',
-            image: '/assets/Potty Trainers/Joy Rider Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.32.jpeg'
+        name: 'Green',
+        hex: '#22C55E',
+        image: '/assets/Potty Trainers/Joy Rider Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.32.jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Potty Trainers/Joy Rider Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.32 (1).jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Potty Trainers/Joy Rider Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.32 (1).jpeg'
       },
       {
-            name: 'Pink',
-            hex: '#EC4899',
-            image: '/assets/Potty Trainers/Joy Rider Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.31.jpeg'
+        name: 'Pink',
+        hex: '#EC4899',
+        image: '/assets/Potty Trainers/Joy Rider Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.31.jpeg'
       }
-],
+    ],
     modelCode: 'YW-PT-05',
     image: '/assets/Potty Trainers/Joy Rider Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.32.jpeg',
     highlights: ['Ride-On Style', 'Floor Wheels', 'High Backrest']
@@ -1983,23 +1983,23 @@ export const PRODUCTS: Product[] = [
     features: ['Builds balance', 'Smooth floor-safe wheels', 'Comfortable wide seat', 'Cute Kitty face with soft ear grips', 'Removable inner waste bowl'],
     colors: [
       {
-            name: 'Green',
-            hex: '#22C55E',
-            image: '/assets/Potty Trainers/MY QITTY Rider & Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.49.jpeg'
+        name: 'Pink',
+        hex: '#EC4899',
+        image: '/assets/Potty Trainers/MY QITTY Rider & Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.50 (1).jpeg'
       },
       {
-            name: 'Pink',
-            hex: '#EC4899',
-            image: '/assets/Potty Trainers/MY QITTY Rider & Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.50 (1).jpeg'
+        name: 'Green',
+        hex: '#22C55E',
+        image: '/assets/Potty Trainers/MY QITTY Rider & Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.49.jpeg'
       },
       {
-            name: 'Blue',
-            hex: '#3B82F6',
-            image: '/assets/Potty Trainers/MY QITTY Rider & Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.50.jpeg'
+        name: 'Blue',
+        hex: '#3B82F6',
+        image: '/assets/Potty Trainers/MY QITTY Rider & Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.50.jpeg'
       }
-],
+    ],
     modelCode: 'YW-PT-06',
-    image: '/assets/Potty Trainers/MY QITTY Rider & Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.49.jpeg',
+    image: '/assets/Potty Trainers/MY QITTY Rider & Potty Trainer/WhatsApp Image 2026-09-09 at 17.23.50 (1).jpeg',
     highlights: ['Kitty Ear Handles', 'Removable Bowl', 'Floor Safe']
   },
   {
