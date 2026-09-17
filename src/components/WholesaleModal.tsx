@@ -118,7 +118,7 @@ export const WholesaleModal: React.FC<WholesaleModalProps> = ({ isOpen, onClose,
       msg += `💬 *Note:* ${formData.message}\n`;
     }
     msg += `------------------------------------\n`;
-    msg += `Please send wholesale price master list and catalog. Thank you!`;
+    msg += `Please send wholesale price master list and catalogue. Thank you!`;
 
     window.open(`https://wa.me/${COMPANY_DETAILS.whatsappRaw}?text=${encodeURIComponent(msg)}`, '_blank');
   };

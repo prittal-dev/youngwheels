@@ -301,7 +301,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             <div className="lg:col-span-8 space-y-3">
               <span className="bg-white/90 text-slate-900 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider shadow-2xs">
-                Young Wheels Catalog • {categoryProducts.length} Models
+                Young Wheels Catalogue • {categoryProducts.length} Models
               </span>
 
               <h1 className="text-3xl sm:text-5xl font-black font-heading text-slate-900 tracking-tight">

@@ -237,7 +237,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenWholesaleModal, onNavi
                   className="px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl shadow-md flex items-center gap-2 shrink-0 transition-transform active:scale-95"
                 >
                   <Building2 className="w-4 h-4 text-[#FFD93D]" />
-                  <span>Request Wholesale Catalog</span>
+                  <span>Request Wholesale Catalogue</span>
                 </button>
               </div>
 

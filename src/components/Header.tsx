@@ -392,7 +392,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Business Catalogue Button */}
           <a
             href="/assets/Young_Wheels_Business_Catalog.pdf"
-            download="Young_Wheels_Business_Catalog.pdf"
+            download="Young_Wheels_Business_Catalogue.pdf"
             className="hidden sm:flex items-center gap-1.5 bg-[#10B981] hover:bg-[#059669] text-white px-3 py-2 rounded-2xl font-bold text-xs transition-all shadow-xs hover:scale-105 active:scale-95 whitespace-nowrap cursor-pointer"
             title="Download High-Quality Young Wheels Business Catalogue PDF"
           >
@@ -564,7 +564,7 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="pt-2 flex flex-col gap-2">
             <a
               href="/assets/Young_Wheels_Business_Catalog.pdf"
-              download="Young_Wheels_Business_Catalog.pdf"
+              download="Young_Wheels_Business_Catalogue.pdf"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full flex items-center justify-center gap-2 bg-[#10B981] hover:bg-[#059669] text-white py-2.5 rounded-xl font-bold text-sm shadow-xs"
             >

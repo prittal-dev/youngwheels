@@ -78,7 +78,6 @@ export const WholesaleB2B: React.FC<WholesaleB2BProps> = ({ onOpenWholesaleModal
                 </h3>
                 <p className="text-xs text-slate-600 font-medium mt-1">
                   Get our complete master catalog with wholesale tier rates sent directly to your WhatsApp or Email.
-                  Get our complete master catalogue with wholesale tier rates sent directly to your WhatsApp or Email.
                 </p>
               </div>
 
@@ -91,7 +90,7 @@ export const WholesaleB2B: React.FC<WholesaleB2BProps> = ({ onOpenWholesaleModal
               </button>
 
               <a
-                href={`https://wa.me/${COMPANY_DETAILS.whatsappRaw}?text=${encodeURIComponent('Hi Young Wheels Wholesale Dept! I am a toy dealer interested in buying Swing Cars & Walkers in bulk. Please share dealer catalogue.')}`}
+                href={`https://wa.me/${COMPANY_DETAILS.whatsappRaw}?text=${encodeURIComponent('Hi Young Wheels Wholesale Dept! I am a toy dealer interested in buying Swing Cars & Walkers in bulk. Please share dealer catalog.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-heading font-bold text-xs rounded-2xl flex items-center justify-center gap-2 shadow-md"
