@@ -389,15 +389,15 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Action Buttons */}
         <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           
-          {/* Business Catalog Button */}
+          {/* Business Catalogue Button */}
           <a
             href="/assets/Young_Wheels_Business_Catalog.pdf"
             download="Young_Wheels_Business_Catalog.pdf"
             className="hidden sm:flex items-center gap-1.5 bg-[#10B981] hover:bg-[#059669] text-white px-3 py-2 rounded-2xl font-bold text-xs transition-all shadow-xs hover:scale-105 active:scale-95 whitespace-nowrap cursor-pointer"
-            title="Download High-Quality Young Wheels Business Catalog PDF"
+            title="Download High-Quality Young Wheels Business Catalogue PDF"
           >
             <FileText className="w-3.5 h-3.5 text-[#FFD93D] shrink-0" />
-            <span className="whitespace-nowrap">Business Catalog</span>
+            <span className="whitespace-nowrap">Business Catalogue</span>
           </a>
 
           {/* Dealer & Distributor Form Button */}
@@ -569,7 +569,7 @@ export const Header: React.FC<HeaderProps> = ({
               className="w-full flex items-center justify-center gap-2 bg-[#10B981] hover:bg-[#059669] text-white py-2.5 rounded-xl font-bold text-sm shadow-xs"
             >
               <FileText className="w-4 h-4 text-[#FFD93D]" />
-              <span>Download Business Catalog PDF</span>
+              <span>Download Business Catalogue PDF</span>
             </a>
 
             <a

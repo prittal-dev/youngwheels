@@ -402,7 +402,7 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
             onClick={() => onNavigateToCategory(selectedTab === 'bestsellers' ? 'magic-cars' : selectedTab)}
             className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-heading font-bold text-sm px-8 py-3.5 rounded-2xl shadow-lg transition-transform hover:scale-105"
           >
-            <span>View Complete Product Catalog & Specifications</span>
+            <span>View Complete Product Catalogue & Specifications</span>
             <ArrowRight className="w-4 h-4 text-[#FFD93D]" />
           </button>
         </div>

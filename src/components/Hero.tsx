@@ -409,14 +409,14 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href={`https://wa.me/${COMPANY_DETAILS.whatsappRaw}?text=${encodeURIComponent('Hi Young Wheels! I am looking for kids ride-on toys / swing cars. Please share catalog & price details.')}`}
+              href={`https://wa.me/${COMPANY_DETAILS.whatsappRaw}?text=${encodeURIComponent('Hi Young Wheels! I am looking for kids ride-on toys / swing cars. Please share catalogue & price details.')}`}
               target="_blank"
               rel="noopener noreferrer"
               onClick={triggerConfetti}
               className="w-full sm:w-auto toy-button bg-[#25D366] hover:bg-[#20bd5a] text-white font-heading font-bold text-base px-7 h-[60px] rounded-2xl flex items-center justify-center gap-2 shadow-md"
             >
               <MessageCircle className="w-5 h-5 fill-white text-[#25D366]" />
-              <span>WhatsApp Catalog & Prices</span>
+              <span>WhatsApp Catalogue & Prices</span>
             </motion.a>
           </motion.div>
           
