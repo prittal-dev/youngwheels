@@ -283,7 +283,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
                 <span>100% BPA-Free Non-Toxic</span>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} className="bg-white border border-[#FFE8B5] px-3 py-1 rounded-xl text-xs font-bold text-slate-800 flex items-center gap-1.5 shadow-2xs">
-                <img src="../../assets/india_flag.png" className='w-3 inline' alt="" />
+                <img src="/assets/india_flag.png" className='w-3 inline' alt="India Flag" />
                 <span>Proudly Made in India </span>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} className="bg-white border border-[#FFE8B5] px-3 py-1 rounded-xl text-xs font-bold text-slate-800 flex items-center gap-1.5 shadow-2xs">
@@ -323,6 +323,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
                       src={currentSlide.image}
                       alt={currentSlide.title}
                       loading="eager"
+                      fetchPriority="high"
                       decoding="async"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
