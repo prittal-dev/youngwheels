@@ -164,9 +164,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
                       <span className="text-[#FFD93D] group-hover:translate-x-0.5 transition-transform">›</span>
                       <span className="group-hover:text-white transition-colors">{cat.name}</span>
                     </span>
-                    <span className="text-[10px] bg-slate-800 text-slate-400 group-hover:bg-[#FFD93D] group-hover:text-slate-900 px-2 py-0.5 rounded-full transition-colors font-bold">
-                      {cat.itemCount}
-                    </span>
                   </a>
                 </li>
               ))}
