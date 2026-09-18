@@ -23,8 +23,12 @@ Disallow: /admin/
 
 # Directives for Googlebot Image Crawler
 User-agent: Googlebot-Image
+Allow: /
 Allow: /assets/
 Allow: /assets/products/
+Allow: /favicon*
+Allow: /logo*
+Allow: /apple-touch-icon*
 
 # Directives for Bingbot
 User-agent: Bingbot
