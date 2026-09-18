@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Home, 
   ChevronRight, 
@@ -25,14 +25,47 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenWholesaleModal, onNavi
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
+  useEffect(() => {
+    const handleLocationChange = () => {
+      if (typeof window !== 'undefined') {
+        const path = window.location.pathname;
+        if (path.startsWith('/blog/')) {
+          const slugOrTitle = decodeURIComponent(path.replace('/blog/', '').replace(/\/$/, ''));
+          const matched = BLOG_POSTS.find(p => 
+            p.slug?.toLowerCase() === slugOrTitle.toLowerCase() || 
+            p.title?.toLowerCase() === slugOrTitle.toLowerCase()
+          );
+          if (matched) {
+            setSelectedPost(matched);
+          } else {
+            setSelectedPost(null);
+          }
+        } else if (path === '/blog' || path === '/blogs') {
+          setSelectedPost(null);
+        }
+      }
+    };
+
+    handleLocationChange();
+    
+    window.addEventListener('popstate', handleLocationChange);
+    return () => window.removeEventListener('popstate', handleLocationChange);
+  }, []);
+
   const handleSelectPost = (post: BlogPost) => {
     setSelectedPost(post);
     setOpenFaqIndex(null);
+    if (typeof window !== 'undefined') {
+      window.history.pushState({ tab: 'blog' }, '', `/blog/${post.slug || encodeURIComponent(post.title)}`);
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleBackToList = () => {
     setSelectedPost(null);
+    if (typeof window !== 'undefined') {
+      window.history.pushState({ tab: 'blog' }, '', '/blog');
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
