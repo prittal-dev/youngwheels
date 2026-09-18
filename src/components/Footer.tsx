@@ -50,6 +50,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
                 <img 
                   src={logoImg} 
                   alt="Young Wheels" 
+                  loading="lazy"
+                  decoding="async"
                   className="h-16 w-auto object-contain" 
                 />
               </div>
@@ -175,10 +177,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
             {/* MSME & ISO Logos in the empty space under the category links */}
             <div className="pt-3 flex items-center gap-3">
               <div className="bg-white p-2 rounded-xl shadow-md border border-slate-700/50 flex items-center justify-center hover:scale-105 transition-transform" title="MSME Registered Enterprise">
-                <img src={msmeImg} alt="MSME Certified" className="h-9 w-auto object-contain" />
+                <img src={msmeImg} alt="MSME Certified" loading="lazy" decoding="async" className="h-9 w-auto object-contain" />
               </div>
               <div className="bg-white p-2 rounded-xl shadow-md border border-slate-700/50 flex items-center justify-center hover:scale-105 transition-transform" title="ISO 9001:2015 Quality System">
-                <img src={isoImg} alt="ISO Certified 9001:2015" className="h-9 w-auto object-contain" />
+                <img src={isoImg} alt="ISO Certified 9001:2015" loading="lazy" decoding="async" className="h-9 w-auto object-contain" />
               </div>
             </div>
           </div>
@@ -262,10 +264,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenWholesaleMo
               <div className="flex items-center justify-between border-b border-slate-700/60 pb-2">
                 <div className="flex items-center gap-2">
                   <div className="bg-white px-1.5 py-1 rounded-lg">
-                    <img src={msmeImg} alt="MSME" className="h-5 w-auto object-contain" />
+                    <img src={msmeImg} alt="MSME" loading="lazy" decoding="async" className="h-5 w-auto object-contain" />
                   </div>
                   <div className="bg-white px-1.5 py-1 rounded-lg">
-                    <img src={isoImg} alt="ISO" className="h-5 w-auto object-contain" />
+                    <img src={isoImg} alt="ISO" loading="lazy" decoding="async" className="h-5 w-auto object-contain" />
                   </div>
                 </div>
                 <span className="text-[10px] text-[#34D399] bg-[#34D399]/10 px-2 py-0.5 rounded-full border border-[#34D399]/20 font-semibold">Verified Unit</span>

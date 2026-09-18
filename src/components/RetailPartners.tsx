@@ -67,6 +67,8 @@ export const RetailPartners: React.FC = () => {
               <img 
                 src={vmartImg} 
                 alt="V-Mart Logo" 
+                loading="lazy"
+                decoding="async"
                 className="max-h-full max-w-full object-contain filter drop-shadow-xs" 
               />
             </div>
@@ -117,6 +119,8 @@ export const RetailPartners: React.FC = () => {
               <img 
                 src={vbazaarImg} 
                 alt="V-Bazaar Logo" 
+                loading="lazy"
+                decoding="async"
                 className="max-h-full max-w-full object-contain filter drop-shadow-xs" 
               />
             </div>

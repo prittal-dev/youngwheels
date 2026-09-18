@@ -141,6 +141,8 @@ export const Header: React.FC<HeaderProps> = ({
           <img 
             src={logoImg} 
             alt="Young Wheels" 
+            decoding="async"
+            fetchPriority="high"
             className="h-10 sm:h-12 md:h-13 w-auto object-contain group-hover:scale-105 transition-transform shrink-0" 
           />
         </a>
