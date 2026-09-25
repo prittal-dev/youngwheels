@@ -115,8 +115,8 @@ export default function App() {
         metaDesc = "Young Wheels is a leading kids’ toy manufacturer in Delhi, India, offering premium, non-toxic ride-ons, scooters, walkers, tricycles, swing cars & potty trainers.";
         break;
       case 'about':
-        title = "About Us | Young Wheels - Premier Kids Toy Manufacturer in Delhi, India";
-        metaDesc = "Learn about Young Wheels, India's leading ISO certified kids toy manufacturer in Pooth Khurd, New Delhi producing safe ride-ons, swing cars, and tricycles.";
+        title = "Premium Kids Toys Manufacturer in Delhi | Young Wheels";
+        metaDesc = "Young Wheels is a premium kids toys manufacturer in Delhi, offering quality ride-ons, kick scooters, walkers, swing cars, tricycles and potty trainers for businesses across India.";
         break;
       case 'contact':
         title = "Contact Us | Young Wheels Factory Pooth Khurd, New Delhi";

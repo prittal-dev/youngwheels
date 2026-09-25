@@ -47,8 +47,8 @@ const routes = [
   },
   {
     path: '/about-us',
-    title: 'About Us | Young Wheels - Premier Kids Toy Manufacturer in Delhi, India',
-    metaDesc: "Learn about Young Wheels, India's leading ISO certified kids toy manufacturer in Pooth Khurd, New Delhi producing safe ride-ons, swing cars, and tricycles."
+    title: 'Premium Kids Toys Manufacturer in Delhi | Young Wheels',
+    metaDesc: 'Young Wheels is a premium kids toys manufacturer in Delhi, offering quality ride-ons, kick scooters, walkers, swing cars, tricycles and potty trainers for businesses across India.'
   },
   {
     path: '/contact-us',
@@ -125,9 +125,7 @@ routes.forEach(route => {
     html = html.replace('</head>', `  <meta name="description" content="${route.metaDesc}" />\n</head>`);
   }
 
-  // Populate OpenGraph & Twitter Meta Tags for View Source & Social Crawlers
-  html = html.replace('<meta property="og:title" content="" />', `<meta property="og:title" content="${route.title}" />`);
-  html = html.replace('<meta property="og:description" content="" />', `<meta property="og:description" content="${route.metaDesc}" />`);
+  // Populate Twitter Meta Tags for View Source & Social Crawlers
   html = html.replace('<meta name="twitter:title" content="" />', `<meta name="twitter:title" content="${route.title}" />`);
   html = html.replace('<meta name="twitter:description" content="" />', `<meta name="twitter:description" content="${route.metaDesc}" />`);
 
