@@ -324,12 +324,12 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose, on
               <div>
                 <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-1.5 flex items-center gap-2">
                   <span>Select Color Option:</span>
-                  <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-slate-100 text-slate-900 border border-slate-200">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 text-slate-900 border border-slate-200/80 shadow-2xs">
                     <span
-                      className="w-2.5 h-2.5 rounded-full border border-black/10 shrink-0"
+                      className="w-3 h-3 rounded-full border border-slate-300 shrink-0 shadow-2xs"
                       style={{ backgroundColor: activeColor?.hex || '#3B82F6' }}
                     />
-                    <span className="font-extrabold" style={{ color: activeColor?.hex && activeColor.hex !== '#FFFFFF' ? activeColor.hex : undefined }}>
+                    <span className="font-black text-slate-800 text-xs">
                       {selectedColor}
                     </span>
                   </span>

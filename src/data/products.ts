@@ -998,8 +998,8 @@ export const PRODUCTS: Product[] = [
             image: '/assets/Swing Cars/PANDAA FACE SWING CAR/WhatsApp Image 2026-09-09 at 16.24.49.jpeg'
       },
       {
-            name: 'Black',
-            hex: '#1E293B',
+            name: 'White',
+            hex: '#F8FAFC',
             image: '/assets/Swing Cars/PANDAA FACE SWING CAR/WhatsApp Image 2026-09-09 at 16.32.13.jpeg'
       }
 ],
@@ -1040,8 +1040,8 @@ export const PRODUCTS: Product[] = [
         image: '/assets/Swing Cars/PANDAA BASKET SWING CAR/WhatsApp Image 2026-09-09 at 16.25.55.jpeg'
       },
       {
-        name: 'Mint',
-        hex: '#14B8A6',
+        name: 'Grey',
+        hex: '#64748B',
         image: '/assets/Swing Cars/PANDAA BASKET SWING CAR/WhatsApp Image 2026-09-09 at 16.33.20.jpeg'
       }
     ],
@@ -1159,8 +1159,8 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Anti-skid footrest', 'Builds balance', 'Smooth wheels', 'Teddy bear head mask with LED eyes'],
     colors: [
       {
-        name: 'Cyan/Blue',
-        hex: '#06B6D4',
+        name: 'Alice Blue',
+        hex: '#E8F4FC',
         image: '/assets/Swing Cars/BEAR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.19.jpeg'
       }
     ],
@@ -1181,8 +1181,8 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Anti-skid footrest', 'Builds balance', 'Smooth floor wheels', 'Teddy bear face with LED lights'],
     colors: [
       {
-        name: 'Green',
-        hex: '#22C55E',
+        name: 'Blue',
+        hex: '#3B82F6',
         image: '/assets/Swing Cars/BEAR COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.47 (1).jpeg'
       },
       {
@@ -1191,13 +1191,13 @@ export const PRODUCTS: Product[] = [
         image: '/assets/Swing Cars/BEAR COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.47.jpeg'
       },
       {
-        name: 'Yellow',
-        hex: '#EAB308',
+        name: 'Pink',
+        hex: '#EC4899',
         image: '/assets/Swing Cars/BEAR COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.48 (1).jpeg'
       },
       {
-        name: 'Brown',
-        hex: '#78350F',
+        name: 'Red',
+        hex: '#EF4444',
         image: '/assets/Swing Cars/BEAR COLOUR SWING CAR/WhatsApp Image 2026-09-09 at 16.36.48.jpeg'
       }
     ],
@@ -1217,8 +1217,8 @@ export const PRODUCTS: Product[] = [
     features: ['Develops motor skills', 'Anti-skid footrest', 'Builds balance', 'High-speed ABEC steel bearings', '35 kg load capacity'],
     colors: [
       {
-        name: 'Red',
-        hex: '#EF4444',
+        name: 'Black',
+        hex: '#1E293B',
         image: '/assets/Swing Cars/BOO RIDER SWING CAR/WhatsApp Image 2026-09-09 at 17.10.04.jpeg'
       },
       {
