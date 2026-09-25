@@ -215,6 +215,9 @@ export const EnquiryDrawer: React.FC<EnquiryDrawerProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => {
+                try {
+                  sessionStorage.setItem('yw_inquiry_submitted', 'true');
+                } catch {}
                 onClose();
                 if (onNavigateTab) {
                   onNavigateTab('thank-you');

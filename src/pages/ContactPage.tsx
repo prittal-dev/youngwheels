@@ -20,6 +20,9 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigateTab }) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
+    try {
+      sessionStorage.setItem('yw_inquiry_submitted', 'true');
+    } catch {}
     if (onNavigateTab) {
       onNavigateTab('thank-you');
     }
@@ -28,8 +31,8 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigateTab }) => {
   const sendWhatsAppDirect = () => {
     let msg = `*NEW CONTACT INQUIRY - YOUNG WHEELS WEBSITE*\n`;
     msg += `------------------------------------\n`;
-    msg += `👤 *Name:* ${formData.name}\n`;
-    msg += `📞 *Phone:* ${formData.phone}\n`;
+    msg += `👤 *Name:* ${formData.name || 'Website Visitor'}\n`;
+    msg += `📞 *Phone:* ${formData.phone || 'N/A'}\n`;
     msg += `✉️ *Email:* ${formData.email || 'N/A'}\n`;
     msg += `🧸 *Interest:* ${formData.productInterest}\n`;
     msg += `🏷️ *Type:* ${formData.inquiryType}\n`;
@@ -40,6 +43,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigateTab }) => {
     msg += `Please connect with me. Thank you!`;
 
     window.open(`https://wa.me/${COMPANY_DETAILS.whatsappRaw}?text=${encodeURIComponent(msg)}`, '_blank');
+    try {
+      sessionStorage.setItem('yw_inquiry_submitted', 'true');
+    } catch {}
+    if (onNavigateTab) {
+      onNavigateTab('thank-you');
+    }
   };
 
   return (

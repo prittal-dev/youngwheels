@@ -52,7 +52,6 @@ export const SitemapPage: React.FC<SitemapPageProps> = ({
     { title: 'Contact Us & Factory Visit', path: '/contact-us', tab: 'contact', desc: 'Get in touch for wholesale orders, dealership inquiries & factory visits.' },
     { title: 'Social Media Hub', path: '/social', tab: 'social', desc: 'Follow Young Wheels on Instagram, YouTube, and Facebook.' },
     { title: 'XML Sitemap File', path: '/sitemap.xml', isXml: true, desc: 'Official XML Sitemap URL for Googlebot, Bingbot & Search Console crawlers.' },
-    { title: 'Thank You Page', path: '/thank-you', tab: 'thank-you', desc: 'Confirmation page for inquiries and wholesale catalog requests.' },
   ];
 
 

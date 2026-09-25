@@ -38,7 +38,17 @@ const PageLoadingFallback = () => (
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>(() => {
-    return getTabFromPath(window.location.pathname);
+    const initialTab = getTabFromPath(window.location.pathname);
+    if (initialTab === 'thank-you') {
+      const hasSubmitted = typeof window !== 'undefined' && sessionStorage.getItem('yw_inquiry_submitted') === 'true';
+      if (!hasSubmitted) {
+        if (typeof window !== 'undefined') {
+          window.history.replaceState({ tab: 'home' }, '', '/');
+        }
+        return 'home';
+      }
+    }
+    return initialTab;
   });
   const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
   const [enquiryDrawerOpen, setEnquiryDrawerOpen] = useState<boolean>(false);
@@ -46,6 +56,13 @@ export default function App() {
   const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
 
   const navigateToTab = (tab: string, replace = false) => {
+    if (tab === 'thank-you') {
+      const hasSubmitted = typeof window !== 'undefined' && sessionStorage.getItem('yw_inquiry_submitted') === 'true';
+      if (!hasSubmitted) {
+        navigateToTab('home', true);
+        return;
+      }
+    }
     const targetPath = getPathFromTab(tab);
     if (window.location.pathname !== targetPath) {
       if (replace) {
@@ -89,6 +106,13 @@ export default function App() {
       const searchParams = new URLSearchParams(window.location.search);
       if (searchParams.get('tab') === 'admin' || window.location.hash === '#admin') {
         navigateToTab('admin', true);
+      } else if (currentTab === 'thank-you') {
+        const hasSubmitted = typeof window !== 'undefined' && sessionStorage.getItem('yw_inquiry_submitted') === 'true';
+        if (!hasSubmitted) {
+          navigateToTab('home', true);
+        } else {
+          setActiveTab('thank-you');
+        }
       } else {
         setActiveTab(currentTab);
       }
@@ -465,6 +489,9 @@ export default function App() {
                 {activeTab === 'thank-you' && (
                   <ThankYouPage
                     onNavigateTab={(tab) => {
+                      try {
+                        sessionStorage.removeItem('yw_inquiry_submitted');
+                      } catch {}
                       navigateToTab(tab);
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}

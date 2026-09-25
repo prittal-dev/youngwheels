@@ -9,6 +9,8 @@ User-agent: *
 Allow: /
 Disallow: /admin
 Disallow: /admin/
+Disallow: /thank-you
+Disallow: /thank-you/
 Disallow: /404
 Disallow: /*?*tab=admin
 Disallow: /*?*admin
@@ -20,6 +22,8 @@ Allow: /assets/
 Allow: /sitemap.xml
 Disallow: /admin
 Disallow: /admin/
+Disallow: /thank-you
+Disallow: /thank-you/
 
 # Directives for Googlebot Image Crawler
 User-agent: Googlebot-Image

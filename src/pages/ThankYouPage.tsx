@@ -23,7 +23,14 @@ interface ThankYouPageProps {
 }
 
 export const ThankYouPage: React.FC<ThankYouPageProps> = ({ onNavigateTab }) => {
+  const isAuthorized = typeof window !== 'undefined' && sessionStorage.getItem('yw_inquiry_submitted') === 'true';
+
   useEffect(() => {
+    if (!isAuthorized) {
+      onNavigateTab('home');
+      return;
+    }
+
     // Trigger celebratory confetti on mount
     confetti({
       particleCount: 120,
@@ -31,7 +38,11 @@ export const ThankYouPage: React.FC<ThankYouPageProps> = ({ onNavigateTab }) => 
       origin: { y: 0.5 },
       colors: ['#FFD93D', '#FF6B6B', '#4ECDC4', '#25D366', '#8B5CF6']
     });
-  }, []);
+  }, [isAuthorized, onNavigateTab]);
+
+  if (!isAuthorized) {
+    return null;
+  }
 
   return (
     <div className="py-12 sm:py-16 bg-transparent relative overflow-hidden">

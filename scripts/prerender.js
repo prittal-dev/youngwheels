@@ -104,11 +104,6 @@ const routes = [
     path: '/sitemap.html',
     title: 'Sitemap | Young Wheels Toys Manufacturer Delhi',
     metaDesc: 'Explore all pages, toy categories, factory manufacturing locations, product models, blog posts, and resources on youngwheels.in.'
-  },
-  {
-    path: '/thank-you',
-    title: 'Thank You! | Young Wheels Factory',
-    metaDesc: 'Thank you for reaching out to Young Wheels. Our team will get back to you shortly.'
   }
 ];
 

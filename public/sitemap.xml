@@ -116,11 +116,4 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Thank You Page -->
-  <url>
-    <loc>https://www.youngwheels.in/thank-you</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
 </urlset>

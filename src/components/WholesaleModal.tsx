@@ -96,6 +96,9 @@ export const WholesaleModal: React.FC<WholesaleModalProps> = ({ isOpen, onClose,
     } finally {
       setIsSubmitting(false);
       setSubmitted(true);
+      try {
+        sessionStorage.setItem('yw_inquiry_submitted', 'true');
+      } catch {}
       if (onNavigateTab) {
         onClose();
         onNavigateTab('thank-you');
@@ -121,6 +124,13 @@ export const WholesaleModal: React.FC<WholesaleModalProps> = ({ isOpen, onClose,
     msg += `Please send wholesale price master list and catalogue. Thank you!`;
 
     window.open(`https://wa.me/${COMPANY_DETAILS.whatsappRaw}?text=${encodeURIComponent(msg)}`, '_blank');
+    try {
+      sessionStorage.setItem('yw_inquiry_submitted', 'true');
+    } catch {}
+    if (onNavigateTab) {
+      onClose();
+      onNavigateTab('thank-you');
+    }
   };
 
   return (
