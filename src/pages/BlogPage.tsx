@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Home, 
   ChevronRight, 
@@ -25,14 +25,36 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenWholesaleModal, onNavi
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
+  useEffect(() => {
+    const handleHashSync = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash) {
+        const found = BLOG_POSTS.find(p => p.slug === hash || p.id === hash);
+        if (found) {
+          setSelectedPost(found);
+          return;
+        }
+      }
+      setSelectedPost(null);
+    };
+
+    handleHashSync();
+    window.addEventListener('hashchange', handleHashSync);
+    return () => window.removeEventListener('hashchange', handleHashSync);
+  }, []);
+
   const handleSelectPost = (post: BlogPost) => {
     setSelectedPost(post);
     setOpenFaqIndex(null);
+    window.location.hash = post.slug;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleBackToList = () => {
     setSelectedPost(null);
+    if (window.location.hash) {
+      history.pushState(null, '', window.location.pathname);
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -107,7 +129,8 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenWholesaleModal, onNavi
             <div className={`relative rounded-3xl overflow-hidden p-6 sm:p-8 border-4 border-white shadow-xl ${
               selectedPost.category === 'Tri Cycle' ? 'bg-[#67E8F9]' :
               selectedPost.category === 'Magic Car / Swing Car' ? 'bg-[#FEF08A]' :
-              selectedPost.category === 'Potty Chair' ? 'bg-[#FCA5A5]' : 'bg-[#FFEDD5]'
+              selectedPost.category === 'Potty Chair' ? 'bg-[#FCA5A5]' :
+              selectedPost.category === 'Safe & Smart Toys' ? 'bg-[#FDE047]' : 'bg-[#FFEDD5]'
             }`}>
               <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
                 <div className="md:col-span-7 space-y-2">
@@ -151,30 +174,33 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenWholesaleModal, onNavi
               </h1>
             </div>
 
+            {/* Featured Banner Cover (if article has dedicated full banner) */}
+            {selectedPost.bannerImage && (
+              <div className="rounded-3xl overflow-hidden border-3 border-slate-200/90 shadow-xl bg-white hover:shadow-2xl transition-all">
+                <img 
+                  src={selectedPost.bannerImage} 
+                  alt={selectedPost.title} 
+                  className="w-full h-auto object-cover max-h-[500px]"
+                />
+              </div>
+            )}
+
             {/* Article Body Content */}
             <div className="bg-white rounded-3xl p-6 sm:p-10 border-2 border-slate-200/80 shadow-md space-y-8 text-slate-800 leading-relaxed text-sm sm:text-base">
               
               {/* Intro Paragraphs */}
+              {/* Intro Paragraphs */}
               <div className="space-y-4 text-slate-700 font-medium">
                 {selectedPost.intro.split('\n\n').map((paragraph, idx) => (
-                  <p key={idx} className="leading-relaxed">
-                    {paragraph.includes('Children Tricycle Manufacturer') ? (
-                      <>
-                        {paragraph.split('Children Tricycle Manufacturer').map((part, pIdx, arr) => (
-                          <React.Fragment key={pIdx}>
-                            {part}
-                            {pIdx < arr.length - 1 && (
-                              <span className="font-bold text-[#FF6B6B] underline decoration-[#FF6B6B]/40 decoration-2 underline-offset-2">
-                                Children Tricycle Manufacturer
-                              </span>
-                            )}
-                          </React.Fragment>
-                        ))}
-                      </>
-                    ) : (
-                      paragraph
-                    )}
-                  </p>
+                  <p 
+                    key={idx} 
+                    className="leading-relaxed [&_a]:text-[#FF6B6B] [&_a]:underline [&_a]:font-bold [&_a:hover]:text-[#E05353] [&_a]:transition-colors"
+                    dangerouslySetInnerHTML={{ 
+                      __html: paragraph.includes('Children Tricycle Manufacturer') && !paragraph.includes('<a')
+                        ? paragraph.replace(/Children Tricycle Manufacturer/g, '<span class="font-bold text-[#FF6B6B] underline decoration-[#FF6B6B]/40 decoration-2 underline-offset-2">Children Tricycle Manufacturer</span>')
+                        : paragraph 
+                    }}
+                  />
                 ))}
               </div>
 
@@ -186,24 +212,18 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenWholesaleModal, onNavi
                     <span>{section.heading}</span>
                   </h2>
 
-                  <p className="text-slate-700 font-medium leading-relaxed">
-                    {section.content.includes('Children Tricycle Manufacturer') ? (
-                      <>
-                        {section.content.split('Children Tricycle Manufacturer').map((part, pIdx, arr) => (
-                          <React.Fragment key={pIdx}>
-                            {part}
-                            {pIdx < arr.length - 1 && (
-                              <span className="font-bold text-[#FF6B6B] underline decoration-[#FF6B6B]/40 decoration-2 underline-offset-2">
-                                Children Tricycle Manufacturer
-                              </span>
-                            )}
-                          </React.Fragment>
-                        ))}
-                      </>
-                    ) : (
-                      section.content
-                    )}
-                  </p>
+                  <div className="text-slate-700 font-medium leading-relaxed space-y-4 [&_a]:text-[#FF6B6B] [&_a]:underline [&_a]:font-bold [&_a:hover]:text-[#E05353] [&_a]:transition-colors">
+                    {section.content.split('\n\n').map((para, pIdx) => (
+                      <p 
+                        key={pIdx}
+                        dangerouslySetInnerHTML={{ 
+                          __html: para.includes('Children Tricycle Manufacturer') && !para.includes('<a')
+                            ? para.replace(/Children Tricycle Manufacturer/g, '<span class="font-bold text-[#FF6B6B] underline decoration-[#FF6B6B]/40 decoration-2 underline-offset-2">Children Tricycle Manufacturer</span>')
+                            : para 
+                        }}
+                      />
+                    ))}
+                  </div>
 
                   {/* Bullet Points */}
                   {section.bulletPoints && (
@@ -211,9 +231,13 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenWholesaleModal, onNavi
                       {section.bulletPoints.map((bp, bpIdx) => (
                         <li key={bpIdx} className="flex items-start gap-2.5 text-xs sm:text-sm font-medium text-slate-800">
                           <CheckCircle2 className="w-4 h-4 text-[#84CC16] shrink-0 mt-0.5" />
-                          <div>
-                            <strong className="font-black text-slate-900">{bp.bold} </strong>
-                            <span>{bp.text}</span>
+                          <div className="[&_a]:text-[#FF6B6B] [&_a]:underline [&_a]:font-bold [&_a:hover]:text-[#E05353] [&_a]:transition-colors">
+                            {bp.bold.includes('<a') ? (
+                              <span dangerouslySetInnerHTML={{ __html: bp.bold }} />
+                            ) : (
+                              <strong className="font-black text-slate-900">{bp.bold} </strong>
+                            )}
+                            <span dangerouslySetInnerHTML={{ __html: bp.text }} />
                           </div>
                         </li>
                       ))}
@@ -282,9 +306,10 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenWholesaleModal, onNavi
                         </button>
 
                         {isOpen && (
-                          <div className="px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm font-medium text-slate-700 leading-relaxed border-t border-slate-200/60 pt-3">
-                            {faq.answer}
-                          </div>
+                          <div 
+                            className="px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm font-medium text-slate-700 leading-relaxed border-t border-slate-200/60 pt-3 [&_a]:text-[#FF6B6B] [&_a]:underline [&_a]:font-bold [&_a:hover]:text-[#E05353] [&_a]:transition-colors"
+                            dangerouslySetInnerHTML={{ __html: faq.answer }}
+                          />
                         )}
                       </div>
                     );
@@ -338,7 +363,8 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenWholesaleModal, onNavi
                     <div className={`relative rounded-2xl p-5 border-2 border-white shadow-xs overflow-hidden ${
                       post.category === 'Tri Cycle' ? 'bg-[#67E8F9]' :
                       post.category === 'Magic Car / Swing Car' ? 'bg-[#FEF08A]' :
-                      post.category === 'Potty Chair' ? 'bg-[#FCA5A5]' : 'bg-[#FFEDD5]'
+                      post.category === 'Potty Chair' ? 'bg-[#FCA5A5]' :
+                      post.category === 'Safe & Smart Toys' ? 'bg-[#FDE047]' : 'bg-[#FFEDD5]'
                     }`}>
                       <div className="flex items-start justify-between gap-3">
                         <div>
