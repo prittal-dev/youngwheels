@@ -27,7 +27,7 @@ export const ALL_CATEGORY_CARDS: CategoryCardItem[] = [
   {
     id: 'ride-ons',
     name: 'Ride-Ons &\nPush Cars',
-    subtitle: 'European supercar styling push cars with steering wheel horn, ergonomic back support, and hidden under-seat storage trunk.',
+    subtitle: 'G-Vagon, McClaren, Racing & Animal Riders • European supercar styling push cars with steering wheel horn, ergonomic back support, and hidden under-seat storage trunk.',
     bgHex: '#6EE7B7',
     bgClass: 'bg-[#6EE7B7]',
     textClass: 'text-slate-900',
@@ -38,7 +38,7 @@ export const ALL_CATEGORY_CARDS: CategoryCardItem[] = [
   {
     id: 'kick-scooters',
     name: 'Kick Scooters &\nPolice Bikes',
-    subtitle: 'Thrilling police patrol bikes and kick balance trikes with electronic sirens, flashing emergency beacons, and rugged wide wheels.',
+    subtitle: 'Speedy, Smiley, Ferrarii, Stylo & Panda Scooters • Thrilling police patrol bikes and kick balance trikes with electronic sirens, flashing emergency beacons, and rugged wide wheels.',
     bgHex: '#86EFAC',
     bgClass: 'bg-[#86EFAC]',
     textClass: 'text-slate-900',
@@ -49,7 +49,7 @@ export const ALL_CATEGORY_CARDS: CategoryCardItem[] = [
   {
     id: 'baby-walkers',
     name: 'Baby Walkers &\nPush Trikes',
-    subtitle: 'Grow-with-me 2-in-1 stroller push trikes with steerable parent handles, safety harnesses, and retractable toddler footrests.',
+    subtitle: 'Bunny, Casper Deluxe & Bearyboo Walkers • Grow-with-me 2-in-1 stroller push trikes with steerable parent handles, safety harnesses, and retractable toddler footrests.',
     bgHex: '#A3E635',
     bgClass: 'bg-[#A3E635]',
     textClass: 'text-slate-900',
@@ -60,7 +60,7 @@ export const ALL_CATEGORY_CARDS: CategoryCardItem[] = [
   {
     id: 'swing-cars',
     name: 'Magic Swing Cars &\nTwisters',
-    subtitle: 'No batteries, no gears, no pedals needed! Twist the steering wheel left and right to glide forward with smooth 360° rotation.',
+    subtitle: 'Pandaa, Wendy, Cutiee, Bear, Boo & Candy • No batteries, no gears, no pedals needed! Twist the steering wheel left and right to glide forward with smooth 360° rotation.',
     bgHex: '#FEF08A',
     bgClass: 'bg-[#FEF08A]',
     textClass: 'text-slate-900',
@@ -71,7 +71,7 @@ export const ALL_CATEGORY_CARDS: CategoryCardItem[] = [
   {
     id: 'tricycles',
     name: 'Kids Tricycles\n& Trikes',
-    subtitle: 'Classic heavy-duty carbon steel tricycles, robot mascot trikes, and deluxe musical cushion models.',
+    subtitle: 'NexRide, Tiny Rider, Ninja, Police & 2in1 Trikes • Classic heavy-duty carbon steel tricycles, robot mascot trikes, and deluxe musical cushion models.',
     bgHex: '#67E8F9',
     bgClass: 'bg-[#67E8F9]',
     textClass: 'text-slate-900',
@@ -82,7 +82,7 @@ export const ALL_CATEGORY_CARDS: CategoryCardItem[] = [
   {
     id: 'potty-trainers',
     name: 'Potty Chairs &\nTrainers',
-    subtitle: 'Make potty training gentle and exciting with real scooty scooter handles, deep removable bowl, and splash-guard lid.',
+    subtitle: 'Teddy, Cow, Sofa, Scooty, Joy & Qitty Chairs • Make potty training gentle and exciting with real scooty scooter handles, deep removable bowl, and splash-guard lid.',
     bgHex: '#FCA5A5',
     bgClass: 'bg-[#FCA5A5]',
     textClass: 'text-slate-900',

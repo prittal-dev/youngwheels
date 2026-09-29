@@ -81,42 +81,42 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
         return {
           h1Title: 'Kids Ride On Car Manufacturer in Delhi',
           title: 'Ride-Ons & Push Cars',
-          subtitle: 'European supercar styling push cars with steering wheel horn, ergonomic back support, and hidden under-seat storage trunk.',
+          subtitle: 'G-Vagon riders, McClaren supercars, racing cars, tractors & rocking animals. European supercar styling push cars with steering wheel horn, ergonomic back support, and hidden under-seat storage trunk.',
           highlights: ['Under-Seat Storage Trunk', 'Ergonomic High Backrest', 'Anti-Flip Safety Rear Bumper', 'Squeaker Steering Horn']
         };
       case 'kick-scooters':
         return {
           h1Title: 'Kids Kick Scooter Manufacturer in Delhi',
           title: 'Kick Scooters & Police Bikes',
-          subtitle: 'Thrilling police patrol bikes and kick balance trikes with electronic sirens, flashing emergency beacons, and rugged wide wheels.',
+          subtitle: 'Speedy, Smiley, Ferrarii, Stylo & Panda kick scooters. Thrilling police patrol bikes and kick balance trikes with electronic sirens, flashing emergency beacons, and rugged wide wheels.',
           highlights: ['Electronic Police Siren', 'Flashing Emergency Light', 'Superbike Decal Styling', 'Wide High-Traction Wheels']
         };
       case 'baby-walkers':
         return {
           h1Title: 'Best Baby Walkers Manufacturers in India',
           title: 'Baby Walkers & Push Trikes',
-          subtitle: 'Grow-with-me 2-in-1 stroller push trikes with steerable parent handles, safety harnesses, and retractable toddler footrests.',
+          subtitle: 'Bunny rider, Casper Deluxe & Bearyboo activity push walkers. Grow-with-me 2-in-1 stroller push trikes with steerable parent handles, safety harnesses, and retractable toddler footrests.',
           highlights: ['Steerable Parent Push Handle', 'Foldaway Footrests', 'Safety Strap Harness', 'Heavy-Duty Steel Frame']
         };
       case 'swing-cars':
         return {
           h1Title: 'Top Kids Swing Car Manufacturer in Delhi',
           title: 'Magic Swing Cars & Twisters',
-          subtitle: 'No batteries, no gears, no pedals needed! Twist the steering wheel left and right to glide forward with smooth 360° rotation.',
+          subtitle: 'Pandaa, Wendy, Cutiee, Bear, Boo & Candy 360° twist kinetic cars. No batteries, no gears, no pedals needed! Twist the steering wheel left and right to glide forward with smooth 360° rotation.',
           highlights: ['360° Polyurethane Smooth Wheels', 'Up to 35 kg Weight Capacity', '100% Non-Toxic Virgin ABS', 'Indoor & Outdoor Safe']
         };
       case 'tricycles':
         return {
           h1Title: 'Best Children Tricycle Manufacturer in Delhi',
           title: 'Kids Activity Tricycles & Trikes',
-          subtitle: 'Classic heavy-duty carbon steel tricycles, robot mascot trikes, and deluxe musical cushion models.',
+          subtitle: 'NexRide, Tiny Rider, Ninja, Police & 2-in-1 trikes. Classic heavy-duty carbon steel tricycles, robot mascot trikes, and deluxe musical cushion models.',
           highlights: ['Carbon Steel Sturdy Frame', 'Wide Non-Slip Foot Pedals', 'Ergonomic Contoured Seat', 'Front & Rear Storage Baskets']
         };
       case 'potty-trainers':
         return {
           h1Title: 'Best Quality Baby Potty Trainer Manufacturer in Delhi',
           title: 'Ergonomic Potty Chairs & Trainers',
-          subtitle: 'Make potty training gentle and exciting with real scooty scooter handles, deep removable bowl, and splash-guard lid.',
+          subtitle: 'Teddy, Cow, Sofa, Scooty, Joy & Qitty ergonomic chairs. Make potty training gentle and exciting with real scooty scooter handles, deep removable bowl, and splash-guard lid.',
           highlights: ['Deep Removable Inner Bowl', 'Non-Slip Grippy Base', 'High Splash Guard & Lid', 'Fun Ergonomic Handlebars']
         };
       default:

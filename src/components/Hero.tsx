@@ -252,8 +252,9 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenWholesaleModal
             
 
             {/* Main Playful Heading with Stacked Top Line & Animated Flip Word Below */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black font-heading text-slate-900 tracking-tight leading-[1.2] flex flex-col items-center lg:items-start gap-1 mt-11">
-              <span className="block text-slate-900">Premier Kids Toys Manufacturers in India</span>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-slate-900 tracking-tight leading-[1.2] flex flex-col items-center lg:items-start gap-1 mt-11">
+              <span className="block text-[#FF6B6B] text-lg sm:text-xl lg:text-2xl font-black uppercase tracking-wider">Premier Kids Toys Manufacturers in India</span>
+              <span className="block text-slate-900">A Perfect Place To Explore Your</span>
               <span className="inline-flex items-center relative min-w-[280px] sm:min-w-[400px] text-left align-bottom h-[1.3em] overflow-hidden text-2xl sm:text-3xl lg:text-4xl">
                 <AnimatePresence mode="wait">
                   <motion.span

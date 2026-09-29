@@ -23,13 +23,17 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenWholesaleModal }) =>
             Established 2019 • Pooth Khurd, New Delhi
           </div>
 
-          <h1 className="text-4xl sm:text-5xl font-black font-heading text-slate-900 tracking-tight flex items-center justify-center gap-2 flex-wrap">
+          <h1 className="text-3xl sm:text-5xl font-black font-heading text-slate-900 tracking-tight flex items-center justify-center gap-2 flex-wrap">
             <span>Premium Kids Toys Manufacturer & Wholesaler in India</span>
             <Sparkles className="w-8 h-8 text-[#FF6B6B] shrink-0 animate-wiggle" />
           </h1>
 
+          <p className="text-lg sm:text-xl font-extrabold font-heading text-[#FF6B6B]">
+            Crafting Safe, Joyful & Durable Toys for Growing Minds
+          </p>
+
           <p className="text-slate-600 font-medium text-base sm:text-lg leading-relaxed">
-            Crafting safe, joyful & durable toys for growing minds. Welcome to <strong className="text-slate-900 font-bold">Young Wheels</strong> — India’s trusted manufacturer of kids ride-on magic cars, baby walkers, potty chairs, and rocking animals.
+            Welcome to <strong className="text-slate-900 font-bold">Young Wheels</strong> — India’s trusted manufacturer of kids ride-on magic cars, baby walkers, potty chairs, and rocking animals.
           </p>
         </motion.div>
 
