@@ -46,8 +46,13 @@ const routes = [
     metaDesc: 'Discover Young Wheels on Facebook, Instagram, YouTube & LinkedIn. Follow us for kids’ ride-ons, toys, product updates, ideas and more.'
   },
   {
+    path: '/',
+    title: 'Premier Kids Toys Manufacturers in India | Young Wheels',
+    metaDesc: 'Young Wheels is a leading kids’ toy manufacturer in Delhi, India, offering premium, non-toxic ride-ons, scooters, walkers, tricycles, swing cars & potty trainers.'
+  },
+  {
     path: '/about-us',
-    title: 'Premium Kids Toys Manufacturer in Delhi | Young Wheels',
+    title: 'Premium Kids Toys Manufacturer & Wholesaler in India | Young Wheels',
     metaDesc: 'Young Wheels is a premium kids toys manufacturer in Delhi, offering quality ride-ons, kick scooters, walkers, swing cars, tricycles and potty trainers for businesses across India.'
   },
   {
@@ -62,38 +67,38 @@ const routes = [
   },
   {
     path: '/toys-manufacturer-in-india',
-    title: 'Toys Manufacturer in India | Explore All Categories | Young Wheels',
-    metaDesc: 'Explore all toy categories manufactured by Young Wheels in Delhi, India — ride-ons, swing cars, walkers, kick scooters, tricycles & potty trainers.'
+    title: 'Best Toys Manufacturer in India | Explore Our Kids Toy Categories | Young Wheels',
+    metaDesc: 'From gravity-driven swing cars to ergonomic walkers, rocking animals & potty trainers — engineered for safety, durability, and endless play.'
   },
   {
     path: '/kids-ride-on-car-manufacturer-in-delhi',
-    title: 'Kids Ride On Car Manufacturer in Delhi, India | Young Wheels',
-    metaDesc: 'Premier kids ride-on car and push car manufacturer in Delhi, India. Heavy-duty G-Vagon riders, McClaren supercars, and rocking animals.'
+    title: 'Kids Ride On Car Manufacturer in Delhi | Young Wheels',
+    metaDesc: 'European supercar styling push cars with steering wheel horn, ergonomic back support, and hidden under-seat storage trunk.'
   },
   {
     path: '/best-children-tricycle-manufacturer-in-delhi',
-    title: 'Best Children Tricycle Manufacturer in Delhi, India | Young Wheels',
-    metaDesc: 'Young Wheels is the best children tricycle manufacturer in Delhi, India. Explore durable 2-in-1 push trikes, pedal tricycles & police bikes.'
+    title: 'Best Children Tricycle Manufacturer in Delhi | Young Wheels',
+    metaDesc: 'Classic heavy-duty carbon steel tricycles, robot mascot trikes, and deluxe musical cushion models.'
   },
   {
     path: '/kids-swing-car-manufacturer-in-delhi',
-    title: 'Kids Swing Car Manufacturer in Delhi, India | Young Wheels',
-    metaDesc: 'Leading kids swing car and magic car manufacturer in Delhi, India. 360° twist kinetic motion cars made from virgin non-toxic plastic.'
+    title: 'Top Kids Swing Car Manufacturer in Delhi | Young Wheels',
+    metaDesc: 'No batteries, no gears, no pedals needed! Twist the steering wheel left and right to glide forward with smooth 360° rotation.'
   },
   {
     path: '/baby-potty-trainer-manufacturer-in-delhi',
-    title: 'Baby Potty Trainer Manufacturer in Delhi, India | Young Wheels',
-    metaDesc: 'Top baby potty trainer and potty chair manufacturer in Delhi, India. Ergonomic, easy-to-clean, non-toxic potty chairs for toddlers.'
+    title: 'Best Quality Baby Potty Trainer Manufacturer in Delhi | Young Wheels',
+    metaDesc: 'Make potty training gentle and exciting with real scooty scooter handles, deep removable bowl, and splash-guard lid.'
   },
   {
     path: '/baby-walkers-manufacturers-in-india',
-    title: 'Baby Walkers Manufacturers in India | Young Wheels Delhi',
-    metaDesc: 'Leading baby walker manufacturer in Delhi, India. 360° revolving wheels, 3-level height adjustments & interactive musical activity trays.'
+    title: 'Best Baby Walkers Manufacturers in India | Young Wheels',
+    metaDesc: 'Grow-with-me 2-in-1 stroller push trikes with steerable parent handles, safety harnesses, and retractable toddler footrests.'
   },
   {
     path: '/kids-kick-scooter-manufacturer-in-delhi',
-    title: 'Kids Kick Scooter Manufacturer in Delhi, India | Young Wheels',
-    metaDesc: 'Top kids kick scooter manufacturer in Delhi, India. Foldable 3-wheel scooters with height-adjustable handlebars & LED light-up wheels.'
+    title: 'Kids Kick Scooter Manufacturer in Delhi | Young Wheels',
+    metaDesc: 'Thrilling police patrol bikes and kick balance trikes with electronic sirens, flashing emergency beacons, and rugged wide wheels.'
   },
   {
     path: '/sitemap',

@@ -24,12 +24,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenWholesaleModal }) =>
           </div>
 
           <h1 className="text-4xl sm:text-5xl font-black font-heading text-slate-900 tracking-tight flex items-center justify-center gap-2 flex-wrap">
-            <span>Crafting Safe, Joyful & Durable Toys for Growing Minds</span>
+            <span>Premium Kids Toys Manufacturer & Wholesaler in India</span>
             <Sparkles className="w-8 h-8 text-[#FF6B6B] shrink-0 animate-wiggle" />
           </h1>
 
           <p className="text-slate-600 font-medium text-base sm:text-lg leading-relaxed">
-            Welcome to <strong className="text-slate-900 font-bold">Young Wheels</strong> — India’s trusted manufacturer of kids ride-on magic cars, baby walkers, potty chairs, and rocking animals.
+            Crafting safe, joyful & durable toys for growing minds. Welcome to <strong className="text-slate-900 font-bold">Young Wheels</strong> — India’s trusted manufacturer of kids ride-on magic cars, baby walkers, potty chairs, and rocking animals.
           </p>
         </motion.div>
 
