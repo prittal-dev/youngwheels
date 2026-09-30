@@ -63,12 +63,22 @@ export default function App() {
         return;
       }
     }
-    const targetPath = getPathFromTab(tab);
-    if (window.location.pathname !== targetPath) {
-      if (replace) {
-        window.history.replaceState({ tab }, '', targetPath);
+    const isEmbedded = typeof window !== 'undefined' && window.location.pathname.includes('/templates/youngwheels');
+    if (isEmbedded) {
+      if (tab === 'home') {
+        const cleanBase = window.location.pathname.split('#')[0];
+        window.history.replaceState({ tab: 'home' }, '', cleanBase);
       } else {
-        window.history.pushState({ tab }, '', targetPath);
+        window.location.hash = `#tab=${tab}`;
+      }
+    } else {
+      const targetPath = getPathFromTab(tab);
+      if (window.location.pathname !== targetPath) {
+        if (replace) {
+          window.history.replaceState({ tab }, '', targetPath);
+        } else {
+          window.history.pushState({ tab }, '', targetPath);
+        }
       }
     }
     setActiveTab(tab);
@@ -125,7 +135,11 @@ export default function App() {
     };
 
     window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
+    window.addEventListener('hashchange', handlePopState);
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+      window.removeEventListener('hashchange', handlePopState);
+    };
   }, []);
 
   // Dynamic SEO Title & Meta Description Manager

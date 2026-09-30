@@ -4,7 +4,29 @@
  */
 
 export function getTabFromPath(path: string): string {
-  const cleanPath = path.replace(/\/+$/, '').toLowerCase() || '/';
+  // Support hash tab param (e.g., #/about, #tab=about, #admin)
+  if (typeof window !== 'undefined' && window.location.hash) {
+    const rawHash = window.location.hash.replace(/^#\/?/, '').toLowerCase();
+    if (rawHash === 'admin') return 'admin';
+    const tabMatch = rawHash.match(/tab=([a-z0-9-]+)/);
+    if (tabMatch && tabMatch[1]) {
+      return tabMatch[1];
+    }
+    const cleanHash = rawHash.replace(/^\//, '');
+    if (cleanHash === '' || cleanHash === 'home') return 'home';
+    if (cleanHash === 'about' || cleanHash === 'about-us') return 'about';
+    if (cleanHash === 'blog' || cleanHash === 'blogs') return 'blog';
+    if (cleanHash === 'contact' || cleanHash === 'contact-us') return 'contact';
+    if (cleanHash === 'events') return 'events';
+    if (cleanHash === 'all-categories' || cleanHash === 'categories' || cleanHash === 'toys') return 'all-categories';
+  }
+
+  // Strip subpath prefixes if embedded in agency showcase or subfolder
+  let cleanPath = (path || '').replace(/\/+$/, '').toLowerCase();
+  cleanPath = cleanPath.replace(/^.*\/templates\/youngwheels(\/index\.html)?/, '');
+  cleanPath = cleanPath.replace(/\/index\.html$/, '');
+  if (!cleanPath || cleanPath === '' || cleanPath === '/') return 'home';
+  if (!cleanPath.startsWith('/')) cleanPath = '/' + cleanPath;
 
   if (cleanPath === '/' || cleanPath === '/home') return 'home';
   if (cleanPath === '/about-us' || cleanPath === '/about') return 'about';
