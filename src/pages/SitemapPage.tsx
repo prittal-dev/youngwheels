@@ -371,6 +371,7 @@ export const SitemapPage: React.FC<SitemapPageProps> = ({
                 href={`/blog#${blog.slug}`}
                 onClick={(e) => {
                   e.preventDefault();
+                  window.location.hash = blog.slug;
                   onNavigateTab('blog');
                 }}
                 className="p-5 rounded-2xl bg-white border-2 border-slate-200/80 hover:border-[#FF6B6B] hover:shadow-lg transition-all group flex flex-col justify-between"

@@ -8,7 +8,7 @@ export function getTabFromPath(path: string): string {
 
   if (cleanPath === '/' || cleanPath === '/home') return 'home';
   if (cleanPath === '/about-us' || cleanPath === '/about') return 'about';
-  if (cleanPath === '/blog' || cleanPath === '/blogs') return 'blog';
+  if (cleanPath === '/blog' || cleanPath === '/blogs' || cleanPath.startsWith('/blog/')) return 'blog';
   if (cleanPath === '/contact-us' || cleanPath === '/contact' || cleanPath === '/visit-factory') return 'contact';
   if (cleanPath === '/events') return 'events';
   if (cleanPath === '/toys-manufacturer-in-india' || cleanPath === '/categories' || cleanPath === '/all-categories' || cleanPath === '/toys') return 'all-categories';

@@ -28,8 +28,12 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenWholesaleModal, onNavi
   useEffect(() => {
     const handleHashSync = () => {
       const hash = window.location.hash.replace('#', '');
-      if (hash) {
-        const found = BLOG_POSTS.find(p => p.slug === hash || p.id === hash);
+      let targetSlug = hash;
+      if (!targetSlug && window.location.pathname.startsWith('/blog/')) {
+        targetSlug = window.location.pathname.replace(/^\/blog\//, '').replace(/\/+$/, '');
+      }
+      if (targetSlug) {
+        const found = BLOG_POSTS.find(p => p.slug === targetSlug || p.id === targetSlug);
         if (found) {
           setSelectedPost(found);
           return;
@@ -40,7 +44,11 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenWholesaleModal, onNavi
 
     handleHashSync();
     window.addEventListener('hashchange', handleHashSync);
-    return () => window.removeEventListener('hashchange', handleHashSync);
+    window.addEventListener('popstate', handleHashSync);
+    return () => {
+      window.removeEventListener('hashchange', handleHashSync);
+      window.removeEventListener('popstate', handleHashSync);
+    };
   }, []);
 
   const handleSelectPost = (post: BlogPost) => {
@@ -53,7 +61,9 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenWholesaleModal, onNavi
   const handleBackToList = () => {
     setSelectedPost(null);
     if (window.location.hash) {
-      history.pushState(null, '', window.location.pathname);
+      history.pushState(null, '', window.location.pathname.startsWith('/blog/') ? '/blog' : window.location.pathname);
+    } else if (window.location.pathname.startsWith('/blog/')) {
+      history.pushState(null, '', '/blog');
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -130,7 +140,8 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenWholesaleModal, onNavi
               selectedPost.category === 'Tri Cycle' ? 'bg-[#67E8F9]' :
               selectedPost.category === 'Magic Car / Swing Car' ? 'bg-[#FEF08A]' :
               selectedPost.category === 'Potty Chair' ? 'bg-[#FCA5A5]' :
-              selectedPost.category === 'Safe & Smart Toys' ? 'bg-[#FDE047]' : 'bg-[#FFEDD5]'
+              selectedPost.category === 'Safe & Smart Toys' ? 'bg-[#FDE047]' :
+              selectedPost.category === 'Toy Manufacturing' ? 'bg-[#FED7AA]' : 'bg-[#FFEDD5]'
             }`}>
               <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
                 <div className="md:col-span-7 space-y-2">
@@ -364,7 +375,8 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenWholesaleModal, onNavi
                       post.category === 'Tri Cycle' ? 'bg-[#67E8F9]' :
                       post.category === 'Magic Car / Swing Car' ? 'bg-[#FEF08A]' :
                       post.category === 'Potty Chair' ? 'bg-[#FCA5A5]' :
-                      post.category === 'Safe & Smart Toys' ? 'bg-[#FDE047]' : 'bg-[#FFEDD5]'
+                      post.category === 'Safe & Smart Toys' ? 'bg-[#FDE047]' :
+                      post.category === 'Toy Manufacturing' ? 'bg-[#FED7AA]' : 'bg-[#FFEDD5]'
                     }`}>
                       <div className="flex items-start justify-between gap-3">
                         <div>

@@ -61,6 +61,11 @@ const routes = [
     metaDesc: 'Read expert safety guides, manufacturing standards, and buying tips for children ride-on toys, swing cars, walkers & tricycles.'
   },
   {
+    path: '/blog/best-toys-manufacturer-in-india',
+    title: 'Discover the Best Toys Manufacturer in India | Young Wheels Delhi',
+    metaDesc: 'Discover the best toys manufacturer in India. Explore why choosing a Delhi toy manufacturer matters for quality materials, Make in India, and child development.'
+  },
+  {
     path: '/toys-manufacturer-in-india',
     title: 'Toys Manufacturer in India | Explore All Categories | Young Wheels',
     metaDesc: 'Explore all toy categories manufactured by Young Wheels in Delhi, India — ride-ons, swing cars, walkers, kick scooters, tricycles & potty trainers.'
